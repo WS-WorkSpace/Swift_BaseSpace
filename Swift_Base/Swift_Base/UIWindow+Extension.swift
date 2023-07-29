@@ -11,7 +11,6 @@ import UIKit
 extension UIWindow {
     static var keyWindow: UIWindow? {
         var originalKeyWindow: UIWindow?
-
         #if swift(>=5.1)
             if #available(iOS 13, *) {
                 originalKeyWindow = UIApplication.shared.connectedScenes
