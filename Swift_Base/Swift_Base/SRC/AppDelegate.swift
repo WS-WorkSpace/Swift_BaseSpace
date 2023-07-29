@@ -9,16 +9,19 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        initWindow()
+        self.initWindow()
+        let num = 10
+        Logger.log("打撒打撒",num)
+        Toast.toast("--->myPro")
         return true
     }
+
     func initWindow() {
         // 创建窗口
-        self.window = UIWindow.init()
+        self.window = UIWindow()
         self.window?.backgroundColor = UIColor.white
         self.window?.frame = UIScreen.main.bounds
         // 显示窗口
@@ -27,6 +30,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: UISceneSession Lifecycle
-
 }
-
