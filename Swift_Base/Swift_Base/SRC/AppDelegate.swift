@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = RootViewController()
+        self.window?.rootViewController = HandyJsonViewController()
     }
 
     // MARK: UISceneSession Lifecycle

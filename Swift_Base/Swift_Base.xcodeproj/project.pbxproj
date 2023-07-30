@@ -44,6 +44,14 @@
 		C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */; };
 		C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF022A76DBF100C5CF02 /* YYWeakProxy.m */; };
 		C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF052A76DBF100C5CF02 /* FPSLabel.m */; };
+		C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF092A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.m */; };
+		C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF0C2A76F9AB00C5CF02 /* SelfRefreshGifHeader.m */; };
+		C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */; };
+		C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */; };
+		C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */; };
+		C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */; };
+		C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */; };
+		C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +122,18 @@
 		C6C5CF032A76DBF100C5CF02 /* FPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
 		C6C5CF042A76DBF100C5CF02 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		C6C5CF052A76DBF100C5CF02 /* FPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSLabel.m; sourceTree = "<group>"; };
+		C6C5CF092A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		C6C5CF0A2A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		C6C5CF0B2A76F9AB00C5CF02 /* SelfRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfRefreshGifHeader.h; sourceTree = "<group>"; };
+		C6C5CF0C2A76F9AB00C5CF02 /* SelfRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfRefreshGifHeader.m; sourceTree = "<group>"; };
+		C6C5CF0F2A76FA1600C5CF02 /* SELFAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SELFAutoStateFooter.h; sourceTree = "<group>"; };
+		C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SELFAutoStateFooter.m; sourceTree = "<group>"; };
+		C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonViewController.swift; sourceTree = "<group>"; };
+		C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyJsonModel.swift; sourceTree = "<group>"; };
+		C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Refresh.bundle; sourceTree = "<group>"; };
+		C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhProgressHUD.m; sourceTree = "<group>"; };
+		C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhProgressHUD.h; sourceTree = "<group>"; };
+		C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +252,8 @@
 				C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */,
 				C6C5CEDF2A76958000C5CF02 /* AppDelegate+Extension.swift */,
 				C6C5CEA42A745D8B00C5CF02 /* RootViewController.swift */,
+				C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */,
+				C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */,
 				C6C5CEA92A74619500C5CF02 /* Swift_Base-Bridging-Header.h */,
 			);
 			path = SRC;
@@ -331,6 +353,8 @@
 		C6C5CEEC2A76AA0E00C5CF02 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CF1C2A770F3F00C5CF02 /* JhProgressHUD */,
+				C6C5CF082A76F99900C5CF02 /* Refresh */,
 				C6C5CF012A76DBF100C5CF02 /* FPSLabel */,
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
@@ -348,6 +372,30 @@
 				C6C5CF022A76DBF100C5CF02 /* YYWeakProxy.m */,
 			);
 			path = FPSLabel;
+			sourceTree = "<group>";
+		};
+		C6C5CF082A76F99900C5CF02 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF0B2A76F9AB00C5CF02 /* SelfRefreshGifHeader.h */,
+				C6C5CF0C2A76F9AB00C5CF02 /* SelfRefreshGifHeader.m */,
+				C6C5CF0A2A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.h */,
+				C6C5CF092A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.m */,
+				C6C5CF0F2A76FA1600C5CF02 /* SELFAutoStateFooter.h */,
+				C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */,
+				C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		C6C5CF1C2A770F3F00C5CF02 /* JhProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */,
+				C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */,
+				C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */,
+			);
+			path = JhProgressHUD;
 			sourceTree = "<group>";
 		};
 		D956914C5C9F306AEEBF4E78 /* Frameworks */ = {
@@ -466,6 +514,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */,
+				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
+				C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */,
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 			);
@@ -536,8 +586,10 @@
 			files = (
 				C6C5CEBA2A75CC5000C5CF02 /* DeviceInfo.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
+				C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
+				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
 				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
@@ -560,10 +612,14 @@
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
+				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
+				C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,
+				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
+				C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */,
 				C6C5CECD2A75D67800C5CF02 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

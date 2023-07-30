@@ -1,5 +1,20 @@
 PODS:
   - AAInfographics (6.0.0)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - Alamofire (4.9.1)
   - BRPickerView (2.7.6):
     - BRPickerView/AddressPickerView (= 2.7.6)
@@ -65,6 +80,7 @@ PODS:
 
 DEPENDENCIES:
   - AAInfographics (= 6.0.0)
+  - AFNetworking (= 4.0.1)
   - Alamofire (= 4.9.1)
   - BRPickerView (= 2.7.6)
   - Cache (= 5.3.0)
@@ -108,6 +124,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AAInfographics
+    - AFNetworking
     - Alamofire
     - BRPickerView
     - Cache
@@ -151,6 +168,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BRPickerView: 2a1620caf218e37a3aca9626732719a419928b15
   Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
@@ -192,6 +210,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 15a5b31972f8b4d54e3bc6550a7e4dbd92c8d8f6
+PODFILE CHECKSUM: 82d5226d8d8b731dd1ea7ddafbba453dcba74b49
 
 COCOAPODS: 1.12.1

@@ -177,7 +177,7 @@ target 'Swift_Base' do
   #pod 'SwiftOCR'
   #pod 'OAuthSwift'
 # -------------- OC --------------
-  #pod 'AFNetworking', '4.0.1'
+  pod 'AFNetworking', '4.0.1'
   pod 'DZNEmptyDataSet','1.8.1'
   pod 'MJExtension','3.4.0'
   pod 'MJRefresh','3.7.2'
