@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.initWindow()
         AppDelegate_configIQKeyboardManager()
         monitorNetwork2()
+        #if DEBUG
+        let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
+        self.window?.addSubview(fpsLab)
+        fpsLab.snp.makeConstraints { make in
+            make.top.equalTo(self.window!).offset(kStatusBarHeight)
+            make.left.equalTo(self.window!).offset(10)
+            make.size.equalTo(CGSizeMake(70, 30))
+        }
+        #endif
         return true
     }
 
