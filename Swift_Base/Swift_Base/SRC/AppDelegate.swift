@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.initWindow()
-        let num = 10
-        Logger.log("打撒打撒",num)
-        Toast.toast("--->myPro")
+
+        let str = " dsadsadsadsadsadsadsadsadsadsadsadsadsadsadasd1231231232131313212313213213213 "
+        let trimmedStr = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        self.window?.RD_y = 100
+        print(str.RD_isEmpty)
+        print(str.RD_getStringHeight(100, 18))
+
         return true
     }
 
