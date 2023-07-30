@@ -52,6 +52,7 @@
 		C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */; };
 		C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */; };
 		C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */; };
+		C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhProgressHUD.m; sourceTree = "<group>"; };
 		C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhProgressHUD.h; sourceTree = "<group>"; };
 		C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhProgressHUD.bundle; sourceTree = "<group>"; };
+		C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDActionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
+				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
 			);
 			path = RD_UIKit;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				C6C5CEC32A75D46E00C5CF02 /* UIColor+Extension.swift in Sources */,
 				C6C5CEB82A758A2100C5CF02 /* FrameMacro.swift in Sources */,
 				C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */,
+				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
 				C6C5CEBC2A75D1D200C5CF02 /* GlobalConfig.swift in Sources */,
