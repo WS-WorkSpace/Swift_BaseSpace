@@ -16,7 +16,7 @@ class Alert: NSObject {
         case error
         case warning
     }
-    
+
     class func show(type: AlertType, text: String) {
         if let window = UIApplication.shared.delegate?.window {
             var image: UIImage
@@ -35,7 +35,7 @@ class Alert: NSObject {
             let hud = MBProgressHUD.showAdded(to: window!, animated: true)
             hud.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
             hud.mode = .customView
-            hud.customView = UIImageView(image:image)
+            hud.customView = UIImageView(image: image)
             hud.label.text = text
             hud.hide(animated: true, afterDelay: 1.2)
         }
@@ -49,7 +49,7 @@ class ProgressHUD {
             MBProgressHUD.showAdded(to: window!, animated: true)
         }
     }
-    
+
     class func hide() {
         if let window = UIApplication.shared.delegate?.window {
             MBProgressHUD.hide(for: window!, animated: true)

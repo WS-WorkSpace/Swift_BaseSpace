@@ -20,7 +20,7 @@ extension UIImage {
             return lightImage
         }
     }
-    
+
     /// 设置动态图片
     static func RD_dynamicImage(_ lightImage: String, _ darkImage: String) -> UIImage {
         if #available(iOS 13.0, *) {

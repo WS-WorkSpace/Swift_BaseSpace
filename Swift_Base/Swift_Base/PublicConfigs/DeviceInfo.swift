@@ -18,39 +18,6 @@ public typealias DEV = DeviceInfo
 /// 常用系统信息相关方法
 @objcMembers
 public class DeviceInfo: NSObject {
-    // 屏幕宽度
-    public static let w = UIScreen.main.bounds.width
-
-    // 屏幕高度
-    public static let h = UIScreen.main.bounds.height
-
-    public static var window: UIWindow? {
-        return UIWindow.keyWindow
-    }
-
-    public static let bounds = UIScreen.main.bounds
-
-    // 等比适配
-    public static let equalScale = w / 375
-
-    // 状态栏高度
-    public static let statusBarHeight: CGFloat = isSupportSafeArea ? (window?.safeAreaInsets.top ?? 20) : 20
-
-    // 底部安全区高度
-    public static let bottomSafeHeight: CGFloat = isSupportSafeArea ? (window?.safeAreaInsets.bottom ?? 0) : 0
-
-    // 导航栏高度
-    public static let naviHeight: CGFloat = 44
-
-    // TableBar高度
-    public static let tableBarHeight: CGFloat = 49
-
-    // 顶部高度
-    public static let topBarHeight: CGFloat = statusBarHeight + naviHeight
-
-    // 底部高度
-    public static let bottomBarHeight: CGFloat = bottomSafeHeight + tableBarHeight
-
     // 设备udid
     static let identifierNumber = UIDevice.current.identifierForVendor?.uuidString ?? ""
 
@@ -280,3 +247,38 @@ let RD_Is_iPhone12ProMax = (UIScreen.instancesRespond(to: #selector(getter: UISc
 
 /// 刘海屏系列
 let RD_Is_IPhoneX_All = (RD_Is_iPhoneX || RD_Is_iPhoneXR || RD_Is_iPhoneXS || RD_Is_iPhoneXsMax || RD_Is_iPhone12Mini || RD_Is_iPhone12 || RD_Is_iPhone12ProMax)
+
+/*
+ // 屏幕宽度
+ public static let w = UIScreen.main.bounds.width
+
+ // 屏幕高度
+ public static let h = UIScreen.main.bounds.height
+
+ public static var window: UIWindow? {
+     return UIWindow.keyWindow
+ }
+
+ public static let bounds = UIScreen.main.bounds
+
+ // 等比适配
+ public static let equalScale = w / 375
+
+ // 状态栏高度
+ public static let statusBarHeight: CGFloat = isSupportSafeArea ? (window?.safeAreaInsets.top ?? 20) : 20
+
+ // 底部安全区高度
+ public static let bottomSafeHeight: CGFloat = isSupportSafeArea ? (window?.safeAreaInsets.bottom ?? 0) : 0
+
+ // 导航栏高度
+ public static let naviHeight: CGFloat = 44
+
+ // TableBar高度
+ public static let tableBarHeight: CGFloat = 49
+
+ // 顶部高度
+ public static let topBarHeight: CGFloat = statusBarHeight + naviHeight
+
+ // 底部高度
+ public static let bottomBarHeight: CGFloat = bottomSafeHeight + tableBarHeight
+ */

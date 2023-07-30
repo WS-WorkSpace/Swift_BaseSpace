@@ -30,7 +30,6 @@
 import SnapKit
 
 public extension Array where Element: ConstraintView {
-    
     var snp: ConstraintArrayDSL {
         return ConstraintArrayDSL(views: self)
     }
