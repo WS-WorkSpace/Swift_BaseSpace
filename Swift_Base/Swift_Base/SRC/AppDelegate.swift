@@ -13,14 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.initWindow()
-
-        let str = " dsadsadsadsadsadsadsadsadsadsadsadsadsadsadasd1231231232131313212313213213213 "
-        let trimmedStr = str.trimmingCharacters(in: .whitespacesAndNewlines)
-
-        self.window?.RD_y = 100
-        print(str.RD_isEmpty)
-        print(str.RD_getStringHeight(100, 18))
-
+        AppDelegate_configIQKeyboardManager()
+        monitorNetwork2()
         return true
     }
 

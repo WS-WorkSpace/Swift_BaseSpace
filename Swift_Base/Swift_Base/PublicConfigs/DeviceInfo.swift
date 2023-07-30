@@ -122,17 +122,17 @@ public class DeviceInfo: NSObject {
         return false
     }
 
-    public static func scaleW(_ width: CGFloat, fit: CGFloat = 375.0) -> CGFloat {
-        return w / fit * width
-    }
+//    public static func scaleW(_ width: CGFloat, fit: CGFloat = 375.0) -> CGFloat {
+//        return w / fit * width
+//    }
+//
+//    public static func scaleH(_ height: CGFloat, fit: CGFloat = 812.0) -> CGFloat {
+//        return h / fit * height
+//    }
 
-    public static func scaleH(_ height: CGFloat, fit: CGFloat = 812.0) -> CGFloat {
-        return h / fit * height
-    }
-
-    public static func scale(_ value: CGFloat) -> CGFloat {
-        return scaleW(value)
-    }
+//    public static func scale(_ value: CGFloat) -> CGFloat {
+//        return scaleW(value)
+//    }
 
     // MARK: - Private
 
