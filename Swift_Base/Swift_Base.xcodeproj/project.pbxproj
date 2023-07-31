@@ -61,6 +61,8 @@
 		C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */; };
 		C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF422A7738D700C5CF02 /* NavigationController.swift */; };
 		C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF492A77714500C5CF02 /* SettingViewController.swift */; };
+		C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */; };
+		C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +154,8 @@
 		C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveTabViewController.swift; sourceTree = "<group>"; };
 		C6C5CF422A7738D700C5CF02 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		C6C5CF492A77714500C5CF02 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVersion.swift; sourceTree = "<group>"; };
+		C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +375,7 @@
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
 				C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */,
+				C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			children = (
 				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
 				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
+				C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */,
 				C6C5CF482A776A5900C5CF02 /* Tab1 */,
 				C6C5CF472A776A5300C5CF02 /* Tab2 */,
 				C6C5CF462A776A4D00C5CF02 /* Tab3 */,
@@ -696,9 +702,11 @@
 				C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */,
 				C6C5CED52A75D84F00C5CF02 /* MBProgressHUD+Extension.swift in Sources */,
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
+				C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
+				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
 				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,

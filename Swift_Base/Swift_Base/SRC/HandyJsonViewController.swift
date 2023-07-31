@@ -42,7 +42,7 @@ class HandyJsonViewController: UIViewController {
 
     }
     func loadNewData() -> Void {
-        sleep(2)
+        sleep(1)
         self.tabview.mj_header?.endRefreshing()
 
 //        let baseUrl = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
@@ -56,7 +56,7 @@ class HandyJsonViewController: UIViewController {
 //        }
     }
     func loadMoreData() -> Void {
-        sleep(2)
+        sleep(1)
         self.tabview.mj_footer?.endRefreshing()
 //        let _ = page + 1
 //        let baseUrl = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
@@ -76,6 +76,14 @@ class HandyJsonViewController: UIViewController {
     
 }
 extension HandyJsonViewController:UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "aaaa"
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.mj_footer?.isHidden = (items.count == 0)
         return items.count
@@ -97,6 +105,10 @@ extension HandyJsonViewController:UITableViewDataSource{
     }
 }
 extension HandyJsonViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
