@@ -18,6 +18,13 @@ let kNaviHeight = 44.0
 /// TableBar高度
 let kTableBarHeight = 49.0
 
+// 按照 iphoneX 比例缩放
+let kWidthRatio = (kScreenWidth / 375.0)
+let kHeightRatio = (kScreenHeight / 812.0)
+func RD_Ratio(_ value: CGFloat) -> CGFloat {
+    return kScreenWidth * (value / 375.0)
+}
+
 // MARK: - 方法获取高度
 
 /** 顶部状态栏高度（包括安全区5px） **/
