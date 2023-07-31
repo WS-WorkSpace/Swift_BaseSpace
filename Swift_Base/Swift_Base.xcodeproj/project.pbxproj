@@ -60,6 +60,7 @@
 		C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */; };
 		C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */; };
 		C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF422A7738D700C5CF02 /* NavigationController.swift */; };
+		C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF492A77714500C5CF02 /* SettingViewController.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +151,7 @@
 		C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourTabViewController.swift; sourceTree = "<group>"; };
 		C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveTabViewController.swift; sourceTree = "<group>"; };
 		C6C5CF422A7738D700C5CF02 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		C6C5CF492A77714500C5CF02 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,13 +431,54 @@
 			children = (
 				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
 				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
-				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
-				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
-				C6C5CF3C2A77366800C5CF02 /* ThreeTabViewController.swift */,
-				C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */,
-				C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */,
+				C6C5CF482A776A5900C5CF02 /* Tab1 */,
+				C6C5CF472A776A5300C5CF02 /* Tab2 */,
+				C6C5CF462A776A4D00C5CF02 /* Tab3 */,
+				C6C5CF452A776A4300C5CF02 /* Tab4 */,
+				C6C5CF442A776A2900C5CF02 /* Tab5 */,
 			);
 			path = AppBusiness;
+			sourceTree = "<group>";
+		};
+		C6C5CF442A776A2900C5CF02 /* Tab5 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */,
+				C6C5CF492A77714500C5CF02 /* SettingViewController.swift */,
+			);
+			path = Tab5;
+			sourceTree = "<group>";
+		};
+		C6C5CF452A776A4300C5CF02 /* Tab4 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */,
+			);
+			path = Tab4;
+			sourceTree = "<group>";
+		};
+		C6C5CF462A776A4D00C5CF02 /* Tab3 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF3C2A77366800C5CF02 /* ThreeTabViewController.swift */,
+			);
+			path = Tab3;
+			sourceTree = "<group>";
+		};
+		C6C5CF472A776A5300C5CF02 /* Tab2 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
+			);
+			path = Tab2;
+			sourceTree = "<group>";
+		};
+		C6C5CF482A776A5900C5CF02 /* Tab1 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
+			);
+			path = Tab1;
 			sourceTree = "<group>";
 		};
 		D956914C5C9F306AEEBF4E78 /* Frameworks */ = {
@@ -665,6 +708,7 @@
 				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
 				C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
+				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
 				C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */,

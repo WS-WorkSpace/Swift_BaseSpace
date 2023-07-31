@@ -124,7 +124,7 @@ class FiveTabViewController: UIViewController {
             make.centerX.equalTo(self.titleLabel).offset(0)
             make.top.equalTo(self.formView.snp_bottom).offset(30)
             make.width.equalTo(self.formView.snp_width)
-            make.height.equalTo(90)
+            make.height.equalTo(30)
         }
     }
      
@@ -133,18 +133,19 @@ class FiveTabViewController: UIViewController {
         // 收起键盘
         self.view.endEditing(true)
         // 视图约束恢复初始设置
-//        UIView.animate(withDuration: 0.5, animations: { () in
-//            self.topConstraint?.update(offset: kStatusBarHeight+150)
-//            self.view.layoutIfNeeded()
-//        })
+        UIView.animate(withDuration: 0.3, animations: { () in
+            self.topConstraint?.update(offset: kStatusBarHeight+150)
+            self.view.layoutIfNeeded()
+        })
+        self.navigationController?.pushViewController(SettingViewController(), animated: true)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-//        UIView.animate(withDuration: 0.5, animations: { () in
-//            self.topConstraint?.update(offset: kStatusBarHeight+150)
-//            self.view.layoutIfNeeded()
-//        })
+        UIView.animate(withDuration: 0.3, animations: { () in
+            self.topConstraint?.update(offset: kStatusBarHeight+150)
+            self.view.layoutIfNeeded()
+        })
     }
 }
 
@@ -152,10 +153,10 @@ extension FiveTabViewController: UITextFieldDelegate {
     // 输入框获取焦点开始编辑
     // 动画更新约束,键盘高度125
     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        UIView.animate(withDuration: 0.5, animations: { () in
-//            self.topConstraint?.update(offset: kStatusBarHeight+150-125)
-//            self.view.layoutIfNeeded()
-//        })
+        UIView.animate(withDuration: 0.3, animations: { () in
+            self.topConstraint?.update(offset: kStatusBarHeight+150-125)
+            self.view.layoutIfNeeded()
+        })
     }
 
     // 输入框返回时操作

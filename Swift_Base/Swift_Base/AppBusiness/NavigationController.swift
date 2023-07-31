@@ -7,75 +7,138 @@
 
 import UIKit
 
-class NavigationController: UINavigationController, UINavigationControllerDelegate {
-
-    var popDelegate: UIGestureRecognizerDelegate?
-    
+class NavigationController: UINavigationController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        //https://www.jianshu.com/p/f7dc127ecda9?ivk_sa=1024320u
-        self.view.backgroundColor = .white
-        let primaryTextColor = UIColor.green
-        // 解决侧滑返回失效问题
-        self.popDelegate = self.interactivePopGestureRecognizer?.delegate
-        self.delegate = self
-        self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-        self.navigationBar.layer.shadowRadius = 20
-        self.navigationBar.layer.shadowOpacity = 0.2
-        self.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5)
-        self.navigationBar.tintColor = primaryTextColor
-        self.navigationBar.isTranslucent = false
-        self.navigationBar.barTintColor = .white
-
-        let appearance = UINavigationBar.appearance()
-        appearance.shadowImage = UIImage()
-        appearance.layer.shadowColor = UIColor.blue.cgColor
-        appearance.layer.shadowRadius = 20
-        appearance.layer.shadowOpacity = 0.2
-        appearance.layer.shadowOffset = CGSize(width: 0, height: 5)
-        appearance.tintColor = primaryTextColor //前景色，按钮颜色
-        appearance.isTranslucent = false // 导航条背景是否透明
-        appearance.barTintColor = .white //背景色，导航条背景色
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: primaryTextColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .medium)] // 设置导航条标题颜色，还可以设置其它文字属性，只需要在里面添加对应的属性
         
-        // 解决iOS15 barTintColor设置无效的问题，参考https://developer.apple.com/forums/thread/682420
-        if #available(iOS 15.0, *) {
-            let newAppearance = UINavigationBarAppearance()
-            newAppearance.configureWithOpaqueBackground()
-            newAppearance.backgroundColor = .white
-            newAppearance.shadowImage = UIImage()
-            newAppearance.shadowColor = nil
-            newAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: primaryTextColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .medium)]
-            
-            appearance.standardAppearance = newAppearance
-            appearance.scrollEdgeAppearance = appearance.standardAppearance
-        }
+        // 设置半透明毛玻璃导航条（白底黑字）
+        //        RD_setHalfTransparentNav()
+        //        RD_setNavColor(UIColor.white, BaseThemeColor, false)
+        
+        setNavColor(BaseNavTitleColor2, BaseNavBgColor2, false) // 主题色白字
+        setNavColor(BaseNavTitleColor, BaseNavBgColor, false) // 白底黑字
+        
+        addFullScreenPan() //全屏侧滑返回
+        self.interactivePopGestureRecognizer?.delegate = self //侧滑返回
     }
-//https://blog.csdn.net/same_life/article/details/125320337
-    private func setupAppearance() {
-        //自定义navBar，根据当前的nav自定义 navBar
-        let navBar = UINavigationBar.appearance()
-        var attrTitleText = [NSAttributedString.Key: Any]()
-        if #available(iOS 13.0, *) {
-            let navBarAppearance = UINavigationBarAppearance()
-            //Opaque: 不透明
-            navBarAppearance.configureWithOpaqueBackground()
-            //设置导航栏的背景色
-            navBarAppearance.backgroundColor = .secondarySystemGroupedBackground
-            attrTitleText = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.tertiarySystemBackground]
-            navBarAppearance.titleTextAttributes = attrTitleText as [NSAttributedString.Key: Any]
-            navBar.standardAppearance = navBarAppearance
-            navBar.scrollEdgeAppearance = navBarAppearance
-        } else {
-            attrTitleText = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.black]
-            //设置导航条的背景色
-            navBar.barTintColor = .yellow
-            navBar.titleTextAttributes = attrTitleText as [NSAttributedString.Key: Any]
+    
+    
+    // MARK: - <UIGestureRecognizerDelegate>
+    // 什么时候调用：每次触发手势之前都会询问下代理，是否触发。
+    // 作用：拦截手势触发,手势识别器对象会调用这个代理方法来决定手势是否有效
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+    
+    /// 重写push方法的目的 : 拦截所有push进来的子控制器
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if (self.children.count > 0 ) {
+            let backItem = UIBarButtonItem.RD_backItem(imageName: "ic_dynamic_nav_back", target: self, action: #selector(ClickBackBtn))
+            viewController.navigationItem.leftBarButtonItem = backItem
+            // 隐藏底部的工具条
+            viewController.hidesBottomBarWhenPushed = true
         }
-        //设置导航条不透明
-        navBar.isTranslucent = false
-        //设置除导航条以外的其他字体的颜色
-        navBar.tintColor = .lightGray
+        // 所有设置搞定后, 再push控制器
+        super.pushViewController(viewController, animated: animated)
+    }
+    @objc func ClickBackBtn() {
+        self.popViewController(animated: true)
+    }
+    
+    // MARK: - 全屏侧滑返回
+    func addFullScreenPan() {
+        guard let targets  = interactivePopGestureRecognizer?.value(forKey: "_targets") as? [NSObject] else {return}
+        let targetObjc = targets[0]
+        let target = targetObjc.value(forKey: "target")
+        let action = Selector(("handleNavigationTransition:"))
+        
+        let panges = UIPanGestureRecognizer(target: target, action: action)
+        view.addGestureRecognizer(panges)
     }
 }
+
+// MARK: - 设置半透明毛玻璃导航条（白底黑字）
+
+func setHalfTransparentNav() {
+    // 设置标题字体颜色
+    var titleTextAttributes = [NSAttributedString.Key: Any]()
+    titleTextAttributes[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 18)
+    titleTextAttributes[NSAttributedString.Key.foregroundColor] = UIColor.black
+    UINavigationBar.appearance().titleTextAttributes = titleTextAttributes
+    if #available(iOS 15.0, *) {
+        let appearance = UINavigationBarAppearance()
+
+        appearance.configureWithDefaultBackground() // 使用默认背景和阴影值配置条形外观对象。
+        //        appearance.configureWithTransparentBackground(); //配置具有透明背景且无阴影的条形外观对象。
+        //        appearance.configureWithOpaqueBackground(); //使用一组适合当前主题的不透明颜色配置栏外观对象。
+
+        appearance.titleTextAttributes = titleTextAttributes
+        // standardAppearance：常规状态, 标准外观，iOS15之后不设置的时候，导航栏背景透明
+        UINavigationBar.appearance().standardAppearance = appearance
+        // scrollEdgeAppearance：被scrollview向下拉的状态, 滚动时外观，不设置的时候，使用标准外观
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+}
+
+// MARK: - 设置透明导航条,白字
+
+func setTransparentNav() {
+    setNavColor(UIColor.white, UIColor.clear, true)
+}
+
+// MARK: - 设置导航条背景颜色和标题颜色， iOS15是否透明
+
+func setNavColor(_ titleColor: UIColor, _ navBgColor: UIColor, _ isTransparent: Bool) {
+    // 设置标题字体颜色
+    var titleTextAttributes = [NSAttributedString.Key: Any]()
+    titleTextAttributes[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 18)
+    titleTextAttributes[NSAttributedString.Key.foregroundColor] = titleColor
+    UINavigationBar.appearance().titleTextAttributes = titleTextAttributes
+
+    // 设置导航栏背景色
+    UINavigationBar.appearance().barTintColor = navBgColor
+
+    // iOS15适配
+    if #available(iOS 15.0, *) {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = navBgColor
+        appearance.titleTextAttributes = titleTextAttributes
+        if isTransparent {
+            // 设置透明
+            appearance.backgroundColor = UIColor.clear // 透明背景色
+            appearance.backgroundEffect = nil // 不使用毛玻璃效果
+            appearance.shadowColor = nil // 隐藏底部分隔线
+        }
+        // standardAppearance：常规状态, 标准外观，iOS15之后不设置的时候，导航栏背景透明
+        UINavigationBar.appearance().standardAppearance = appearance
+        // scrollEdgeAppearance：被scrollview向下拉的状态, 滚动时外观，不设置的时候，使用标准外观
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+}
+
+// https://blog.csdn.net/same_life/article/details/125320337
+//private func setupAppearance() {
+//    // 自定义navBar，根据当前的nav自定义 navBar
+//    let navBar = UINavigationBar.appearance()
+//    var attrTitleText = [NSAttributedString.Key: Any]()
+//    if #available(iOS 13.0, *) {
+//        let navBarAppearance = UINavigationBarAppearance()
+//        // Opaque: 不透明
+//        navBarAppearance.configureWithOpaqueBackground()
+//        // 设置导航栏的背景色
+//        navBarAppearance.backgroundColor = .secondarySystemGroupedBackground
+//        attrTitleText = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.tertiarySystemBackground]
+//        navBarAppearance.titleTextAttributes = attrTitleText as [NSAttributedString.Key: Any]
+//        navBar.standardAppearance = navBarAppearance
+//        navBar.scrollEdgeAppearance = navBarAppearance
+//    } else {
+//        attrTitleText = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.black]
+//        // 设置导航条的背景色
+//        navBar.barTintColor = .yellow
+//        navBar.titleTextAttributes = attrTitleText as [NSAttributedString.Key: Any]
+//    }
+//    // 设置导航条不透明
+//    navBar.isTranslucent = false
+//    // 设置除导航条以外的其他字体的颜色
+//    navBar.tintColor = .lightGray
+//}

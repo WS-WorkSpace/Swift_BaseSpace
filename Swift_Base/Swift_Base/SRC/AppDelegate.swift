@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.initWindow()
-        AppDelegate_configIQKeyboardManager()
         monitorNetwork2()
         #if DEBUG
         let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
