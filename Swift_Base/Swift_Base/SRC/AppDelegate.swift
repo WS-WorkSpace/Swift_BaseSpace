@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
         self.window?.addSubview(fpsLab)
         fpsLab.snp.makeConstraints { make in
-            make.top.equalTo(self.window!).offset(kStatusBarHeight)
+            make.top.equalTo(self.window!).offset(distanceTop)
             make.left.equalTo(self.window!).offset(10)
             make.size.equalTo(CGSizeMake(70, 30))
         }
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = HandyJsonViewController()
+        self.window?.rootViewController = BaseTabBarController()
     }
 
     // MARK: UISceneSession Lifecycle

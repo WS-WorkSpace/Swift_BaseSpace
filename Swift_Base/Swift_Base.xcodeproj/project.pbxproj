@@ -53,6 +53,13 @@
 		C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */; };
 		C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */; };
 		C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */; };
+		C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */; };
+		C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */; };
+		C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */; };
+		C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF3C2A77366800C5CF02 /* ThreeTabViewController.swift */; };
+		C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */; };
+		C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */; };
+		C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF422A7738D700C5CF02 /* NavigationController.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +143,13 @@
 		C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhProgressHUD.h; sourceTree = "<group>"; };
 		C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhProgressHUD.bundle; sourceTree = "<group>"; };
 		C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDActionSheet.swift; sourceTree = "<group>"; };
+		C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabViewController.swift; sourceTree = "<group>"; };
+		C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabViewController.swift; sourceTree = "<group>"; };
+		C6C5CF3C2A77366800C5CF02 /* ThreeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTabViewController.swift; sourceTree = "<group>"; };
+		C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourTabViewController.swift; sourceTree = "<group>"; };
+		C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveTabViewController.swift; sourceTree = "<group>"; };
+		C6C5CF422A7738D700C5CF02 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,8 +213,9 @@
 		C6C5CE732A745BD300C5CF02 /* Swift_Base */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CF2F2A77342100C5CF02 /* AppBusiness */,
 				C6C5CEEC2A76AA0E00C5CF02 /* Tools */,
-				C6C5CEE72A76A88400C5CF02 /* RD_Foundation */,
+				C6C5CEE72A76A88400C5CF02 /* RD_Model */,
 				C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */,
 				C6C5CEDA2A75D8D400C5CF02 /* Category */,
 				C6C5CEAF2A74C6D700C5CF02 /* PublicConfigs */,
@@ -297,15 +312,6 @@
 			path = Foundation_Category;
 			sourceTree = "<group>";
 		};
-		C6C5CED12A75D80E00C5CF02 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				C6C5CED32A75D82300C5CF02 /* MBProgressHUD */,
-				C6C5CED22A75D81700C5CF02 /* SnapKit */,
-			);
-			path = Vendors;
-			sourceTree = "<group>";
-		};
 		C6C5CED22A75D81700C5CF02 /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +335,6 @@
 				C6C5CEDD2A76120500C5CF02 /* Category_README.md */,
 				C6C5CECE2A75D71500C5CF02 /* Foundation_Category */,
 				C6C5CEBF2A75D36600C5CF02 /* UIKit_Category */,
-				C6C5CED12A75D80E00C5CF02 /* Vendors */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -337,20 +342,20 @@
 		C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
-				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
+				C6C5CF2D2A7733D400C5CF02 /* ViewControllers */,
+				C6C5CF2E2A77341000C5CF02 /* Views */,
 			);
 			path = RD_UIKit;
 			sourceTree = "<group>";
 		};
-		C6C5CEE72A76A88400C5CF02 /* RD_Foundation */ = {
+		C6C5CEE72A76A88400C5CF02 /* RD_Model */ = {
 			isa = PBXGroup;
 			children = (
 				C6C5CEE82A76A8D700C5CF02 /* BaseModel.swift */,
 				C6C5CEE52A76A82000C5CF02 /* JsonUtils.swift */,
 				C6C5CEEA2A76A9D300C5CF02 /* JsonTool.swift */,
 			);
-			path = RD_Foundation;
+			path = RD_Model;
 			sourceTree = "<group>";
 		};
 		C6C5CEEC2A76AA0E00C5CF02 /* Tools */ = {
@@ -359,6 +364,8 @@
 				C6C5CF1C2A770F3F00C5CF02 /* JhProgressHUD */,
 				C6C5CF082A76F99900C5CF02 /* Refresh */,
 				C6C5CF012A76DBF100C5CF02 /* FPSLabel */,
+				C6C5CED32A75D82300C5CF02 /* MBProgressHUD */,
+				C6C5CED22A75D81700C5CF02 /* SnapKit */,
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
 				C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */,
@@ -399,6 +406,36 @@
 				C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */,
 			);
 			path = JhProgressHUD;
+			sourceTree = "<group>";
+		};
+		C6C5CF2D2A7733D400C5CF02 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C6C5CF2E2A77341000C5CF02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
+				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6C5CF2F2A77342100C5CF02 /* AppBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
+				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
+				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
+				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
+				C6C5CF3C2A77366800C5CF02 /* ThreeTabViewController.swift */,
+				C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */,
+				C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */,
+			);
+			path = AppBusiness;
 			sourceTree = "<group>";
 		};
 		D956914C5C9F306AEEBF4E78 /* Frameworks */ = {
@@ -600,25 +637,32 @@
 				C6C5CED02A75D73200C5CF02 /* NSString+Extension.swift in Sources */,
 				C6C5CEE02A76958000C5CF02 /* AppDelegate+Extension.swift in Sources */,
 				C6C5CEC52A75D52600C5CF02 /* UIImage+DarkImage.swift in Sources */,
+				C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */,
 				C6C5CEE92A76A8D700C5CF02 /* BaseModel.swift in Sources */,
 				C6C5CEC32A75D46E00C5CF02 /* UIColor+Extension.swift in Sources */,
 				C6C5CEB82A758A2100C5CF02 /* FrameMacro.swift in Sources */,
 				C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */,
+				C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
+				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,
 				C6C5CEBC2A75D1D200C5CF02 /* GlobalConfig.swift in Sources */,
 				C6C5CEEE2A76AA2D00C5CF02 /* FileManagerTool.swift in Sources */,
 				C6C5CEB52A74E2D000C5CF02 /* Toast.swift in Sources */,
+				C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */,
 				C6C5CED52A75D84F00C5CF02 /* MBProgressHUD+Extension.swift in Sources */,
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
+				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
+				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
+				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
 				C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,

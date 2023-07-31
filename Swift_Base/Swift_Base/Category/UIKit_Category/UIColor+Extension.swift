@@ -10,11 +10,11 @@ import UIKit
 extension UIColor {
     /// color：支持“#123456”
     class func RD_hexColor(_ hexStr: String) -> UIColor {
-        return UIColor.RD_hexColorA(hexStr, 1.0)
+        return UIColor.RD_hexColor(hexStr, 1.0)
     }
 
     /// color：支持“#123456”
-    class func RD_hexColorA(_ hexStr: String, _ alpha: CGFloat) -> UIColor {
+    class func RD_hexColor(_ hexStr: String, _ alpha: CGFloat) -> UIColor {
         let hexString = hexStr.trimmingCharacters(in: .whitespacesAndNewlines)
         let scanner = Scanner(string: hexString)
         if hexString.hasPrefix("#") {
