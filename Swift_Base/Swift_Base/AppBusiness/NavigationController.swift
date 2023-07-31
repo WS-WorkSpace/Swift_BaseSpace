@@ -10,30 +10,30 @@ import UIKit
 class NavigationController: UINavigationController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // 设置半透明毛玻璃导航条（白底黑字）
         //        RD_setHalfTransparentNav()
         //        RD_setNavColor(UIColor.white, BaseThemeColor, false)
-        
+
         setNavColor(BaseNavTitleColor2, BaseNavBgColor2, false) // 主题色白字
         setNavColor(BaseNavTitleColor, BaseNavBgColor, false) // 白底黑字
-        
-        addFullScreenPan() //全屏侧滑返回
-        self.interactivePopGestureRecognizer?.delegate = self //侧滑返回
+
+        self.addFullScreenPan() // 全屏侧滑返回
+        self.interactivePopGestureRecognizer?.delegate = self // 侧滑返回
     }
-    
-    
+
     // MARK: - <UIGestureRecognizerDelegate>
+
     // 什么时候调用：每次触发手势之前都会询问下代理，是否触发。
     // 作用：拦截手势触发,手势识别器对象会调用这个代理方法来决定手势是否有效
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return viewControllers.count > 1
     }
-    
+
     /// 重写push方法的目的 : 拦截所有push进来的子控制器
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if (self.children.count > 0 ) {
-            let backItem = UIBarButtonItem.RD_backItem(imageName: "ic_dynamic_nav_back", target: self, action: #selector(ClickBackBtn))
+        if self.children.count > 0 {
+            let backItem = UIBarButtonItem.RD_backItem(imageName: "ic_dynamic_nav_back", target: self, action: #selector(self.ClickBackBtn))
             viewController.navigationItem.leftBarButtonItem = backItem
             // 隐藏底部的工具条
             viewController.hidesBottomBarWhenPushed = true
@@ -41,17 +41,19 @@ class NavigationController: UINavigationController, UIGestureRecognizerDelegate 
         // 所有设置搞定后, 再push控制器
         super.pushViewController(viewController, animated: animated)
     }
+
     @objc func ClickBackBtn() {
         self.popViewController(animated: true)
     }
-    
+
     // MARK: - 全屏侧滑返回
+
     func addFullScreenPan() {
-        guard let targets  = interactivePopGestureRecognizer?.value(forKey: "_targets") as? [NSObject] else {return}
+        guard let targets = interactivePopGestureRecognizer?.value(forKey: "_targets") as? [NSObject] else { return }
         let targetObjc = targets[0]
         let target = targetObjc.value(forKey: "target")
         let action = Selector(("handleNavigationTransition:"))
-        
+
         let panges = UIPanGestureRecognizer(target: target, action: action)
         view.addGestureRecognizer(panges)
     }
@@ -117,7 +119,7 @@ func setNavColor(_ titleColor: UIColor, _ navBgColor: UIColor, _ isTransparent: 
 }
 
 // https://blog.csdn.net/same_life/article/details/125320337
-//private func setupAppearance() {
+// private func setupAppearance() {
 //    // 自定义navBar，根据当前的nav自定义 navBar
 //    let navBar = UINavigationBar.appearance()
 //    var attrTitleText = [NSAttributedString.Key: Any]()
@@ -141,4 +143,4 @@ func setNavColor(_ titleColor: UIColor, _ navBgColor: UIColor, _ isTransparent: 
 //    navBar.isTranslucent = false
 //    // 设置除导航条以外的其他字体的颜色
 //    navBar.tintColor = .lightGray
-//}
+// }
