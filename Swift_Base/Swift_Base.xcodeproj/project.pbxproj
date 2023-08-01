@@ -219,7 +219,7 @@
 		C6C5CE732A745BD300C5CF02 /* Swift_Base */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF2F2A77342100C5CF02 /* AppBusiness */,
+				C6C5CF2F2A77342100C5CF02 /* ProjectDemo */,
 				C6C5CEEC2A76AA0E00C5CF02 /* Tools */,
 				C6C5CEE72A76A88400C5CF02 /* RD_Model */,
 				C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */,
@@ -433,7 +433,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C6C5CF2F2A77342100C5CF02 /* AppBusiness */ = {
+		C6C5CF2F2A77342100C5CF02 /* ProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
 				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
@@ -443,7 +443,7 @@
 				C6C5CF452A776A4300C5CF02 /* Tab4 */,
 				C6C5CF442A776A2900C5CF02 /* Tab5 */,
 			);
-			path = AppBusiness;
+			path = ProjectDemo;
 			sourceTree = "<group>";
 		};
 		C6C5CF442A776A2900C5CF02 /* Tab5 */ = {

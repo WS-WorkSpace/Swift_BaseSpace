@@ -13,16 +13,32 @@ import UIKit
 
 // MARK: - 设备数据
 
-public typealias DEV = DeviceInfo
+public typealias DEV_INFO = DeviceInfo
+
+let DEV_Application = UIApplication.shared
+let DEV_KeyWindow = UIApplication.shared.keyWindow
+let DEV_AppDelegate = UIApplication.shared.delegate
+let DEV_UserDefaults = UserDefaults.standard
+let DEV_NotificationCenter = NotificationCenter.default
 
 /// 常用系统信息相关方法
 @objcMembers
+
 public class DeviceInfo: NSObject {
+    // App 显示名称
+    static let appDisplayName = Bundle.main.infoDictionary?["CFBundleDisplayName"] ?? ""
+
+    // App BundleName
+    static let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] ?? ""
+
+    // App BuildNumber , build号
+    static let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) ?? ""
+
+    // Bundle Identifier ,App BundleID
+    static let bundleIdentifier: String = Bundle.main.bundleIdentifier ?? ""
+
     // 设备udid
     static let identifierNumber = UIDevice.current.identifierForVendor?.uuidString ?? ""
-
-    // Bundle Identifier
-    static let bundleIdentifier: String = Bundle.main.bundleIdentifier ?? ""
 
     // App版本号
     static let appVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
@@ -30,12 +46,10 @@ public class DeviceInfo: NSObject {
     // iOS版本
     static let iOSVersion: String = UIDevice.current.systemVersion
 
-    // MARK: - Device Info
+    // App Language en
+    static let aPPLanguage = NSLocale.preferredLanguages[0]
 
-    /// build号
-    public static var build: String {
-        return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String ?? "1"
-    }
+    // MARK: - Device Info
 
     /// app版本号
     public static var versionS: String {
