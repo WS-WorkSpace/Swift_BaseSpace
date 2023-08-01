@@ -419,7 +419,6 @@
 				C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */,
 				C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */,
 				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
-				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -427,6 +426,7 @@
 		C6C5CF2E2A77341000C5CF02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
 			);
