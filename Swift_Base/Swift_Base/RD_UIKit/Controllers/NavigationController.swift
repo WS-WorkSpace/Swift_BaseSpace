@@ -22,7 +22,7 @@ class NavigationController: UINavigationController {
     /// 重写push方法的目的 : 拦截所有push进来的子控制器
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.children.count > 0 {
-            let backItem = UIBarButtonItem.RD_backItem(imageName: "ic_dynamic_nav_back", target: self, action: #selector(self.ClickBackBtn))
+            let backItem = UIBarButtonItem.RD_backItem(imageName: ("ic_dynamic_nav_back", "ic_dynamic_nav_back"), target: self, action: #selector(self.ClickBackBtn))
             viewController.navigationItem.leftBarButtonItem = backItem
             // 隐藏底部的工具条
             viewController.hidesBottomBarWhenPushed = true

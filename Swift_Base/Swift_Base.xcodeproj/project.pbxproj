@@ -304,7 +304,6 @@
 				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
 				C6C5CECC2A75D67800C5CF02 /* UITableView+Extension.swift */,
-				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -348,7 +347,7 @@
 		C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF2D2A7733D400C5CF02 /* ViewControllers */,
+				C6C5CF2D2A7733D400C5CF02 /* Controllers */,
 				C6C5CF2E2A77341000C5CF02 /* Views */,
 			);
 			path = RD_UIKit;
@@ -375,7 +374,6 @@
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
 				C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */,
-				C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -415,11 +413,15 @@
 			path = JhProgressHUD;
 			sourceTree = "<group>";
 		};
-		C6C5CF2D2A7733D400C5CF02 /* ViewControllers */ = {
+		C6C5CF2D2A7733D400C5CF02 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */,
+				C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */,
+				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
+				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C6C5CF2E2A77341000C5CF02 /* Views */ = {
@@ -434,9 +436,7 @@
 		C6C5CF2F2A77342100C5CF02 /* AppBusiness */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
 				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
-				C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */,
 				C6C5CF482A776A5900C5CF02 /* Tab1 */,
 				C6C5CF472A776A5300C5CF02 /* Tab2 */,
 				C6C5CF462A776A4D00C5CF02 /* Tab3 */,
