@@ -69,7 +69,6 @@ extension DemoTableViewController: UITableViewDataSource {
 //    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.mj_footer?.isHidden = (dataArr.count == 0)
         return dataArr.count
     }
 

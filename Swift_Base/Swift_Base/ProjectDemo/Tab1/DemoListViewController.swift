@@ -16,14 +16,24 @@ class DemoListViewController: DemoTableViewController {
 
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
-        dataArr = ["ExampleUI_ViewController", "TableViewDemoListVC", "CollectionViewDemoListVC", "NetworkDemoListVC", "AlertDemoListVC", "LibDemoListVC"]
+        dataArr = ["ExampleUI_ViewController",
+                   "AlertUIViewController",
+                   "TableViewDemoListVC",
+                   "CollectionViewDemoListVC",
+                   "NetworkDemoListVC",
+                   "LibDemoListVC"]
         return dataArr
     }()
 
     private func configTableView() {
-        modelArr = ["基本控件", "UITableView", "UICollcetionView", "网络请求", "弹框加载框选择器", "三方库使用"]
+        modelArr = ["基本控件",
+                    "Alert底部弹框",
+                    "UITableView",
+                    "UICollcetionView",
+                    "网络请求",
+                    "三方库使用"]
 
-        clickCellBlock = { [weak self] (indexPath,text) in
+        clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别
             let className = self?.classArr.object(at: indexPath.row) as! String
             let jumpVC = NSString.RD_classFromString(className)

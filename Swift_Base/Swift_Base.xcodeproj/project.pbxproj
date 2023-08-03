@@ -67,6 +67,7 @@
 		C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */; };
 		C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF562A7B024B00C5CF02 /* DemoListViewController.swift */; };
 		C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */; };
+		C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +165,7 @@
 		C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		C6C5CF562A7B024B00C5CF02 /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
 		C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUI_ViewController.swift; sourceTree = "<group>"; };
+		C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */,
+				C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */,
 			);
 			path = ExampleList;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
+				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
 				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
