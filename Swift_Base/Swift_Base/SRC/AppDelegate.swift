@@ -16,15 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.initWindow()
         monitorNetwork2()
         self.getAppInfo()
-        #if DEBUG
-        let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
-        self.window?.addSubview(fpsLab)
-        fpsLab.snp.makeConstraints { make in
-            make.top.equalTo(self.window!).offset(distanceTop)
-            make.left.equalTo(self.window!).offset(10)
-            make.size.equalTo(CGSizeMake(70, 30))
-        }
-        #endif
         return true
     }
 
