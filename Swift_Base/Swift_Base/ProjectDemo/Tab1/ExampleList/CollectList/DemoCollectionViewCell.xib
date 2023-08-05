@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DemoCollectionViewCell" customModule="Swift_Base" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-nF-osP" userLabel="textLabel">
+                        <rect key="frame" x="0.0" y="120" width="120" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon-mini" translatesAutoresizingMaskIntoConstraints="NO" id="KQd-E9-472" userLabel="imgView">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KQd-E9-472" secondAttribute="trailing" id="7GH-dQ-N7o"/>
+                <constraint firstItem="xTs-nF-osP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CHZ-Ug-Iwg"/>
+                <constraint firstItem="xTs-nF-osP" firstAttribute="top" secondItem="KQd-E9-472" secondAttribute="bottom" id="Nwy-29-rui"/>
+                <constraint firstAttribute="trailing" secondItem="xTs-nF-osP" secondAttribute="trailing" id="OSr-md-i9u"/>
+                <constraint firstAttribute="bottom" secondItem="KQd-E9-472" secondAttribute="bottom" constant="20" id="Tpv-j9-PcB"/>
+                <constraint firstItem="KQd-E9-472" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xss-3K-nU0"/>
+                <constraint firstAttribute="bottom" secondItem="xTs-nF-osP" secondAttribute="bottom" id="bzL-Ce-vWs"/>
+                <constraint firstItem="KQd-E9-472" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ikb-kI-ebG"/>
+            </constraints>
+            <size key="customSize" width="122" height="135"/>
+            <connections>
+                <outlet property="imgView" destination="KQd-E9-472" id="zzb-8p-HPQ"/>
+                <outlet property="textLabel" destination="xTs-nF-osP" id="Aci-k2-uxh"/>
+            </connections>
+            <point key="canvasLocation" x="36.92307692307692" y="50.829383886255918"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AppIcon-mini" width="76" height="76"/>
+    </resources>
+</document>

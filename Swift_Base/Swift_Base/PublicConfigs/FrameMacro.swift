@@ -18,7 +18,16 @@ let kNaviHeight = 44.0
 /// TableBar高度
 let kTableBarHeight = 49.0
 
-// 按照 iphoneX 比例缩放
+// MARK: - 计算使用高度
+
+/// 顶部高度 = 顶部状态栏高度 + 导航条高度
+let distanceTop = (kStatusBarHeight + kNaviHeight)
+/// 底部高度 = Tabbar高度 + 底部高度
+let distanceBottom = (49.0 + kBottomSafeHeight)
+/// table/collection 高度 = 当前屏幕高度 - (顶部状态栏高度 + 导航条高度44) - (Tabbar高度49 + 底部高度34)
+let kScrollViewHeight = kScreenHeight-distanceTop-distanceBottom
+let kScrollViewFrame = CGRect(x: 0, y: distanceTop, width: kScreenWidth, height: kScrollViewHeight)
+/// 按照 iphoneX 比例缩放
 let kWidthRatio = (kScreenWidth / 375.0)
 let kHeightRatio = (kScreenHeight / 812.0)
 func RD_Ratio(_ value: CGFloat) -> CGFloat {
@@ -40,13 +49,6 @@ let kTopSafeHeight = SAFEAREA_TOP()
 /// let safeAreaInsets_top: CGFloat = (1 == 1) ? (getWindow()?.safeAreaInsets.top ?? 20) : 20
 /// 34 || 0
 let kBottomSafeHeight = SAFEAREA_BOTTOM()
-
-// MARK: - 计算使用高度
-
-/// 顶部高度 = 顶部状态栏高度 + 导航条高度
-let distanceTop = (kStatusBarHeight + kNaviHeight)
-/// 底部高度 = Tabbar高度 + 底部高度
-let distanceBottom = (49.0 + kBottomSafeHeight)
 
 // MARK: - 方法
 

@@ -1,13 +1,13 @@
 //
-//  DemoListViewController.swift
+//  CollectListViewController.swift
 //  Swift_Base
 //
-//  Created by 王爽 on 2023/8/3.
+//  Created by 王爽 on 2023/8/5.
 //
 
 import UIKit
 
-class DemoListViewController: DemoTableViewController {
+class CollectListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "示例1.0"
@@ -16,20 +16,20 @@ class DemoListViewController: DemoTableViewController {
 
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
-        dataArr = ["ExampleUI_ViewController",
-                   "AlertUIViewController",
+        dataArr = ["EasyCollectionViewController",
+                   "NineGridViewController",
                    "TableViewDemoListVC",
-                   "CollectListViewController",
+                   "BaseCollectionViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
         return dataArr
     }()
 
     private func configTableView() {
-        modelArr = ["基本控件",
-                    "Alert底部弹框",
+        modelArr = ["基本使用",
+                    "九宫格",
                     "UITableView",
-                    "UICollcetionView列表",
+                    "UICollcetionView",
                     "网络请求",
                     "三方库使用"]
 
@@ -41,4 +41,5 @@ class DemoListViewController: DemoTableViewController {
             self?.navigationController?.pushViewController(jumpVC!, animated: true)
         }
     }
+
 }

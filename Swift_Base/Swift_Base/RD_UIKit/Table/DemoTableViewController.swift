@@ -8,7 +8,6 @@
 import UIKit
 
 class DemoTableViewController: BaseViewController {
-
     private lazy var dataArr = [String]()
     var modelArr: [String] {
         get {
@@ -35,7 +34,7 @@ class DemoTableViewController: BaseViewController {
 
     lazy var tableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
-        tableView.frame = CGRect(x: 0, y: distanceTop, width: kScreenWidth, height: kScreenHeight-distanceTop-distanceBottom)
+        tableView.frame = kScrollViewFrame
         //        tableView.separatorStyle = .none //不显示分割线
         //        tableView.showsVerticalScrollIndicator = false;
         //        tableView.scrollEnabled = false // 设置tableview 不能滚动
@@ -120,7 +119,7 @@ extension DemoTableViewController: UITableViewDelegate {
 
         let cell = tableView.cellForRow(at: indexPath)
         let text = cell?.textLabel?.text ?? ""
-        Lg.log(" 父类 - 选中cell : \(text)")
+        Lg.log("- 选中cell : \(text)")
         clickCellBlock?(indexPath, text)
     }
 }

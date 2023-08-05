@@ -9,7 +9,7 @@ import Foundation
 import MBProgressHUD
 
 // Alert.show(type: .error, text: message)
-class Alert: NSObject {
+class MBProgressHUD_Alert: NSObject {
     enum AlertType {
         case success
         case info
