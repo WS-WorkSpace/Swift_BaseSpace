@@ -18,7 +18,7 @@ class CollectListViewController: DemoTableViewController {
         var dataArr = NSMutableArray()
         dataArr = ["EasyCollectionViewController",
                    "NineGridViewController",
-                   "TableViewDemoListVC",
+                   "SessionBackImageSectionViewController",
                    "BaseCollectionViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
@@ -28,7 +28,7 @@ class CollectListViewController: DemoTableViewController {
     private func configTableView() {
         modelArr = ["基本使用",
                     "九宫格",
-                    "UITableView",
+                    "自定义section背景图",
                     "UICollcetionView",
                     "网络请求",
                     "三方库使用"]
@@ -41,5 +41,4 @@ class CollectListViewController: DemoTableViewController {
             self?.navigationController?.pushViewController(jumpVC!, animated: true)
         }
     }
-
 }

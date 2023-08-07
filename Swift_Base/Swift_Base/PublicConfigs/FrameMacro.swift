@@ -24,8 +24,8 @@ let kTableBarHeight = 49.0
 let distanceTop = (kStatusBarHeight + kNaviHeight)
 /// 底部高度 = Tabbar高度 + 底部高度
 let distanceBottom = (49.0 + kBottomSafeHeight)
-/// table/collection 高度 = 当前屏幕高度 - (顶部状态栏高度 + 导航条高度44) - (Tabbar高度49 + 底部高度34)
-let kScrollViewHeight = kScreenHeight-distanceTop-distanceBottom
+/// table/collection 高度 = 当前屏幕高度 - (顶部状态栏高度 + 导航条高度44) - 底部高度34
+let kScrollViewHeight = kScreenHeight-distanceTop-kBottomSafeHeight
 let kScrollViewFrame = CGRect(x: 0, y: distanceTop, width: kScreenWidth, height: kScrollViewHeight)
 /// 按照 iphoneX 比例缩放
 let kWidthRatio = (kScreenWidth / 375.0)

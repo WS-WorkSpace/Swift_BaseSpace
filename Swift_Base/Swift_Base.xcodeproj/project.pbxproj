@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */; };
+		C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */; };
+		C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */; };
+		C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437042A8080E800C304B4 /* SectionDecorationLayout.swift */; };
+		C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437062A80811B00C304B4 /* SessionBackImageSectionViewController.swift */; };
+		C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370B2A80829D00C304B4 /* ContentCell.swift */; };
+		C654370E2A80844700C304B4 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370D2A80844700C304B4 /* Then.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
 		C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7F2A745BD400C5CF02 /* LaunchScreen.storyboard */; };
@@ -101,6 +107,12 @@
 		7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A286F9C1BFE2A0885F7E4F /* Pods-Swift_Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Base.release.xcconfig"; path = "Target Support Files/Pods-Swift_Base/Pods-Swift_Base.release.xcconfig"; sourceTree = "<group>"; };
 		C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridViewController.swift; sourceTree = "<group>"; };
+		C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridFlowLayout.swift; sourceTree = "<group>"; };
+		C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundReusableView.swift; sourceTree = "<group>"; };
+		C65437042A8080E800C304B4 /* SectionDecorationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDecorationLayout.swift; sourceTree = "<group>"; };
+		C65437062A80811B00C304B4 /* SessionBackImageSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBackImageSectionViewController.swift; sourceTree = "<group>"; };
+		C654370B2A80829D00C304B4 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		C654370D2A80844700C304B4 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,6 +230,36 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		C65437082A80816400C304B4 /* BasicUse */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF6C2A7E330400C5CF02 /* EasyCollectionViewController.swift */,
+				C6C5CF6E2A7E347B00C5CF02 /* DemoCollectionViewCell.swift */,
+				C6C5CF6F2A7E347B00C5CF02 /* DemoCollectionViewCell.xib */,
+			);
+			path = BasicUse;
+			sourceTree = "<group>";
+		};
+		C65437092A80817E00C304B4 /* NineGrid */ = {
+			isa = PBXGroup;
+			children = (
+				C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */,
+				C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */,
+			);
+			path = NineGrid;
+			sourceTree = "<group>";
+		};
+		C654370A2A80818B00C304B4 /* SessionBackImageSection */ = {
+			isa = PBXGroup;
+			children = (
+				C65437062A80811B00C304B4 /* SessionBackImageSectionViewController.swift */,
+				C65437042A8080E800C304B4 /* SectionDecorationLayout.swift */,
+				C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */,
+				C654370B2A80829D00C304B4 /* ContentCell.swift */,
+			);
+			path = SessionBackImageSection;
 			sourceTree = "<group>";
 		};
 		C6C5CE682A745BD300C5CF02 = {
@@ -402,6 +444,7 @@
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
 				C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */,
+				C654370D2A80844700C304B4 /* Then.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -550,10 +593,9 @@
 		C6C5CF6B2A7E325E00C5CF02 /* CollectList */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF6C2A7E330400C5CF02 /* EasyCollectionViewController.swift */,
-				C6C5CF6E2A7E347B00C5CF02 /* DemoCollectionViewCell.swift */,
-				C6C5CF6F2A7E347B00C5CF02 /* DemoCollectionViewCell.xib */,
-				C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */,
+				C65437082A80816400C304B4 /* BasicUse */,
+				C65437092A80817E00C304B4 /* NineGrid */,
+				C654370A2A80818B00C304B4 /* SessionBackImageSection */,
 			);
 			path = CollectList;
 			sourceTree = "<group>";
@@ -747,6 +789,7 @@
 			files = (
 				C6C5CEBA2A75CC5000C5CF02 /* DeviceInfo.swift in Sources */,
 				C6C5CF652A7D0B0500C5CF02 /* BaseCollectionViewCell.swift in Sources */,
+				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
@@ -754,13 +797,16 @@
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
+				C654370E2A80844700C304B4 /* Then.swift in Sources */,
 				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
 				C6C5CF632A7D03CE00C5CF02 /* BaseCollectionView.swift in Sources */,
 				C6C5CF612A7D011A00C5CF02 /* BaseCollectionViewController.swift in Sources */,
 				C6C5CEE62A76A82000C5CF02 /* JsonUtils.swift in Sources */,
 				C6C5CED02A75D73200C5CF02 /* NSString+Extension.swift in Sources */,
+				C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */,
 				C6C5CF6D2A7E330400C5CF02 /* EasyCollectionViewController.swift in Sources */,
 				C6C5CEE02A76958000C5CF02 /* AppDelegate+Extension.swift in Sources */,
+				C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */,
 				C6C5CEC52A75D52600C5CF02 /* UIImage+DarkImage.swift in Sources */,
 				C6C5CF6A2A7E325300C5CF02 /* CollectListViewController.swift in Sources */,
 				C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */,
@@ -796,6 +842,8 @@
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
+				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
+				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
 				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
 				C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,

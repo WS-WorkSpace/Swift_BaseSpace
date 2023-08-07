@@ -15,6 +15,9 @@ class EasyCollectionViewController: BaseCollectionViewController {
         
         modelArr = dataArr
     }
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
 
     func setupCollectionView() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -30,20 +33,21 @@ class EasyCollectionViewController: BaseCollectionViewController {
         flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin) // 每组的四周位置间距 ,分别为上、左、下、右
         
         collectionFlowLayout = flowLayout
+        
         registerCellWithNib = "DemoCollectionViewCell"
 
-        custumCellBlock = { [weak self] indexPath, custumCell in
-            let cell: DemoCollectionViewCell = custumCell as! DemoCollectionViewCell
+        customCellBlock = { [weak self] indexPath, customCell in
+            let cell = customCell as? DemoCollectionViewCell
             
             // -------------------- SwiftyJSON --------------------
             let dict = JSON(self?.modelArr as Any)[indexPath.row]
             //            JhLog("dict : \(dict)")
             //            JhLog("text : \(dict["text"])")
-            cell.textLabel.text = String(describing: dict["text"])
-            cell.imgView.image = UIImage(named: String(describing: dict["img"]))
+            cell?.textLabel.text = String(describing: dict["text"])
+            cell?.imgView.image = UIImage(named: String(describing: dict["img"]))
         }
         
-        clickCustumCellBlock = { [weak self] indexPath in
+        clickCustomCellBlock = { [weak self] indexPath in
             let cell = self?.collectionView.cellForItem(at: indexPath) as! DemoCollectionViewCell
             Lg.log("cell : \(String(describing: cell.textLabel.text))")
             
@@ -62,8 +66,9 @@ class EasyCollectionViewController: BaseCollectionViewController {
         headerView.backgroundColor = RD_RandomColor()
         headerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: headerHeight)
         collectionFlowLayout?.headerReferenceSize = CGSize(width: kScreenWidth, height: headerHeight)
-        //        Jh_collectionFlowLayout?.sectionHeadersPinToVisibleBounds = true // 悬停
-        custumHeaderViewBlock = { _, mHeaderView in
+        collectionFlowLayout?.sectionHeadersPinToVisibleBounds = true // 悬停
+        customHeaderViewBlock = { indexpath, mHeaderView in
+            print("-----------",indexpath.section)
             mHeaderView.addSubview(headerView)
         }
         
@@ -74,9 +79,10 @@ class EasyCollectionViewController: BaseCollectionViewController {
         footerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: footerHeight)
         collectionFlowLayout?.footerReferenceSize = CGSize(width: kScreenWidth, height: footerHeight)
         //        Jh_collectionFlowLayout?.sectionFootersPinToVisibleBounds = true // 悬停
-        custumFooterViewBlock = { _, mFooterView in
+        customFooterViewBlock = { _, mFooterView in
             mFooterView.addSubview(footerView)
         }
+        
     }
     
     lazy var dataArr: NSMutableArray = {
