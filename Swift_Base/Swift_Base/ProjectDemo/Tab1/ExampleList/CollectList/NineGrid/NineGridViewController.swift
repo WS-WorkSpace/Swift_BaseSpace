@@ -8,33 +8,25 @@
 import UIKit
 
 class NineGridViewController: BaseCollectionViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        
+
 //        modelArr = dataArr
     }
-    
+
     func setupCollectionView() {
-        customCellBlock = { [weak self] (indexpath, customCell) in
+        customCellBlock = { [weak self] _, customCell in
             let cell = customCell as? BaseCollectionViewCell
             cell?.contentView.backgroundColor = UIColor.randomColor
         }
-        
-//        let flowLayout = UICollectionViewFlowLayout()
-//        flowLayout.scrollDirection = .vertical // 方向
-//        let margin = 10.0 // 设置间距
-//        let maxCol = 3.0 // 设置列数
-//        // 设置item尺寸
-//        let itemW = (kScreenWidth - (maxCol + 1) * margin - 1) / maxCol
-//        let itemH = itemW + 20
-//        flowLayout.itemSize = CGSize(width: itemW, height: itemH) // 每个item的大小
-//        flowLayout.minimumLineSpacing = margin // 设置最小行间距
-//        flowLayout.minimumInteritemSpacing = margin // 最小列间距
-//        flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin) // 每组的四周位置间距 ,分别为上、左、下、右
-//
-//        collectionFlowLayout = flowLayout
+
+        /// 待完善
+        collectionFlowLayout = NineGridFlowLayout()
+
+        /// 仅用于测试,这里父类register后子类再register,覆盖了一层SectionHeader
+        collectionView.register(ImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderViewID")
+
 //        registerCellWithNib = "DemoCollectionViewCell"
 //
 //        custumCellBlock = { [weak self] indexPath, custumCell in
@@ -84,4 +76,20 @@ class NineGridViewController: BaseCollectionViewController {
 //        }
     }
 
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
+    }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if indexPath.item == 1 {
+//            return CGSizeMake(150, 150)
+//        }
+//        return CGSizeMake(100, 100)
+//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 1 {
+            return CGSizeMake(kScreenWidth, 150)
+        }
+        return CGSizeMake(kScreenWidth, 100)
+    }
 }
