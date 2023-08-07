@@ -21,7 +21,7 @@ class NineGridViewController: BaseCollectionViewController {
             cell?.contentView.backgroundColor = UIColor.randomColor
         }
 
-        /// 待完善
+        /// 待完善,NineGridFlowLayout()失效
         collectionFlowLayout = NineGridFlowLayout()
 
         /// 仅用于测试,这里父类register后子类再register,覆盖了一层SectionHeader
@@ -80,12 +80,13 @@ class NineGridViewController: BaseCollectionViewController {
         2
     }
 
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if indexPath.item == 1 {
-//            return CGSizeMake(150, 150)
-//        }
-//        return CGSizeMake(100, 100)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.item == 1 {
+            return CGSizeMake(150, 150)
+        }
+        return CGSizeMake(100, 100)
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 1 {
             return CGSizeMake(kScreenWidth, 150)
