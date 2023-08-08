@@ -15,6 +15,7 @@
 		C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370B2A80829D00C304B4 /* ContentCell.swift */; };
 		C654370E2A80844700C304B4 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370D2A80844700C304B4 /* Then.swift */; };
 		C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370F2A80D90800C304B4 /* ImageReusableView.swift */; };
+		C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
 		C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7F2A745BD400C5CF02 /* LaunchScreen.storyboard */; };
@@ -115,6 +116,7 @@
 		C654370B2A80829D00C304B4 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		C654370D2A80844700C304B4 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C654370F2A80D90800C304B4 /* ImageReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReusableView.swift; sourceTree = "<group>"; };
+		C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCollectionViewController.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +265,14 @@
 				C654370B2A80829D00C304B4 /* ContentCell.swift */,
 			);
 			path = SessionBackImageSection;
+			sourceTree = "<group>";
+		};
+		C65437112A8203CB00C304B4 /* WaterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */,
+			);
+			path = WaterFlow;
 			sourceTree = "<group>";
 		};
 		C6C5CE682A745BD300C5CF02 = {
@@ -596,6 +606,7 @@
 		C6C5CF6B2A7E325E00C5CF02 /* CollectList */ = {
 			isa = PBXGroup;
 			children = (
+				C65437112A8203CB00C304B4 /* WaterFlow */,
 				C65437082A80816400C304B4 /* BasicUse */,
 				C65437092A80817E00C304B4 /* NineGrid */,
 				C654370A2A80818B00C304B4 /* SessionBackImageSection */,
@@ -854,6 +865,7 @@
 				C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */,
 				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,
+				C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */,
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
 				C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */,
 				C6C5CECD2A75D67800C5CF02 /* UITableView+Extension.swift in Sources */,

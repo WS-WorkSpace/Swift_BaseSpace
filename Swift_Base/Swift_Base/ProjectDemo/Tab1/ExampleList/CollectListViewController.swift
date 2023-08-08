@@ -19,7 +19,7 @@ class CollectListViewController: DemoTableViewController {
         dataArr = ["EasyCollectionViewController",
                    "NineGridViewController",
                    "SessionBackImageSectionViewController",
-                   "BaseCollectionViewController",
+                   "WaterflowCollectionViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
         return dataArr
@@ -29,7 +29,7 @@ class CollectListViewController: DemoTableViewController {
         modelArr = ["基本使用",
                     "九宫格",
                     "自定义section背景图",
-                    "UICollcetionView",
+                    "刷新瀑布流",
                     "网络请求",
                     "三方库使用"]
 

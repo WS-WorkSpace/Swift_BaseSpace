@@ -135,8 +135,9 @@ target 'Swift_Base' do
   #pod 'HorizonCalendar'
   #pod 'CalendarKit'
 # 下拉刷新
+#  pod 'DGElasticPullToRefresh'
+  pod 'CRRefresh'
   pod 'ESPullToRefresh', '2.9.3'
-  #pod 'DGElasticPullToRefresh'
   #pod 'PullToRefresher'
 # UI
   #pod 'Eureka' # 表单
