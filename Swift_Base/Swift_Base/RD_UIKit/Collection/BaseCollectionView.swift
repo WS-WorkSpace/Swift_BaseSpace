@@ -8,13 +8,16 @@
 import UIKit
 
 class BaseCollectionView: UICollectionView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
-    */
-
+    override init(frame: CGRect, collectionViewLayout:UICollectionViewLayout){
+        super.init(frame:frame, collectionViewLayout:collectionViewLayout)
+        config()
+    }
+    private func config() {
+        self.backgroundColor = .white
+        self.showsVerticalScrollIndicator = false
+        self.alwaysBounceVertical = true
+    }
 }

@@ -84,6 +84,7 @@
 		C6C5CF6D2A7E330400C5CF02 /* EasyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF6C2A7E330400C5CF02 /* EasyCollectionViewController.swift */; };
 		C6C5CF702A7E347B00C5CF02 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF6E2A7E347B00C5CF02 /* DemoCollectionViewCell.swift */; };
 		C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF6F2A7E347B00C5CF02 /* DemoCollectionViewCell.xib */; };
+		C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +199,7 @@
 		C6C5CF6C2A7E330400C5CF02 /* EasyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyCollectionViewController.swift; sourceTree = "<group>"; };
 		C6C5CF6E2A7E347B00C5CF02 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6C5CF6F2A7E347B00C5CF02 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */,
+				C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */,
 			);
 			path = WaterFlow;
 			sourceTree = "<group>";
@@ -813,6 +816,7 @@
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
 				C654370E2A80844700C304B4 /* Then.swift in Sources */,
 				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
+				C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */,
 				C6C5CF632A7D03CE00C5CF02 /* BaseCollectionView.swift in Sources */,
 				C6C5CF612A7D011A00C5CF02 /* BaseCollectionViewController.swift in Sources */,
 				C6C5CEE62A76A82000C5CF02 /* JsonUtils.swift in Sources */,
