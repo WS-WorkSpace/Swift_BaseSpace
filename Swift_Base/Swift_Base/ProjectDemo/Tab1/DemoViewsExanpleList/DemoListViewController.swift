@@ -10,7 +10,7 @@ import UIKit
 class DemoListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "示例1.0"
+        navTitle = "基本控件demo示例1.0"
         configTableView()
     }
 
@@ -19,6 +19,7 @@ class DemoListViewController: DemoTableViewController {
         dataArr = ["ExampleUI_ViewController",
                    "AlertUIViewController",
                    "TableViewDemoListVC",
+                   "FPSViewController",
                    "CollectListViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
@@ -29,6 +30,7 @@ class DemoListViewController: DemoTableViewController {
         modelArr = ["基本控件",
                     "Alert底部弹框",
                     "UITableView",
+                    "FPS_Label",
                     "UICollcetionView列表",
                     "网络请求",
                     "三方库使用"]
