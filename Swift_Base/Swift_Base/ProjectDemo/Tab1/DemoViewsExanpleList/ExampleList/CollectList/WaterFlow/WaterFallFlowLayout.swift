@@ -8,7 +8,6 @@
 import UIKit
 
 class WaterFallFlowLayout: UICollectionViewFlowLayout {
-    
 //    weak var delegate: WaterFallLayoutDelegate?
     var getHeightWithIndexBlock: ((_ mindexPath: IndexPath) -> Double)?
     // 列数
@@ -24,7 +23,7 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
         super.prepare()
         // 重置
         layoutAttributeArray.removeAll()
-        yArray = Array(repeating: self.sectionInset.top, count: cols)
+        yArray = Array(repeating: sectionInset.top, count: cols)
         // 计算每个 Cell 的宽度
         let itemWidth = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(cols - 1)) / CGFloat(cols)
         // Cell 数量
@@ -37,8 +36,7 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
             let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             // 获取动态高度
 //            let itemHeight = delegate?.waterFlowLayout(self, itemHeight: indexPath)
-            let itemHeight:Double = getHeightWithIndexBlock?(indexPath) ?? 0.0
-            print("77777777777",itemHeight)
+            let itemHeight: Double = getHeightWithIndexBlock?(indexPath) ?? 0.0
             // 找到高度最短的那一列
             let value = yArray.min()
             // 获取数组索引
@@ -60,11 +58,10 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
             yArray[minHeightIndex] = attr.frame.maxY
         }
         maxHeight = yArray.max()! + sectionInset.bottom
-        
     }
 }
+
 extension WaterFallFlowLayout {
-    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         // 返回相交的区域
         return layoutAttributeArray.filter {
@@ -76,4 +73,3 @@ extension WaterFallFlowLayout {
         return CGSize(width: collectionView!.bounds.width, height: maxHeight)
     }
 }
-

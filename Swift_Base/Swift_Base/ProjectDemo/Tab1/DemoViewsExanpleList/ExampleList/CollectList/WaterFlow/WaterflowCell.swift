@@ -10,7 +10,7 @@ import UIKit
 
 class WaterflowCell: UICollectionViewCell {
     static let CellID = "WaterflowCell_CID"
-    let bottomViewHeight:Double = 20.0
+    let bottomViewHeight: Double = 20.0
     lazy var imgView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .blue
@@ -38,12 +38,14 @@ class WaterflowCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        setSubViewsFrame(rect: self.bounds)
+        setSubViewsFrame(rect: bounds)
     }
-    func setSubViewsFrame(rect:CGRect) {
-        imgView.frame = CGRectMake(0, 0, rect.size.width, rect.size.height-bottomViewHeight)
+
+    func setSubViewsFrame(rect: CGRect) {
+        imgView.frame = CGRectMake(0, 0, rect.size.width, rect.size.height - bottomViewHeight)
         bottomView.frame = CGRectMake(0, imgView.RD_height, rect.size.width, bottomViewHeight)
 //        imgView.snp.makeConstraints { make in
 //            make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0))

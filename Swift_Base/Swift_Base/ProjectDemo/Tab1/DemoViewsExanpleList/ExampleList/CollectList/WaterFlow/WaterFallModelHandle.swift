@@ -72,7 +72,6 @@ class WaterFallModelHandle {
                     let ietmWidth: Double = self.itemWidth
                     let itemHeight: Double = ietmWidth * scale
                     self.heights.append(itemHeight)
-                    print("000", self.heights)
                 }
                 if self.heights.count == self.allImageURLs.count {
                     // 赋值所有cell的高度数组itemHeights
