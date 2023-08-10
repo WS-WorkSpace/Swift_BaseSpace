@@ -13,7 +13,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        subViewsWidth = kScreenWidth - 20
+        self.subViewsWidth = kScreenWidth - 20
         self.navTitle = "基础控件"
         self.setupSubviews()
     }
@@ -28,7 +28,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         self.customLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(distanceTop)
             make.left.equalTo(self.view).offset(10)
-            make.size.equalTo(CGSize(width: subViewsWidth, height: 30))
+            make.size.equalTo(CGSize(width: self.subViewsWidth, height: 30))
         }
         
         self.view.addSubview(self.mLabel)
@@ -46,7 +46,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         let label = UILabel(frame: .zero)
         label.textAlignment = NSTextAlignment.center
         // customLabel.RD_y+customLabel.RD_height ,约束和frame布局选择一种
-        label.frame = CGRect(x: 10, y: distanceTop+30+10, width: subViewsWidth, height: 30)
+        label.frame = CGRect(x: 10, y: distanceTop+30+10, width: self.subViewsWidth, height: 30)
         label.text = "normal: label"
         label.textColor = .black
         label.backgroundColor = RD_RandomColor()
@@ -56,7 +56,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
     lazy var mView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = RD_RandomColor()
-        view.frame = CGRect(x: 10, y: self.mLabel.frame.maxY+10, width: mLabel.frame.size.width, height: 30*3)
+        view.frame = CGRect(x: 10, y: self.mLabel.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30 * 3)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapClick(tap:)))
         view.addGestureRecognizer(tapGesture)
         return view
@@ -72,7 +72,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         let titleColor = RD_RandomColor()
         
         let button = UIButton(frame: .zero)
-        button.frame = CGRect(x: 10, y: self.mView.frame.maxY+10, width: mLabel.frame.size.width, height: 30)
+        button.frame = CGRect(x: 10, y: self.mView.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30)
         button.titleLabel?.font = RD_Font(16)
         button.setTitle(title, for: .normal)
         button.setTitleColor(titleColor, for: .normal)
@@ -92,7 +92,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
     
     lazy var mTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.frame = CGRect(x: 10, y: self.mButton.frame.maxY+10, width: mLabel.frame.size.width, height: 30)
+        textField.frame = CGRect(x: 10, y: self.mButton.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30)
         textField.text = ""
         textField.placeholder = "这是UITextField"
         textField.font = RD_Font(15)
@@ -123,7 +123,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
     
     lazy var pwdTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.frame = CGRect(x: 10, y: self.mTextField.frame.maxY+10, width: mLabel.frame.size.width, height: 30)
+        textField.frame = CGRect(x: 10, y: self.mTextField.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30)
         textField.text = ""
         textField.font = RD_Font(15)
         textField.textColor = RD_RandomColor()
@@ -158,7 +158,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         let image = UIImage(named: "AppIcon")
         
         let imageView = UIImageView(frame: .zero)
-        imageView.frame = CGRect(x: (kScreenWidth-50)/2, y: self.pwdTextField.frame.maxY+10, width: 50, height: 50)
+        imageView.frame = CGRect(x: (kScreenWidth - 50)/2, y: self.pwdTextField.frame.maxY+10, width: 50, height: 50)
         imageView.RD_centerX = self.view.RD_centerX
         imageView.image = image
         return imageView
@@ -166,7 +166,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
     
     lazy var mTextView: UITextView = {
         let textView = UITextView(frame: .zero)
-        textView.frame = CGRect(x: 10, y: self.mImageView.frame.maxY+10, width: mLabel.frame.size.width, height: 100)
+        textView.frame = CGRect(x: 10, y: self.mImageView.frame.maxY+10, width: self.mLabel.frame.size.width, height: 100)
         textView.text = "UITextView"
         textView.font = RD_Font(15)
         textView.textColor = RD_RandomColor()
@@ -196,7 +196,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
     
     lazy var mSwitch: UISwitch = {
         let switchBtn = UISwitch(frame: .zero)
-        switchBtn.frame = CGRect(x: (kScreenWidth-30)/2, y: self.mTextView.frame.maxY+10, width: kScreenWidth, height: 30)
+        switchBtn.frame = CGRect(x: (kScreenWidth - 30)/2, y: self.mTextView.frame.maxY+10, width: kScreenWidth, height: 30)
         switchBtn.isOn = true
         switchBtn.onTintColor = RD_RandomColor()
         return switchBtn

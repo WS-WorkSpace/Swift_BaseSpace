@@ -15,6 +15,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         
         modelArr = dataArr
     }
+
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -68,7 +69,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         collectionFlowLayout?.headerReferenceSize = CGSize(width: kScreenWidth, height: headerHeight)
         collectionFlowLayout?.sectionHeadersPinToVisibleBounds = true // 悬停
         customHeaderViewBlock = { indexpath, mHeaderView in
-            print("-----------",indexpath.section)
+            print("-----------", indexpath.section)
             mHeaderView.addSubview(headerView)
         }
         
@@ -82,7 +83,6 @@ class EasyCollectionViewController: BaseCollectionViewController {
         customFooterViewBlock = { _, mFooterView in
             mFooterView.addSubview(footerView)
         }
-        
     }
     
     lazy var dataArr: NSMutableArray = {

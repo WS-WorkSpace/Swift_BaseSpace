@@ -11,9 +11,10 @@ class ImageReusableView: UICollectionReusableView {
     static let CID = "ImageReusableView_CID"
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(bg_imageView)
+        self.addSubview(self.bg_imageView)
     }
-    
+
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -25,7 +26,7 @@ class ImageReusableView: UICollectionReusableView {
         imageView.frame = self.bounds
         return imageView
     }()
-    
+
     /// 当布局更新时会调用这个方法，在这里更新UI
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
