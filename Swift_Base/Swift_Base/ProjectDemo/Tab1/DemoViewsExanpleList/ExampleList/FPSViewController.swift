@@ -12,36 +12,54 @@ class FPSViewController: BaseViewController {
 //        $0.backgroundColor = .yellow
 //
 //    }
-    lazy var mButton: UIButton = {
-        let title = "这是UIButton"
+    private lazy var mButton = UIButton().then {
+        let title = "UIButton"
         let titleColor = RD_RandomColor()
+        $0.frame = .zero
+        $0.titleLabel?.font = RD_Font(16)
+        $0.setTitle(title, for: .normal)
+        $0.setTitleColor(titleColor, for: .normal)
+        $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
+        $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
+        $0.layer.cornerRadius = 5
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = RD_RandomColor().cgColor
+        $0.backgroundColor = RD_RandomColor()
+        $0.addTarget(self, action: #selector(self.fpsClickButton(btn:)), for: .touchUpInside)
+        view.addSubview($0)
+    }
 
-        let button = UIButton(frame: .zero)
-        button.frame = .zero
-        button.titleLabel?.font = RD_Font(16)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(titleColor, for: .normal)
-        button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
-        button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
-        button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
-        button.backgroundColor = RD_RandomColor()
-        button.addTarget(self, action: #selector(self.fpsClickButton(btn:)), for: .touchUpInside)
-        view.addSubview(button)
-        button.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.size.equalTo(CGSizeMake(100, 50))
+    private lazy var fpsLabel = {
+        #if DEBUG
+        let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
+        let window = UIWindow.keyWindow
+        window?.addSubview(fpsLab)
+        fpsLab.snp.makeConstraints { make in
+            guard let windowTemp = window else { return }
+            make.top.equalTo(windowTemp).offset(distanceTop)
+            make.left.equalTo(windowTemp).offset(10)
+            make.size.equalTo(CGSizeMake(70, 30))
         }
-        return button
+        return fpsLab
+        #endif
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mButton.backgroundColor = .yellow
     }
 
-    @objc func fpsClickButton(btn:UIButton) {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        // add mButton右触发一次,是否需要优化,
+        mButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(CGSizeMake(100, 50))
+        }
+    }
+
+    @objc func fpsClickButton(btn: UIButton) {
+        /// 由于只在debug测试模式下运行,window未释放造成的内存泄露暂时不管
+        fpsLabel.frame = CGRectMake(100, 100, 150, 50)
         Lg.log("fpsClickButton")
     }
 }

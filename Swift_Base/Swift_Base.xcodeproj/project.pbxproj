@@ -592,9 +592,9 @@
 		C6C5CF582A7B088900C5CF02 /* ExampleList */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */,
 				C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */,
 				C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */,
+				C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */,
 				C6C5CF692A7E325300C5CF02 /* CollectListViewController.swift */,
 				C6C5CF6B2A7E325E00C5CF02 /* CollectList */,
 			);

@@ -29,17 +29,6 @@ class OneTabViewController: DemoTableViewController {
     }
 
     @objc func addFPSLable() {
-        #if DEBUG
-        let fpsLab = FPSLabel(frame: CGRectMake(100, 100, 150, 50))
-        let window = UIWindow.keyWindow
-        window?.addSubview(fpsLab)
-        fpsLab.snp.makeConstraints { make in
-            guard let windowTemp = window else { return }
-            make.top.equalTo(windowTemp).offset(distanceTop)
-            make.left.equalTo(windowTemp).offset(10)
-            make.size.equalTo(CGSizeMake(70, 30))
-        }
-        #endif
     }
 
     func loadNewData() {

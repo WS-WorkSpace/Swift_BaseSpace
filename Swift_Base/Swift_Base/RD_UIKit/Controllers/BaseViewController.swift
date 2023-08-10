@@ -78,6 +78,9 @@ class BaseViewController: UIViewController {
         configIOS11()
         configIOS15()
     }
+    override func viewWillLayoutSubviews(){
+        super.viewWillLayoutSubviews()
+    }
 
     deinit {
         NotificationCenter.default.removeObserver(self)

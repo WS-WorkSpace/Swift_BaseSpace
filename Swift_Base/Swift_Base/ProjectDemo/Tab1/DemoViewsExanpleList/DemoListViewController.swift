@@ -18,8 +18,8 @@ class DemoListViewController: DemoTableViewController {
         var dataArr = NSMutableArray()
         dataArr = ["ExampleUI_ViewController",
                    "AlertUIViewController",
-                   "TableViewDemoListVC",
                    "FPSViewController",
+                   "TableViewDemoListVC",
                    "CollectListViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
@@ -29,8 +29,8 @@ class DemoListViewController: DemoTableViewController {
     private func configTableView() {
         modelArr = ["基本控件",
                     "Alert底部弹框",
-                    "UITableView",
                     "FPS_Label",
+                    "UITableView",
                     "UICollcetionView列表",
                     "网络请求",
                     "三方库使用"]
