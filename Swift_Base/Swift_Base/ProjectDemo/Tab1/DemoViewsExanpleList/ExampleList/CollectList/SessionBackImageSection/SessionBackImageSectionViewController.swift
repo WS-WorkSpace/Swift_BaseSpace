@@ -39,6 +39,10 @@ class SessionBackImageSectionViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+
+    deinit {
+        Lg.log(type(of: self))
+    }
 }
 
 extension SessionBackImageSectionViewController {

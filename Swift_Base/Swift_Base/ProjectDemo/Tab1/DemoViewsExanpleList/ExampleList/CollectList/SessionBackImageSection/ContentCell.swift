@@ -27,7 +27,7 @@ class ContentCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupView() {
+    private func setupView() {
         imgView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

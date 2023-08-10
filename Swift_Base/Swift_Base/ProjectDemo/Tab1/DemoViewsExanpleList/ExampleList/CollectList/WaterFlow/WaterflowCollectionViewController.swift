@@ -10,14 +10,7 @@ import Kingfisher
 import UIKit
 
 let cellWidth: Double = 150
-class WaterflowCollectionViewController: BaseViewController, WaterFallModelHandleDelegate {
-    /// 下载图片计算高度的回调方法
-    /// - Parameter imgHeights: 图片高度数组
-    func notificationReloadWithWithItemHeights(imgHeights: [Double]) {
-        itemCellHeight = imgHeights
-        mCollectionView.reloadData()
-    }
-
+class WaterflowCollectionViewController: BaseViewController {
     var dataModelArray: [String] = []
     private lazy var layout = WaterFallFlowLayout().then {
         let margin: CGFloat = 10
@@ -73,6 +66,8 @@ class WaterflowCollectionViewController: BaseViewController, WaterFallModelHandl
         setupSubViews()
     }
 }
+
+// MARK: - Private扩展
 
 extension WaterflowCollectionViewController {
     private func setupSubViews() {
@@ -134,6 +129,19 @@ extension WaterflowCollectionViewController {
     }
 }
 
+// MARK: - ModelHandle 数据处理回调
+
+extension WaterflowCollectionViewController: WaterFallModelHandleDelegate {
+    /// 下载图片计算高度的回调方法
+    /// - Parameter imgHeights: 图片高度数组
+    func notificationReloadWithWithItemHeights(imgHeights: [Double]) {
+        itemCellHeight = imgHeights
+        mCollectionView.reloadData()
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+
 extension WaterflowCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         dataModelArray.count
@@ -147,5 +155,7 @@ extension WaterflowCollectionViewController: UICollectionViewDataSource {
         return mCell
     }
 }
+
+// MARK: - UICollectionViewDelegate
 
 extension WaterflowCollectionViewController: UICollectionViewDelegate {}
