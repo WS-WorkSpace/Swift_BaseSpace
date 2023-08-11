@@ -18,7 +18,7 @@ class DemoTableViewController: BaseViewController {
         }
     }
 
-    lazy var tableView: BaseTableView = {
+    lazy var mTableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
@@ -34,7 +34,7 @@ class DemoTableViewController: BaseViewController {
     var clickCellBlock: ((_ indexPath: IndexPath, _ text: String) -> ())?
 
     private func configTableView() {
-        view.addSubview(tableView)
+        view.addSubview(mTableView)
     }
 
     override func viewDidLoad() {

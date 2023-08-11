@@ -135,7 +135,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     func buttonImage(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> UIImage! {
         var image = UIImage(named: "empty")
         if (emptyState == .StateNetWorkError) {
-            image = UIImage(named:"EmptyDataView.bundle/NullData_reloadData")
+            image = UIImage(named:"RDEmptyData.bundle/NullData_reloadData")
         } else {
             image = UIImage(named: "empty")
         }

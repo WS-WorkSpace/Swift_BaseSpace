@@ -1,16 +1,16 @@
 //
-//  CollectListViewController.swift
+//  TableListViewController.swift
 //  Swift_Base
 //
-//  Created by 王爽 on 2023/8/5.
+//  Created by 王爽 on 2023/8/11.
 //
 
 import UIKit
 
-class CollectListViewController: DemoTableViewController {
+class TableListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "Collect示例1.0"
+        navTitle = "TableViw示例1.0"
         configTableView()
     }
 
@@ -32,6 +32,7 @@ class CollectListViewController: DemoTableViewController {
                           "刷新瀑布流",
                           "网络请求",
                           "三方库使用"]
+//        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别

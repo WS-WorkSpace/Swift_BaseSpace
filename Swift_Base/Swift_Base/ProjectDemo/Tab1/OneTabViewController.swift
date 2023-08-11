@@ -19,9 +19,9 @@ class OneTabViewController: DemoTableViewController {
 
         let header = SelfRefreshGifHeader(refreshingBlock: self.loadNewData)
         header.beginRefreshing()
-        tableView.mj_header = header
+        mTableView.mj_header = header
 
-        tableView.mj_footer = SelfRefreshBackGifFooter(refreshingBlock: self.loadMoreData)
+        mTableView.mj_footer = SelfRefreshBackGifFooter(refreshingBlock: self.loadMoreData)
     }
 
     @objc func demoListVC() {
@@ -32,11 +32,11 @@ class OneTabViewController: DemoTableViewController {
 
     func loadNewData() {
         sleep(1)
-        self.tableView.mj_header?.endRefreshing()
+        self.mTableView.mj_header?.endRefreshing()
     }
 
     func loadMoreData() {
         sleep(1)
-        self.tableView.mj_footer?.endRefreshing()
+        self.mTableView.mj_footer?.endRefreshing()
     }
 }

@@ -19,7 +19,7 @@ class DemoListViewController: DemoTableViewController {
         dataArr = ["ExampleUI_ViewController",
                    "AlertUIViewController",
                    "FPSViewController",
-                   "TableViewDemoListVC",
+                   "TableListViewController",
                    "CollectListViewController",
                    "NetworkDemoListVC",
                    "LibDemoListVC"]
