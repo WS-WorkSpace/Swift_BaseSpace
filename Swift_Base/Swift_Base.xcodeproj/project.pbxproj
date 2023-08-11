@@ -583,7 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
-				C6EE3A572A84DC1B00A76C19 /* NetWorkingList */,
+				C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */,
 				C6EE3A562A84DBD200A76C19 /* DemoViewsExanpleList */,
 			);
 			path = Tab1;
@@ -640,13 +640,13 @@
 			path = DemoViewsExanpleList;
 			sourceTree = "<group>";
 		};
-		C6EE3A572A84DC1B00A76C19 /* NetWorkingList */ = {
+		C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */ = {
 			isa = PBXGroup;
 			children = (
 				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
 				C6EE3A5A2A84DCA800A76C19 /* NetDemo */,
 			);
-			path = NetWorkingList;
+			path = "NetWorking网络请求";
 			sourceTree = "<group>";
 		};
 		C6EE3A5A2A84DCA800A76C19 /* NetDemo */ = {

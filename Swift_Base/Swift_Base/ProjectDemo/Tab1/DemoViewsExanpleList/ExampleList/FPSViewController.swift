@@ -8,10 +8,6 @@
 import SnapKit
 import UIKit
 class FPSViewController: BaseViewController {
-//    private lazy var fpsButton = UIButton().then{
-//        $0.backgroundColor = .yellow
-//
-//    }
     private lazy var mButton = UIButton().then {
         let title = "UIButton"
         let titleColor = RD_RandomColor()
