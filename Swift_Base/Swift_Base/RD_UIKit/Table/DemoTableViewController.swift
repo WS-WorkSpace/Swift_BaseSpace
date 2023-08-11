@@ -32,14 +32,14 @@ class DemoTableViewController: BaseViewController {
 
     /// 点击Cell Block
     var clickCellBlock: ((_ indexPath: IndexPath, _ text: String) -> ())?
-
-    private func configTableView() {
+    /// 子类加载需要调用这个方法
+    func configTableView() {
         view.addSubview(mTableView)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableView()
+//        configTableView()
     }
 }
 

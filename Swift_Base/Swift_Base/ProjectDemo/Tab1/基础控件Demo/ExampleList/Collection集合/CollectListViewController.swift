@@ -11,7 +11,7 @@ class CollectListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "Collect示例1.0"
-        configTableView()
+        mConfigTableView()
     }
 
     private lazy var classArr: NSMutableArray = {
@@ -25,7 +25,8 @@ class CollectListViewController: DemoTableViewController {
         return dataArr
     }()
 
-    private func configTableView() {
+    private func mConfigTableView() {
+        self.configTableView()
         configModelArr = ["基本使用",
                           "九宫格",
                           "自定义section背景图",

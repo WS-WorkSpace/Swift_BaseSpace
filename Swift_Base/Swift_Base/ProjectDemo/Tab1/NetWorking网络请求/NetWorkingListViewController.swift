@@ -11,7 +11,7 @@ class NetWorkingListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "网络类demo示例 1.0"
-        configTableView()
+        mConfigTableView()
     }
 
     private lazy var classArr: NSMutableArray = {
@@ -25,7 +25,8 @@ class NetWorkingListViewController: DemoTableViewController {
         return dataArr
     }()
 
-    private func configTableView() {
+    private func mConfigTableView() {
+        self.configTableView()
         configModelArr = ["基本控件",
                           "Alert底部弹框",
                           "UITableView",

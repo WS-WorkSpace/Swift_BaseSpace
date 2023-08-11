@@ -11,7 +11,7 @@ class DemoListViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "基本控件demo示例1.0"
-        configTableView()
+        mConfigTableView()
     }
 
     private lazy var classArr: NSMutableArray = {
@@ -26,7 +26,8 @@ class DemoListViewController: DemoTableViewController {
         return dataArr
     }()
 
-    private func configTableView() {
+    private func mConfigTableView() {
+        self.configTableView()
         configModelArr = ["基本控件",
                           "Alert底部弹框",
                           "FPS_Label",

@@ -1,5 +1,5 @@
 //
-//  TableListViewController.swift
+//  TableXIBViewController.swift
 //  Swift_Base
 //
 //  Created by 王爽 on 2023/8/11.
@@ -7,13 +7,7 @@
 
 import UIKit
 
-class TableListViewController: DemoTableViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navTitle = "TableViw示例1.0"
-        self.mConfigTableView()
-    }
-
+class TableXIBViewController: DemoTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
@@ -29,7 +23,8 @@ class TableListViewController: DemoTableViewController {
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false
-        tableView.RD_registerCell(UITableViewCell.self)
+        tableView.register(UINib(nibName: "XIBExampleCell", bundle: nil), forCellReuseIdentifier: XIBExampleCell.CellID)
+//        tableView.RD_registerNibCell(XIBExampleCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .yellow
@@ -52,5 +47,19 @@ class TableListViewController: DemoTableViewController {
             jumpVC?.title = self?.configModelArr[indexPath.row]
             self?.navigationController?.pushViewController(jumpVC!, animated: true)
         }
+    }
+
+    /// 重写父类代理自定义xib cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
+        cell?.leftLab.text = configModelArr[indexPath.row]
+        cell?.rightImg.image = UIImage.init(named: "APP_NineGridHeadImg")
+        return cell ?? XIBExampleCell()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navTitle = "TableViw示例1.0"
+        self.mConfigTableView()
     }
 }

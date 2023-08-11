@@ -11,6 +11,8 @@ class OneTabViewController: DemoTableViewController {
     var page = 1
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configTableView()
+
         view.backgroundColor = .white
         configModelArr = ["1", "2", "3", "4", "5", "6", "7", "8"]
         let item1 = UIBarButtonItem.RD_imageItem(imageName: navRightImage ?? ("tab5", "tab5_select"), target: self, action: #selector(self.demoListVC))

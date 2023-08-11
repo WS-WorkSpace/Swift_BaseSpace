@@ -94,6 +94,9 @@
 		C6EE3A612A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */; };
 		C6EE3A642A85EB1900A76C19 /* TableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A632A85EB1900A76C19 /* TableListViewController.swift */; };
 		C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */; };
+		C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */; };
+		C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */; };
+		C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +221,9 @@
 		C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainProgrammingNetWorkKit.swift; sourceTree = "<group>"; };
 		C6EE3A632A85EB1900A76C19 /* TableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewController.swift; sourceTree = "<group>"; };
 		C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RDEmptyData.bundle; sourceTree = "<group>"; };
+		C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableXIBViewController.swift; sourceTree = "<group>"; };
+		C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBExampleCell.swift; sourceTree = "<group>"; };
+		C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBExampleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -688,6 +694,9 @@
 		C6EE3A672A85F46700A76C19 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */,
+				C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */,
+				C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -809,6 +818,7 @@
 			files = (
 				C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */,
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
+				C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */,
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
 				C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */,
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
@@ -886,6 +896,7 @@
 				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */,
+				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
@@ -943,6 +954,7 @@
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
 				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
+				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
 				C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */,
