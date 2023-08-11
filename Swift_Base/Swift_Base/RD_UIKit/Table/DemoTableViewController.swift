@@ -9,7 +9,7 @@ import UIKit
 
 class DemoTableViewController: BaseViewController {
     private lazy var dataArr = [String]()
-    var modelArr: [String] {
+    var configModelArr: [String] {
         get {
             return dataArr
         }
@@ -18,43 +18,28 @@ class DemoTableViewController: BaseViewController {
         }
     }
 
-//    private lazy var dataArr: NSMutableArray = {
-//        let tempArr = NSMutableArray()
-//        return tempArr
-//    }()
-
-//    var modelArr: NSMutableArray {
-//        get {
-//            return dataArr
-//        }
-//        set(newValue) {
-//            dataArr = newValue
-//        }
-//    }
-
     lazy var tableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
         tableView.frame = kScrollViewFrame
-        //        tableView.separatorStyle = .none //不显示分割线
-        //        tableView.showsVerticalScrollIndicator = false;
-        //        tableView.scrollEnabled = false // 设置tableview 不能滚动
-//        tableView.register(T##UINib?, forCellReuseIdentifier: <#T##String#>)
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        tableView.separatorStyle = .singleLine
+        tableView.showsVerticalScrollIndicator = false
         tableView.RD_registerCell(UITableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = BaseBgColor
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
-        tableView.tableFooterView = UIView()
         return tableView
     }()
 
     /// 点击Cell Block
     var clickCellBlock: ((_ indexPath: IndexPath, _ text: String) -> ())?
 
+    private func configTableView() {
+        view.addSubview(tableView)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
+        configTableView()
     }
 }
 
@@ -63,10 +48,6 @@ extension DemoTableViewController: UITableViewDataSource {
         return 1
     }
 
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "aaaa"
-//    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count
     }
@@ -74,15 +55,6 @@ extension DemoTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
         cell.textLabel?.text = dataArr[indexPath.row]
-
-//        let repTestDetail:HandyJsonModel = items[indexPath.row]
-//        cell.textLabel?.text = repTestDetail.desc
-
-        // 图片转换
-        // let url = "tupian.webp"
-        // let pngUrl = url.replacingOccurrences(of: ".webp", with: ".png")
-//        cell.imageView?.kf.setImage(with: URL(string: "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"))
-        //        print("--------__>",dicT)
         return cell
     }
 }
@@ -106,12 +78,8 @@ extension DemoTableViewController: UITableViewDataSource {
  */
 
 extension DemoTableViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10
-//    }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 80
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

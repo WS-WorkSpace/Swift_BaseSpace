@@ -12,7 +12,7 @@ class OneTabViewController: DemoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        modelArr = ["1", "2", "3", "4", "5", "6", "7"]
+        configModelArr = ["1", "2", "3", "4", "5", "6", "7", "8"]
         let item1 = UIBarButtonItem.RD_imageItem(imageName: navRightImage ?? ("tab5", "tab5_select"), target: self, action: #selector(self.demoListVC))
         let item2 = UIBarButtonItem.RD_textItem(title: "FPS", titleColor: .black, target: self, action: #selector(self.addFPSLable))
         navigationItem.rightBarButtonItems = [item1, item2]
@@ -28,8 +28,7 @@ class OneTabViewController: DemoTableViewController {
         self.navigationController?.pushViewController(DemoListViewController(), animated: true)
     }
 
-    @objc func addFPSLable() {
-    }
+    @objc func addFPSLable() {}
 
     func loadNewData() {
         sleep(1)
