@@ -7,30 +7,31 @@
 
 import UIKit
 
-class XIBTableHeaderView: UIView {
-    
-    @IBOutlet weak var RightButton: UIButton!
-    
-    @IBOutlet weak var leftImge: UIImageView!
-    
+class XIBTableHeaderView: UIView, NibLoadable {
+    @IBOutlet var RightButton: UIButton!
+
+    @IBOutlet var leftImge: UIImageView!
+
     @IBAction func rightBtnMethod(_ sender: UIButton) {
-        self.headerClickRightBtnBlock()
+        headerClickRightBtnBlock()
     }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         initUI()
     }
+
     let headerClickRightBtnBlock: () -> Void = {
         print("点击按钮了！")
     }
-    
+
     func initUI() {
-        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tapImageView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapImageView))
         leftImge.addGestureRecognizer(tapGesture)
         leftImge.isUserInteractionEnabled = true
     }
-    @objc func tapImageView(){
+
+    @objc func tapImageView() {
         print("视图被点击")
     }
-
 }

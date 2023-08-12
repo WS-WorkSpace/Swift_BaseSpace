@@ -99,6 +99,7 @@
 		C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */; };
 		C6EE3A7E2A86927700A76C19 /* XIBTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */; };
 		C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */; };
+		C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +229,7 @@
 		C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBExampleCell.xib; sourceTree = "<group>"; };
 		C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBTableHeaderView.swift; sourceTree = "<group>"; };
 		C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBTableHeaderView.xib; sourceTree = "<group>"; };
+		C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,7 +419,6 @@
 				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
 				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
-				C6C5CECC2A75D67800C5CF02 /* UITableView+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -544,6 +545,7 @@
 		C6C5CF2E2A77341000C5CF02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
@@ -635,6 +637,7 @@
 				C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */,
 				C6C5CF522A7ADB3A00C5CF02 /* DemoTableViewController.swift */,
 				C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */,
+				C6C5CECC2A75D67800C5CF02 /* UITableView+Extension.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -954,6 +957,7 @@
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
+				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
 				C6C5CF702A7E347B00C5CF02 /* DemoCollectionViewCell.swift in Sources */,
 				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,

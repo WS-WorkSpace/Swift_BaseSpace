@@ -9,10 +9,10 @@ import UIKit
 
 class XIBExampleCell: UITableViewCell {
     static let CellID = "XIBExampleCell_ID"
-    
-    @IBOutlet weak var leftLab: UILabel!
-    @IBOutlet weak var rightImg: UIImageView!
-    
+
+    @IBOutlet var leftLab: UILabel!
+    @IBOutlet var rightImg: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +23,4 @@ class XIBExampleCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

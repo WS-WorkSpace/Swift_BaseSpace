@@ -29,11 +29,13 @@ class TableXIBViewController: DemoTableViewController {
          原因：xib创建的view直接赋值给tableview.tableHeaderView会造成约束问题不准确。
          解决办法：先代码创建一个空的UIview,比如叫bgview同时设置frame,把tableview.tableHeaderView = bgview.然后在把xib创建的view添加到bgview上即可。
          */
-        let boundle = Bundle.main.loadNibNamed("XIBTableHeaderView", owner: nil)
-        let viewT = boundle?.first as? XIBTableHeaderView
-        viewT?.backgroundColor = .lightGray
-        tableView.tableHeaderView = viewT
+//        let boundle = Bundle.main.loadNibNamed("XIBTableHeaderView", owner: nil)
+//        let viewT = boundle?.first as? XIBTableHeaderView
+//        viewT?.backgroundColor = .lightGray
+//        tableView.tableHeaderView = viewT
 
+        lazy var headerView = XIBTableHeaderView.loadFromNib()
+        tableView.tableHeaderView = headerView
 
         tableView.register(UINib(nibName: "XIBExampleCell", bundle: nil), forCellReuseIdentifier: XIBExampleCell.CellID)
 //        tableView.RD_registerNibCell(XIBExampleCell.self)
