@@ -97,6 +97,8 @@
 		C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */; };
 		C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */; };
 		C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */; };
+		C6EE3A7E2A86927700A76C19 /* XIBTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */; };
+		C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +226,8 @@
 		C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableXIBViewController.swift; sourceTree = "<group>"; };
 		C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBExampleCell.swift; sourceTree = "<group>"; };
 		C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBExampleCell.xib; sourceTree = "<group>"; };
+		C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBTableHeaderView.swift; sourceTree = "<group>"; };
+		C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBTableHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -697,6 +701,8 @@
 				C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */,
 				C6EE3A6C2A864ADE00A76C19 /* XIBExampleCell.swift */,
 				C6EE3A6D2A864ADE00A76C19 /* XIBExampleCell.xib */,
+				C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */,
+				C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
+				C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +915,7 @@
 				C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */,
 				C6C5CF632A7D03CE00C5CF02 /* BaseCollectionView.swift in Sources */,
 				C6C5CF612A7D011A00C5CF02 /* BaseCollectionViewController.swift in Sources */,
+				C6EE3A7E2A86927700A76C19 /* XIBTableHeaderView.swift in Sources */,
 				C6C5CEE62A76A82000C5CF02 /* JsonUtils.swift in Sources */,
 				C6C5CED02A75D73200C5CF02 /* NSString+Extension.swift in Sources */,
 				C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */,

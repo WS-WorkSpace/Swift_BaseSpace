@@ -23,6 +23,18 @@ class TableXIBViewController: DemoTableViewController {
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false
+        tableView.RD_registerHeaderFooterNib(XIBTableHeaderView.self)
+        /*
+         xib创建的view直接赋值给tableview.tableHeaderView会出现view填充不满的问题，右边会有留白现象。即使用Masoty约束frame也没有效果。
+         原因：xib创建的view直接赋值给tableview.tableHeaderView会造成约束问题不准确。
+         解决办法：先代码创建一个空的UIview,比如叫bgview同时设置frame,把tableview.tableHeaderView = bgview.然后在把xib创建的view添加到bgview上即可。
+         */
+        let boundle = Bundle.main.loadNibNamed("XIBTableHeaderView", owner: nil)
+        let viewT = boundle?.first as? XIBTableHeaderView
+        viewT?.backgroundColor = .lightGray
+        tableView.tableHeaderView = viewT
+
+
         tableView.register(UINib(nibName: "XIBExampleCell", bundle: nil), forCellReuseIdentifier: XIBExampleCell.CellID)
 //        tableView.RD_registerNibCell(XIBExampleCell.self)
         tableView.dataSource = self
@@ -33,11 +45,7 @@ class TableXIBViewController: DemoTableViewController {
 
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
-        configModelArr = ["XIB + TableView",
-                          "九宫格",
-                          "自定义section背景图",
-                          "刷新瀑布流",
-                          "网络请求"]
+        configModelArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
         clickCellBlock = { [weak self] indexPath, _ in
@@ -49,17 +57,28 @@ class TableXIBViewController: DemoTableViewController {
         }
     }
 
-    /// 重写父类代理自定义xib cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
-        cell?.leftLab.text = configModelArr[indexPath.row]
-        cell?.rightImg.image = UIImage.init(named: "APP_NineGridHeadImg")
-        return cell ?? XIBExampleCell()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "TableViw示例1.0"
         self.mConfigTableView()
+    }
+}
+
+extension TableXIBViewController {
+    /// 重写父类代理自定义xib cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
+        cell?.leftLab.text = configModelArr[indexPath.row]
+        cell?.rightImg.image = UIImage(named: "AppIcon-mini") // "APP_NineGridHeadImg"
+        cell?.backgroundColor = UIColor.randomColor
+        return cell ?? XIBExampleCell()
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
