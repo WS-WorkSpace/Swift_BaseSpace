@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableListViewController: DemoTableViewController {
+class TableListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "TableViw示例1.0"

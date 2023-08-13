@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableXIBViewController: DemoTableViewController {
+class TableXIBViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",

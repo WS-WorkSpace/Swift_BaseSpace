@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DemoListViewController: DemoTableViewController {
+class DemoListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "基本控件demo示例1.0"

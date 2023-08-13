@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectListViewController: DemoTableViewController {
+class CollectListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "Collect示例1.0"

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChainProgrammingViewController: DemoTableViewController {
+class ChainProgrammingViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

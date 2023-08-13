@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OneTabViewController: DemoTableViewController {
+class OneTabViewController: BaseTableViewController {
     var page = 1
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class OneTabViewController: DemoTableViewController {
     }
 
     @objc func demoListVC() {
-        self.navigationController?.pushViewController(DemoListViewController(), animated: true)
+        self.navigationController?.pushViewController(BaseTableViewController(), animated: true)
     }
 
     @objc func addFPSLable() {}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NetWorkingListViewController: DemoTableViewController {
+class NetWorkingListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle = "网络类demo示例 1.0"

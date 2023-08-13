@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DemoTableViewController: BaseViewController {
+class BaseTableViewController: BaseViewController {
     private lazy var dataArr = [String]()
     var configModelArr: [String] {
         get {
@@ -43,7 +43,7 @@ class DemoTableViewController: BaseViewController {
     }
 }
 
-extension DemoTableViewController: UITableViewDataSource {
+extension BaseTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -77,7 +77,7 @@ extension DemoTableViewController: UITableViewDataSource {
  }
  */
 
-extension DemoTableViewController: UITableViewDelegate {
+extension BaseTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
