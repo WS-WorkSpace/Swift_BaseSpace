@@ -180,7 +180,6 @@ target 'Swift_Base' do
 # -------------- OC --------------
   pod 'AFNetworking', '4.0.1'
   pod 'DZNEmptyDataSet','1.8.1'
-  pod 'MJExtension','3.4.0'
   pod 'MJRefresh','3.7.2'
   pod 'Masonry','1.1.0'
   pod 'SVProgressHUD','2.2.5'

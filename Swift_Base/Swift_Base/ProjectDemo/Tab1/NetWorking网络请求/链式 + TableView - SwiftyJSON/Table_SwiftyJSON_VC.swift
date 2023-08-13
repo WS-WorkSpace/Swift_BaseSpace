@@ -39,7 +39,6 @@ class Table_SwiftyJSON_VC: BaseTableViewController {
 
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
-        configModelArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
         clickCellBlock = { [weak self] _, _ in

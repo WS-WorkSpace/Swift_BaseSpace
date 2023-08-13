@@ -104,6 +104,7 @@
 		C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */; };
 		C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */; };
 		C6EE3A932A893AB100A76C19 /* Table_MJExtension_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */; };
+		C6EE3A952A893D8B00A76C19 /* DemoMJExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,7 @@
 		C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHttpTool.swift; sourceTree = "<group>"; };
 		C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_MJExtension_VC.swift; sourceTree = "<group>"; };
+		C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMJExtensionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -725,6 +727,7 @@
 			isa = PBXGroup;
 			children = (
 				C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */,
+				C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */,
 			);
 			path = "链式 + TableView - MJExtension";
 			sourceTree = "<group>";
@@ -1003,6 +1006,7 @@
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
+				C6EE3A952A893D8B00A76C19 /* DemoMJExtensionModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
 				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
