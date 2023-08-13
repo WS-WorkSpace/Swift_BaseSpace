@@ -7,6 +7,7 @@
 
 import SwiftyJSON
 import UIKit
+import Kingfisher
 
 class Table_SwiftyJSON_VC: BaseTableViewController {
     private var jsonModel: JSON?
@@ -39,6 +40,8 @@ class Table_SwiftyJSON_VC: BaseTableViewController {
 
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
+        configModelArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
+
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
         clickCellBlock = { [weak self] _, _ in
@@ -96,13 +99,12 @@ extension Table_SwiftyJSON_VC {
         let arrTemp = mJsonModel["data"]
         let cityStr = arrTemp[indexPath.row]["city"]
         cell?.leftLab.text = arrTemp[indexPath.row]["province"].stringValue + ":\n" + cityStr.stringValue
-        cell?.rightImg.isHidden = true
+        cell?.rightImg.kf.setImage(with: URL(string: arrTemp[indexPath.row]["imageUrl"].stringValue), placeholder: UIImage(named: "AppIcon-mini"), options: nil, progressBlock: nil, completionHandler: nil)
         cell?.backgroundColor = UIColor.randomColor
         return cell ?? XIBExampleCell()
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.jsonModel?.count ?? 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.jsonModel?["data"].arrayValue.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

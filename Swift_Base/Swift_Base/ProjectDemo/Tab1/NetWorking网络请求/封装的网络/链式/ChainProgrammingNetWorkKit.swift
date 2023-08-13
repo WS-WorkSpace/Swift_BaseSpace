@@ -92,6 +92,9 @@ extension ChainProgrammingNetWorkKit {
                     let code = responseObject["code"].intValue
                     let msg = String(describing: responseObject["msg"])
                     switch code {
+                    /// 这里仅仅用于测试没有code字段的返回
+                    case 0:
+                        fallthrough
                     case 200:
                         // 数据返回正确
                         self.success?(responseObject)
