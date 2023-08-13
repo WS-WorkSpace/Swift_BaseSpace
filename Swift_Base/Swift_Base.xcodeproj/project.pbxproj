@@ -103,6 +103,7 @@
 		C6EE3A872A88D9E000A76C19 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */; };
 		C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */; };
 		C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */; };
+		C6EE3A932A893AB100A76C19 /* Table_MJExtension_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +237,7 @@
 		C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHttpTool.swift; sourceTree = "<group>"; };
 		C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_MJExtension_VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -673,18 +675,11 @@
 			isa = PBXGroup;
 			children = (
 				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
+				C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
-				C6EE3A882A88E8BA00A76C19 /* Moya */,
-				C6EE3A5A2A84DCA800A76C19 /* NetDemo */,
+				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - MJExtension */,
 			);
 			path = "NetWorking网络请求";
-			sourceTree = "<group>";
-		};
-		C6EE3A5A2A84DCA800A76C19 /* NetDemo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetDemo;
 			sourceTree = "<group>";
 		};
 		C6EE3A622A85E4B400A76C19 /* Tableview集合 */ = {
@@ -711,7 +706,6 @@
 		C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */,
 				C6EE3A842A88AEEE00A76C19 /* Table_SwiftyJSON_VC.swift */,
 			);
 			path = "链式 + TableView - SwiftyJSON";
@@ -725,6 +719,31 @@
 				C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */,
 			);
 			path = Moya;
+			sourceTree = "<group>";
+		};
+		C6EE3A8D2A89399500A76C19 /* 链式 + TableView - MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */,
+			);
+			path = "链式 + TableView - MJExtension";
+			sourceTree = "<group>";
+		};
+		C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */ = {
+			isa = PBXGroup;
+			children = (
+				C6EE3A8F2A8939FC00A76C19 /* 链式 */,
+				C6EE3A882A88E8BA00A76C19 /* Moya */,
+			);
+			path = "封装的网络";
+			sourceTree = "<group>";
+		};
+		C6EE3A8F2A8939FC00A76C19 /* 链式 */ = {
+			isa = PBXGroup;
+			children = (
+				C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */,
+			);
+			path = "链式";
 			sourceTree = "<group>";
 		};
 		D956914C5C9F306AEEBF4E78 /* Frameworks */ = {
@@ -958,6 +977,7 @@
 				C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
+				C6EE3A932A893AB100A76C19 /* Table_MJExtension_VC.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
 				C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */,
 				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,

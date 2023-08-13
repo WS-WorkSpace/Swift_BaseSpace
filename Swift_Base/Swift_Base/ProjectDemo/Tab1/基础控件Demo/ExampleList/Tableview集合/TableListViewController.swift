@@ -18,9 +18,9 @@ class TableListViewController: BaseTableViewController {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
                    "Table_SwiftyJSON_VC",
-                   "SessionBackImageSectionViewController",
-                   "WaterflowCollectionViewController",
-                   "NetworkDemoListVC"]
+                   "",
+                   "",
+                   ""]
         return dataArr
     }()
 
@@ -40,9 +40,9 @@ class TableListViewController: BaseTableViewController {
         self.view.addSubview(self.subTableView)
         configModelArr = ["XIB + TableView",
                           "链式 + TableView + SwiftyJSON",
-                          "自定义section背景图",
-                          "刷新瀑布流",
-                          "网络请求"]
+                          "",
+                          "",
+                          ""]
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
         clickCellBlock = { [weak self] indexPath, _ in

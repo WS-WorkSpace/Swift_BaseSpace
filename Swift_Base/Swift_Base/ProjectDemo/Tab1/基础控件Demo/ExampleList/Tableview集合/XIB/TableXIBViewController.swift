@@ -13,7 +13,7 @@ class TableXIBViewController: BaseTableViewController {
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false
-        tableView.RD_registerHeaderFooterNib(XIBTableHeaderView.self)
+//        tableView.RD_registerHeaderFooterNib(XIBTableHeaderView.self)
         /*
          xib创建的view直接赋值给tableview.tableHeaderView会出现view填充不满的问题，右边会有留白现象。即使用Masoty约束frame也没有效果。
          原因：xib创建的view直接赋值给tableview.tableHeaderView会造成约束问题不准确。
