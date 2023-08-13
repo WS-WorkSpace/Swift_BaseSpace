@@ -5,13 +5,12 @@
 //  Created by 王爽 on 2023/8/13.
 //
 
-import UIKit
 import SwiftyJSON
+import UIKit
 
 class Table_SwiftyJSON_VC: BaseTableViewController {
-    
     private var jsonModel: JSON?
-    
+
     lazy var subTableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
         tableView.frame = kScrollViewFrame
@@ -44,7 +43,7 @@ class Table_SwiftyJSON_VC: BaseTableViewController {
         configModelArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
 
-        clickCellBlock = { [weak self] indexPath, _ in
+        clickCellBlock = { [weak self] _, _ in
             // OC对象 和 Swift 区别
             let mType: UIViewController.Type = Table_SwiftyJSON_VC.self
             let childVC = mType.init()
@@ -59,8 +58,9 @@ class Table_SwiftyJSON_VC: BaseTableViewController {
         self.loadNewData()
     }
 }
+
 extension Table_SwiftyJSON_VC {
-    private func loadNewData() -> Void {
+    private func loadNewData() {
         // 链式网络请求：Alamofire + SwiftyJSON
         let url = kBaseURL + "/mock/simpleArrDict"
         let mSuccess: (JSON) -> Void = {
@@ -87,9 +87,9 @@ extension Table_SwiftyJSON_VC {
 //            print("code : \(String(describing: code))")
 //            print("message : \(msg)")
 //        }.request()
-
     }
 }
+
 extension Table_SwiftyJSON_VC {
     /// 重写父类代理自定义xib cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
