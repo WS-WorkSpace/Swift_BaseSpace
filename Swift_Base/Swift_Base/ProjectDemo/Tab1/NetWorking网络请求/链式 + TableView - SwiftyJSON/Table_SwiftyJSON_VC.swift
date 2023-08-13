@@ -1,13 +1,17 @@
 //
-//  TableXIBViewController.swift
+//  Table_MJExtension_VC.swift
 //  Swift_Base
 //
-//  Created by 王爽 on 2023/8/11.
+//  Created by 王爽 on 2023/8/13.
 //
 
 import UIKit
+import SwiftyJSON
 
-class TableXIBViewController: BaseTableViewController {
+class Table_SwiftyJSON_VC: BaseTableViewController {
+    
+    private var jsonModel: JSON?
+    
     lazy var subTableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
         tableView.frame = kScrollViewFrame
@@ -42,7 +46,7 @@ class TableXIBViewController: BaseTableViewController {
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别
-            let mType: UIViewController.Type = TableXIBViewController.self
+            let mType: UIViewController.Type = Table_SwiftyJSON_VC.self
             let childVC = mType.init()
             self?.navigationController?.pushViewController(childVC, animated: true)
         }
@@ -50,23 +54,57 @@ class TableXIBViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "TableViw示例1.0"
+        navTitle = "Table_SwiftyJSON_VC"
         self.mConfigTableView()
+        self.loadNewData()
     }
 }
+extension Table_SwiftyJSON_VC {
+    private func loadNewData() -> Void {
+        // 链式网络请求：Alamofire + SwiftyJSON
+        let url = kBaseURL + "/mock/simpleArrDict"
+        let mSuccess: (JSON) -> Void = {
+            json in
+            self.jsonModel = json
+            mLog(json)
+            self.subTableView.reloadData()
+        }
+        let mFailure: (Int?, String) -> Void = {
+            errorCode, msg in
+            mLog(errorCode ?? -999)
+            mLog(msg)
+        }
+        CP_Net.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
+//        CP_Net_Request.url(baseUrl).requestType(.get).params(nil).success { res in
+//            print(" ========链式网络请求======== ")
+//            print(res)
+//            print(res["code"])
+//            //            let decoder = JSONDecoder()
+//            //            let model = try? decoder.decode(DMModel.self, from: jsonData)
+//            //            self.model = model
+//            //            self.tableView.reloadData()
+//        }.failure { code, msg in
+//            print("code : \(String(describing: code))")
+//            print("message : \(msg)")
+//        }.request()
 
-extension TableXIBViewController {
+    }
+}
+extension Table_SwiftyJSON_VC {
     /// 重写父类代理自定义xib cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
-        cell?.leftLab.text = configModelArr[indexPath.row]
-        cell?.rightImg.image = UIImage(named: "AppIcon-mini") // "APP_NineGridHeadImg"
+        guard let mJsonModel = jsonModel else { return cell ?? XIBExampleCell() }
+        let arrTemp = mJsonModel["data"]
+        let cityStr = arrTemp[indexPath.row]["city"]
+        cell?.leftLab.text = arrTemp[indexPath.row]["province"].stringValue + ":\n" + cityStr.stringValue
+        cell?.rightImg.isHidden = true
         cell?.backgroundColor = UIColor.randomColor
         return cell ?? XIBExampleCell()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return self.jsonModel?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

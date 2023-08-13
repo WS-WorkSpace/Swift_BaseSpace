@@ -8,13 +8,13 @@
 import UIKit
 
 class BaseTableViewController: BaseViewController {
-    private lazy var dataArr = [String]()
+    private lazy var modelArr = [String]()
     var configModelArr: [String] {
         get {
-            return dataArr
+            return modelArr
         }
         set(newValue) {
-            dataArr = newValue
+            modelArr = newValue
         }
     }
 
@@ -49,12 +49,12 @@ extension BaseTableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArr.count
+        return modelArr.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
-        cell.textLabel?.text = dataArr[indexPath.row]
+        cell.textLabel?.text = modelArr[indexPath.row]
         return cell
     }
 }

@@ -16,7 +16,7 @@ class OneTabViewController: BaseTableViewController {
         view.backgroundColor = .white
         configModelArr = ["1", "2", "3", "4", "5", "6", "7", "8"]
         let item1 = UIBarButtonItem.RD_imageItem(imageName: navRightImage ?? ("tab5", "tab5_select"), target: self, action: #selector(self.demoListVC))
-        let item2 = UIBarButtonItem.RD_textItem(title: "FPS", titleColor: .black, target: self, action: #selector(self.addFPSLable))
+        let item2 = UIBarButtonItem.RD_textItem(title: "NetWoring", titleColor: .black, target: self, action: #selector(self.netWoringMethod))
         navigationItem.rightBarButtonItems = [item1, item2]
 
         let header = SelfRefreshGifHeader(refreshingBlock: self.loadNewData)
@@ -26,11 +26,13 @@ class OneTabViewController: BaseTableViewController {
         mTableView.mj_footer = SelfRefreshBackGifFooter(refreshingBlock: self.loadMoreData)
     }
 
-    @objc func demoListVC() {
-        self.navigationController?.pushViewController(BaseTableViewController(), animated: true)
+    @objc func netWoringMethod() {
+        self.navigationController?.pushViewController(NetWorkingListViewController(), animated: true)
     }
 
-    @objc func addFPSLable() {}
+    @objc func demoListVC() {
+        self.navigationController?.pushViewController(DemoListViewController(), animated: true)
+    }
 
     func loadNewData() {
         sleep(1)

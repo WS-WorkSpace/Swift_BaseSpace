@@ -10,29 +10,25 @@ import UIKit
 class NetWorkingListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "网络类demo示例 1.0"
+        navTitle = "网络demo示例1.0"
         mConfigTableView()
     }
 
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
-        dataArr = ["ExampleUI_ViewController",
-                   "AlertUIViewController",
-                   "TableViewDemoListVC",
-                   "CollectListViewController",
-                   "NetworkDemoListVC",
-                   "LibDemoListVC"]
+        dataArr = ["Table_SwiftyJSON_VC",
+                   "",
+                   "",
+                   ""]
         return dataArr
     }()
 
     private func mConfigTableView() {
-        self.configTableView()
-        configModelArr = ["基本控件",
-                          "Alert底部弹框",
-                          "UITableView",
-                          "UICollcetionView列表",
-                          "网络请求",
-                          "三方库使用"]
+        configTableView()
+        configModelArr = ["链式+TableSwiftyJSON",
+                          "",
+                          "",
+                          ""]
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别

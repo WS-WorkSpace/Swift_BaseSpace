@@ -9,6 +9,15 @@ import Foundation
 
 public typealias Lg = Logger
 
+public func mLog(_ items: Any...,
+                separator: String = " ",
+                terminator: String = "\n",
+                file: String = #file,
+                line: Int = #line,
+                method: String = #function){
+    Lg.log(items, separator: separator, terminator: terminator, file: file, line: line, method: method)
+}
+
 @objcMembers
 public class Logger: NSObject
 {

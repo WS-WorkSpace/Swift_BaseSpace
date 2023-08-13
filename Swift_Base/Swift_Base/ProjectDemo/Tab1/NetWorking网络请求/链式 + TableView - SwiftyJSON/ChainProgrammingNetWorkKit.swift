@@ -16,7 +16,7 @@ enum HttpRequestType {
 
 public typealias CP_Net = ChainProgrammingNetWorkKit
 
-public let JhRequest = ChainProgrammingNetWorkKit.shared
+public let CP_Net_Request = ChainProgrammingNetWorkKit.shared
 
 // ChainProgrammingNetWorkKit属性设置
 public class ChainProgrammingNetWorkKit {
@@ -60,7 +60,7 @@ extension ChainProgrammingNetWorkKit {
     }
     
     /// 失败的回调
-    func failure(handler: @escaping FailureHandlerType) -> Self {
+    func failure(_ handler: @escaping FailureHandlerType) -> Self {
         failure = handler
         return self
     }

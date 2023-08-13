@@ -17,7 +17,7 @@ class TableListViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
-                   "NineGridViewController",
+                   "Table_SwiftyJSON_VC",
                    "SessionBackImageSectionViewController",
                    "WaterflowCollectionViewController",
                    "NetworkDemoListVC"]
@@ -39,7 +39,7 @@ class TableListViewController: BaseTableViewController {
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
         configModelArr = ["XIB + TableView",
-                          "九宫格",
+                          "链式 + TableView + SwiftyJSON",
                           "自定义section背景图",
                           "刷新瀑布流",
                           "网络请求"]
