@@ -33,6 +33,19 @@ class HandyJsonModel: NSObject, HandyJSON {
     required override init(){
         
     }
+     var cellHeight:CGFloat {
+        get {
+            var height = 0.0
+            let labelWidrh = 120.0
+            let font = 17.0
+            guard let contentHeight = desc?.RD_getStringHeight(labelWidrh, font) else { return 0 }
+            height += contentHeight
+            height += 10 + 10
+//            JhLog("height : \(height)")
+            return height>60 ? height : 60.0
+        }
+    }
+
 //    func mapping(mapper: HelpingMapper) {
 //        mapper <<< self.temp <-- "access_token"  //把access_token 转换为模型中的 temp
 //        mapper <<< self.temp2 <-- "refresh_token"  //把access_token 转换为模型中的 temp

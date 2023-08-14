@@ -1,13 +1,16 @@
 //
-//  Table_MJExtension_VC.swift
+//  Table_HandyJSON_VC.swift
 //  Swift_Base
 //
 //  Created by 王爽 on 2023/8/14.
 //
 
 import UIKit
+import Alamofire
+import HandyJSON
 
-class Table_MJExtension_VC: BaseTableViewController {
+class Table_HandyJSON_VC: BaseTableViewController {
+    lazy var items = [HandyJsonModel]()
 
     lazy var subTableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)
@@ -25,55 +28,55 @@ class Table_MJExtension_VC: BaseTableViewController {
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
         clickCellBlock = { [weak self] _, _ in
-            // OC对象 和 Swift 区别
-            let mType: UIViewController.Type = Table_SwiftyJSON_VC.self
-            let childVC = mType.init()
-            self?.navigationController?.pushViewController(childVC, animated: true)
+            mLog("点击Cell",self as Any)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "Table_MJExtension_VC"
+        navTitle = "Table_HandyJSON_VC"
         self.mConfigTableView()
         self.loadNewData()
     }
 }
 
-extension Table_MJExtension_VC {
+extension Table_HandyJSON_VC {
     private func loadNewData() {
         // 链式网络请求：Alamofire + SwiftyJSON
         let url = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
-        CP_Net_Request.url(url).requestType(.get).params(nil).success { res in
-            mLog(res)
+        CP_Net_Request.url(url).requestType(.get).params(nil).requestEasy {[weak self] res in
+            let dic = res as? Dictionary<String, Any>
+            /// HandyJSON接受字典
+            /// 会重新计算label的高度,并保存.刷新UI时,动态改变Cell的高度.此时label 的约束失效.
+            guard let resObj = TotalModel.deserialize(from: dic) ,let self = self else { return }
+            self.items.removeAll()
+            self.items = resObj.list
+            mLog(self.items)
             self.subTableView.reloadData()
-        }.failure { errorCode, msg in
-            mLog(errorCode ?? -999)
-            mLog(msg)
-        }.request()
+        }
     }
 }
 
-extension Table_MJExtension_VC {
+extension Table_HandyJSON_VC {
     /// 重写父类代理自定义xib cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
-//        guard let mJsonModel = jsonModel else { return cell ?? XIBExampleCell() }
-//        let arrTemp = mJsonModel["data"]
-//        let cityStr = arrTemp[indexPath.row]["city"]
-//        cell?.leftLab.text = arrTemp[indexPath.row]["province"].stringValue + ":\n" + cityStr.stringValue
-//        cell?.rightImg.isHidden = true
-//        cell?.backgroundColor = UIColor.randomColor
+        let repTestDetail:HandyJsonModel = items[indexPath.row]
+        cell?.leftLab.text = repTestDetail.desc
+        let imgeURL = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
+        cell?.rightImg.kf.setImage(with: URL(string: imgeURL), placeholder: UIImage(named: "AppIcon-mini"), options: nil, progressBlock: nil, completionHandler: nil)
+        cell?.backgroundColor = UIColor.randomColor
+        cell?.leftLab.numberOfLines = 0
         return cell ?? XIBExampleCell()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return self.jsonModel?.count ?? 0
-        return  0
+        return  items.count
 
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return items[indexPath.row].cellHeight
     }
 }

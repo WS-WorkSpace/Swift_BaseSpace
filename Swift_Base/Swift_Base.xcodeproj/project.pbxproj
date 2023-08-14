@@ -57,7 +57,6 @@
 		C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF0C2A76F9AB00C5CF02 /* SelfRefreshGifHeader.m */; };
 		C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */; };
 		C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */; };
-		C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */; };
 		C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */; };
 		C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */; };
 		C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */; };
@@ -103,8 +102,8 @@
 		C6EE3A872A88D9E000A76C19 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */; };
 		C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */; };
 		C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */; };
-		C6EE3A932A893AB100A76C19 /* Table_MJExtension_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */; };
-		C6EE3A952A893D8B00A76C19 /* DemoMJExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */; };
+		C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */; };
+		C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,7 +190,6 @@
 		C6C5CF0F2A76FA1600C5CF02 /* SELFAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SELFAutoStateFooter.h; sourceTree = "<group>"; };
 		C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SELFAutoStateFooter.m; sourceTree = "<group>"; };
 		C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonViewController.swift; sourceTree = "<group>"; };
-		C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyJsonModel.swift; sourceTree = "<group>"; };
 		C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Refresh.bundle; sourceTree = "<group>"; };
 		C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhProgressHUD.m; sourceTree = "<group>"; };
 		C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhProgressHUD.h; sourceTree = "<group>"; };
@@ -238,8 +236,8 @@
 		C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHttpTool.swift; sourceTree = "<group>"; };
 		C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
-		C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_MJExtension_VC.swift; sourceTree = "<group>"; };
-		C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMJExtensionModel.swift; sourceTree = "<group>"; };
+		C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_HandyJSON_VC.swift; sourceTree = "<group>"; };
+		C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +400,6 @@
 				C6C5CEDF2A76958000C5CF02 /* AppDelegate+Extension.swift */,
 				C6C5CEA42A745D8B00C5CF02 /* RootViewController.swift */,
 				C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */,
-				C6C5CF142A76FD1400C5CF02 /* HandyJsonModel.swift */,
 				C6C5CEA92A74619500C5CF02 /* Swift_Base-Bridging-Header.h */,
 			);
 			path = SRC;
@@ -679,7 +676,7 @@
 				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
 				C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
-				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - MJExtension */,
+				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 			);
 			path = "NetWorking网络请求";
 			sourceTree = "<group>";
@@ -723,13 +720,13 @@
 			path = Moya;
 			sourceTree = "<group>";
 		};
-		C6EE3A8D2A89399500A76C19 /* 链式 + TableView - MJExtension */ = {
+		C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A922A893AB100A76C19 /* Table_MJExtension_VC.swift */,
-				C6EE3A942A893D8B00A76C19 /* DemoMJExtensionModel.swift */,
+				C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */,
+				C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */,
 			);
-			path = "链式 + TableView - MJExtension";
+			path = "链式 + TableView - HandyJSON + 动态高度";
 			sourceTree = "<group>";
 		};
 		C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */ = {
@@ -944,7 +941,6 @@
 				C6C5CF652A7D0B0500C5CF02 /* BaseCollectionViewCell.swift in Sources */,
 				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
-				C6C5CF152A76FD1500C5CF02 /* HandyJsonModel.swift in Sources */,
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
@@ -980,7 +976,7 @@
 				C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
-				C6EE3A932A893AB100A76C19 /* Table_MJExtension_VC.swift in Sources */,
+				C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
 				C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */,
 				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,
@@ -1006,7 +1002,7 @@
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
-				C6EE3A952A893D8B00A76C19 /* DemoMJExtensionModel.swift in Sources */,
+				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
 				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,

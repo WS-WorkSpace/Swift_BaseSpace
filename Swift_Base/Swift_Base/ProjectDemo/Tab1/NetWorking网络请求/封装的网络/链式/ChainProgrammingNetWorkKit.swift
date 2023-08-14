@@ -68,6 +68,41 @@ extension ChainProgrammingNetWorkKit {
 
 // NetworkKit请求相关
 extension ChainProgrammingNetWorkKit {
+    func requestEasy(respondCallback: @escaping (_ responseObject: Any) -> Void) {
+        var dataRequest: DataRequest? // alamofire请求后的返回值
+        // 发起请求
+        if let URLString = url {
+//            ProgressHUD.show()
+            let method = requestType == .get ? HTTPMethod.get : HTTPMethod.post
+            dataRequest = Alamofire.request(URLString, method: method, parameters: params)
+            httpRequest = dataRequest
+        }
+        dataRequest?.responseJSON {
+            response in
+//            ProgressHUD.hide()
+            switch response.result {
+            case let .success(response):
+                do {
+                    respondCallback(response)
+                }
+            case let .failure(error):
+                failureHandle(failure: self.failure, stateCode: nil, message: error.localizedDescription)
+            }
+        }
+        
+        // 错误处理 - 弹出错误信息
+        func failureHandle(failure: FailureHandlerType?, stateCode: Int?, message: String) {
+            MBProgressHUD_Alert.show(type: .error, text: message)
+            failure?(stateCode, message)
+        }
+        
+        // 登录弹窗 - 弹出是否需要登录的窗口
+        func alertLogin(_ title: String?) {
+            // TODO: 跳转到登录页的操作：
+        }
+    }
+    
+
     /// 发起请求 设置好相关参数后再调用
     func request() {
         var dataRequest: DataRequest? // alamofire请求后的返回值

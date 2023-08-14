@@ -17,7 +17,7 @@ class NetWorkingListViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["Table_SwiftyJSON_VC",
-                   "Table_MJExtension_VC",
+                   "Table_HandyJSON_VC",
                    "",
                    ""]
         return dataArr
@@ -26,7 +26,7 @@ class NetWorkingListViewController: BaseTableViewController {
     private func mConfigTableView() {
         configTableView()
         configModelArr = ["链式+SwiftyJSON",
-                          "链式+MJExtension",
+                          "链式+HandyJSON",
                           "",
                           ""]
 
