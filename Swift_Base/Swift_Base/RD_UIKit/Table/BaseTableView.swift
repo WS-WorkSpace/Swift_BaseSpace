@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CRRefresh
 
 enum EmptyDataViewState: Int {
     /// 状态0 - 暂无数据
@@ -142,4 +143,50 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
         return image
     }
     
+}
+extension BaseTableView {
+    /// 添加上拉刷新控件
+    func mAddHeadRefresh(isAutoRefresh: Bool = false, fetchNewDataBlock: @escaping (() -> Void)) {
+        
+        /// animator: 你的上拉刷新的Animator, 默认是 NormalHeaderAnimator
+        self.cr.addHeadRefresh(animator: NormalHeaderAnimator()) { //[weak self] in
+//            guard let self = self else { return }
+            /// 开始刷新了
+            /// 开始刷新的回调
+            fetchNewDataBlock()
+
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                /// 停止刷新
+//                self.mTableView.cr.endHeaderRefresh()
+//                /// 清空数据,然后传入下拉数据,计算高度
+//                self.modelArr.removeAll()
+//            }
+        }
+        /// 手动刷新
+        if isAutoRefresh{
+            self.cr.beginHeaderRefresh()
+        }
+    }
+
+    /// 添加下拉加载控件
+    func addFootRefresh(fetchNewDataBlock: @escaping (() -> Void)) {
+        /// animator: 你的下拉加载的Animator, 默认是NormalFootAnimator
+        self.cr.addFootRefresh(animator: NormalFooterAnimator()) {
+//            [weak self] in
+//            guard let self = self else { return }
+            /// 开始下拉加载
+            /// 回调
+            fetchNewDataBlock()
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                /// 结束加载
+//                self.mTableView.cr.endLoadingMore()
+//                /// 没有更多数据
+//                self.mTableView.cr.noticeNoMoreData()
+////                /// 复位
+//                self.mTableView.cr.resetNoMore()
+//                self.fetchNewDataBlock?(true)
+//            }
+        }
+    }
+
 }

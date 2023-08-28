@@ -16,6 +16,7 @@
 		C654370E2A80844700C304B4 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370D2A80844700C304B4 /* Then.swift */; };
 		C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370F2A80D90800C304B4 /* ImageReusableView.swift */; };
 		C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */; };
+		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
 		C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7F2A745BD400C5CF02 /* LaunchScreen.storyboard */; };
@@ -137,6 +138,7 @@
 		C654370D2A80844700C304B4 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C654370F2A80D90800C304B4 /* ImageReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReusableView.swift; sourceTree = "<group>"; };
 		C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCollectionViewController.swift; sourceTree = "<group>"; };
+		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -316,6 +318,14 @@
 				C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */,
 			);
 			path = WaterFlow;
+			sourceTree = "<group>";
+		};
+		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C6C5CE682A745BD300C5CF02 = {
@@ -677,6 +687,7 @@
 				C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
+				C6B8C4E52A89ED100080F9B4 /* New Group */,
 			);
 			path = "NetWorking网络请求";
 			sourceTree = "<group>";
@@ -988,6 +999,7 @@
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
 				C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */,
+				C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */,
 				C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,

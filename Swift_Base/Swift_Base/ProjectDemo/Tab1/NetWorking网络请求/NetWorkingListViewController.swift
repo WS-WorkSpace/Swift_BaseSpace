@@ -18,7 +18,7 @@ class NetWorkingListViewController: BaseTableViewController {
         var dataArr = NSMutableArray()
         dataArr = ["Table_SwiftyJSON_VC",
                    "Table_HandyJSON_VC",
-                   "",
+                   "Table_ObjectMapper_Moya",
                    ""]
         return dataArr
     }()
@@ -27,7 +27,7 @@ class NetWorkingListViewController: BaseTableViewController {
         configTableView()
         configModelArr = ["链式+SwiftyJSON",
                           "链式+HandyJSON",
-                          "",
+                          "Table_ObjectMapper_Moya",
                           ""]
 
         clickCellBlock = { [weak self] indexPath, _ in
