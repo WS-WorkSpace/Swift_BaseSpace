@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func getAppInfo() {
+//version QA_Branch
 //update
 //        print("App 显示名称 :", DEV_INFO.appDisplayName)
 //        print("App BundleName :", DEV_INFO.appName)
