@@ -40,7 +40,7 @@ PODS:
   - FSPagerView (0.8.3)
   - Gifu (3.3.1)
   - HandyJSON (5.0.2)
-  - Instructions (2.1.1)
+  - Instructions (2.3.0)
   - IQKeyboardManagerSwift (6.5.9)
   - JTAppleCalendar (7.1.7)
   - Kingfisher (4.10.1)
@@ -94,7 +94,7 @@ DEPENDENCIES:
   - FSPagerView (= 0.8.3)
   - Gifu (= 3.3.1)
   - HandyJSON (= 5.0.2)
-  - Instructions (= 2.1.1)
+  - Instructions (= 2.3.0)
   - IQKeyboardManagerSwift (= 6.5.9)
   - JTAppleCalendar (= 7.1.7)
   - Kingfisher (= 4.10.1)
@@ -182,7 +182,7 @@ SPEC CHECKSUMS:
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  Instructions: bde4a699f27e8e43d20efa3508e5bc53215d0879
+  Instructions: 3aac22d036495ba4c40e00747e0a275da40ce53d
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
@@ -210,6 +210,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: d75bde90f03b95a9b002e8ca0188ffcd8c144fe3
+PODFILE CHECKSUM: 789d0d7f434c1024b0fbd21bc7e68846d9adc10a
 
 COCOAPODS: 1.12.1

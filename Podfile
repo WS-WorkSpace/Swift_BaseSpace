@@ -110,7 +110,7 @@ target 'Swift_Base' do
   pod 'ESTabBarController-swift', '2.8.0'
   #pod 'RAMAnimatedTabBarController'
 # 引导页
-  pod 'Instructions', '2.1.1'
+  pod 'Instructions', '2.3.0'
   #pod 'RazzleDazzle'
   #pod 'ZLaunchAd'
 # 二维码
