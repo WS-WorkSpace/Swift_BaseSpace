@@ -16,12 +16,17 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 # pod install --no-repo-update 跳过检查更新
 # pod install
 # pod install --repo-update 检查更新
+# 更新指定库名的第三个库，其他库不更新：pod update 库名 --verbose --no-repo-update
+# 更新所有的第三方库：pod update --verbose --no-repo-update
+# 只安装新增的库，已经安装的库不更新 pod install --verbose --no-repo-update
 # removing SDWebImage
+
 
 # pod --version 查看版本
 # sudo gem update cocoapods 更新升级CocoaPods
 # sudo gem update --system  更新升级gem
 # sudo gem install -n /usr/local/bin cocoapods 安装CocoaPods
+
 
 # -------------- 指令 --------------
 
