@@ -44,7 +44,7 @@ target 'Swift_Base' do
 # 自动布局
   pod 'SnapKit', '4.2.0'
 # 网络图片加载缓存
-  pod 'Kingfisher', '4.10.1'
+  pod 'Kingfisher', '6.3.1'
   pod 'IQKeyboardManagerSwift', '6.5.9'
   pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
