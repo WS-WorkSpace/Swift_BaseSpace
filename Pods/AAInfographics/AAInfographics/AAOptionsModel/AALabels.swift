@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -50,25 +50,25 @@ public class AALabels: AAObject {
     public var useHTML: Bool? // HTML rendering
     
     @discardableResult
-    public func align(_ prop: String) -> AALabels {
-        align = prop
+    public func align(_ prop: AAChartAlignType?) -> AALabels {
+        align = prop?.rawValue
         return self
     }
     
     @discardableResult
-    public func autoRotation(_ prop: Any) -> AALabels {
+    public func autoRotation(_ prop: Any?) -> AALabels {
         autoRotation = prop
         return self
     }
     
     @discardableResult
-    public func autoRotationLimit(_ prop: Float) -> AALabels {
+    public func autoRotationLimit(_ prop: Float?) -> AALabels {
         autoRotationLimit = prop
         return self
     }
     
     @discardableResult
-    public func distance(_ prop: Float) -> AALabels {
+    public func distance(_ prop: Float?) -> AALabels {
         distance = prop
         return self
     }
@@ -80,61 +80,61 @@ public class AALabels: AAObject {
     }
     
     @discardableResult
-    public func format(_ prop: String) -> AALabels {
+    public func format(_ prop: String?) -> AALabels {
         format = prop
         return self
     }
     
     @discardableResult
-    public func formatter(_ prop: String) -> AALabels {
-        formatter = prop.aa_toPureJSString()
+    public func formatter(_ prop: String?) -> AALabels {
+        formatter = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
-    public func padding(_ prop: Float) -> AALabels {
+    public func padding(_ prop: Float?) -> AALabels {
         padding = prop
         return self
     }
     
     @discardableResult
-    public func rotation(_ prop: Float) -> AALabels {
+    public func rotation(_ prop: Float?) -> AALabels {
         rotation = prop
         return self
     }
     
     @discardableResult
-    public func staggerLines(_ prop: Int) -> AALabels {
+    public func staggerLines(_ prop: Int?) -> AALabels {
         staggerLines = prop
         return self
     }
     
     @discardableResult
-    public func step(_ prop: Int) -> AALabels {
+    public func step(_ prop: Int?) -> AALabels {
         step = prop
         return self
     }
     
     @discardableResult
-    public func style(_ prop: AAStyle) -> AALabels {
+    public func style(_ prop: AAStyle?) -> AALabels {
         style = prop
         return self
     }
     
     @discardableResult
-    public func x(_ prop: Float) -> AALabels {
+    public func x(_ prop: Float?) -> AALabels {
         x = prop
         return self
     }
     
     @discardableResult
-    public func y(_ prop: Float) -> AALabels {
+    public func y(_ prop: Float?) -> AALabels {
         y = prop
         return self
     }
     
     @discardableResult
-    public func useHTML(_ prop: Bool) -> AALabels {
+    public func useHTML(_ prop: Bool?) -> AALabels {
         useHTML = prop
         return self
     }

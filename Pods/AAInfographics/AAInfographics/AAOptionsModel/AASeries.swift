@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -33,90 +33,186 @@
 import Foundation
 
 public class AASeries: AAObject {
-    public var borderRadius: Float?
+    public var borderColor: String?        //The border color, It is only valid for column, bar, pie, columnrange, pyramid and funnel chart types
+    public var borderWidth: Float?         //The border width, It is only valid for column, bar, pie, columnrange, pyramid and funnel chart types
     public var marker: AAMarker?
     public var stacking: String?
-    public var animation: AAAnimation?
+    public var animation: Any? //AAAnimation | Bool
     public var keys: [String]?
     public var colorByPoint: Bool?
     public var connectNulls: Bool? //Whether reconnects the broken line of the chart
-    public var events: AAEvents?
+    public var events: AASeriesEvents?
     public var shadow: AAShadow?
     public var dataLabels: AADataLabels?
     public var states: AAStates?
     public var allowPointSelect: Bool?
     public var point: AAPoint?
-
+    public var pointInterval: Float?
+    public var pointIntervalUnit: String?
+    public var pointPlacement: Any? //String | Number
+    public var pointStart: Float?
+    public var pointPadding: Float?
+    public var groupPadding: Float?
+    public var pointWidth: Float?
+    public var maxPointWidth: Float?
+    public var minPointLength: Float?
+    public var tooltip: AATooltip?
+    public var lineWidth: Float?
     
+
     @discardableResult
-    public func borderRadius(_ prop: Float?) -> AASeries {
-        borderRadius = prop
+    public func borderColor(_ prop: String?) -> Self {
+        borderColor = prop
         return self
     }
     
     @discardableResult
-    public func marker(_ prop: AAMarker) -> AASeries {
+    public func borderWidth(_ prop: Float?) -> Self {
+        borderWidth = prop
+        return self
+    }
+    
+    @discardableResult
+    public func marker(_ prop: AAMarker?) -> Self {
         marker = prop
         return self
     }
     
     @discardableResult
-    public func stacking(_ prop: AAChartStackingType?) -> AASeries {
+    public func stacking(_ prop: AAChartStackingType?) -> Self {
         stacking = prop?.rawValue
         return self
     }
     
     @discardableResult
-    public func animation(_ prop: AAAnimation) -> AASeries {
+    public func animation(_ prop: AAAnimation?) -> Self {
         animation = prop
         return self
     }
     
     @discardableResult
-    public func keys(_ prop: [String]) -> AASeries {
+    public func animation(_ prop: Bool?) -> Self {
+        animation = prop
+        return self
+    }
+    
+    @discardableResult
+    public func keys(_ prop: [String]?) -> Self {
         keys = prop
         return self
     }
     
     @discardableResult
-    public func colorByPoint(_ prop: Bool?) -> AASeries {
+    public func colorByPoint(_ prop: Bool?) -> Self {
         colorByPoint = prop
         return self
     }
     
     @discardableResult
-    public func connectNulls(_ prop: Bool?) -> AASeries {
+    public func connectNulls(_ prop: Bool?) -> Self {
         connectNulls = prop
         return self
     }
     
     @discardableResult
-    public func events(_ prop: AAEvents?) -> AASeries {
+    public func events(_ prop: AASeriesEvents?) -> Self {
         events = prop
         return self
     }
     
     @discardableResult
-    public func shadow(_ prop: AAShadow) -> AASeries {
+    public func shadow(_ prop: AAShadow?) -> Self {
         shadow = prop
         return self
     }
     
     @discardableResult
-    public func dataLabels(_ prop: AADataLabels) -> AASeries {
+    public func dataLabels(_ prop: AADataLabels?) -> Self {
         dataLabels = prop
         return self
     }
     
     @discardableResult
-    public func states(_ prop: AAStates) -> AASeries {
+    public func states(_ prop: AAStates?) -> Self {
         states = prop
         return self
     }
     
     @discardableResult
-    public func point(_ prop: AAPoint) -> AASeries {
+    public func allowPointSelect(_ prop: Bool?) -> Self {
+        allowPointSelect = prop
+        return self
+    }
+    
+    @discardableResult
+    public func point(_ prop: AAPoint?) -> Self {
         point = prop
+        return self
+    }
+
+    @discardableResult
+    public func pointInterval(_ prop: Float?) -> Self {
+        pointInterval = prop
+        return self
+    }
+    
+    @discardableResult
+    public func pointIntervalUnit(_ prop: String?) -> Self {
+        pointIntervalUnit = prop
+        return self
+    }
+    
+    @discardableResult
+    public func pointPlacement(_ prop: Any?) -> Self {
+        pointPlacement = prop
+        return self
+    }
+    
+    @discardableResult
+    public func pointStart(_ prop: Float?) -> Self {
+        pointStart = prop
+        return self
+    }
+    
+    @discardableResult
+    public func pointPadding(_ prop: Float?) -> Self {
+        pointPadding = prop
+        return self
+    }
+    
+    @discardableResult
+    public func groupPadding(_ prop: Float?) -> Self {
+        groupPadding = prop
+        return self
+    }
+
+    @discardableResult
+    public func pointWidth(_ prop: Float?) -> Self {
+        pointWidth = prop
+        return self
+    }
+
+    @discardableResult
+    public func maxPointWidth(_ prop: Float?) -> Self {
+        maxPointWidth = prop
+        return self
+    }
+
+    @discardableResult
+    public func minPointLength(_ prop: Float?) -> Self {
+        minPointLength = prop
+        return self
+    }
+
+    @discardableResult
+    public func tooltip(_ prop: AATooltip?) -> Self {
+        tooltip = prop
+        return self
+    }
+    
+    @discardableResult
+    public func lineWidth(_ prop: Float?) -> Self {
+        lineWidth = prop
         return self
     }
     
@@ -126,14 +222,33 @@ public class AASeries: AAObject {
 }
 
 
-public class AAEvents: AAObject {
+public class AASeriesEvents: AAObject {
+    public var click: String?
+    public var mouseOver: String?
+    public var mouseOut: String?
     public var legendItemClick: String?
+    
+    @discardableResult
+    public func click(_ prop: String?) -> AASeriesEvents {
+        click = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func mouseOver(_ prop: String?) -> AASeriesEvents {
+        mouseOver = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func mouseOut(_ prop: String?) -> AASeriesEvents {
+        mouseOut = prop?.aa_toPureJSString()
+        return self
+    }
 
     @discardableResult
-    public func legendItemClick(_ prop: String?) -> AAEvents {
-        if prop != nil {
-            legendItemClick = prop!.aa_toPureJSString()
-        }
+    public func legendItemClick(_ prop: String?) -> AASeriesEvents {
+        legendItemClick = prop?.aa_toPureJSString()
         return self
     }
     
@@ -162,56 +277,58 @@ public class AAPoint: AAObject {
 public class AAPointEvents: AAObject {
     public var click: String?
     public var mouseOver: String?
+    public var mouseOut: String?
     public var remove: String?
     public var select: String?
     public var unselect: String?
     public var update: String?
+    public var legendItemClick: String? // Only for pie chart
 
     @discardableResult
     public func click(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            click = prop!.aa_toPureJSString()
-        }
+        click = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
     public func mouseOver(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            mouseOver = prop!.aa_toPureJSString()
-        }
+        mouseOver = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func mouseOut(_ prop: String?) -> AAPointEvents {
+        mouseOut = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
     public func remove(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            remove = prop!.aa_toPureJSString()
-        }
+        remove = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
     public func select(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            select = prop!.aa_toPureJSString()
-        }
+        select = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
     public func unselect(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            unselect = prop!.aa_toPureJSString()
-        }
+        unselect = prop?.aa_toPureJSString()
         return self
     }
     
     @discardableResult
     public func update(_ prop: String?) -> AAPointEvents {
-        if prop != nil {
-            update = prop!.aa_toPureJSString()
-        }
+        update = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func legendItemClick(_ prop: String?) -> AAPointEvents {
+        legendItemClick = prop?.aa_toPureJSString()
         return self
     }
     

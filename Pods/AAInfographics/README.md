@@ -14,8 +14,7 @@
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/AAChartModel/AAChartKit-Swift.svg)](http://isitmaintained.com/project/AAChartModel/AAChartKit-Swift "Percentage of issues still open")
 [![](https://img.shields.io/badge/AAChartKitSwift-StarHistory-blue.svg)](https://star-history.t9t.io/#AAChartModel/AAChartKit-Swift)</br>
 
-## [ **English Document 🇬🇧** ](https://github.com/AAChartModel/AAChartKit-Swift)  |  [ **简体中文文档 🇨🇳** ](https://github.com/AAChartModel/AAChartKit-Swift/blob/master/CHINESE-README.md)| [ **繁體中文文檔 🇭🇰** ](https://github.com/AAChartModel/AAChartKit-Swift/blob/master/TRADITIONAL-CHINESE-README.md)
-
+## [ **English Document 🇬🇧** ](https://github.com/AAChartModel/AAChartKit-Swift)  |  [ **简体中文文档 🇨🇳** ](https://github.com/AAChartModel/AAChartKit-Swift/blob/master/CHINESE-README.md)
 ### There is the link of **Objective-C version** of  `AAChartKit` as follow
 #### *https://github.com/AAChartModel/AAChartKit*
  
@@ -26,7 +25,7 @@
 ***
 ## Features
 
-* 🎂  **Environment friendly**. Support `iOS `、`iPadOS` and  `macOS`. Totally support `Swift` language, and there are more types version such as  `Objective-C` language version [AAChartKit](https://github.com/AAChartModel/AAChartKit) 、 `Java` language version [AAChartCore](https://github.com/AAChartModel/AAChartCore) 、`Kotlin` language version [AAInfographics](https://github.com/AAChartModel/AAChartCore-Kotlin) . To get more details you can see the [source code links list](https://github.com/AAChartModel/AAChartKit-Swift#source-code).
+* 🎂  **Environment friendly**. Support `iOS `、`iPadOS` and  `macOS`. Totally support `Swift` language, and there are more types version such as  `Objective-C` language version [AAChartKit](https://github.com/AAChartModel/AAChartKit) 、 `Java` language version [AAChartCore](https://github.com/AAChartModel/AAChartCore) 、`Kotlin` language version [AAInfographics](https://github.com/AAChartModel/AAChartCore-Kotlin) . To get more details you can see the [source code links list](https://github.com/AAChartModel/AAChartKit-Swift#source-code-Links).
 
 * 🚀  **Powerful and easy to use**. It supports `column chart`, `bar chart`, `area chart`, `areaspline chart`, `line chart`, `spline chart`, `radar chart`, `polar chart`, `pie chart`, `bubble chart`, `pyramid chart`, `funnel chart`, `columnrange chart`, `arearange chart`, `mixed chart` and other graphics. Support for more chart types is planned.
 
@@ -34,7 +33,7 @@
 
 * 🎮  **Interactive and animated**. The charts `animation` effect is exquisite, delicate, smooth and beautiful.
 
-* ⛓  **Chain programming**.  Supports `chain programming syntax` like *Masonry* .
+* ⛓  **Chain programming**.  Supports `chain programming syntax` like *SwiftUI* and *Jetpack Compose*.
 
 * 🦋  **Minimalist**. `AAChartView + AAChartModel = Chart`. The AAChartKit follows a minimalist formula: Chart view + Chart model = The chart you want, just like the powerful and beautiful charts framework [AAChartKit](https://github.com/AAChartModel/AAChartKit).
 
@@ -65,7 +64,7 @@
 
 ## Installation
 
-### CocoaPods (recommand)
+### CocoaPods (recommended)
 
 1. Add following content
 ```ruby
@@ -77,6 +76,18 @@ to your project Podfile.
 2. Run `pod install` or `pod update`.
 3. Import  `AAInfographics`.
 
+### Carthage
+
+1. Add following content
+```ruby
+github "https://github.com/AAChartModel/AAChartKit-Swift.git" ~> 1.0
+
+```
+to your project Cartfile.
+
+2. Run `carthage bootstrap` or `carthage update`.
+3. Import  `AAInfographics`.
+
 ### Manually  (old school way)
 
 1. Download whole project demo of `AAInfographicsDemo`
@@ -85,11 +96,15 @@ to your project Podfile.
 ## Usage
 
 1. Creat the instance object of chart view:`AAChartView`
+
 ```swift
         let chartViewWidth  = self.view.frame.size.width
         let chartViewHeight = self.view.frame.size.height
         aaChartView = AAChartView()
-        aaChartView?.frame = CGRect(x:0,y:0,width:chartViewWidth,height:chartViewHeight)
+        aaChartView?.frame = CGRect(x: 0,
+                                    y: 60,
+                                    width: chartViewWidth,
+                                    height: chartViewHeight)
         // set the content height of aachartView
         // aaChartView?.contentHeight = self.view.frame.size.height
         self.view.addSubview(aaChartView!)
@@ -98,7 +113,7 @@ to your project Podfile.
 
 ``` swift
         let aaChartModel = AAChartModel()
-            .chartType(.column)//Can be any of the chart types listed under `AAChartType`.
+            .chartType(.area)//Can be any of the chart types listed under `AAChartType`.
             .animationType(.bounce)
             .title("TITLE")//The chart title
             .subtitle("subtitle")//The chart subtitle
@@ -122,6 +137,7 @@ to your project Podfile.
                     .data([3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]),
                     ])
 ```
+
 3.  Draw the chart(This method is called only for the first time after you create an AAChartView instance object)
 
 ```swift
@@ -144,6 +160,7 @@ if you want to refresh chart content,you should do something as follow.According
 ```
 
 *  Refresh the chart, minus the chart data (this method is recommended for subsequent refreshes after the first drawing of graphics has completed. If you want to update the chart data only, you should use the function `aa_onlyRefreshTheChartDataWithChartModelSeries`)
+
 ```swift
         //Refresh the chart after the AAChartModel whole content is updated
         aaChartView?.aa_refreshChartWholeContentWithChartModel(aaChartModel!)
@@ -218,26 +235,68 @@ if you want to refresh chart content,you should do something as follow.According
 
 ### Support user click events and move over events
 
-you can monitor the user touch events message through implementing delegate function for AAChartView instance object
+you can monitor the user cick or finger move over events message through implementing delegate function for AAChartView instance object
 
 ```swift
  //Set AAChartView events delegate
  aaChartView!.delegate = self as AAChartViewDelegate
- //set AAChartModel support user touch event
- aaChartModel = aaChartModel!.touchEventEnabled(true)
+ 
 
- //implement AAChartView user touch events delegate function
-extension CommonChartVC: AAChartViewDelegate {
-   open func aaChartView(_ aaChartView: AAChartView, moveOverEventMessage: AAMoveOverEventMessageModel) {
-       print("🔥selected point series element name: \(moveOverEventMessage.name ?? "")")
-   }
+
+ //implement AAChartView user click or finger move over events delegate function
+extension BasicChartVC: AAChartViewDelegate {
+    open func aaChartView(_ aaChartView: AAChartView, clickEventMessage: AAClickEventMessageModel) {
+        print(
+            """
+
+            clicked point series element name: \(clickEventMessage.name ?? "")
+            🖱🖱🖱WARNING!!!!!!!!!!!!!!!!!!!! Click Event Message !!!!!!!!!!!!!!!!!!!! WARNING🖱🖱🖱
+            ==========================================================================================
+            ------------------------------------------------------------------------------------------
+            user finger moved over!!!,get the move over event message: {
+            category = \(String(describing: clickEventMessage.category))
+            index = \(String(describing: clickEventMessage.index))
+            name = \(String(describing: clickEventMessage.name))
+            offset = \(String(describing: clickEventMessage.offset))
+            x = \(String(describing: clickEventMessage.x))
+            y = \(String(describing: clickEventMessage.y))
+            }
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            
+            
+            """
+        )
+    }
+
+    open func aaChartView(_ aaChartView: AAChartView, moveOverEventMessage: AAMoveOverEventMessageModel) {
+        print(
+            """
+
+            moved over point series element name: \(moveOverEventMessage.name ?? "")
+            ✋🏻✋🏻✋🏻✋🏻✋🏻WARNING!!!!!!!!!!!!!! Move Over Event Message !!!!!!!!!!!!!! WARNING✋🏻✋🏻✋🏻✋🏻✋🏻
+            ==========================================================================================
+            ------------------------------------------------------------------------------------------
+            user finger moved over!!!,get the move over event message: {
+            category = \(String(describing: moveOverEventMessage.category))
+            index = \(String(describing: moveOverEventMessage.index))
+            name = \(String(describing: moveOverEventMessage.name))
+            offset = \(String(describing: moveOverEventMessage.offset))
+            x = \(String(describing: moveOverEventMessage.x))
+            y = \(String(describing: moveOverEventMessage.y))
+            }
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            
+            
+            """
+        )
+    }
 }
 ```
 
-The received touch events message contain following content
+The received user click or finger move over events contain following content
 
 ```swift
-public class AAMoveOverEventMessageModel: NSObject {
+public class AAEventMessageModel: NSObject {
     public var name: String?
     public var x: Float?
     public var y: Float?
@@ -245,6 +304,10 @@ public class AAMoveOverEventMessageModel: NSObject {
     public var offset: [String: Any]?
     public var index: Int?
 }
+
+public class AAClickEventMessageModel: AAEventMessageModel {}
+
+public class AAMoveOverEventMessageModel: AAEventMessageModel {}
 ```
 
 Monitoring user click events can achieve a variety of custom functions. For example, you can implement **Double Charts Linkage** through user click event callbacks. The example effects are as follows
@@ -252,7 +315,7 @@ Monitoring user click events can achieve a variety of custom functions. For exam
 ![doubleChartsLinkage](https://raw.githubusercontent.com/AAChartModel/Gallery/master/AAChartKit/doubleChartsLinkage.gif)
 
 
-### Support for custom the style of chart `AATooltip` through `JavaScript` function
+### Support for customizing the style of chart `AATooltip` through `JavaScript` function
 
 As we all know, AAInfographics support using HTML String.  Most of time, the `headerFormat` 、`pointFormat`、`footerFormat` HTML string is enough for customizing chart tooltip string content, However, sometimes the needs of APP is so weird to satified, in this time, you can even customize the chart tooltip style through `JavaScript` function. 
 
@@ -294,18 +357,18 @@ you can get the customized tooltip style chart like this👇
             .useHTML(true)
             .formatter(#"""
 function () {
-        let colorsArr = ["mediumspringgreen", "deepskyblue", "red", "sandybrown"];
-        let wholeContentString ='<span style=\"' + 'color:lightGray; font-size:13px\"' + '>◉ Time: ' + this.x + ' year</span><br/>';
-        for (let i = 0;i < 4;i++) {
+        let wholeContentStr ='<span style=\"' + 'color:lightGray; font-size:13px\"' + '>◉ Time: ' + this.x + ' year</span><br/>';
+        let length = this.points.length;
+        for (let i = 0; i < length; i++) {
             let thisPoint = this.points[i];
             let yValue = thisPoint.y;
             if (yValue != 0) {
-                let spanStyleStartStr = '<span style=\"' + 'color:'+ colorsArr[i] + '; font-size:13px\"' + '>◉ ';
+                let spanStyleStartStr = '<span style=\"' + 'color:'+ thisPoint.color + '; font-size:13px\"' + '>◉ ';
                 let spanStyleEndStr = '</span> <br/>';
-                wholeContentString += spanStyleStartStr + thisPoint.series.name + ': ' + thisPoint.y + '℃' + spanStyleEndStr;
+                wholeContentStr += spanStyleStartStr + thisPoint.series.name + ': ' + thisPoint.y + '℃' + spanStyleEndStr;
             }
         }
-        return wholeContentString;
+        return wholeContentStr;
     }
 """#)
             .backgroundColor("#050505")
@@ -347,34 +410,53 @@ you can get the customized tooltip style chart like this👇
 ### Supported chart type for now
 
 ```swift
-enum AAChartType: String {
-    case column          = "column"          //column chart
-    case bar             = "bar"             //bar chart 
-    case area            = "area"            //area chart 
-    case areaspline      = "areaspline"      //areaspline chart
-    case line            = "line"            //line chart
-    case spline          = "spline"          //spline chart
-    case scatter         = "scatter"         //scatter chart 
-    case pie             = "pie"             //pie chart
-    case bubble          = "bubble"          //bubble chart  
-    case pyramid         = "pyramid"         //pyramid chart
-    case funnel          = "funnel"          //funnel chart
-    case columnrange     = "columnrange"     //column range chart
-    case arearange       = "arearange"       //area range chart
-    case areasplinerange = "areasplinerange" //area spline range chart
-    case boxplot         = "boxplot"         //boxplot chart
-    case waterfall       = "waterfall"       //waterfall chart
-    case polygon         = "polygon"         //polygon chart
+public enum AAChartType: String {
+    case column          //Column series display one column per value along an X axis.
+    case bar             //A bar series is a special type of column series where the columns are horizontal.
+    case area            //The area series type.
+    case areaspline      //The area spline series is an area series where the graph between the points is smoothed into a spline.
+    case line            //A line series displays information as a series of data points connected by straight line segments.
+    case spline          //A spline series is a special type of line series, where the segments between the data points are smoothed.
+    case scatter         //A scatter plot uses cartesian coordinates to display values for two variables for a set of data.
+    case pie             //A pie chart is a circular graphic which is divided into slices to illustrate numerical proportion.
+    case bubble          //A bubble series is a three dimensional series type where each point renders an X, Y and Z value. Each points is drawn as a bubble where the position along the X and Y axes mark the X and Y values, and the size of the bubble relates to the Z value.
+    case pyramid         //A pyramid series is a special type of funnel, without neck and reversed by default.
+    case funnel          //Funnel charts are a type of chart often used to visualize stages in a sales project, where the top are the initial stages with the most clients. It requires that the modules/funnel.js file is loaded.
+    case columnrange     //The column range is a cartesian series type with higher and lower Y values along an X axis. To display horizontal bars, set chart.inverted to true.
+    case arearange       //The area range series is a carteseian series with higher and lower values for each point along an X axis, where the area between the values is shaded.
+    case areasplinerange //The area spline range is a cartesian series type with higher and lower Y values along an X axis. The area inside the range is colored, and the graph outlining the area is a smoothed spline.
+    case boxplot         //A box plot is a convenient way of depicting groups of data through their five-number summaries: the smallest observation (sample minimum), lower quartile (Q1), median (Q2), upper quartile (Q3), and largest observation (sample maximum).
+    case waterfall       //A waterfall chart displays sequentially introduced positive or negative values in cumulative columns.
+    case polygon         //A polygon series can be used to draw any freeform shape in the cartesian coordinate system. A fill is applied with the color option, and stroke is applied through lineWidth and lineColor options.
+    case gauge           //Gauges are circular plots displaying one or more values with a dial pointing to values along the perimeter.
+    case errorbar        //Error bars are a graphical representation of the variability of data and are used on graphs to indicate the error, or uncertainty in a reported measurement.
 }
 ```
 
-### Supported zoom guesture types for now
+### Supported zoom gesture types for now
 ```swift
 enum AAChartZoomType: String {
     case none = "none"
     case x    = "x"
     case y    = "y"
     case xy   = "xy"
+}
+```
+
+### Suppported line dash style types for now
+```swift
+public enum AAChartLineDashStyleType: String {
+    case solid           //———————————————————————————————————
+    case shortDash       //— — — — — — — — — — — — — — — — — —
+    case shortDot        //ⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈⵈ
+    case shortDashDot    //—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧—‧
+    case shortDashDotDot //—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧—‧‧
+    case dot             //‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧
+    case dash            //—— —— —— —— —— —— —— —— —— —— —— ——
+    case longDash        //——— ——— ——— ——— ——— ——— ——— ——— ———
+    case dashDot         //——‧——‧——‧——‧——‧——‧——‧——‧——‧——‧——‧——‧
+    case longDashDot     //———‧———‧———‧———‧———‧———‧———‧———‧———‧
+    case longDashDotDot  //———‧‧———‧‧———‧‧———‧‧———‧‧———‧‧———‧‧
 }
 ```
 
@@ -447,56 +529,56 @@ symbol | AAChartSymbolType | A predefined shape or symbol for the marker. When n
 
 * ### AAChartModel:chart all properties list
 ```swift
-public var animationType: AAChartAnimationType? //The type of chart animation
-public var animationDuration: Int?      //The chart rendering animation duration
-public var title: String?               //The chart title
-public var titleFontColor: String?      //The chart title font color
-public var titleFontSize: Float?        //The chart title font size
-public var titleFontWeight: AAChartFontWeightType? //The chart font weight
-public var subtitle: String?            //The chart subtitle
-public var subtitleAlign: AAChartAlignType?//The chart subtitle text align style
-public var subtitleFontColor: String?   //The chart subtitle font color
-public var subtitleFontSize: Float?     //The chart subtitle font size
-public var subtitleFontWeight: AAChartFontWeightType?   //The chart subtitle font weight
-public var axesTextColor: String?       //The labels font color of chart x axis and y axis
-public var chartType: AAChartType?      //The default series type for the chart. Can be any of the chart types listed under `AAChartType`. Defaults to line
-public var stacking: AAChartStackingType? //Whether to stack the values of each series on top of each other. Possible values are null to disable, "normal" to stack by value or "percent". When stacking is enabled, data must be sorted in ascending X order
-public var markerSymbol: AAChartSymbolType?   //A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down"
-public var markerSymbolStyle: AAChartSymbolStyleType?
-public var zoomType: AAChartZoomType?   //Decides in what dimensions the user can zoom by dragging the mouse. Can be one of x, y or xy
-public var inverted: Bool?              //Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When true, the x axis is reversed by default. If a bar series is present in the chart, it will be inverted automatically.Inverting the chart doesn't have an effect if there are no cartesian series in the chart, or if the chart is polar.Defaults to false
-public var xAxisReversed: Bool?         //Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. Defaults to false
-public var yAxisReversed: Bool?         //Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. Defaults to false
-public var crosshairs: Bool?            //Enable or disable the crosshairs
-public var polar: Bool?                 //When true, cartesian charts like line, spline, area and column are transformed into the polar coordinate system. Requires `AAHighchartsMore.js`. Defaults to false
-public var margin: [Float]?
-public var dataLabelsEnabled: Bool?     //Enable or disable the data labels. Defaults to false
-public var dataLabelsFontColor: String? //The data labels font color
-public var dataLabelsFontSize: Float?   //The data labels font size
-public var dataLabelsFontWeight: AAChartFontWeightType?//The data labels font weight
-public var xAxisLabelsEnabled: Bool?    //Enable or disable the axis labels. Defaults to true
-public var categories: [String]?        //Set new categories for the axis
-public var xAxisGridLineWidth: Float?   //The width of the grid lines extending the ticks across the plot area.Defaults to 0
-public var xAxisVisible: Bool?
-public var xAxisTickInterval: Int?
-public var yAxisVisible: Bool?
-public var yAxisLabelsEnabled: Bool?    //Enable or disable the axis labels. Defaults to true
-public var yAxisTitle: String?          //The actual text of the axis title
-public var yAxisLineWidth: Float?       //The width of y axis line
-public var yAxisGridLineWidth: Float?   //The width of the grid lines extending the ticks across the plot area. Defaults to 1
-public var yAxisMin: Float?             //The y axis mini value
-public var yAxisMax: Float?             //The y axis max value
-public var yAxisAllowDecimals: Bool?    //The y axis values label allow decimals or not
-public var tooltipEnabled: Bool?
-public var tooltipValueSuffix: String?
-public var tooltipCrosshairs: Bool?
-public var colorsTheme: [Any]?          //An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again. Defaults to: ["#bb250c","#f67210","#fde680","#257679","#f1c6c5"]
-public var series: [Any]?               //An array of all the chart's series
-public var legendEnabled: Bool?         //Enable or disable the legend. Defaults to true
-public var backgroundColor: Any?        //The background color or gradient for the outer chart area. Defaults to #FFFFFF
-public var borderRadius: Int?           //The corner radius of the outer chart border. Defaults to 0
-public var markerRadius: Int?           //The radius of the point marker. Defaults to 4
-public var touchEventEnabled: Bool?     //Support touch event call back or not
+public class AAChartModel: AAObject {
+    public var animationType: AAChartAnimationType? //The type of chart animation
+    public var animationDuration: Int?      //The chart rendering animation duration
+    public var title: String?               //The chart title
+    public var titleStyle: AAStyle?         //The chart title style
+    public var subtitle: String?            //The chart subtitle
+    public var subtitleAlign: AAChartAlignType?//The chart subtitle text align style
+    public var subtitleStyle: AAStyle?      //The chart subtitle style
+    public var chartType: AAChartType?      //The default series type for the chart. Can be any of the chart types listed under `AAChartType`. Defaults to line
+    public var stacking: AAChartStackingType? //Whether to stack the values of each series on top of each other. Possible values are null to disable, "normal" to stack by value or "percent". When stacking is enabled, data must be sorted in ascending X order
+    public var markerSymbol: AAChartSymbolType?   //A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down"
+    public var markerSymbolStyle: AAChartSymbolStyleType?
+    public var zoomType: AAChartZoomType?   //Decides in what dimensions the user can zoom by dragging the mouse. Can be one of x, y or xy
+    public var inverted: Bool?              //Whether to invert the axes so that the x axis is vertical and y axis is horizontal. When true, the x axis is reversed by default. If a bar series is present in the chart, it will be inverted automatically.Inverting the chart doesn't have an effect if there are no cartesian series in the chart, or if the chart is polar.Defaults to false
+    public var xAxisReversed: Bool?         //Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. Defaults to false
+    public var yAxisReversed: Bool?         //Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. Defaults to false
+    public var polar: Bool?                 //When true, cartesian charts like line, spline, area and column are transformed into the polar coordinate system. Requires `AAHighchartsMore.js`. Defaults to false
+    public var margin: [Any?]?
+    public var dataLabelsEnabled: Bool?     //Enable or disable the data labels. Defaults to false
+    public var dataLabelsStyle: AAStyle?    //The data labels style
+    public var xAxisLabelsEnabled: Bool?    //Enable or disable the axis labels. Defaults to true
+    public var xAxisLabelsStyle: AAStyle?   //The x axis labels style
+    public var categories: [String]?        //Set new categories for the axis
+    public var xAxisGridLineWidth: Float?   //The width of the grid lines extending the ticks across the plot area.Defaults to 0
+    public var xAxisVisible: Bool?          //Show the x axis or not
+    public var xAxisTickInterval: Float?    //Custom x axis tick interval,It is useful when the x categories array is too long to show all of them
+    public var yAxisVisible: Bool?          //Show the y axis or not
+    public var yAxisLabelsEnabled: Bool?    //Enable or disable the axis labels. Defaults to true
+    public var yAxisLabelsStyle: AAStyle?   //The y axis labels style
+    public var yAxisTitle: String?          //The actual text of the axis title
+    public var xAxisTitle: String?          //The actual text of the axis title
+    public var yAxisLineWidth: Float?       //The width of y axis line
+    public var yAxisGridLineWidth: Float?   //The width of the grid lines extending the ticks across the plot area. Defaults to 1
+    public var yAxisMin: Double?            //The y axis mini value
+    public var yAxisMax: Double?            //The y axis max value
+    public var yAxisTickPositions:[Any]?    //An array defining where the ticks are laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval.
+    public var yAxisAllowDecimals: Bool?    //The y axis values label allow decimals or not
+    public var tooltipEnabled: Bool?        //Show the tooltip or not
+    public var tooltipValueSuffix: String?  //Custom tooltip value unit suffix
+    public var colorsTheme: [Any]?          //An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again. Defaults to: ["#bb250c","#f67210","#fde680","#257679","#f1c6c5"]
+    public var series: [Any]?               //An array of all the chart's series
+    public var legendEnabled: Bool?         //Enable or disable the legend. Defaults to true
+    public var backgroundColor: Any?        //The background color or gradient for the outer chart area. Defaults to #FFFFFF
+    public var borderRadius: Float?         //The corner radius of the outer chart border. Defaults to 0
+    public var markerRadius: Float?         //The radius of the point marker. Defaults to 4
+    public var scrollablePlotArea: AAScrollablePlotArea?    //Scroll properties if supported
+ 
+    ...
+    ...  
+}
 ```
 
 ##  Created By
@@ -593,6 +675,7 @@ AAInfographics is available under the MIT license. See the [LICENSE](https://git
 - [x] Support rendering the rectangular tree hierarchy diagrams
 - [x] Support rendering the circular progress bar chart 
 - [x] Support adding clicked event callbacks for graphics
+- [x] Support adding finger✋🏻 or mouse🖱 move over event callbacks for graphics
 - [x] Support graphics to refresh pure data in real time and scroll dynamically
 - [ ] Support rendered graphics to generate image files
 - [ ] Support generating image files saved to the system album

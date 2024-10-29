@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -66,7 +66,9 @@ public class AAHover: AAObject {
     public var brightness: Float?
     public var color: String?
     public var halo: AAHalo?
-    
+    public var lineWidth: Float?
+    public var lineWidthPlus: Float?
+
     @discardableResult
     public func enabled(_ prop: Bool) -> AAHover {
         enabled = prop
@@ -94,6 +96,18 @@ public class AAHover: AAObject {
     @discardableResult
     public func halo(_ prop: AAHalo) -> AAHover {
         halo = prop
+        return self
+    }
+    
+    @discardableResult
+    public func lineWidth(_ prop: Float) -> AAHover {
+        lineWidth = prop
+        return self
+    }
+    
+    @discardableResult
+    public func lineWidthPlus(_ prop: Float) -> AAHover {
+        lineWidthPlus = prop
         return self
     }
     
@@ -144,8 +158,8 @@ public class AAHalo: AAObject {
     public var size: Float?
     
     @discardableResult
-    public func attributes(_ prop: [String: Any]) -> AAHalo {
-        attributes = prop
+    public func attributes(_ prop: AASVGAttributes) -> AAHalo {
+        attributes = prop.toDictionaryProp()
         return self
     }
     
@@ -184,5 +198,47 @@ public class AAInactive: AAObject {
     
     public override init() {
         
+    }
+}
+
+public class AASVGAttributes: AAObject {
+    public var fill: String?
+    public var stroke: String?
+    public var strokeWidth: Float?
+    
+    @discardableResult
+    public func fill(_ prop: String?) -> AASVGAttributes {
+        fill = prop
+        return self
+    }
+    
+    @discardableResult
+    public func stroke(_ prop: String?) -> AASVGAttributes {
+        stroke = prop
+        return self
+    }
+    
+    @discardableResult
+    public func strokeWidth(_ prop: Float?) -> AASVGAttributes {
+        strokeWidth = prop
+        return self
+    }
+    
+    public override init() {
+        
+    }
+    
+    public func toDictionaryProp() -> [String: Any]? {
+        var dic = [String: Any]()
+        if let fill = fill {
+            dic["fill"] = fill
+        }
+        if let stroke = stroke {
+            dic["stroke"] = stroke
+        }
+        if let strokeWidth = strokeWidth {
+            dic["stroke-width"] = strokeWidth
+        }
+        return dic
     }
 }

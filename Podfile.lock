@@ -1,5 +1,5 @@
 PODS:
-  - AAInfographics (6.0.0)
+  - AAInfographics (9.0.0)
   - AFNetworking (4.0.1):
     - AFNetworking/NSURLSession (= 4.0.1)
     - AFNetworking/Reachability (= 4.0.1)
@@ -79,7 +79,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - AAInfographics (= 6.0.0)
+  - AAInfographics (= 9.0.0)
   - AFNetworking (= 4.0.1)
   - Alamofire (= 4.9.1)
   - BRPickerView (= 2.7.6)
@@ -167,7 +167,7 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
+  AAInfographics: 31fd2891509a97e34693aeaf681daa7b2b4d8c0f
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BRPickerView: 2a1620caf218e37a3aca9626732719a419928b15
@@ -210,6 +210,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 789d0d7f434c1024b0fbd21bc7e68846d9adc10a
+PODFILE CHECKSUM: 79c04062896f88b07e5165e6920d88c32771aaa9
 
 COCOAPODS: 1.12.1

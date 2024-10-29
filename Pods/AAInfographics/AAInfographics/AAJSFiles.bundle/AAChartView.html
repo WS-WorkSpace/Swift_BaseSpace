@@ -2,10 +2,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0,user-scalable = no">
-            <script src="AAHighchartsLib.js"></script>
-            <script src="AAHighchartsMore.js"></script>
+            <script src="AAHighcharts.js"></script>
+            <script src="AAHighcharts-More.js"></script>
             <script src="AAFunnel.js"></script>
             <script src="AAEasing.js"></script>
+            <script src="AARounded-Corners.js"></script>
+
 <!--            <script src="https://code.highcharts.com/highcharts.js"></script>-->
 <!--            <script src="https://code.highcharts.com/highcharts-more.js"></script>-->
 <!--            <script src="https://code.highcharts.com/modules/funnel.js"></script>-->
@@ -15,7 +17,7 @@
             }
                 </style>
             </head>
-    <body style="margin:0px 0px 0px 0px;">
+    <body style="margin:0 0 0 0;">
         <div id="container" style="width:100%; height: 100%;"></div>
         <script>
             let aaGlobalChart;
@@ -27,15 +29,15 @@
                 if(receivedHeight != 0) {
                     container.style.height = receivedHeight;
                 }
-                
-                var aaOptions = JSON.parse(sender, function (key, value) {
-                  if (   typeof(value) == 'string'
-                      && value.indexOf('function') != -1) {
-                     return eval(value)
-                  }
-                   return value;
+
+                let aaOptions = JSON.parse(sender, function (key, value) {
+                    if (typeof (value) == 'string'
+                        && value.indexOf('function') !== -1) {
+                        return eval(value)
+                    }
+                    return value;
                 });
-                
+
                 if (aaOptions.defaultOptions) {
                     Highcharts.setOptions({
                         lang: aaOptions.defaultOptions
@@ -54,7 +56,7 @@
                 }
                                 
                 aaGlobalChart = Highcharts.chart('container', aaOptions);
-            };
+            }
 
         function configurePlotOptions(aaOptions) {
             let aaPlotOptions = aaOptions.plotOptions;
@@ -64,34 +66,45 @@
                 animation.easing = configureTheChartAnimationEasingType(animationEasingType);
             }
             
-            if (aaOptions.touchEventEnabled == true && aaPlotOptions.series) {
+            if (aaOptions.clickEventEnabled == true) {
+                configureChartClickEvent(aaPlotOptions);
+            }
+            
+            if (aaOptions.touchEventEnabled == true) {
                 configureChartTouchEvent(aaPlotOptions);
             }
         }
         
+        function configureEventMessageBody(selectedPoint) {
+            return {
+                name: selectedPoint.series.name,
+                y: selectedPoint.y,
+                x: selectedPoint.x,
+                category: selectedPoint.category,
+                offset: {
+                    plotX: selectedPoint.plotX,
+                    plotY: selectedPoint.plotY
+                },
+                index: selectedPoint.index,
+            };
+        }
+            
+        function configureChartClickEvent(aaPlotOptions) {
+            let clickEventFunc = function() {
+                let message = configureEventMessageBody(this);
+                window.webkit.messageHandlers.click.postMessage(message);
+            };
+            
+            aaPlotOptions.series.point.events.click = clickEventFunc;
+        }
+        
         function configureChartTouchEvent(aaPlotOptions) {
-            var mouseOverFunc = function() {
-                var message = {
-                    name: this.series.name,
-                    y: this.y,
-                    x: this.x,
-                    category:this.category,
-                    offset: {plotX: this.plotX, plotY: this.plotY},
-                    index: this.index,
-                };
+            let mouseOverEventFunc = function() {
+                let message = configureEventMessageBody(this);
                 window.webkit.messageHandlers.mouseover.postMessage(message);
             };
             
-            if (aaPlotOptions.series.point) {// set property directlly for series point
-                aaPlotOptions.series.point.events.mouseOver = mouseOverFunc;
-            } else {// creat a new series point object instance
-                var seriesPoint = {
-                    events:{
-                        mouseOver: mouseOverFunc,
-                    }
-                };
-                aaPlotOptions.series.point = seriesPoint;
-            }
+            aaPlotOptions.series.point.events.mouseOver = mouseOverEventFunc;
         }
         
         function onlyRefreshTheChartDataWithSeries(receivedSeries, animation) {
@@ -103,7 +116,7 @@
                 seriesElement.setData(receivedSeriesElementData, false);
             }
             
-            let animationBool = (animation == "true") ? true:false;
+            let animationBool = (animation === "true");
             aaGlobalChart.redraw(animationBool);
         }
         
@@ -114,16 +127,16 @@
         
         function addPointToChartSeries(elementIndex, optionsStr, redraw, shift, animation) {
             let options = JSON.parse(optionsStr);
-            let redrawBool = (redraw == "true") ? true:false;
-            let shiftBool = (shift == "true") ? true:false;
-            let animationBool = (animation == "true") ? true:false;
+            let redrawBool = (redraw === "true");
+            let shiftBool = (shift === "true");
+            let animationBool = (animation === "true");
             
             let seriesElement = aaGlobalChart.series[elementIndex];
             seriesElement.addPoint(options, redrawBool, shiftBool, animationBool);
         }
         
         function redrawWithAnimation(animation) {
-            let animationBool = (animation == "true") ? true:false;
+            let animationBool = (animation === "true");
             aaGlobalChart.redraw(animationBool);
         }
         
@@ -143,7 +156,7 @@
             let seriesLength = aaGlobalChart.series.length;
             for (let i = 0; i < seriesLength; i++) {
                 let seriesElement = aaGlobalChart.series[i];
-                if (hidden == "true") {
+                if (hidden === "true") {
                     seriesElement.hide();
                 } else {
                     seriesElement.show();

@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -35,6 +35,7 @@ import Foundation
 public class AAChart: AAObject {
     public var type: String?
     public var backgroundColor: Any?
+    public var plotBackgroundColor: Any?
     public var plotBackgroundImage: String?
     public var pinchType: String?
     public var panning: Bool?
@@ -42,7 +43,7 @@ public class AAChart: AAObject {
     public var polar: Bool?
     public var animation: AAAnimation?
     public var inverted: Bool?
-    public var margin: [Float]? //Margin between the outer edge of the chart and the drawing area. The numbers in the array represent the top, right, bottom, and left ([👆, 👉, 👇, 👈]). You can also use marginTop, marginRight, marginBottom, and marginLeft to set the margins in a certain direction.
+    public var margin: [Any?]? //Margin between the outer edge of the chart and the drawing area. The numbers in the array represent the top, right, bottom, and left ([👆, 👉, 👇, 👈]). You can also use marginTop, marginRight, marginBottom, and marginLeft to set the margins in a certain direction. Defaults to [null]
     public var marginTop: Float? //👆
     public var marginRight: Float? //👉
     public var marginBottom: Float? //👇
@@ -54,6 +55,15 @@ public class AAChart: AAObject {
     public var spacingLeft: Float? //👈
     public var scrollablePlotArea: AAScrollablePlotArea?
     public var resetZoomButton: AAResetZoomButton?
+    public var zoomType: String?
+    public var events: AAChartEvents?
+    public var height: Any?
+    
+    @discardableResult
+    public func height(_ prop: AAChartType?) -> AAChart {
+        height = prop?.rawValue
+        return self
+    }
     
     @discardableResult
     public func type(_ prop: AAChartType?) -> AAChart {
@@ -64,6 +74,12 @@ public class AAChart: AAObject {
     @discardableResult
     public func backgroundColor(_ prop: Any?) -> AAChart {
         backgroundColor = prop
+        return self
+    }
+    
+    @discardableResult
+    public func plotBackgroundColor(_ prop: Any?) -> AAChart {
+        plotBackgroundColor = prop
         return self
     }
     
@@ -110,8 +126,24 @@ public class AAChart: AAObject {
     }
     
     @discardableResult
-    public func margin(top: Float = 0, right: Float = 0, bottom: Float = 0, left: Float = 0) -> AAChart {
-        margin = [top,right,bottom,left]
+    public func margin(_ prop: [Any?]?) -> AAChart {
+        margin = prop
+        return self
+    }
+    
+    @discardableResult
+    public func margin(
+        top: Any? = nil,
+        right: Any? = nil,
+        bottom: Any? = nil,
+        left: Any? = nil
+    ) -> AAChart {
+        margin = [
+            top,
+            right,
+            bottom,
+            left
+        ]
         return self
     }
     
@@ -140,8 +172,18 @@ public class AAChart: AAObject {
     }
     
     @discardableResult
-    public func spacing(top: Float = 0, right: Float = 0, bottom: Float = 0, left: Float = 0) -> AAChart {
-        spacing = [top,right,bottom,left]
+    public func spacing(
+        top: Float = 10,
+        right: Float = 10,
+        bottom: Float = 15,
+        left: Float = 10
+    ) -> AAChart {
+        spacing = [
+            top,
+            right,
+            bottom,
+            left
+        ]
         return self
     }
     
@@ -181,9 +223,45 @@ public class AAChart: AAObject {
         return self
     }
     
+    @discardableResult
+    public func zoomType(_ prop: AAChartZoomType?) -> AAChart {
+        zoomType = prop?.rawValue
+        return self
+    }
+    
+    @discardableResult
+    public func events(_ prop: AAChartEvents?) -> AAChart {
+        events = prop
+        return self
+    }
+    
     public override init() {
         
     }
+}
+
+public func AAMargin(
+    left: Float,
+    right: Float
+) -> [Any?]? {
+    [
+        nil,
+        right,
+        nil,
+        left
+    ]
+}
+
+public func AAMargin(
+    top: Float,
+    bottom: Float
+) -> [Any?]? {
+    [
+        top,
+        nil,
+        bottom,
+        nil
+    ]
 }
 
 public class AAResetZoomButton: AAObject {
@@ -206,6 +284,49 @@ public class AAResetZoomButton: AAObject {
     @discardableResult
     public func theme(_ prop: [String: Any]?) -> AAResetZoomButton {
         theme = prop
+        return self
+    }
+    
+    public override init() {
+        
+    }
+}
+
+public class AAChartEvents: AAObject {
+    public var click: String?
+    public var load: String?
+    public var redraw: String?
+    public var render: String?
+    public var selection: String?
+
+
+    @discardableResult
+    public func click(_ prop: String?) -> AAChartEvents {
+        click = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func load(_ prop: String?) -> AAChartEvents {
+        load = prop?.aa_toPureJSString()
+        return self
+    }
+
+    @discardableResult
+    public func redraw(_ prop: String?) -> AAChartEvents {
+        redraw = prop?.aa_toPureJSString()
+        return self
+    }
+
+    @discardableResult
+    public func render(_ prop: String?) -> AAChartEvents {
+        render = prop?.aa_toPureJSString()
+        return self
+    }
+    
+    @discardableResult
+    public func selection(_ prop: String?) -> AAChartEvents {
+        selection = prop?.aa_toPureJSString()
         return self
     }
     

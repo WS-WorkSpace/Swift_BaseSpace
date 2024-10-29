@@ -1,9 +1,6 @@
 //
-//  AAPane.swift
-//  AAInfographicsDemo
-//
-//  Created by AnAn on 2019/9/29.
-//  Copyright © 2019 An An. All rights reserved.
+// Created by AnAn on 2022/11/25.
+// Copyright (c) 2022 An An. All rights reserved.
 //*************** ...... SOURCE CODE ...... ***************
 //***...................................................***
 //*** https://github.com/AAChartModel/AAChartKit        ***
@@ -32,101 +29,99 @@
 
 import Foundation
 
-public class AAPane: AAObject {
-    public var background: [AABackgroundElement]?
-    public var center: [String]?
-    public var endAngle: Float?
-    public var size: Any?
+public class AAPie: AASeries {
+    public var type: String?
+    public var data: [Any]?
+    public var size: Float?
+    public var cursor: String?
+    public var showInLegend: Bool?
     public var startAngle: Float?
-    
-    
+    public var endAngle: Float?
+    public var depth: Float?
+    public var center: [Any]?
+    public var borderRadius: Any?
+
     @discardableResult
-    public func background(_ prop: [AABackgroundElement]) -> AAPane {
-        background = prop
+    public func type(_ prop: AAChartType) -> AAPie {
+        type = prop.rawValue
         return self
     }
     
     @discardableResult
-    public func center(_ prop: [String]) -> AAPane {
-        center = prop
+    public func data(_ prop: [Any]) -> AAPie {
+        data = prop
         return self
     }
     
     @discardableResult
-    public func endAngle(_ prop: Float) -> AAPane {
-        endAngle = prop
-        return self
-    }
-    
-    @discardableResult
-    public func size(_ prop: Any) -> AAPane {
+    public func size(_ prop: Float?) -> AAPie {
         size = prop
         return self
     }
     
     @discardableResult
-    public func startAngle(_ prop: Float) -> AAPane {
+    public func cursor(_ prop: String) -> AAPie {
+        cursor = prop
+        return self
+    }
+    
+    @discardableResult
+    public func showInLegend(_ prop: Bool?) -> AAPie {
+        showInLegend = prop
+        return self
+    }
+    
+    @discardableResult
+    public func startAngle(_ prop: Float?) -> AAPie {
         startAngle = prop
         return self
     }
     
+    @discardableResult
+    public func endAngle(_ prop: Float?) -> AAPie {
+        endAngle = prop
+        return self
+    }
+    
+    @discardableResult
+    public func depth(_ prop: Float?) -> AAPie {
+        depth = prop
+        return self
+    }
+    
+    @discardableResult
+    public func center(_ prop: [Int]?) -> AAPie {
+        center = prop
+        return self
+    }
+    
+    @discardableResult
+    public func center(_ prop: [String]?) -> AAPie {
+        center = prop
+        return self
+    }
+    
+    @discardableResult
+    public func borderRadius(_ prop: Float?) -> AAPie {
+        borderRadius = prop
+        return self
+    }
+    
+    @discardableResult
+    public func borderRadius(_ prop: String?) -> AAPie {
+        borderRadius = prop
+        return self
+    }
+    
+    @discardableResult
+    public func borderRadius(_ prop: Any?) -> AAPie {
+        borderRadius = prop
+        return self
+    }
+    
     public override init() {
         
     }
+    
 }
 
-public class AABackgroundElement: AAObject {
-    public var backgroundColor: Any? //背景颜色
-    public var borderColor: String? //边框颜色
-    public var borderWidth: Float? //边框宽度
-    public var className: String?//类名
-    public var innerRadius: Any?//内半径
-    public var outerRadius: Any?//外半径
-    public var shape: String?
-    
-    @discardableResult
-    public func backgroundColor(_ prop: Any) -> AABackgroundElement {
-        backgroundColor = prop
-        return self
-    }
-    
-    @discardableResult
-    public func borderColor(_ prop: String) -> AABackgroundElement {
-        borderColor = prop
-        return self
-    }
-    
-    @discardableResult
-    public func borderWidth(_ prop: Float) -> AABackgroundElement {
-        borderWidth = prop
-        return self
-    }
-    
-    @discardableResult
-    public func className(_ prop: String) -> AABackgroundElement {
-        className = prop
-        return self
-    }
-    
-    @discardableResult
-    public func innerRadius(_ prop: Any) -> AABackgroundElement {
-        innerRadius = prop
-        return self
-    }
-    
-    @discardableResult
-    public func outerRadius(_ prop: Any) -> AABackgroundElement {
-        outerRadius = prop
-        return self
-    }
-    
-    @discardableResult
-    public func shape(_ prop: String) -> AABackgroundElement {
-        shape = prop
-        return self
-    }
-    
-    public override init() {
-        
-    }
-}

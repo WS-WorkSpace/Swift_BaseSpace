@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -48,7 +48,9 @@ public class AAOptions: AAObject {
     public var colors: [Any]?
     public var credits: AACredits?
     public var defaultOptions: AALang?
-    public var touchEventEnabled: Bool?
+    
+    public var clickEventEnabled: Bool?//Please DO NOT use this property
+    public var touchEventEnabled: Bool?//Please DO NOT use this property
     
     @discardableResult
     public func chart(_ prop: AAChart?) -> AAOptions {
@@ -140,16 +142,17 @@ public class AAOptions: AAObject {
         return self
     }
     
-    @discardableResult
-    public func touchEventEnabled(_ prop: Bool?) -> AAOptions {
-        touchEventEnabled = prop
-        return self
-    }
-    
     public override init() {
         let aaCredits = AACredits()
         aaCredits.enabled = false
         credits = aaCredits
+    }
+    
+    
+    @available(*, unavailable, message: "This setter function is useless now, please remove it directly")
+    public func touchEventEnabled(_ prop: Bool?) -> AAOptions {
+//        touchEventEnabled = prop
+        return self
     }
 }
 
@@ -158,7 +161,7 @@ public class AAOptionsConstructor {
     
     public static func configureChartOptions(
         _ aaChartModel: AAChartModel
-        ) -> AAOptions {
+    ) -> AAOptions {
         let aaChart = AAChart()
             .type(aaChartModel.chartType)
             .inverted(aaChartModel.inverted)
@@ -188,30 +191,22 @@ public class AAOptionsConstructor {
         let aaTooltip = AATooltip()
             .enabled(aaChartModel.tooltipEnabled)
             .shared(true) //Multiple groups of data share the same tooltip
-            .crosshairs(true) //Enable crosshair
             .valueSuffix(aaChartModel.tooltipValueSuffix)
         
         let aaPlotOptions = AAPlotOptions()
             .series(AASeries()
-                .stacking(aaChartModel.stacking)
-        )
+                        .stacking(aaChartModel.stacking))
         
-        if (aaChartModel.animationType != .linear) {
-            aaPlotOptions
-                .series?.animation(AAAnimation()
-                    .easing(aaChartModel.animationType)
-                    .duration(aaChartModel.animationDuration)
-            )
-        }
+        aaPlotOptions.series?
+            .animation(AAAnimation()
+                        .easing(aaChartModel.animationType)
+                        .duration(aaChartModel.animationDuration))
         
         configurePlotOptionsMarkerStyle(aaChartModel, aaPlotOptions)
         configurePlotOptionsDataLabels(aaPlotOptions, aaChartModel)
         
         let aaLegend = AALegend()
             .enabled(aaChartModel.legendEnabled)
-            .itemStyle(AAItemStyle()
-                .color(aaChartModel.axesTextColor)
-        ) //The default legend text color is the same as the X-axis text color
         
         let aaOptions = AAOptions()
             .chart(aaChart)
@@ -222,7 +217,6 @@ public class AAOptionsConstructor {
             .legend(aaLegend)
             .series(aaChartModel.series)
             .colors(aaChartModel.colorsTheme)
-            .touchEventEnabled(aaChartModel.touchEventEnabled)
         
         configureAxisContentAndStyle(aaOptions, aaChartModel)
         
@@ -232,27 +226,27 @@ public class AAOptionsConstructor {
     private static func configurePlotOptionsMarkerStyle(
         _ aaChartModel: AAChartModel,
         _ aaPlotOptions: AAPlotOptions
-        ) {
-        let chartType = aaChartModel.chartType!
+    ) {
+        let aaChartType = aaChartModel.chartType!
         
         //Data point markers related configuration. Only linear graphs have data point markers.
-        if     chartType == .area
-            || chartType == .areaspline
-            || chartType == .line
-            || chartType == .spline
-            || chartType == .scatter
-            || chartType == .arearange
-            || chartType == .areasplinerange
-            || chartType == .polygon {
+        if     aaChartType == .area
+            || aaChartType == .areaspline
+            || aaChartType == .line
+            || aaChartType == .spline
+            || aaChartType == .scatter
+            || aaChartType == .arearange
+            || aaChartType == .areasplinerange
+            || aaChartType == .polygon {
             let aaMarker = AAMarker()
                 .radius(aaChartModel.markerRadius) //Curve connection point radius, default is 4
                 .symbol(aaChartModel.markerSymbol?.rawValue) //Curve connection point type: "circle", "square", "diamond", "triangle", "triangle-down", the default is "circle"
-            if (aaChartModel.markerSymbolStyle == .innerBlank) {
+            if aaChartModel.markerSymbolStyle == .innerBlank {
                 aaMarker
-                    .fillColor("#ffffff") //The fill color of the point (used to set the fill color of the polyline connection point)
+                    .fillColor(AAColor.white) //The fill color of the point (used to set the fill color of the polyline connection point)
                     .lineWidth(0.4 * aaChartModel.markerRadius!) //The width of the outer line (used to set the width of the outline stroke of the polyline connection point)
                     .lineColor("") //The color of the outer edge (used to set the outline stroke color of the polyline connection point. When the value is an empty string, the color of the data point or data column is taken by default)
-            } else if (aaChartModel.markerSymbolStyle == .borderBlank) {
+            } else if aaChartModel.markerSymbolStyle == .borderBlank {
                 aaMarker
                     .lineWidth(2.0)
                     .lineColor(aaChartModel.backgroundColor)
@@ -262,53 +256,69 @@ public class AAOptionsConstructor {
         }
     }
     
-
-    private static  func configurePlotOptionsDataLabels(
+    
+    private static func configurePlotOptionsDataLabels(
         _ aaPlotOptions: AAPlotOptions,
         _ aaChartModel: AAChartModel
-        ) {
-        let chartType = aaChartModel.chartType!
+    ) {
+        let aaChartType = aaChartModel.chartType!
         
         let aaDataLabels = AADataLabels()
-        .enabled(aaChartModel.dataLabelsEnabled)
+            .enabled(aaChartModel.dataLabelsEnabled)
         if (aaChartModel.dataLabelsEnabled == true) {
-             aaDataLabels
+            aaDataLabels
                 .style(aaChartModel.dataLabelsStyle)
         }
         
-        switch chartType {
+        switch aaChartType {
         case .column:
             let aaColumn = AAColumn()
                 .borderWidth(0)
                 .borderRadius(aaChartModel.borderRadius)
+
             if (aaChartModel.polar == true) {
-                aaColumn.pointPadding(0)
+                aaColumn
+                    .pointPadding(0)
                     .groupPadding(0.005)
             }
             aaPlotOptions.column(aaColumn)
+            
         case .bar:
             let aaBar = AABar()
                 .borderWidth(0)
                 .borderRadius(aaChartModel.borderRadius)
+
             if (aaChartModel.polar == true) {
-                aaBar.pointPadding(0)
+                aaBar
+                    .pointPadding(0)
                     .groupPadding(0.005)
             }
             aaPlotOptions.bar(aaBar)
+            
         case .pie:
+            if (aaChartModel.dataLabelsEnabled == true) {
+                aaDataLabels.format("<b>{point.name}</b>: {point.percentage:.1f} %")
+            }
             let aaPie = AAPie()
                 .allowPointSelect(true)
                 .cursor("pointer")
                 .showInLegend(true)
-            if (aaChartModel.dataLabelsEnabled == true) {
-                aaDataLabels.format("<b>{point.name}</b>: {point.percentage:.1f} %")
-            }
-            aaPlotOptions.pie(aaPie)
-        case .columnrange:
-            aaPlotOptions.columnrange(AAColumnrange()
                 .borderRadius(aaChartModel.borderRadius)
-                .borderWidth(0))
+            
+            aaPlotOptions.pie(aaPie)
+            
+        case .columnrange:
+            let aaColumnrange = AAColumnrange()
+                .borderWidth(0)
+                .borderRadius(aaChartModel.borderRadius)
 
+            if (aaChartModel.polar == true) {
+                aaColumnrange
+                    .pointPadding(0)
+                    .groupPadding(0.005)
+            }
+            aaPlotOptions.columnrange(aaColumnrange)
+            
         default: break
         }
         aaPlotOptions.series?.dataLabels(aaDataLabels)
@@ -318,33 +328,31 @@ public class AAOptionsConstructor {
         _ aaOptions: AAOptions,
         _ aaChartModel: AAChartModel
     ) {
-        let chartType = aaChartModel.chartType
+        let aaChartType = aaChartModel.chartType
         //The related configuration of the x-axis and the Y-axis, the fan, pyramid, funnel, and meter and dial charts do not need to set the relevant content of the X-axis and Y-axis
-        if (chartType == .column
-            || chartType == .bar
-            || chartType == .area
-            || chartType == .areaspline
-            || chartType == .line
-            || chartType == .spline
-            || chartType == .scatter
-            || chartType == .bubble
-            || chartType == .columnrange
-            || chartType == .arearange
-            || chartType == .areasplinerange
-            || chartType == .boxplot
-            || chartType == .waterfall
-            || chartType == .polygon
-            || chartType == .gauge) {
+        if     aaChartType == .column
+            || aaChartType == .bar
+            || aaChartType == .area
+            || aaChartType == .areaspline
+            || aaChartType == .line
+            || aaChartType == .spline
+            || aaChartType == .scatter
+            || aaChartType == .bubble
+            || aaChartType == .columnrange
+            || aaChartType == .arearange
+            || aaChartType == .areasplinerange
+            || aaChartType == .boxplot
+            || aaChartType == .waterfall
+            || aaChartType == .polygon
+            || aaChartType == .gauge {
             
-            if chartType != .gauge {
+            if aaChartType != .gauge {
                 let aaXAxisLabelsEnabled = aaChartModel.xAxisLabelsEnabled
                 let aaXAxisLabels = AALabels()
                     .enabled(aaXAxisLabelsEnabled) //Set whether the x-axis displays text
                 if aaXAxisLabelsEnabled == true {
-                    aaXAxisLabels.style(
-                        AAStyle()
-                            .color(aaChartModel.axesTextColor)
-                    )
+                    aaXAxisLabels
+                        .style(aaChartModel.xAxisLabelsStyle)
                 }
                 
                 let aaXAxis = AAXAxis()
@@ -354,13 +362,9 @@ public class AAOptionsConstructor {
                     .categories(aaChartModel.categories)
                     .visible(aaChartModel.xAxisVisible) //whether the x axis is visible
                     .tickInterval(aaChartModel.xAxisTickInterval) //Number of x-axis coordinate point intervals
-		    		.title(AATitle()
-                    .text(aaChartModel.xAxisTitle) //y axis title
-                    .style(AAStyle()
-                        .color(aaChartModel.axesTextColor)
-                ))
-
-                
+                    .title(AATitle()
+                            .text(aaChartModel.xAxisTitle)) //x axis title
+                                            
                 aaOptions.xAxis(aaXAxis)
             }
             
@@ -368,26 +372,22 @@ public class AAOptionsConstructor {
             let aaYAxisLabels = AALabels()
                 .enabled(aaChartModel.yAxisLabelsEnabled)
             if aaYAxisLabelsEnabled == true {
-                aaYAxisLabels.style(
-                    AAStyle()
-                        .color(aaChartModel.axesTextColor)
-                )
+                aaYAxisLabels
+                    .style(aaChartModel.yAxisLabelsStyle)
             }
             
             let aaYAxis = AAYAxis()
                 .labels(aaYAxisLabels) //Set the y-axis text
                 .min(aaChartModel.yAxisMin) //Set the minimum value of the y-axis. If the minimum value is equal to zero, negative values ​​cannot be displayed.
                 .max(aaChartModel.yAxisMax) //Maximum y-axis
+                .tickPositions(aaChartModel.yAxisTickPositions)
                 .allowDecimals(aaChartModel.yAxisAllowDecimals) //Whether to display decimals
                 .reversed(aaChartModel.yAxisReversed)
                 .gridLineWidth(aaChartModel.yAxisGridLineWidth) //y-axis grid line width
                 .lineWidth(aaChartModel.yAxisLineWidth) //Set the width of the y-axis axis, which is 0 to hide the y-axis axis
                 .visible(aaChartModel.yAxisVisible)
                 .title(AATitle()
-                    .text(aaChartModel.yAxisTitle) //y axis title
-                    .style(AAStyle()
-                        .color(aaChartModel.axesTextColor)
-                ))
+                        .text(aaChartModel.yAxisTitle)) //y axis title
             
             aaOptions.yAxis(aaYAxis)
         }

@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -54,6 +54,15 @@ public class AADataLabels: AAObject {
     public var crop: Bool?
     public var inside: Bool?
     public var overflow: String?
+    public var filter: AAFilter?
+    public var textPath: AATextPath?
+    public var softConnector: Bool?
+    public var connectorColor: String?
+    public var connectorPadding: Float?
+    public var connectorShape: String?
+    public var connectorWidth: Float?
+    public var crookDistance: String?
+    public var alignTo: String?
     
     @discardableResult
     public func enabled(_ prop: Bool?) -> AADataLabels {
@@ -81,9 +90,7 @@ public class AADataLabels: AAObject {
     
     @discardableResult
     public func formatter(_ prop: String?) -> AADataLabels {
-        if prop != nil {
-            formatter = prop!.aa_toPureJSString()
-        }
+        formatter = prop?.aa_toPureJSString()
         return self
     }
     
@@ -183,40 +190,85 @@ public class AADataLabels: AAObject {
         return self
     }
     
+    @discardableResult
+    public func softConnector(_ prop: Bool?) -> AADataLabels {
+        softConnector = prop
+        return self
+    }
+    
+    @discardableResult
+    public func filter(_ prop: AAFilter?) -> AADataLabels {
+        filter = prop
+        return self
+    }
+    
+    @discardableResult
+    public func textPath(_ prop: AATextPath?) -> AADataLabels {
+        textPath = prop
+        return self
+    }
+    
+    @discardableResult
+    public func connectorColor(_ prop: String?) -> AADataLabels {
+        connectorColor = prop
+        return self
+    }
+    
+    @discardableResult
+    public func connectorPadding(_ prop: Float?) -> AADataLabels {
+        connectorPadding = prop
+        return self
+    }
+    
+    @discardableResult
+    public func connectorShape(_ prop: String?) -> AADataLabels {
+        connectorShape = prop
+        return self
+    }
+    
+    @discardableResult
+    public func connectorWidth(_ prop: Float?) -> AADataLabels {
+        connectorWidth = prop
+        return self
+    }
+    
+    @discardableResult
+    public func crookDistance(_ prop: String?) -> AADataLabels {
+        crookDistance = prop
+        return self
+    }
+    
+    @discardableResult
+    public func alignTo(_ prop: String?) -> AADataLabels {
+        alignTo = prop
+        return self
+    }
+    
     public override init() {
         enabled = true
     }
 }
 
-public class AAStyle: AAObject {
-    public var color: String?
-    public var fontSize: String?
-    public var fontWeight: String?
-    public var textOutline: String?
+public class AAFilter: AAObject {
+    public var property: String?
+    public var `operator`: String?
+    public var value: Float?
     
     @discardableResult
-    public func color(_ prop: String?) -> AAStyle {
-        color = prop
+    public func property(_ prop: String?) -> AAFilter {
+        property = prop
         return self
     }
     
     @discardableResult
-    public func fontSize(_ prop: Float?) -> AAStyle {
-        if prop != nil {
-            fontSize = "\(prop!)px"
-        }
+    public func `operator`(_ prop: String?) -> AAFilter {
+        `operator` = prop
         return self
     }
     
     @discardableResult
-    public func fontWeight(_ prop: AAChartFontWeightType?) -> AAStyle {
-        fontWeight = prop?.rawValue
-        return self
-    }
-    
-    @discardableResult
-    public func textOutline(_ prop: String?) -> AAStyle {
-        textOutline = prop
+    public func value(_ prop: Float?) -> AAFilter {
+        value = prop
         return self
     }
     
@@ -225,24 +277,27 @@ public class AAStyle: AAObject {
     }
 }
 
-public extension AAStyle {
-    convenience init(color : String?) {
-        self.init(color: color, fontSize: nil)
+public class AATextPath: AAObject {
+    public var enabled: Bool?
+    public var attributes: [String: Any]?
+    public var value: Float?
+    
+    @discardableResult
+    public func enabled(_ prop: Bool?) -> AATextPath {
+        enabled = prop
+        return self
     }
     
-    convenience init(color : String?, fontSize: Float?) {
-        self.init(color: color, fontSize: fontSize,weight: nil)
+    @discardableResult
+    public func attributes(_ prop: [String: Any]?) -> AATextPath {
+        attributes = prop
+        return self
     }
     
-    convenience init(color : String?, fontSize: Float?, weight: AAChartFontWeightType?) {
-      self.init(color: color, fontSize: fontSize,weight: weight, outline: nil)
-    }
-    
-    convenience init(color : String?, fontSize: Float?, weight: AAChartFontWeightType?, outline: String?) {
-        self.init()
-        self.color(color)
-        .fontSize(fontSize)
-        .fontWeight(weight)
-        .textOutline(outline)
+    public override init() {
+        
     }
 }
+
+
+

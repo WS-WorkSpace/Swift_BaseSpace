@@ -123,7 +123,7 @@ target 'Swift_Base' do
   pod 'swiftScan', '1.2.1'
   #pod 'WeScan'
 # 图表 SwiftUICharts
-  pod 'AAInfographics', '6.0.0'
+  pod 'AAInfographics', '9.0.0'
   #pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
   #pod 'Charts'
   #pod 'SwiftCharts'

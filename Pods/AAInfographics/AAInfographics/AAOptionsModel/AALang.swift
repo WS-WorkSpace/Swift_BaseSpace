@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -30,11 +30,31 @@
  
  */
 
-import UIKit
 
 public class AALang: AAObject {
+    public var noData: String?
+    public var numericSymbolMagnitude: Int?
+    public var numericSymbols: [String]?
     public var resetZoom: String?
     public var thousandsSep: String?
+    
+    @discardableResult
+    public func noData(_ prop: String?) -> AALang {
+        noData = prop
+        return self
+    }
+    
+    @discardableResult
+    public func numericSymbolMagnitude(_ prop: Int?) -> AALang {
+        numericSymbolMagnitude = prop
+        return self
+    }
+    
+    @discardableResult
+    public func numericSymbols(_ prop: [String]?) -> AALang {
+        numericSymbols = prop
+        return self
+    }
     
     @discardableResult
     public func resetZoom(_ prop: String?) -> AALang {

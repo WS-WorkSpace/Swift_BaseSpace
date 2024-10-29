@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -35,6 +35,7 @@ import Foundation
 
 public class AAObject { }
 
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
 public extension AAObject {
     var classNameString: String {
         let nameClass: AnyClass! = object_getClass(self)
@@ -42,18 +43,15 @@ public extension AAObject {
     }
 }
 
-
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
 public extension AAObject {
-    func toDic() -> [String: Any]? {
-        var representation = [String: Any]()
-        
-        let mirrorChildren = Mirror(reflecting: self).children
+    fileprivate func loopForMirrorChildren(_ mirrorChildren: Mirror.Children, _ representation: inout [String : Any]) {
         for case let (label?, value) in mirrorChildren {
             switch value {
             case let value as AAObject: do {
                 representation[label] = value.toDic()
             }
-            
+                
             case let value as [AAObject]: do {
                 var aaObjectArr = [Any]()
                 
@@ -66,15 +64,27 @@ public extension AAObject {
                 
                 representation[label] = aaObjectArr
             }
-            
+                
             case let value as NSObject: do {
                 representation[label] = value
             }
-            
+                
             default:
                 // Ignore any unserializable properties
                 break
             }
+        }
+    }
+    
+    func toDic() -> [String: Any]? {
+        var representation = [String: Any]()
+        
+        let mirrorChildren = Mirror(reflecting: self).children
+        loopForMirrorChildren(mirrorChildren, &representation)
+        
+        let superMirrorChildren = Mirror(reflecting: self).superclassMirror?.children
+        if superMirrorChildren?.count ?? 0 > 0 {
+            loopForMirrorChildren(superMirrorChildren!, &representation)
         }
         
         return representation as [String: Any]?

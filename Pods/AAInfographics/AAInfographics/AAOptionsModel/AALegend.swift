@@ -22,7 +22,7 @@
  * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
- * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
+ * StackOverflow : https://stackoverflow.com/users/12302132/codeforu
  * JianShu       : https://www.jianshu.com/u/f1e6753d4254
  * SegmentFault  : https://segmentfault.com/u/huanghunbieguan
  *
@@ -39,9 +39,11 @@ public class AALegend: AAObject {
     public var enabled: Bool?
     public var borderColor: String?
     public var borderWidth: Float?
+    public var bubbleLegend: AABubbleLegend?
     public var itemMarginTop: Float? //The top margin of each item of the legend, in px. The default is: 0.
     public var itemMarginBottom: Float?//The bottom margin of each item of the legend, in px. The default is: 0.
     public var itemStyle: AAItemStyle?
+    public var itemWidth: Float?
     public var symbolHeight: Float?
     public var symbolPadding: Float?
     public var symbolRadius: Float?
@@ -49,6 +51,10 @@ public class AALegend: AAObject {
     public var x: Float?
     public var y: Float?
     public var floating: Bool?
+    public var labelFormat: String?
+    public var backgroundColor: Any?
+    public var reversed: Bool?
+    public var shadow: Bool?
     
     @discardableResult
     public func layout(_ prop: AAChartLayoutType?) -> AALegend {
@@ -85,6 +91,12 @@ public class AALegend: AAObject {
         borderWidth = prop
         return self
     }
+
+    @discardableResult
+    public func bubbleLegend(_ prop: AABubbleLegend?) -> AALegend {
+        bubbleLegend = prop
+        return self
+    }
     
     @discardableResult
     public func itemMarginTop(_ prop: Float?) -> AALegend {
@@ -95,6 +107,12 @@ public class AALegend: AAObject {
     @discardableResult
     public func itemStyle(_ prop: AAItemStyle?) -> AALegend {
         itemStyle = prop
+        return self
+    }
+    
+    @discardableResult
+    public func itemWidth(_ prop: Float?) -> AALegend {
+        itemWidth = prop
         return self
     }
     
@@ -137,6 +155,30 @@ public class AALegend: AAObject {
     @discardableResult
     public func floating(_ prop: Bool?) -> AALegend {
         floating = prop
+        return self
+    }
+    
+    @discardableResult
+    public func labelFormat(_ prop: String?) -> AALegend {
+        labelFormat = prop
+        return self
+    }
+
+    @discardableResult
+    public func backgroundColor(_ prop: Any?) -> AALegend {
+        backgroundColor = prop
+        return self
+    }
+
+    @discardableResult
+    public func reversed(_ prop: Bool?) -> AALegend {
+        reversed = prop
+        return self
+    }
+
+    @discardableResult
+    public func shadow(_ prop: Bool?) -> AALegend {
+        shadow = prop
         return self
     }
     
