@@ -9,19 +9,24 @@ import UIKit
 
 class TwoTabViewController: BaseTableViewController {
     var page = 1
-    
+
     private lazy var vcArray: [String] = {
-        let _vcArray = ["NetWorkingListViewController", "2", "3", "4", "5", "6", "7", "8"]
+        let _vcArray = ["Table_SwiftyJSON_VC",
+                        "Table_HandyJSON_VC",
+                        "Table_ObjectMapper_Moya",
+                        ""]
         return _vcArray
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configTableView()
-
         view.backgroundColor = .white
-        configModelArr = ["网络请求Demo", "2", "3", "4", "5", "6", "7", "8"]
-        let vcArray = ["NetWorkingListViewController", "2", "3", "4", "5", "6", "7", "8"]
+        // 计算属性,设置cell.textLabel
+        configModelArr = ["链式+SwiftyJSON",
+                          "链式+HandyJSON",
+                          "Table_ObjectMapper_Moya",
+                          ""]
 
         // MARK: - BarIetms设置
 

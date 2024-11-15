@@ -25,7 +25,7 @@ class BaseTabBarController: UITabBarController {
     /// 添加所有子控制器
     func setupChildViewControllers() {
         self.addChildVC("主页", "home_1_normal", "home_1_selected", OneTabViewController.self)
-        self.addChildVC("网络", "home_ic_clip_p", "home_ic_clip_selected", TwoTabViewController.self)
+        self.addChildVC("网络Demo", "home_ic_clip_p", "home_ic_clip_selected", TwoTabViewController.self)
         self.addChildVC("互相调用", "home_ic_notice_p", "home_ic_notice_selected", ThreeTabViewController.self)
         self.addChildVC("Temp", "home_ic_template_p", "home_ic_template_selected", FourTabViewController.self)
         self.addChildVC("个人", "tab5", "tab5_select", FiveTabViewController.self)

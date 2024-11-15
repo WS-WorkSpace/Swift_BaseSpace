@@ -9,6 +9,7 @@ import UIKit
 
 class BaseTableViewController: BaseViewController {
     private lazy var modelArr = [String]()
+    // 计算属性,设置cell.textLabel
     var configModelArr: [String] {
         get {
             return modelArr

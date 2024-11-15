@@ -612,7 +612,11 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
-				C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */,
+				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
+				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
+				C6B8C4E52A89ED100080F9B4 /* New Group */,
+				C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */,
+				C6EE3A572A84DC1B00A76C19 /* 废弃的网络tableView目录 */,
 			);
 			path = Tab2;
 			sourceTree = "<group>";
@@ -680,16 +684,12 @@
 			path = "基础控件Demo";
 			sourceTree = "<group>";
 		};
-		C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */ = {
+		C6EE3A572A84DC1B00A76C19 /* 废弃的网络tableView目录 */ = {
 			isa = PBXGroup;
 			children = (
 				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
-				C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */,
-				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
-				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
-				C6B8C4E52A89ED100080F9B4 /* New Group */,
 			);
-			path = "NetWorking网络请求";
+			path = "废弃的网络tableView目录";
 			sourceTree = "<group>";
 		};
 		C6EE3A622A85E4B400A76C19 /* Tableview集合 */ = {
