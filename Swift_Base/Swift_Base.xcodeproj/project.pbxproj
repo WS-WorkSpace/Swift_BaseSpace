@@ -622,6 +622,8 @@
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
+				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
+				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -632,8 +634,6 @@
 				C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */,
 				C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */,
 				C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */,
-				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
-				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
 			);
 			path = ExampleList;
 			sourceTree = "<group>";
