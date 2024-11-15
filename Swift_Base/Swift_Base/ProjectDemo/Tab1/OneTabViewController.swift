@@ -14,8 +14,8 @@ class OneTabViewController: BaseTableViewController {
         self.configTableView()
 
         view.backgroundColor = .white
-        configModelArr = ["基本控件Demo", "2", "3", "4", "5", "6", "7", "8"]
-        let vcArray = ["DemoListViewController", "2", "3", "4", "5", "6", "7", "8"]
+        configModelArr = ["基本控件Demo", "UITableView", "UICollcetionView列表", "4", "5", "6", "7", "8"]
+        let vcArray = ["DemoListViewController", "TableListViewController", "CollectListViewController", "4", "5", "6", "7", "8"]
 
         // MARK: - 点击cell的closure返回
 
