@@ -16,6 +16,8 @@
 		C654370E2A80844700C304B4 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370D2A80844700C304B4 /* Then.swift */; };
 		C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370F2A80D90800C304B4 /* ImageReusableView.swift */; };
 		C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */; };
+		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
+		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -138,6 +140,8 @@
 		C654370D2A80844700C304B4 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C654370F2A80D90800C304B4 /* ImageReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReusableView.swift; sourceTree = "<group>"; };
 		C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCollectionViewController.swift; sourceTree = "<group>"; };
+		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
+		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 				C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */,
 				C6C5CEBB2A75D1D200C5CF02 /* GlobalConfig.swift */,
 				C6C5CEBD2A75D2E300C5CF02 /* ConfigFontColorMacro.swift */,
+				C68CB6FC2CE7B367009F8A6A /* Mems.swift */,
+				C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */,
 			);
 			path = "PublicConfigs基础配置";
 			sourceTree = "<group>";
@@ -955,6 +961,7 @@
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
+				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
@@ -1031,6 +1038,7 @@
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,
 				C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */,
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
+				C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */,
 				C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */,
 				C6C5CECD2A75D67800C5CF02 /* UITableView+Extension.swift in Sources */,
 			);
