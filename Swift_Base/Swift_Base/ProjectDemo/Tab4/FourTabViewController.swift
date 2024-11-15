@@ -20,12 +20,12 @@ class FourTabViewController: UIViewController {
         btn.backgroundColor = UIColor.red
         self.view.addSubview(btn)
         btn.snp.makeConstraints { make in
-            make.centerY.equalTo(self.view).offset(0)
+            make.centerX.equalTo(self.view).offset(0)
 //            make.size.equalTo(CGSizeMake(100, 50))
             make.width.equalTo(100)
             make.height.equalTo(50)
 
-            make.top.equalTo(self.view.snp_top).offset(100)
+            make.top.equalTo(self.view.snp_top).offset(150)
         }
 
     }
