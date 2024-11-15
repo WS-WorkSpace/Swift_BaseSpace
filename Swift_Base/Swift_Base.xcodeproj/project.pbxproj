@@ -612,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
+				C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */,
 			);
 			path = Tab2;
 			sourceTree = "<group>";
@@ -620,7 +621,6 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
-				C6EE3A572A84DC1B00A76C19 /* NetWorking网络请求 */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
 			);
 			path = Tab1;
