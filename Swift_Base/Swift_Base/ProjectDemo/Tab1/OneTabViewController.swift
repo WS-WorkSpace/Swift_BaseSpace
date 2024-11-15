@@ -14,11 +14,11 @@ class OneTabViewController: BaseTableViewController {
         self.configTableView()
 
         view.backgroundColor = .white
-        configModelArr = ["基本控件Demo", "", "网络请求Demo", "4", "5", "6", "7", "8"]
-        let vcArray = ["DemoListViewController", "", "NetWorkingListViewController", "4", "5", "6", "7", "8"]
-
+        configModelArr = ["基本控件Demo", "2", "3", "4", "5", "6", "7", "8"]
+        let vcArray = ["DemoListViewController", "2", "3", "4", "5", "6", "7", "8"]
 
         // MARK: - 点击cell的closure返回
+
         self.clickCellBlock = { (index: IndexPath, _: String) in
             let vc = NSString.RD_VC_ClassFromString(vcArray[index.row])
             if let _vc = vc {
@@ -27,4 +27,3 @@ class OneTabViewController: BaseTableViewController {
         }
     }
 }
-

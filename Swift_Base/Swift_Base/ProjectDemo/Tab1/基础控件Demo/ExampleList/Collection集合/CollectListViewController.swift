@@ -19,20 +19,16 @@ class CollectListViewController: BaseTableViewController {
         dataArr = ["EasyCollectionViewController",
                    "NineGridViewController",
                    "SessionBackImageSectionViewController",
-                   "WaterflowCollectionViewController",
-                   "NetworkDemoListVC",
-                   "LibDemoListVC"]
+                   "WaterflowCollectionViewController"]
         return dataArr
     }()
 
     private func mConfigTableView() {
-        self.configTableView()
+        configTableView()
         configModelArr = ["基本使用",
                           "九宫格",
                           "自定义section背景图",
-                          "刷新瀑布流",
-                          "网络请求",
-                          "三方库使用"]
+                          "刷新瀑布流"]
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别

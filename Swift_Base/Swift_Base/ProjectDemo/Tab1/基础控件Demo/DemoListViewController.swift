@@ -20,21 +20,17 @@ class DemoListViewController: BaseTableViewController {
                    "AlertUIViewController",
                    "FPSViewController",
                    "TableListViewController",
-                   "CollectListViewController",
-                   "NetworkDemoListVC",
-                   "LibDemoListVC"]
+                   "CollectListViewController"]
         return dataArr
     }()
 
     private func mConfigTableView() {
-        self.configTableView()
+        configTableView()
         configModelArr = ["基本控件",
                           "Alert底部弹框",
                           "FPS_Label",
                           "UITableView",
-                          "UICollcetionView列表",
-                          "网络请求",
-                          "三方库使用"]
+                          "UICollcetionView列表"]
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别
