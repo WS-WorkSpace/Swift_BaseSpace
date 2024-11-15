@@ -684,7 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
-				C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */,
+				C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
@@ -740,13 +740,13 @@
 			path = "链式 + TableView - HandyJSON + 动态高度";
 			sourceTree = "<group>";
 		};
-		C6EE3A8E2A8939DB00A76C19 /* 封装的网络 */ = {
+		C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */ = {
 			isa = PBXGroup;
 			children = (
 				C6EE3A8F2A8939FC00A76C19 /* 链式 */,
 				C6EE3A882A88E8BA00A76C19 /* Moya */,
 			);
-			path = "封装的网络";
+			path = "封装的网络Pods";
 			sourceTree = "<group>";
 		};
 		C6EE3A8F2A8939FC00A76C19 /* 链式 */ = {
