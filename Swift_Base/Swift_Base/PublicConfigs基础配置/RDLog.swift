@@ -10,13 +10,27 @@ import Foundation
 public typealias Lg = Logger
 
 public func mLog(_ items: Any...,
-                separator: String = " ",
-                terminator: String = "\n",
-                file: String = #file,
-                line: Int = #line,
-                method: String = #function){
+                 separator: String = " ",
+                 terminator: String = "\n",
+                 file: String = #file,
+                 line: Int = #line,
+                 method: String = #function)
+{
     Lg.log(items, separator: separator, terminator: terminator, file: file, line: line, method: method)
 }
+
+/*
+ public func log<T>(_ msg: T,
+                    file: String = #file,
+                    line: Int = #line,
+                    fn: String = #function)
+ {
+     #if DEBUG
+     let prefix = "\((file as NSString).lastPathComponent)_\(line)_\(fn):"
+     print(prefix, msg)
+     #endif
+ }
+ */
 
 @objcMembers
 public class Logger: NSObject
