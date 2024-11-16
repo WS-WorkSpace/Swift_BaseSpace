@@ -16,9 +16,9 @@
     }
     return self;
 }
-+ (instancetype)personWithAge:(NSInteger)age name:(NSString *)name {
-    return nil;
-}
+//+ (instancetype)personWithAge:(NSInteger)age name:(NSString *)name {
+//    return nil;
+//}
 + (void)run { NSLog(@"Swift调用:类方法: +run"); }
 - (void)run { NSLog(@"Swift调用:实例方法: -run, 年龄:%zd,姓名:%@", _age, _name); }
 + (void)eat:(NSString *)food other:(NSString *)other { NSLog(@"Swift调用:类方法: +eat, 食物:%@, %@", food, other); }
