@@ -13,7 +13,11 @@ class OneTabViewController: BaseTableViewController {
         ["DemoListViewController",
          "TableListViewController",
          "CollectListViewController",
-         "Swift_To_OCViewController", "5", "6", "7", "8"]
+         "Swift_Call_OC_ViewController",
+         "OC_Call_Swift_ViewController",
+         "6",
+         "7",
+         "8"]
     }
 
     override func viewDidLoad() {
@@ -24,7 +28,11 @@ class OneTabViewController: BaseTableViewController {
         configModelArr = ["基本控件_Demo",
                           "UITableView_Demo",
                           "UICollcetionView_Demo",
-                          "Swift调用OC", "5", "6", "7", "8"]
+                          "Swift调用OC",
+                          "OC调用Swift",
+                          "6",
+                          "7",
+                          "8"]
 
         // MARK: - 点击cell的closure返回
 
@@ -32,6 +40,13 @@ class OneTabViewController: BaseTableViewController {
             let vc = NSString.RD_VC_ClassFromString(self.vcArray[index.row])
             if let _vc = vc {
                 self.navigationController?.pushViewController(_vc, animated: true)
+            }
+            // 创建OC的Viewcontroller
+            let _vcTemp = self.vcArray[index.row]
+            if _vcTemp == "OC_Call_Swift_ViewController" {
+//                let vc:UIViewController  = NSClassFromString(_vcTemp).init()
+                let vc:UIViewController  = OC_Call_Swift_ViewController.init()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

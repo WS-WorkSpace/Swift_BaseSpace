@@ -3,6 +3,7 @@
 //
 // MARK: - OC暴漏给Swift的文件
 #import "WS_Person.h"
+#import "OC_Call_Swift_ViewController.h"
 #import "FPSLabel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "SelfRefreshGifHeader.h"

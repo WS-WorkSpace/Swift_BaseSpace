@@ -20,7 +20,10 @@
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
 		C68CB74D2CE83A24009F8A6A /* WS_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB74C2CE83A23009F8A6A /* WS_Person.m */; };
-		C68CB74F2CE83B2C009F8A6A /* Swift_To_OCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB74E2CE83B2C009F8A6A /* Swift_To_OCViewController.swift */; };
+		C68CB74F2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB74E2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift */; };
+		C68CB7512CE83D47009F8A6A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7502CE83D47009F8A6A /* Car.swift */; };
+		C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7532CE83FE9009F8A6A /* MultithreadingViewController.swift */; };
+		C68CB75A2CE8564A009F8A6A /* OC_Call_Swift_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -148,7 +151,11 @@
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		C68CB74B2CE83A23009F8A6A /* WS_Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WS_Person.h; sourceTree = "<group>"; };
 		C68CB74C2CE83A23009F8A6A /* WS_Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WS_Person.m; sourceTree = "<group>"; };
-		C68CB74E2CE83B2C009F8A6A /* Swift_To_OCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_To_OCViewController.swift; sourceTree = "<group>"; };
+		C68CB74E2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Call_OC_ViewController.swift; sourceTree = "<group>"; };
+		C68CB7502CE83D47009F8A6A /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		C68CB7532CE83FE9009F8A6A /* MultithreadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultithreadingViewController.swift; sourceTree = "<group>"; };
+		C68CB7582CE8564A009F8A6A /* OC_Call_Swift_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OC_Call_Swift_ViewController.h; sourceTree = "<group>"; };
+		C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_Call_Swift_ViewController.m; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -334,11 +341,29 @@
 		C68CB74A2CE83A08009F8A6A /* Swift调用OC */ = {
 			isa = PBXGroup;
 			children = (
-				C68CB74E2CE83B2C009F8A6A /* Swift_To_OCViewController.swift */,
+				C68CB74E2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift */,
 				C68CB74B2CE83A23009F8A6A /* WS_Person.h */,
 				C68CB74C2CE83A23009F8A6A /* WS_Person.m */,
 			);
 			path = "Swift调用OC";
+			sourceTree = "<group>";
+		};
+		C68CB7522CE83FB1009F8A6A /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				C68CB7532CE83FE9009F8A6A /* MultithreadingViewController.swift */,
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
+		C68CB7552CE854D5009F8A6A /* OC调用Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C68CB7582CE8564A009F8A6A /* OC_Call_Swift_ViewController.h */,
+				C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */,
+				C68CB7502CE83D47009F8A6A /* Car.swift */,
+			);
+			path = "OC调用Swift";
 			sourceTree = "<group>";
 		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
@@ -649,10 +674,12 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
+				C68CB7522CE83FB1009F8A6A /* 多线程 */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
 				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
 				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
 				C68CB74A2CE83A08009F8A6A /* Swift调用OC */,
+				C68CB7552CE854D5009F8A6A /* OC调用Swift */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1031,6 +1058,7 @@
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6EE3A612A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift in Sources */,
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
+				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
@@ -1053,11 +1081,13 @@
 				C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */,
 				C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
-				C68CB74F2CE83B2C009F8A6A /* Swift_To_OCViewController.swift in Sources */,
+				C68CB74F2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift in Sources */,
 				C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */,
 				C68CB74D2CE83A24009F8A6A /* WS_Person.m in Sources */,
 				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,
+				C68CB75A2CE8564A009F8A6A /* OC_Call_Swift_ViewController.m in Sources */,
+				C68CB7512CE83D47009F8A6A /* Car.swift in Sources */,
 				C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */,
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
 				C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */,
