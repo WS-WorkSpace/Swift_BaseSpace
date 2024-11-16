@@ -19,13 +19,11 @@
     testSwift();
 }
 
-void testSwift() {
-    NSLog(@"testSwift");
-    Car * car = [[Car alloc] initWithPrice:7.77 band:@"Benz"];
+void testSwift(void) {
+    Car * car = [[Car alloc] initWithPrice:250000.0 band:@"奥迪"];
     [car test];
     [car run];
     [Car run];
-    
 }
 
 @end
