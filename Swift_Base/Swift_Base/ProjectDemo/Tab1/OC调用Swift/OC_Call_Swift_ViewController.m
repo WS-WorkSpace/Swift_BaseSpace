@@ -20,10 +20,11 @@
 }
 
 void testSwift(void) {
-    Car * car = [[Car alloc] initWithPrice:250000.0 band:@"奥迪"];
+    WS_Car * car = [[WS_Car alloc] initWithPrice:250000.0 band:@"奥迪"];
+    NSLog(@"%@",car.name);
     [car test];
-    [car run];
-    [Car run];
+    [car ws_run];
+    [WS_Car run];
 }
 
 @end
