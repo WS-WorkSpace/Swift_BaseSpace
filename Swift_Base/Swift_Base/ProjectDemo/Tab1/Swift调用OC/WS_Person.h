@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 // C 语言函数
-int sum(int a, int b);
+//int sum(int a, int b);
 
 @interface WS_Person : NSObject
 @property (nonatomic, assign) NSInteger age;

@@ -7,8 +7,8 @@
 
 import UIKit
 
-//Swift要暴漏给OC的类,最终要继承于 NSObject
-//@objcMembers 等于所有成员以及扩展,都 @objc,暴漏给OC
+// Swift要暴漏给OC的类,最终要继承于 NSObject
+// @objcMembers 等于所有成员以及扩展,都 @objc,暴漏给OC
 @objcMembers class Car: NSObject {
     var price: Double
     var band: String
@@ -16,11 +16,14 @@ import UIKit
         self.price = price
         self.band = band
     }
+
     func run() {
         print(price, band, "run")
     }
+
     static func run() { print("Car run") }
 }
+
 extension Car {
     func test() { print(price, band, "test") }
 }

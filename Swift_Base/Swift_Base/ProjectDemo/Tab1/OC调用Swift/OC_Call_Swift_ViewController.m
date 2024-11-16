@@ -21,7 +21,7 @@
 
 void testSwift() {
     NSLog(@"testSwift");
-    Car * car = [[Car alloc] initWithPrice:1.55 band:@"Benz"];
+    Car * car = [[Car alloc] initWithPrice:7.77 band:@"Benz"];
     [car test];
     [car run];
     [Car run];
