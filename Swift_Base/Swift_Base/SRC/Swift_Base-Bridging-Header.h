@@ -2,6 +2,7 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 // MARK: - OC暴漏给Swift的文件
+#import "WS_Person.h"
 #import "FPSLabel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "SelfRefreshGifHeader.h"

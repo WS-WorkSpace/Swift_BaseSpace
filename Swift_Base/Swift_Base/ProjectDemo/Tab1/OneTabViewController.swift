@@ -9,10 +9,11 @@ import UIKit
 
 class OneTabViewController: BaseTableViewController {
     var page = 1
-    private  var vcArray:[String] {
-        get{
-            ["DemoListViewController", "TableListViewController", "CollectListViewController", "4", "5", "6", "7", "8"]
-        }
+    private var vcArray: [String] {
+        ["DemoListViewController",
+         "TableListViewController",
+         "CollectListViewController",
+         "Swift_To_OCViewController", "5", "6", "7", "8"]
     }
 
     override func viewDidLoad() {
@@ -20,7 +21,10 @@ class OneTabViewController: BaseTableViewController {
         self.configTableView()
 
         view.backgroundColor = .white
-        configModelArr = ["基本控件_Demo", "UITableView_Demo", "UICollcetionView_Demo", "4", "5", "6", "7", "8"]
+        configModelArr = ["基本控件_Demo",
+                          "UITableView_Demo",
+                          "UICollcetionView_Demo",
+                          "Swift调用OC", "5", "6", "7", "8"]
 
         // MARK: - 点击cell的closure返回
 

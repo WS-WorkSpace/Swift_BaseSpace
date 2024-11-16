@@ -88,7 +88,7 @@ extension BaseTableViewController: UITableViewDelegate {
 
         let cell = tableView.cellForRow(at: indexPath)
         let text = cell?.textLabel?.text ?? ""
-        Lg.log("- 选中cell : \(text)")
+        //Lg.log("- 选中cell : \(text)")
         clickCellBlock?(indexPath, text)
     }
 }
