@@ -25,6 +25,7 @@
 		C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7532CE83FE9009F8A6A /* MultithreadingViewController.swift */; };
 		C68CB75A2CE8564A009F8A6A /* OC_Call_Swift_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */; };
 		C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */; };
+		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -158,6 +159,7 @@
 		C68CB7582CE8564A009F8A6A /* OC_Call_Swift_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OC_Call_Swift_ViewController.h; sourceTree = "<group>"; };
 		C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_Call_Swift_ViewController.m; sourceTree = "<group>"; };
 		C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertsManager.swift; sourceTree = "<group>"; };
+		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */,
 				C68CB7002CE83119009F8A6A /* Singleton.swift */,
 				C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */,
+				C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */,
 			);
 			path = "PublicConfigs基础配置";
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
+				C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
