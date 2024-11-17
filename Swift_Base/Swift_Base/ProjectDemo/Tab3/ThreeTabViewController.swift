@@ -35,7 +35,8 @@ class ThreeTabViewController: UIViewController {
             make.center.equalToSuperview()
             make.size.equalTo(CGSizeMake(200, 100))
         }
-
+        
+        
         test()
     }
 
