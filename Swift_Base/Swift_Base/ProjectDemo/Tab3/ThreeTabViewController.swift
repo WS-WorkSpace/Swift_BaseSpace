@@ -5,25 +5,48 @@
 //  Created by 王爽 on 2023/7/31.
 //
 
+import SnapKit
 import UIKit
 
-class ThreeTabViewController: UIViewController {
+@objcMembers class Temp: NSObject {
+    func test1(v1: Int) { print("test1") }
+    func test2(v1: Int, v2: Int) { print("test2(v1:v2:)") }
+    func test2(_ v1: Double, _ v2: Double) { print("test2(_:_:)") }
+    func run() {
+        perform(#selector(test1))
+        perform(#selector(test1(v1:)))
+        perform(#selector(test2(v1:v2:)))
+        perform(#selector(test2(_:_:)))
+        perform(#selector(test2 as (Double, Double) -> Void))
+    }
+}
 
+class ThreeTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let button = UIButton()
+        view.addSubview(button)
+        button.setTitle("测试", for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = RD_RandomColor().cgColor
+        button.backgroundColor = RD_RandomColor()
+        button.addTarget(self, action: #selector(btnMethod), for: UIControl.Event.touchUpInside)
+        button.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(CGSizeMake(200, 100))
+        }
 
-        // Do any additional setup after loading the view.
+        test()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func btnMethod() {
+        print("点击了测试按钮")
     }
-    */
 
+    typealias Fn = (Int) -> (Int)
+    func sum(_ a: Int) -> Fn {
+        { $0 + a }
+    }
+
+    func test() {}
 }
