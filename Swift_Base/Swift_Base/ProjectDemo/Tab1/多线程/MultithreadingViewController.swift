@@ -39,6 +39,7 @@ class MultithreadingViewController: UIViewController {
         view.addSubview(mButton)
         view.addSubview(mSegment)
         view.addSubview(onceButton)
+        view.addSubview(lockButton)
     }
 
     lazy var mButton: UIButton = {
@@ -115,6 +116,37 @@ class MultithreadingViewController: UIViewController {
     @objc func clickOnceButton(btn: UIButton) {
         once()
     }
+
+    lazy var lockButton: UIButton = {
+        let titleColor = RD_RandomColor()
+        let button = UIButton(frame: .zero)
+        button.frame = CGRect(x: 10, y: distanceTop + 350, width: kScreenWidth - 20, height: 60)
+        button.titleLabel?.font = RD_Font(16)
+        button.setTitle("加锁", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
+        button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = RD_RandomColor().cgColor
+        button.backgroundColor = .lightGray
+        button.addTarget(self, action: #selector(clickLockButton(btn:)), for: .touchUpInside)
+        return button
+    }()
+
+    @objc func clickLockButton(btn: UIButton) {
+        WS_Async.async {
+            print(Thread.current)
+            WS_Cache.set("Jack", 1)
+        }
+
+        WS_Async.async {
+            print(Thread.current)
+
+            WS_Cache.set("Jack", 2)
+        }
+        print(WS_Cache.get("Jack") as Any)
+    }
 }
 
 extension MultithreadingViewController {
@@ -148,7 +180,7 @@ extension MultithreadingViewController {
 
     func once() {
         // 方式一:初始化类静态成员变量,仅执行一次
-        let _ = Self.initTask
+        _ = Self.initTask
         _ = initTask2
         print(Self.initTask3)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Cache {
+public struct WS_Cache {
     private static var data = [String: Any]()
     //gcd信号量可以同时一条线程访问
     private static var lock = DispatchSemaphore(value: 1)
