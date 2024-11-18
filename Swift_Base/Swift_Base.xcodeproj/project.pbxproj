@@ -372,6 +372,13 @@
 			path = "OC调用Swift";
 			sourceTree = "<group>";
 		};
+		C68CB7632CEB7B99009F8A6A /* 函数式编程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "函数式编程";
+			sourceTree = "<group>";
+		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,12 +687,13 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
-				C68CB7522CE83FB1009F8A6A /* 多线程 */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
 				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
 				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
 				C68CB74A2CE83A08009F8A6A /* Swift调用OC */,
 				C68CB7552CE854D5009F8A6A /* OC调用Swift */,
+				C68CB7522CE83FB1009F8A6A /* 多线程 */,
+				C68CB7632CEB7B99009F8A6A /* 函数式编程 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
