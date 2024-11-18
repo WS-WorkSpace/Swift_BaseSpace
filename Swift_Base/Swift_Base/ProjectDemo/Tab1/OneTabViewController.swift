@@ -16,7 +16,7 @@ class OneTabViewController: BaseTableViewController {
          "Swift_Call_OC_ViewController",
          "OC_Call_Swift_ViewController",
          "MultithreadingViewController",
-         "7",
+         "FuntionalProgrammingViewController",
          "8"]
     }
 
@@ -31,7 +31,7 @@ class OneTabViewController: BaseTableViewController {
                           "Swift调用OC",
                           "OC调用Swift",
                           "多线程",
-                          "7",
+                          "函数式编程",
                           "8"]
 
         // MARK: - 点击cell的closure返回
@@ -45,7 +45,7 @@ class OneTabViewController: BaseTableViewController {
             let _vcTemp = self.vcArray[index.row]
             if _vcTemp == "OC_Call_Swift_ViewController" {
 //                let vc:UIViewController  = NSClassFromString(_vcTemp).init()
-                let vc:UIViewController  = OC_Call_Swift_ViewController.init()
+                let vc: UIViewController = OC_Call_Swift_ViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
