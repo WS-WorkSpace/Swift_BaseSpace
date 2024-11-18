@@ -26,6 +26,7 @@
 		C68CB75A2CE8564A009F8A6A /* OC_Call_Swift_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */; };
 		C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */; };
 		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
+		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -160,6 +161,7 @@
 		C68CB7592CE8564A009F8A6A /* OC_Call_Swift_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_Call_Swift_ViewController.m; sourceTree = "<group>"; };
 		C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertsManager.swift; sourceTree = "<group>"; };
 		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
+		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -372,9 +374,10 @@
 			path = "OC调用Swift";
 			sourceTree = "<group>";
 		};
-		C68CB7632CEB7B99009F8A6A /* 函数式编程 */ = {
+		C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */ = {
 			isa = PBXGroup;
 			children = (
+				C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */,
 			);
 			path = "函数式编程";
 			sourceTree = "<group>";
@@ -693,7 +696,7 @@
 				C68CB74A2CE83A08009F8A6A /* Swift调用OC */,
 				C68CB7552CE854D5009F8A6A /* OC调用Swift */,
 				C68CB7522CE83FB1009F8A6A /* 多线程 */,
-				C68CB7632CEB7B99009F8A6A /* 函数式编程 */,
+				C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */,
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
 				C68CB74F2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift in Sources */,
+				C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */,
 				C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */,
 				C68CB74D2CE83A24009F8A6A /* WS_Person.m in Sources */,
 				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,
