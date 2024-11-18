@@ -15,7 +15,7 @@ class OneTabViewController: BaseTableViewController {
          "CollectListViewController",
          "Swift_Call_OC_ViewController",
          "OC_Call_Swift_ViewController",
-         "6",
+         "MultithreadingViewController",
          "7",
          "8"]
     }
@@ -30,7 +30,7 @@ class OneTabViewController: BaseTableViewController {
                           "UICollcetionView_Demo",
                           "Swift调用OC",
                           "OC调用Swift",
-                          "6",
+                          "多线程",
                           "7",
                           "8"]
 
