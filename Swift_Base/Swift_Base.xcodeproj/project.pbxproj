@@ -475,10 +475,10 @@
 				C6C5CEBB2A75D1D200C5CF02 /* GlobalConfig.swift */,
 				C6C5CEBD2A75D2E300C5CF02 /* ConfigFontColorMacro.swift */,
 				C68CB6FC2CE7B367009F8A6A /* Mems.swift */,
-				C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */,
 				C68CB7002CE83119009F8A6A /* Singleton.swift */,
 				C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */,
 				C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */,
+				C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */,
 			);
 			path = "PublicConfigs基础配置";
 			sourceTree = "<group>";
