@@ -27,6 +27,7 @@
 		C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */; };
 		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
 		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
+		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -162,6 +163,7 @@
 		C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertsManager.swift; sourceTree = "<group>"; };
 		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
 		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
+		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -639,6 +641,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */,
+				C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */,
 				C6C5CF482A776A5900C5CF02 /* Tab1 */,
 				C6C5CF472A776A5300C5CF02 /* Tab2 */,
 				C6C5CF462A776A4D00C5CF02 /* Tab3 */,
@@ -1057,6 +1060,7 @@
 				C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */,
 				C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
+				C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
 				C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,

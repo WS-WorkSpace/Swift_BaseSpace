@@ -10,7 +10,8 @@ import UIKit
 class BaseTabBarController: UITabBarController {
     convenience init() {
         self.init(nibName: nil, bundle: nil)
-//        setValue(TabBar(), forKey: "tabBar")
+        setValue(WS_TabBar(), forKey: "tabBar")
+        
         self.setupItemTitleTextAttributes()
         self.setupChildViewControllers()
     }
@@ -72,17 +73,18 @@ class BaseTabBarController: UITabBarController {
         if #available(iOS 13.0, *) {
             UITabBar.appearance().unselectedItemTintColor = normalColor
         }
-        // iOS15适配，处理tabBar背景和分割线透明，选中颜色失效
-        if #available(iOS 15.0, *) {
-            let appearance = UITabBarAppearance()
-            if bgColor != nil {
-                appearance.backgroundColor = bgColor // tabBar背景颜色
-            }
-            //        appearance.backgroundEffect = nil; // 去掉半透明效果
-            appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttrs
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttrs
-            UITabBar.appearance().standardAppearance = appearance
-            UITabBar.appearance().scrollEdgeAppearance = appearance
-        }
+        // 不适合ios18
+//        // iOS15适配，处理tabBar背景和分割线透明，选中颜色失效
+//        if #available(iOS 15.0, *) {
+//            let appearance = UITabBarAppearance()
+//            if bgColor != nil {
+//                appearance.backgroundColor = bgColor // tabBar背景颜色
+//            }
+//            //        appearance.backgroundEffect = nil; // 去掉半透明效果
+//            appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttrs
+//            appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttrs
+//            UITabBar.appearance().standardAppearance = appearance
+//            UITabBar.appearance().scrollEdgeAppearance = appearance
+//        }
     }
 }
