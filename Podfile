@@ -36,7 +36,7 @@ target 'Swift_Base' do
   pod 'ReachabilitySwift', '5.0.0'      # ReachabilityTool.swift
 # 模型转换，数据处理
   pod 'SwiftyJSON', '5.0.1'             # MoyaHttpTool.swift
-  pod 'HandyJSON', '5.0.2'
+  pod 'HandyJSON', '5.0.2'              # JsonUtils.swift
 # 自动布局
   pod 'SnapKit', '4.2.0'
 # 网络图片加载缓存
