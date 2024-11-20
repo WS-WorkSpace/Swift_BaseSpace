@@ -9,6 +9,7 @@
 #import "SelfRefreshGifHeader.h"
 #import "SELFAutoStateFooter.h"
 #import "SelfRefreshBackGifFooter.h"
+#import <CommonCrypto/CommonDigest.h> //StringTool 获取MD5需要
 
 //#import "AFHTTPSessionManager.h"
 // MARK: - 系统库
