@@ -17,7 +17,7 @@ class OneTabViewController: BaseTableViewController {
          "OC_Call_Swift_ViewController",
          "MultithreadingViewController",
          "FuntionalProgrammingViewController",
-         "8"]
+         "POPViewController"]
     }
 
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class OneTabViewController: BaseTableViewController {
                           "OC调用Swift",
                           "多线程",
                           "函数式编程",
-                          "8"]
+                          "面向协议编程"]
 
         // MARK: - 点击cell的closure返回
 
