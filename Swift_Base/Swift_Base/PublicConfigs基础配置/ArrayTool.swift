@@ -13,12 +13,15 @@ extension NSArray: ArrayType {}
 func isArrayType(_ type: Any.Type) -> Bool {
     type is ArrayType.Type
 }
+
 /*
  func isArray(_ value: Any) -> Bool { value is [Any] }
  isArray( ["1", 2] )
  isArray( NSArray() )
  isArray( NSMutableArray() )
  */
+
+/*        不知道干嘛的暂时留着           */
 func testType() {
     print(isArrayType([Int].self),
           isArrayType(String.self),
@@ -28,11 +31,9 @@ func testType() {
 }
 
 extension Array {
-    mutating func removeAtIndexes (indexs:[Int]) -> () {
+    mutating func removeAtIndexes(indexs: [Int]) {
         for index in indexs.sorted(by: >) {
             self.remove(at: index)
         }
     }
-    
-    
 }

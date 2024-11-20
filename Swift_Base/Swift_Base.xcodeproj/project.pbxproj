@@ -362,7 +362,6 @@
 				C67C418C2CED766C00DE4723 /* POPViewController.swift */,
 				C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */,
 				C67C41842CED735B00DE4723 /* StringTool.swift */,
-				C67C41872CED746C00DE4723 /* ArrayTool.swift */,
 				C67C41882CED746C00DE4723 /* UIColorTool.swift */,
 			);
 			path = "面向协议编程";
@@ -505,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CEDE2A7612C000C5CF02 /* PublicConfigs_README.md */,
+				C67C41872CED746C00DE4723 /* ArrayTool.swift */,
 				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
 				C6C5CEB72A758A2100C5CF02 /* FrameMacro.swift */,
 				C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */,

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+
+extension String: WSCompatible {}
+
 // String,NSString,NSMUtaleString都遵守 ExpressibleByStringLiteral协议
 extension WS where Base: ExpressibleByStringLiteral{
     func strTest() -> String{
@@ -13,6 +16,7 @@ extension WS where Base: ExpressibleByStringLiteral{
         return string + "type"
     }
 }
+
 extension WS where Base == String {
     func substring(location index:Int, length:Int) -> String {
         if base.count > index {

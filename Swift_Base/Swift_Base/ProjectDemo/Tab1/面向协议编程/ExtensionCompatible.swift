@@ -29,11 +29,6 @@ extension WSCompatible {
     }
 }
 
-/// 扩展字符串功能
-/// 让string拥有ws前缀属性
-/// var ws: WS<String> { WS(self) }
-/// static var ws: WS<String>.Type { WS<String>.self }
-extension String: WSCompatible {}
 /// 给String.ws. String().ws前缀扩展功能
 extension WS where Base == String {
     var numCount: Int {
