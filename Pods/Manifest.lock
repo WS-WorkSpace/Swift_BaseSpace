@@ -15,12 +15,8 @@ PODS:
   - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
   - RxSwift (6.8.0)
-  - SCLAlertView (0.8)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
-  - SwiftMessages (9.0.6):
-    - SwiftMessages/App (= 9.0.6)
-  - SwiftMessages/App (9.0.6)
   - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
 
@@ -36,10 +32,8 @@ DEPENDENCIES:
   - Moya (= 13.0.1)
   - ReachabilitySwift (= 5.0.0)
   - RxSwift (= 6.8.0)
-  - SCLAlertView (= 0.8)
   - SnapKit (= 4.2.0)
   - SVProgressHUD (= 2.2.5)
-  - SwiftMessages (= 9.0.6)
   - SwiftyJSON (= 5.0.1)
   - Toast-Swift (= 5.0.1)
 
@@ -57,10 +51,8 @@ SPEC REPOS:
     - ReachabilitySwift
     - Result
     - RxSwift
-    - SCLAlertView
     - SnapKit
     - SVProgressHUD
-    - SwiftMessages
     - SwiftyJSON
     - Toast-Swift
 
@@ -77,13 +69,11 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: d97af2aa2f9c139c03275ca63ec11d5c834cf090
+PODFILE CHECKSUM: e4c46e3c7e4d22ff2c21a9ec300f29ed148f0cb9
 
 COCOAPODS: 1.12.1

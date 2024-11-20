@@ -71,13 +71,13 @@ target 'Swift_Base' do
   #pod 'DynamicColor'
   #pod 'UIColor_Hex_Swift'
 # 弹框
-  pod 'SCLAlertView', '0.8' # 标题上方带图片
-  pod 'SwiftMessages', '9.0.6'
+  #pod 'SCLAlertView', '0.8' # 标题上方带图片
+  #pod 'SwiftMessages', '9.0.6'
   #pod 'BulletinBoard'
   #pod 'FloatingPanel' # 浮动界面
   #pod 'XLActionController' # 底部菜单栏控件
-# 加载框
-  pod 'Toast-Swift', '5.0.1'
+# 弹框
+  pod 'Toast-Swift', '5.0.1'  # Toast.swift
   #pod 'PKHUD'
   #pod 'ProgressHUD'
   #pod 'Toaster'
