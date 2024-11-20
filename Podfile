@@ -137,8 +137,8 @@ target 'Swift_Base' do
   #pod 'CalendarKit'
 # 下拉刷新
 #  pod 'DGElasticPullToRefresh'
-  pod 'CRRefresh'
-  pod 'ESPullToRefresh', '2.9.3'
+  pod 'CRRefresh'   # BaseTableView
+  #pod 'ESPullToRefresh', '2.9.3'
   #pod 'PullToRefresher'
 # UI
   #pod 'Eureka' # 表单
