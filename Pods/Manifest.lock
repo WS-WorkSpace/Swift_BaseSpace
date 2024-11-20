@@ -1,20 +1,4 @@
 PODS:
-  - AAInfographics (9.0.0)
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
   - Alamofire (4.9.1)
   - BRPickerView (2.7.6):
     - BRPickerView/AddressPickerView (= 2.7.6)
@@ -33,20 +17,13 @@ PODS:
   - CryptoSwift (1.4.3)
   - Dollar (9.0.0)
   - DZNEmptyDataSet (1.8.1)
-  - EFQRCode (6.2.1):
-    - swift_qrcodejs (~> 2.2.2)
   - ESPullToRefresh (2.9.3)
   - ESTabBarController-swift (2.8.0)
-  - FSPagerView (0.8.3)
   - Gifu (3.3.1)
   - HandyJSON (5.0.2)
   - Instructions (2.3.0)
   - IQKeyboardManagerSwift (6.5.9)
-  - JTAppleCalendar (7.1.7)
   - Kingfisher (6.3.1)
-  - Lantern (1.1.2)
-  - LEEAlert (1.5.1)
-  - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.7.2)
   - Moya (13.0.1):
@@ -59,29 +36,18 @@ PODS:
   - Result (4.1.0)
   - RxSwift (6.8.0)
   - SCLAlertView (0.8)
-  - SDWebImage (5.12.1):
-    - SDWebImage/Core (= 5.12.1)
-  - SDWebImage/Core (5.12.1)
-  - SideMenu (5.0.1)
   - SnapKit (4.2.0)
-  - SQLite.swift (0.13.2):
-    - SQLite.swift/standard (= 0.13.2)
-  - SQLite.swift/standard (0.13.2)
   - SVProgressHUD (2.2.5)
   - SwiftDate (6.3.1)
-  - SwiftEntryKit (2.0.0)
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
-  - swiftScan (1.2.1)
   - SwiftTheme (0.6.4)
   - SwiftyJSON (5.0.1)
   - SwiftyUserDefaults (5.3.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - AAInfographics (= 9.0.0)
-  - AFNetworking (= 4.0.1)
   - Alamofire (= 4.9.1)
   - BRPickerView (= 2.7.6)
   - Cache (= 5.3.0)
@@ -89,19 +55,13 @@ DEPENDENCIES:
   - CryptoSwift (= 1.4.3)
   - Dollar (= 9.0.0)
   - DZNEmptyDataSet (= 1.8.1)
-  - EFQRCode (= 6.2.1)
   - ESPullToRefresh (= 2.9.3)
   - ESTabBarController-swift (= 2.8.0)
-  - FSPagerView (= 0.8.3)
   - Gifu (= 3.3.1)
   - HandyJSON (= 5.0.2)
   - Instructions (= 2.3.0)
   - IQKeyboardManagerSwift (= 6.5.9)
-  - JTAppleCalendar (= 7.1.7)
   - Kingfisher (= 6.3.1)
-  - Lantern (= 1.1.2)
-  - LEEAlert (= 1.5.1)
-  - Masonry (= 1.1.0)
   - MBProgressHUD (= 1.1.0)
   - MJRefresh (= 3.7.2)
   - Moya (= 13.0.1)
@@ -109,15 +69,10 @@ DEPENDENCIES:
   - ReachabilitySwift (= 5.0.0)
   - RxSwift (= 6.8.0)
   - SCLAlertView (= 0.8)
-  - SDWebImage (= 5.12.1)
-  - SideMenu (= 5.0.1)
   - SnapKit (= 4.2.0)
-  - SQLite.swift (= 0.13.2)
   - SVProgressHUD (= 2.2.5)
   - SwiftDate (= 6.3.1)
-  - SwiftEntryKit (= 2.0.0)
   - SwiftMessages (= 9.0.6)
-  - swiftScan (= 1.2.1)
   - SwiftTheme (= 0.6.4)
   - SwiftyJSON (= 5.0.1)
   - SwiftyUserDefaults (= 5.3.0)
@@ -125,8 +80,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
-    - AAInfographics
-    - AFNetworking
     - Alamofire
     - BRPickerView
     - Cache
@@ -134,19 +87,13 @@ SPEC REPOS:
     - CryptoSwift
     - Dollar
     - DZNEmptyDataSet
-    - EFQRCode
     - ESPullToRefresh
     - ESTabBarController-swift
-    - FSPagerView
     - Gifu
     - HandyJSON
     - Instructions
     - IQKeyboardManagerSwift
-    - JTAppleCalendar
     - Kingfisher
-    - Lantern
-    - LEEAlert
-    - Masonry
     - MBProgressHUD
     - MJRefresh
     - Moya
@@ -155,23 +102,16 @@ SPEC REPOS:
     - Result
     - RxSwift
     - SCLAlertView
-    - SDWebImage
-    - SideMenu
     - SnapKit
-    - SQLite.swift
     - SVProgressHUD
     - SwiftDate
-    - SwiftEntryKit
     - SwiftMessages
-    - swiftScan
     - SwiftTheme
     - SwiftyJSON
     - SwiftyUserDefaults
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  AAInfographics: 31fd2891509a97e34693aeaf681daa7b2b4d8c0f
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BRPickerView: 2a1620caf218e37a3aca9626732719a419928b15
   Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
@@ -179,19 +119,13 @@ SPEC CHECKSUMS:
   CryptoSwift: a0799ee936271bd2253a006f1e4523df21845000
   Dollar: 2fc9bdeeb2d3ae1f251461803240d5c93829ee0c
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  EFQRCode: a4d39ec3466b68dffa71de3b5caef7c9ceefdc53
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
-  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Instructions: 3aac22d036495ba4c40e00747e0a275da40ce53d
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
-  JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
-  Lantern: ed012be9a7c989ff5b94c080129a4734b45304b6
-  LEEAlert: e8a0d8e7ab24a1430e1003ccfb76da442549ff40
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -200,20 +134,15 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
-  SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
-  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
-  swiftScan: 0849e7d7c1c641384767a573ee8cb90b88d1ddd9
   SwiftTheme: 007cbaf1f9e171caf6448a4657533e54c682b285
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f0f4c7829a60918a3b93d4468dc7673c09b115dc
+PODFILE CHECKSUM: be9ffdd26121df9c779437085c39af0787f667da
 
 COCOAPODS: 1.12.1

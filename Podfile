@@ -48,7 +48,7 @@ target 'Swift_Base' do
   pod 'IQKeyboardManagerSwift', '6.5.9'
   pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
-  pod 'SQLite.swift', '0.13.2'
+  #pod 'SQLite.swift', '0.13.2'
 #pod 'RealmSwift'
   pod 'SwiftyUserDefaults', '5.3.0'
 #pod 'KeychainAccess'
@@ -90,7 +90,7 @@ target 'Swift_Base' do
   #pod 'PopupDialog'
   #pod 'AMPopTip'
 # 顶部
-  pod 'SwiftEntryKit', '2.0.0'
+  #pod 'SwiftEntryKit', '2.0.0'
   #pod 'NotificationBannerSwift'
 # 加载动画
   #pod 'NVActivityIndicatorView'
@@ -101,16 +101,16 @@ target 'Swift_Base' do
   #pod 'BSImagePicker'
   #pod 'ImagePicker'
 # 图片浏览
-  pod 'Lantern', '1.1.2'
+  #pod 'Lantern', '1.1.2'
   #pod 'JXPhotoBrowser'
   #pod 'ImageViewer'
 # 滑动面板
   #pod 'JXSegmentedView'
   #pod 'Panels'
 # 轮播
-  pod 'FSPagerView', '0.8.3'
+  #pod 'FSPagerView', '0.8.3'
 # 侧滑菜单
-  pod 'SideMenu', '5.0.1'
+  #pod 'SideMenu', '5.0.1'
   #pod 'SlideMenuControllerSwift'
   pod 'ESTabBarController-swift', '2.8.0'
   #pod 'RAMAnimatedTabBarController'
@@ -119,11 +119,11 @@ target 'Swift_Base' do
   #pod 'RazzleDazzle'
   #pod 'ZLaunchAd'
 # 二维码
-  pod 'EFQRCode', '6.2.1'
-  pod 'swiftScan', '1.2.1'
+  #pod 'EFQRCode', '6.2.1'
+  #pod 'swiftScan', '1.2.1'
   #pod 'WeScan'
 # 图表 SwiftUICharts
-  pod 'AAInfographics', '9.0.0'
+  #pod 'AAInfographics', '9.0.0'
   #pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
   #pod 'Charts'
   #pod 'SwiftCharts'
@@ -135,7 +135,7 @@ target 'Swift_Base' do
   #pod 'SwiftRichString'
   #pod 'TextAttributes'
 # 日历
-  pod 'JTAppleCalendar', '7.1.7'
+  #pod 'JTAppleCalendar', '7.1.7'
   #pod 'CVCalendar'
   #pod 'HorizonCalendar'
   #pod 'CalendarKit'
@@ -183,16 +183,16 @@ target 'Swift_Base' do
   #pod 'SwiftOCR'
   #pod 'OAuthSwift'
 # -------------- OC --------------
-  pod 'AFNetworking', '4.0.1'
-  pod 'DZNEmptyDataSet','1.8.1'
+#  pod 'AFNetworking', '4.0.1'
+  pod 'DZNEmptyDataSet','1.8.1' #BaseTableView 有用
   pod 'MJRefresh','3.7.2'
-  pod 'Masonry','1.1.0'
+#  pod 'Masonry','1.1.0'
   pod 'SVProgressHUD','2.2.5'
   pod 'MBProgressHUD', '1.1.0'
-  pod 'LEEAlert','1.5.1'
+#  pod 'LEEAlert','1.5.1'
   pod 'BRPickerView','2.7.6'
 # ios14适配 SDWebImage升级到至少5.8.3版本，防止图片不显示、黑屏
-  pod 'SDWebImage','5.12.1'
+#  pod 'SDWebImage','5.12.1'
   #pod 'IQKeyboardManager','6.5.9'
 # 选择图片依赖HXPhotoPicker和SDWebImage，可以分开加或者使用： pod 'HXPhotoPicker/SDWebImage', '3.1.9'
   #pod 'HXPhotoPicker'
