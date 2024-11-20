@@ -53,7 +53,7 @@ target 'Swift_Base' do
 # 时间转换
   #pod 'SwiftDate', '6.3.1'
 # 标准库扩展
-  pod 'Dollar', '9.0.0'
+  #pod 'Dollar', '9.0.0'
 # 扩展库
   #pod 'SwifterSwift'
 # 日志
@@ -65,7 +65,7 @@ target 'Swift_Base' do
   pod 'RxSwift', '6.8.0'
   #pod 'RxCocoa', '6.5.0'
 # 主题和颜色
-  pod 'SwiftTheme', '0.6.4' # 主题
+  #pod 'SwiftTheme', '0.6.4' # 主题
   #pod 'UIImageColors' # 从图像中获取最主要和最突出的颜色
   #pod 'Hue'
   #pod 'DynamicColor'
@@ -82,7 +82,7 @@ target 'Swift_Base' do
   #pod 'ProgressHUD'
   #pod 'Toaster'
   # pop
-  pod 'Popover', '1.3.0'
+  #pod 'Popover', '1.3.0'
   #pod 'PopupDialog'
   #pod 'AMPopTip'
 # 顶部
@@ -111,7 +111,7 @@ target 'Swift_Base' do
   #pod 'ESTabBarController-swift', '2.8.0'
   #pod 'RAMAnimatedTabBarController'
 # 引导页
-  pod 'Instructions', '2.3.0'
+  #pod 'Instructions', '2.3.0'
   #pod 'RazzleDazzle'
   #pod 'ZLaunchAd'
 # 二维码
