@@ -46,12 +46,12 @@ target 'Swift_Base' do
 # 数据存储与数据安全
   #pod 'SQLite.swift', '0.13.2'
 #pod 'RealmSwift'
-  pod 'SwiftyUserDefaults', '5.3.0'
-#pod 'KeychainAccess'
-  pod 'Cache', '5.3.0'
-  pod 'CryptoSwift', '1.4.3'
+  #pod 'SwiftyUserDefaults', '5.3.0'
+  #pod 'KeychainAccess'
+  #pod 'Cache', '5.3.0'
+  #pod 'CryptoSwift', '1.4.3'
 # 时间转换
-  pod 'SwiftDate', '6.3.1'
+  #pod 'SwiftDate', '6.3.1'
 # 标准库扩展
   pod 'Dollar', '9.0.0'
 # 扩展库
