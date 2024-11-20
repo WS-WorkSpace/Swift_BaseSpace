@@ -10,18 +10,11 @@ import Foundation
 protocol ArrayType {}
 extension Array: ArrayType {}
 extension NSArray: ArrayType {}
+/// 判断你的实例是否是数组
 func isArrayType(_ type: Any.Type) -> Bool {
     type is ArrayType.Type
 }
 
-/*
- func isArray(_ value: Any) -> Bool { value is [Any] }
- isArray( ["1", 2] )
- isArray( NSArray() )
- isArray( NSMutableArray() )
- */
-
-/*        不知道干嘛的暂时留着           */
 func testType() {
     print(isArrayType([Int].self),
           isArrayType(String.self),

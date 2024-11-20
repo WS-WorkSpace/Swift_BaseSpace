@@ -8,6 +8,7 @@
 import Foundation
 
 extension String: WSCompatible {}
+extension NSString: WSCompatible {}
 
 /// 给String.ws. String().ws前缀扩展功能
 extension WS where Base == String {
@@ -18,7 +19,7 @@ extension WS where Base == String {
     }
 
     // mutating 表示有可能修改WS这个结构体里面内容,希望WS是可变的可修改的
-    // ws是只读的计算属性
+    // var 类型的字符串才可以调用
     mutating func run() {}
 
     static func test() {
@@ -29,7 +30,7 @@ extension WS where Base == String {
 // String,NSString,NSMUtaleString都遵守 ExpressibleByStringLiteral协议
 extension WS where Base: ExpressibleByStringLiteral {
     func strTest() -> String {
-        var string = base as! String
+        let string = base as! String
         return string + "type"
     }
 }

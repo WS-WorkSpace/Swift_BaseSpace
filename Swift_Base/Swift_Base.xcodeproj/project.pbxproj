@@ -18,9 +18,10 @@
 		C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */; };
 		C67C41852CED735B00DE4723 /* StringTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41842CED735B00DE4723 /* StringTool.swift */; };
 		C67C41862CED735B00DE4723 /* ExtensionCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */; };
-		C67C41892CED746C00DE4723 /* ArrayTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41872CED746C00DE4723 /* ArrayTool.swift */; };
+		C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41872CED746C00DE4723 /* TypeJudge.swift */; };
 		C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41882CED746C00DE4723 /* UIColorTool.swift */; };
 		C67C418D2CED766C00DE4723 /* POPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418C2CED766C00DE4723 /* POPViewController.swift */; };
+		C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */; };
 		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
@@ -157,9 +158,10 @@
 		C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCollectionViewController.swift; sourceTree = "<group>"; };
 		C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCompatible.swift; sourceTree = "<group>"; };
 		C67C41842CED735B00DE4723 /* StringTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTool.swift; sourceTree = "<group>"; };
-		C67C41872CED746C00DE4723 /* ArrayTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTool.swift; sourceTree = "<group>"; };
+		C67C41872CED746C00DE4723 /* TypeJudge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeJudge.swift; sourceTree = "<group>"; };
 		C67C41882CED746C00DE4723 /* UIColorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
 		C67C418C2CED766C00DE4723 /* POPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPViewController.swift; sourceTree = "<group>"; };
+		C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -363,8 +365,17 @@
 				C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */,
 				C67C41842CED735B00DE4723 /* StringTool.swift */,
 				C67C41882CED746C00DE4723 /* UIColorTool.swift */,
+				C67C41872CED746C00DE4723 /* TypeJudge.swift */,
 			);
 			path = "面向协议编程";
+			sourceTree = "<group>";
+		};
+		C67C418E2CEE289F00DE4723 /* 响应式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */,
+			);
+			path = "响应式编程";
 			sourceTree = "<group>";
 		};
 		C68CB74A2CE83A08009F8A6A /* Swift调用OC */ = {
@@ -504,7 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CEDE2A7612C000C5CF02 /* PublicConfigs_README.md */,
-				C67C41872CED746C00DE4723 /* ArrayTool.swift */,
 				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
 				C6C5CEB72A758A2100C5CF02 /* FrameMacro.swift */,
 				C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */,
@@ -723,6 +733,7 @@
 				C68CB7522CE83FB1009F8A6A /* 多线程 */,
 				C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */,
 				C67C41822CED734200DE4723 /* 面向协议编程 */,
+				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1116,11 +1127,12 @@
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
-				C67C41892CED746C00DE4723 /* ArrayTool.swift in Sources */,
+				C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
 				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
 				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
+				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,
