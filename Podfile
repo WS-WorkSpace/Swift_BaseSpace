@@ -31,11 +31,11 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 target 'Swift_Base' do
   project 'Swift_Base/Swift_Base.xcodeproj'  #这里的project要指明路径
 # 网络请求
-  pod 'Alamofire', '4.9.1'
-  pod 'Moya', '13.0.1'
-  pod 'ReachabilitySwift', '5.0.0'
+  pod 'Alamofire', '4.9.1'              # MoyaHttpTool.swift
+  pod 'Moya', '13.0.1'                  # MoyaHttpTool.swift
+  pod 'ReachabilitySwift', '5.0.0'      
 # 模型转换，数据处理
-  pod 'SwiftyJSON', '5.0.1'
+  pod 'SwiftyJSON', '5.0.1'             # MoyaHttpTool.swift
   pod 'HandyJSON', '5.0.2'
 # 自动布局
   pod 'SnapKit', '4.2.0'
