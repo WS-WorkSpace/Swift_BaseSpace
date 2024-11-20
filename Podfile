@@ -27,10 +27,6 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 # sudo gem update --system  更新升级gem
 # sudo gem install -n /usr/local/bin cocoapods 安装CocoaPods
 
-
-# -------------- 指令 --------------
-
-
 # -------------- Swift --------------
 target 'Swift_Base' do
   project 'Swift_Base/Swift_Base.xcodeproj'  #这里的project要指明路径
@@ -45,8 +41,8 @@ target 'Swift_Base' do
   pod 'SnapKit', '4.2.0'
 # 网络图片加载缓存
   pod 'Kingfisher', '6.3.1'
-  pod 'IQKeyboardManagerSwift', '6.5.9'
-  pod 'Gifu', '3.3.1'
+  pod 'IQKeyboardManagerSwift', '6.5.9' #AppDelegate+Extension
+  #pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
   #pod 'SQLite.swift', '0.13.2'
 #pod 'RealmSwift'
@@ -112,7 +108,7 @@ target 'Swift_Base' do
 # 侧滑菜单
   #pod 'SideMenu', '5.0.1'
   #pod 'SlideMenuControllerSwift'
-  pod 'ESTabBarController-swift', '2.8.0'
+  #pod 'ESTabBarController-swift', '2.8.0'
   #pod 'RAMAnimatedTabBarController'
 # 引导页
   pod 'Instructions', '2.3.0'
@@ -190,7 +186,7 @@ target 'Swift_Base' do
   pod 'SVProgressHUD','2.2.5'
   pod 'MBProgressHUD', '1.1.0'
 #  pod 'LEEAlert','1.5.1'
-  pod 'BRPickerView','2.7.6'
+#  pod 'BRPickerView','2.7.6'
 # ios14适配 SDWebImage升级到至少5.8.3版本，防止图片不显示、黑屏
 #  pod 'SDWebImage','5.12.1'
   #pod 'IQKeyboardManager','6.5.9'
