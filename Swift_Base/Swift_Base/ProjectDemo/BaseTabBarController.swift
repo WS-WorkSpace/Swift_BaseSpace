@@ -11,10 +11,18 @@ class BaseTabBarController: UITabBarController {
     convenience init() {
         self.init(nibName: nil, bundle: nil)
         setValue(WS_TabBar(), forKey: "tabBar")
-        
+
         self.setupItemTitleTextAttributes()
         self.setupChildViewControllers()
     }
+
+    /*
+     JhSwiftDemo: 下拉刷新 链式
+     JhSwiftDemo框架搭建: 各种UI Extension工具
+     BMExample OC深度学习demo
+     WorkBench 仿剪映工程
+
+     */
 
     /// 设置所有UITabBarItem的文字属性
     func setupItemTitleTextAttributes() {
