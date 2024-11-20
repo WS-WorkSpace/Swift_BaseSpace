@@ -66,7 +66,7 @@ target 'Swift_Base' do
 # 异步、函数响应式编程
   #pod 'PromiseKit'
   #pod 'AsyncSwift'
-  #pod 'RxSwift', '6.5.0'
+  pod 'RxSwift', '6.8.0'
   #pod 'RxCocoa', '6.5.0'
 # 主题和颜色
   pod 'SwiftTheme', '0.6.4' # 主题

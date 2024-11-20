@@ -57,6 +57,7 @@ PODS:
   - Popover (1.3.0)
   - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
+  - RxSwift (6.8.0)
   - SCLAlertView (0.8)
   - SDWebImage (5.12.1):
     - SDWebImage/Core (= 5.12.1)
@@ -106,6 +107,7 @@ DEPENDENCIES:
   - Moya (= 13.0.1)
   - Popover (= 1.3.0)
   - ReachabilitySwift (= 5.0.0)
+  - RxSwift (= 6.8.0)
   - SCLAlertView (= 0.8)
   - SDWebImage (= 5.12.1)
   - SideMenu (= 5.0.1)
@@ -151,6 +153,7 @@ SPEC REPOS:
     - Popover
     - ReachabilitySwift
     - Result
+    - RxSwift
     - SCLAlertView
     - SDWebImage
     - SideMenu
@@ -195,6 +198,7 @@ SPEC CHECKSUMS:
   Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
@@ -210,6 +214,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e096eac70e3401f83c5323f5f4e14ea925635091
+PODFILE CHECKSUM: f0f4c7829a60918a3b93d4468dc7673c09b115dc
 
 COCOAPODS: 1.12.1
