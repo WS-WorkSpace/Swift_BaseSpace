@@ -33,7 +33,7 @@ target 'Swift_Base' do
 # 网络请求
   pod 'Alamofire', '4.9.1'              # MoyaHttpTool.swift
   pod 'Moya', '13.0.1'                  # MoyaHttpTool.swift
-  pod 'ReachabilitySwift', '5.0.0'      
+  pod 'ReachabilitySwift', '5.0.0'      # ReachabilityTool.swift
 # 模型转换，数据处理
   pod 'SwiftyJSON', '5.0.1'             # MoyaHttpTool.swift
   pod 'HandyJSON', '5.0.2'
