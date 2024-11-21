@@ -63,7 +63,7 @@ target 'Swift_Base' do
   #pod 'PromiseKit'
   #pod 'AsyncSwift'
   pod 'RxSwift', '6.8.0'
-  #pod 'RxCocoa', '6.5.0'
+  pod 'RxCocoa', '6.8.0'
 # 主题和颜色
   #pod 'SwiftTheme', '0.6.4' # 主题
   #pod 'UIImageColors' # 从图像中获取最主要和最突出的颜色

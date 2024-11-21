@@ -14,6 +14,11 @@ PODS:
     - Result (~> 4.1)
   - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
+  - RxCocoa (6.8.0):
+    - RxRelay (= 6.8.0)
+    - RxSwift (= 6.8.0)
+  - RxRelay (6.8.0):
+    - RxSwift (= 6.8.0)
   - RxSwift (6.8.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
@@ -31,6 +36,7 @@ DEPENDENCIES:
   - MJRefresh (= 3.7.2)
   - Moya (= 13.0.1)
   - ReachabilitySwift (= 5.0.0)
+  - RxCocoa (= 6.8.0)
   - RxSwift (= 6.8.0)
   - SnapKit (= 4.2.0)
   - SVProgressHUD (= 2.2.5)
@@ -50,6 +56,8 @@ SPEC REPOS:
     - Moya
     - ReachabilitySwift
     - Result
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
     - SVProgressHUD
@@ -68,12 +76,14 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
+  RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e4c46e3c7e4d22ff2c21a9ec300f29ed148f0cb9
+PODFILE CHECKSUM: 20bc538a0cc089baba85b602899a2092df686ed9
 
 COCOAPODS: 1.12.1
