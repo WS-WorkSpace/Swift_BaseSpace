@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactiveProgrammingViewController" customModule="Swift_Base" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="uGD-Rs-ZQm" id="nvP-xB-xbH"/>
+                <outlet property="label" destination="XZF-kk-e37" id="ybO-0B-9LA"/>
                 <outlet property="view" destination="xB4-WF-aYK" id="eYR-Cg-ybu"/>
             </connections>
         </placeholder>
@@ -19,17 +21,28 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XZF-kk-e37">
-                    <rect key="frame" x="89" y="297" width="222" height="101"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XZF-kk-e37">
+                    <rect key="frame" x="106" y="186" width="180" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGD-Rs-ZQm">
+                    <rect key="frame" x="159" y="323.66666666666669" width="75" height="34.333333333333314"/>
+                    <color key="backgroundColor" red="0.38957780599594116" green="0.84639602899551392" blue="0.98009783029556274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.0039215688593685627" green="0.0039215688593685627" blue="0.0039215688593685627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ZCg-Hh-JmM"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZCg-Hh-JmM" firstAttribute="trailing" secondItem="uGD-Rs-ZQm" secondAttribute="trailing" constant="159" id="ZC6-55-EOb"/>
+                <constraint firstItem="uGD-Rs-ZQm" firstAttribute="leading" secondItem="ZCg-Hh-JmM" secondAttribute="leading" constant="159" id="qod-TO-Yri"/>
+                <constraint firstItem="ZCg-Hh-JmM" firstAttribute="bottom" secondItem="uGD-Rs-ZQm" secondAttribute="bottom" constant="460" id="zHR-K6-NIY"/>
+            </constraints>
             <point key="canvasLocation" x="-245.03816793893128" y="-147.18309859154931"/>
         </view>
     </objects>
