@@ -34,6 +34,7 @@
 		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
 		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
+		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -176,6 +177,7 @@
 		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
 		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
+		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */,
+				C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */,
 			);
 			path = "响应式编程";
 			sourceTree = "<group>";
@@ -987,6 +990,7 @@
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
 				C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */,
+				C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
