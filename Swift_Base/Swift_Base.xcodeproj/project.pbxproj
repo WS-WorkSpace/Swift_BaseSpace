@@ -79,8 +79,6 @@
 		C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */; };
 		C6C5CF132A76FCA900C5CF02 /* HandyJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */; };
 		C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */; };
-		C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */; };
-		C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */; };
 		C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */; };
 		C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */; };
 		C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */; };
@@ -235,9 +233,6 @@
 		C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SELFAutoStateFooter.m; sourceTree = "<group>"; };
 		C6C5CF122A76FCA900C5CF02 /* HandyJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonViewController.swift; sourceTree = "<group>"; };
 		C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Refresh.bundle; sourceTree = "<group>"; };
-		C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhProgressHUD.m; sourceTree = "<group>"; };
-		C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhProgressHUD.h; sourceTree = "<group>"; };
-		C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhProgressHUD.bundle; sourceTree = "<group>"; };
 		C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDActionSheet.swift; sourceTree = "<group>"; };
 		C6C5CF322A7734D500C5CF02 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabViewController.swift; sourceTree = "<group>"; };
@@ -613,7 +608,6 @@
 		C6C5CEEC2A76AA0E00C5CF02 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF1C2A770F3F00C5CF02 /* JhProgressHUD */,
 				C6C5CF082A76F99900C5CF02 /* Refresh */,
 				C6C5CF012A76DBF100C5CF02 /* FPSLabel */,
 				C6C5CED32A75D82300C5CF02 /* MBProgressHUD */,
@@ -649,16 +643,6 @@
 				C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */,
 			);
 			path = Refresh;
-			sourceTree = "<group>";
-		};
-		C6C5CF1C2A770F3F00C5CF02 /* JhProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				C6C5CF1D2A770F3F00C5CF02 /* JhProgressHUD.m */,
-				C6C5CF1E2A770F3F00C5CF02 /* JhProgressHUD.h */,
-				C6C5CF1F2A770F3F00C5CF02 /* JhProgressHUD.bundle */,
-			);
-			path = JhProgressHUD;
 			sourceTree = "<group>";
 		};
 		C6C5CF2D2A7733D400C5CF02 /* Controllers */ = {
@@ -996,7 +980,6 @@
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
 				C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */,
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
-				C6C5CF212A770F3F00C5CF02 /* JhProgressHUD.bundle in Resources */,
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
@@ -1155,7 +1138,6 @@
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
 				C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */,
 				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
-				C6C5CF202A770F3F00C5CF02 /* JhProgressHUD.m in Sources */,
 				C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */,
 				C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */,
 				C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */,
