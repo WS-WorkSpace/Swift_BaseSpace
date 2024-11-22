@@ -460,7 +460,7 @@
 				C6C5CF2F2A77342100C5CF02 /* ProjectDemo */,
 				C6C5CEEC2A76AA0E00C5CF02 /* Tools */,
 				C6C5CEE72A76A88400C5CF02 /* RD_Model */,
-				C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */,
+				C6C5CEE42A76A7F500C5CF02 /* Base_UIKit */,
 				C6C5CEDA2A75D8D400C5CF02 /* Category无耦合分类 */,
 				C6C5CEAF2A74C6D700C5CF02 /* PublicConfigs基础配置 */,
 				C6C5CEAE2A7463FB00C5CF02 /* SRC */,
@@ -584,7 +584,7 @@
 			path = "Category无耦合分类";
 			sourceTree = "<group>";
 		};
-		C6C5CEE42A76A7F500C5CF02 /* RD_UIKit */ = {
+		C6C5CEE42A76A7F500C5CF02 /* Base_UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				C6C5CF2D2A7733D400C5CF02 /* Controllers */,
@@ -592,7 +592,7 @@
 				C6C5CF5D2A7C65EE00C5CF02 /* Collection */,
 				C6C5CF2E2A77341000C5CF02 /* Views */,
 			);
-			path = RD_UIKit;
+			path = Base_UIKit;
 			sourceTree = "<group>";
 		};
 		C6C5CEE72A76A88400C5CF02 /* RD_Model */ = {
@@ -608,7 +608,7 @@
 		C6C5CEEC2A76AA0E00C5CF02 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF082A76F99900C5CF02 /* Refresh */,
+				C6C5CF082A76F99900C5CF02 /* MJRefresh */,
 				C6C5CF012A76DBF100C5CF02 /* FPSLabel */,
 				C6C5CED32A75D82300C5CF02 /* MBProgressHUD */,
 				C6C5CED22A75D81700C5CF02 /* SnapKit */,
@@ -631,7 +631,7 @@
 			path = FPSLabel;
 			sourceTree = "<group>";
 		};
-		C6C5CF082A76F99900C5CF02 /* Refresh */ = {
+		C6C5CF082A76F99900C5CF02 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
 				C6C5CF0B2A76F9AB00C5CF02 /* SelfRefreshGifHeader.h */,
@@ -642,7 +642,7 @@
 				C6C5CF102A76FA1700C5CF02 /* SELFAutoStateFooter.m */,
 				C6C5CF1A2A77031C00C5CF02 /* Refresh.bundle */,
 			);
-			path = Refresh;
+			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		C6C5CF2D2A7733D400C5CF02 /* Controllers */ = {
