@@ -20,6 +20,7 @@ enum NetworkStatus {
     case ethernetOrWiFi
 }
 
+/// 该类实现ReachabilitySwift和Alamofire两种监听网络的方法
 class ReachabilityTool {
     static let shared = ReachabilityTool()
     

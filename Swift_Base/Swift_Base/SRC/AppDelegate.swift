@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.initWindow()
+        /// 监听网络变化 - Alamofire
+        /// monitorNetwork1()
+        /// 监听网络变化 - ReachabilitySwift
         monitorNetwork2()
         self.getAppInfo()
         return true
@@ -28,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func getAppInfo() {
-//version QA_Branch
-//version QA_Branch1
-//update
+        // version QA_Branch
+        // version QA_Branch1
+        // update
 //        print("App 显示名称 :", DEV_INFO.appDisplayName)
 //        print("App BundleName :", DEV_INFO.appName)
 //        print("App BuildNumber :", DEV_INFO.build)
