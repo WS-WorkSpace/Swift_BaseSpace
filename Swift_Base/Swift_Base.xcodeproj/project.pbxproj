@@ -35,6 +35,7 @@
 		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
 		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
+		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -178,6 +179,7 @@
 		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
 		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
+		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -417,6 +419,14 @@
 				C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */,
 			);
 			path = "函数式编程";
+			sourceTree = "<group>";
+		};
+		C6B57FEC2CF087DF00794CF1 /* 反射 */ = {
+			isa = PBXGroup;
+			children = (
+				C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */,
+			);
+			path = "反射";
 			sourceTree = "<group>";
 		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
@@ -728,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
+				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
 				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
 				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
@@ -1122,6 +1133,7 @@
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
+				C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
