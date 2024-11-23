@@ -10,6 +10,7 @@ import UIKit
 class BaseTabBarController: UITabBarController {
     convenience init() {
         self.init(nibName: nil, bundle: nil)
+        // 自定义Tabbar
         setValue(WS_TabBar(), forKey: "tabBar")
 
         self.setupItemTitleTextAttributes()

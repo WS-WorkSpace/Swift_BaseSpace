@@ -31,22 +31,27 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 target 'Swift_Base' do
   project 'Swift_Base/Swift_Base.xcodeproj'  #这里的project要指明路径
 # 网络请求
-  pod 'Alamofire', '4.9.1'              # MoyaHttpTool.swift
+  pod 'Alamofire', '4.9.1'              # MoyaHttpTool.swift   # HTTP 网络请求库  https://github.com/Alamofire/Alamofire
   pod 'Moya', '13.0.1'                  # MoyaHttpTool.swift
   pod 'ReachabilitySwift', '5.0.0'      # ReachabilityTool.swift
 # 模型转换，数据处理
-  pod 'SwiftyJSON', '5.0.1'             # MoyaHttpTool.swift
+  pod 'SwiftyJSON', '5.0.1'             # MoyaHttpTool.swift # SON 解析库，它可以帮助你快速地将 JSON 数据解析为Swift对象
+  pod 'ObjectMapper'                    # Installing ObjectMapper (4.2.0)
   pod 'HandyJSON', '5.0.2'              # JsonUtils.swift
 # 自动布局
-  pod 'SnapKit', '4.2.0'
+  pod 'SnapKit', '4.2.0'                # 自动布局库，它使用简单的 DSL https://github.com/SnapKit/SnapKit
 # 网络图片加载缓存
-  pod 'Kingfisher', '6.3.1'
+  pod 'Kingfisher', '6.3.1'             # 图片下载和缓存库  https://github.com/onevcat/Kingfisher
+  #pod 'KingfisherWebP'
   pod 'IQKeyboardManagerSwift', '6.5.9' #AppDelegate+Extension
   #pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
   #pod 'SQLite.swift', '0.13.2'
-#pod 'RealmSwift'
+  #pod 'RealmSwift'
+
+  #SwiftyUserDefaults 是一个 Swift 编写的 UserDefaults 库，它提供了一个类型安全的 API 来访问 UserDefaults 中的数据，避免了使用字符串键名的问题。      https://github.com/sunshinejr/SwiftyUserDefaults
   #pod 'SwiftyUserDefaults', '5.3.0'
+  
   #pod 'KeychainAccess'
   #pod 'Cache', '5.3.0'
   #pod 'CryptoSwift', '1.4.3'
@@ -60,10 +65,13 @@ target 'Swift_Base' do
   #pod 'XCGLogger'
   #pod 'Log'
 # 异步、函数响应式编程
+  pod 'RxSwift', '6.8.0'  # RxSwift 是一个 Swift 编写的响应式编程库，它提供了一种简单、一致、高效的方式来处理异步事件，包括网络请求、UI 事件等。
+  pod 'RxCocoa', '6.8.0'
   #pod 'PromiseKit'
   #pod 'AsyncSwift'
-  pod 'RxSwift', '6.8.0'
-  pod 'RxCocoa', '6.8.0'
+  #pod 'RxBlocking'#, '6.6.0'
+  #pod 'RxTest'#, '6.6.0'         pod 'libwebp'
+
 # 主题和颜色
   #pod 'SwiftTheme', '0.6.4' # 主题
   #pod 'UIImageColors' # 从图像中获取最主要和最突出的颜色
@@ -72,7 +80,10 @@ target 'Swift_Base' do
   #pod 'UIColor_Hex_Swift'
 # 弹框
   #pod 'SCLAlertView', '0.8' # 标题上方带图片
+  
+  # SwiftMessages 是一个 Swift 编写的通知和消息库，它提供了许多不同的消息样式和配置选项，非常适合移动应用程序开发。                                     https://github.com/SwiftKickMobile/SwiftMessages
   #pod 'SwiftMessages', '9.0.6'
+  
   #pod 'BulletinBoard'
   #pod 'FloatingPanel' # 浮动界面
   #pod 'XLActionController' # 底部菜单栏控件
@@ -89,7 +100,8 @@ target 'Swift_Base' do
   #pod 'SwiftEntryKit', '2.0.0'
   #pod 'NotificationBannerSwift'
 # 加载动画
-  #pod 'NVActivityIndicatorView'
+# NVActivityIndicatorView 是一个 Swift 编写的加载指示器库，它提供了许多不同的加载指示器样式，并支持自定义。                                       https://github.com/ninjaprox/NVActivityIndicatorView
+  pod 'NVActivityIndicatorView'
 # 图片选择器
   #pod 'HXPHPicker', '1.0.8'
   #pod 'ZLPhotoBrowser'
@@ -178,6 +190,9 @@ target 'Swift_Base' do
   #pod 'SwiftLocation'
   #pod 'SwiftOCR'
   #pod 'OAuthSwift'
+  #代码检查工具，它可以帮助你在编写 Swift 代码时遵守一致的编码规范，并自动检查代码中的错误和潜在问题。https://github.com/realm/SwiftLint
+  #pod 'SwiftLint'
+
 # -------------- OC --------------
 #  pod 'AFNetworking', '4.0.1'
   pod 'DZNEmptyDataSet','1.8.1' #BaseTableView 有用
