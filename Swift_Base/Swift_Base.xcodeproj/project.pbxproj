@@ -722,7 +722,6 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF342A7735C200C5CF02 /* OneTabViewController.swift */,
-				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 				C6EE3A562A84DBD200A76C19 /* 基础控件Demo */,
 				C6EE3A622A85E4B400A76C19 /* Tableview集合 */,
 				C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */,
@@ -732,6 +731,7 @@
 				C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */,
 				C67C41822CED734200DE4723 /* 面向协议编程 */,
 				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
+				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";

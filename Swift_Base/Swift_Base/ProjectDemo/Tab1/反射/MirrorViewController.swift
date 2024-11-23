@@ -12,7 +12,7 @@ struct Person {
     var name: String = ""
 }
 
-class MirrorViewController: UIViewController {
+class MirrorViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         execMirror()
