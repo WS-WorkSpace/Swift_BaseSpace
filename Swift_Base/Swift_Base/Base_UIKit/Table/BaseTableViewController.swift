@@ -18,6 +18,9 @@ class BaseTableViewController: BaseViewController {
             modelArr = newValue
         }
     }
+    func appendModelArr(_ newString:String) {
+        modelArr.append(newString)
+    }
 
     lazy var mTableView: BaseTableView = {
         let tableView = BaseTableView(frame: .zero)

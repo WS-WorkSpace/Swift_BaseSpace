@@ -37,6 +37,10 @@
 		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
 		C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */; };
+		C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */; };
+		C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580382CF1C52F00794CF1 /* EasyTestModel.swift */; };
+		C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B5803A2CF206C200794CF1 /* LocalData.json */; };
+		C6B580402CF215CF00794CF1 /* BookList.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B5803F2CF215CF00794CF1 /* BookList.json */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -180,6 +184,10 @@
 		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
 		C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONViewController.swift; sourceTree = "<group>"; };
+		C6B580382CF1C52F00794CF1 /* EasyTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTestModel.swift; sourceTree = "<group>"; };
+		C6B5803A2CF206C200794CF1 /* LocalData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocalData.json; sourceTree = "<group>"; };
+		C6B5803F2CF215CF00794CF1 /* BookList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookList.json; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -432,6 +440,24 @@
 				C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */,
 			);
 			path = "菊花加载动画";
+			sourceTree = "<group>";
+		};
+		C6B580342CF1BF7600794CF1 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		C6B580372CF1C50400794CF1 /* 本地数据 */ = {
+			isa = PBXGroup;
+			children = (
+				C6B580382CF1C52F00794CF1 /* EasyTestModel.swift */,
+				C6B5803F2CF215CF00794CF1 /* BookList.json */,
+				C6B5803A2CF206C200794CF1 /* LocalData.json */,
+			);
+			path = "本地数据";
 			sourceTree = "<group>";
 		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
@@ -719,6 +745,8 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
+				C6B580372CF1C50400794CF1 /* 本地数据 */,
+				C6B580342CF1BF7600794CF1 /* SwiftyJSON */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
@@ -989,6 +1017,8 @@
 			files = (
 				C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */,
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
+				C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */,
+				C6B580402CF215CF00794CF1 /* BookList.json in Resources */,
 				C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */,
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
@@ -1119,6 +1149,7 @@
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
 				C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */,
+				C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */,
 				C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */,
 				C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
@@ -1145,6 +1176,7 @@
 				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
 				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
+				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
