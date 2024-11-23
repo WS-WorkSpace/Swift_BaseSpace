@@ -19,7 +19,8 @@ class OneTabViewController: BaseTableViewController {
          "FuntionalProgrammingViewController",
          "POPViewController",
          "ReactiveProgrammingViewController",
-         "MirrorViewController"]
+         "MirrorViewController",
+         "NVActivityIndicatorViewController"]
     }
 
     override func viewDidLoad() {
@@ -36,7 +37,8 @@ class OneTabViewController: BaseTableViewController {
                           "函数式编程",
                           "面向协议编程",
                           "响应式编程",
-                          "反射"]
+                          "反射",
+                          "菊花动画"]
 
         // MARK: - 点击cell的closure返回
 

@@ -36,6 +36,7 @@
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
 		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
+		C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -178,6 +179,7 @@
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
 		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
+		C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -422,6 +424,14 @@
 				C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */,
 			);
 			path = "反射";
+			sourceTree = "<group>";
+		};
+		C6B580312CF19F8A00794CF1 /* 菊花加载动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */,
+			);
+			path = "菊花加载动画";
 			sourceTree = "<group>";
 		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
@@ -732,6 +742,7 @@
 				C67C41822CED734200DE4723 /* 面向协议编程 */,
 				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 				C6B57FEC2CF087DF00794CF1 /* 反射 */,
+				C6B580312CF19F8A00794CF1 /* 菊花加载动画 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1124,6 +1135,7 @@
 				C6C5CF702A7E347B00C5CF02 /* DemoCollectionViewCell.swift in Sources */,
 				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,
 				C6C5CED82A75D89500C5CF02 /* ConstraintArray+Extensions.swift in Sources */,
+				C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */,
