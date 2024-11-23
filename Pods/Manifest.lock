@@ -12,6 +12,10 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
+  - NVActivityIndicatorView (5.2.0):
+    - NVActivityIndicatorView/Base (= 5.2.0)
+  - NVActivityIndicatorView/Base (5.2.0)
+  - ObjectMapper (4.2.0)
   - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
   - RxCocoa (6.8.0):
@@ -35,6 +39,8 @@ DEPENDENCIES:
   - MBProgressHUD (= 1.1.0)
   - MJRefresh (= 3.7.2)
   - Moya (= 13.0.1)
+  - NVActivityIndicatorView
+  - ObjectMapper
   - ReachabilitySwift (= 5.0.0)
   - RxCocoa (= 6.8.0)
   - RxSwift (= 6.8.0)
@@ -54,6 +60,8 @@ SPEC REPOS:
     - MBProgressHUD
     - MJRefresh
     - Moya
+    - NVActivityIndicatorView
+    - ObjectMapper
     - ReachabilitySwift
     - Result
     - RxCocoa
@@ -74,6 +82,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
@@ -84,6 +94,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 20bc538a0cc089baba85b602899a2092df686ed9
+PODFILE CHECKSUM: f945c698cbf0a7567a513efc4106a6d6082d9e10
 
 COCOAPODS: 1.12.1
