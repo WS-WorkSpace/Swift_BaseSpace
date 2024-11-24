@@ -460,6 +460,20 @@
 			path = "本地数据";
 			sourceTree = "<group>";
 		};
+		C6B580412CF2C2DB00794CF1 /* HandyJson */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HandyJson;
+			sourceTree = "<group>";
+		};
+		C6B580422CF2C2F300794CF1 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,6 +761,8 @@
 				C6C5CF362A7735DB00C5CF02 /* TwoTabViewController.swift */,
 				C6B580372CF1C50400794CF1 /* 本地数据 */,
 				C6B580342CF1BF7600794CF1 /* SwiftyJSON */,
+				C6B580412CF2C2DB00794CF1 /* HandyJson */,
+				C6B580422CF2C2F300794CF1 /* ObjectMapper */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,

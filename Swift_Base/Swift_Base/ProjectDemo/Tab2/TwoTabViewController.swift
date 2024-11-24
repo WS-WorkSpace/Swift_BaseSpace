@@ -10,15 +10,15 @@ import UIKit
 class TwoTabViewController: BaseTableViewController {
     var page = 1
 
-    private lazy var vcArray: [String] = {
-        let _vcArray = ["SwiftyJSONViewController",
-                        "",
-                        "",
-                        "",
-                        "Table_SwiftyJSON_VC",
-                        "Table_HandyJSON_VC",
-                        "Table_ObjectMapper_Moya",
-                        ""]
+    private lazy var mVCArray: [[String]] = {
+        let _vcArray = [["SwiftyJSONViewController",
+                         "",
+                         "",
+                         ""],
+                        ["Table_SwiftyJSON_VC",
+                         "Table_HandyJSON_VC",
+                         "Table_ObjectMapper_Moya",
+                         ""]]
         return _vcArray
     }()
 
@@ -51,8 +51,8 @@ class TwoTabViewController: BaseTableViewController {
 
         // MARK: - 点击cell的closure返回
 
-        self.clickCellBlock = { (index: IndexPath, _: String) in
-            let vc = NSString.RD_VC_ClassFromString(self.vcArray[index.row])
+        self.clickCellBlock = { (indexPath: IndexPath, _: String) in
+            let vc = NSString.RD_VC_ClassFromString(self.mVCArray[indexPath.section][indexPath.row])
             if let _vc = vc {
                 self.navigationController?.pushViewController(_vc, animated: true)
             }
@@ -72,12 +72,44 @@ class TwoTabViewController: BaseTableViewController {
     // MARK: - 下拉,上拉刷新方法
 
     func loadNewData() {
-        sleep(1)
+//        sleep(1)
         self.mTableView.mj_header?.endRefreshing()
     }
 
     func loadMoreData() {
         sleep(1)
         self.mTableView.mj_footer?.endRefreshing()
+    }
+}
+
+extension TwoTabViewController {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "数据模型" : "网络请求"
+    }
+}
+
+extension TwoTabViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.mVCArray[section].count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
+        cell.textLabel?.text = self.mVCArray[indexPath.section][indexPath.row]
+        return cell
+    }
+}
+
+extension TwoTabViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true) // 取消选中
+        let cell = tableView.cellForRow(at: indexPath)
+        let text = cell?.textLabel?.text ?? ""
+        // Lg.log("- 选中cell : \(text)")
+        clickCellBlock?(indexPath, text)
     }
 }
