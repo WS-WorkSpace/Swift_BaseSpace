@@ -9,14 +9,14 @@ import Alamofire
 import SwiftyJSON
 import UIKit
 
-struct Book {
+private struct Book {
     var authorNumber: Int
     var authorName: String
     var desc: String
 }
 
 class SwiftyJSONViewController: UIViewController {
-    var bookArray = [Book]()
+    fileprivate var bookArray = [Book]()
     lazy var mTableView: UITableView = {
         let tabview = UITableView()
         tabview.frame = kScrollViewFrame
@@ -31,7 +31,7 @@ class SwiftyJSONViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableView()
+        view.addSubview(mTableView)
 //        configModelArr = ["SwiftyJSON使用",
 //                          "",
 //                          "",
@@ -41,10 +41,6 @@ class SwiftyJSONViewController: UIViewController {
 //        let dic = EasyTestModel.readJsonWithFileName("BookList", "json")
 //        readLocalJSON()
         getNetModel()
-    }
-
-    func configTableView() {
-        view.addSubview(mTableView)
     }
 
     /// 读取本地json数据
@@ -61,10 +57,8 @@ class SwiftyJSONViewController: UIViewController {
             let desc = element["desc"].stringValue
             let book = Book(authorNumber: num, authorName: name, desc: desc)
             bookArray.append(book)
-
-//            appendModelArr(name) // 列表title
-            mTableView.reloadData()
         }
+        mTableView.reloadData()
     }
 
     func getNetModel() {
@@ -83,6 +77,10 @@ class SwiftyJSONViewController: UIViewController {
 
             })
         }
+    }
+
+    deinit {
+        // print("SwiftyJSONViewController已经释放")
     }
 }
 

@@ -8,7 +8,6 @@
 import Foundation
 import HandyJSON
 
-//https://blog.csdn.net/boildoctor/article/details/122364033
 class TotalModel:NSObject,HandyJSON{
 //    @objc var list:String?
     @objc var list = [HandyJsonModel()]//嵌套模型

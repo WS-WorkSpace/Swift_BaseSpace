@@ -41,6 +41,8 @@
 		C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580382CF1C52F00794CF1 /* EasyTestModel.swift */; };
 		C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B5803A2CF206C200794CF1 /* LocalData.json */; };
 		C6B580402CF215CF00794CF1 /* BookList.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B5803F2CF215CF00794CF1 /* BookList.json */; };
+		C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580432CF2D5CF00794CF1 /* HandyJsonTableViewController.swift */; };
+		C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -188,6 +190,8 @@
 		C6B580382CF1C52F00794CF1 /* EasyTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTestModel.swift; sourceTree = "<group>"; };
 		C6B5803A2CF206C200794CF1 /* LocalData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocalData.json; sourceTree = "<group>"; };
 		C6B5803F2CF215CF00794CF1 /* BookList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookList.json; sourceTree = "<group>"; };
+		C6B580432CF2D5CF00794CF1 /* HandyJsonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonTableViewController.swift; sourceTree = "<group>"; };
+		C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHandyJsonModel.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 		C6B580412CF2C2DB00794CF1 /* HandyJson */ = {
 			isa = PBXGroup;
 			children = (
+				C6B580432CF2D5CF00794CF1 /* HandyJsonTableViewController.swift */,
+				C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */,
 			);
 			path = HandyJson;
 			sourceTree = "<group>";
@@ -1174,6 +1180,7 @@
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
+				C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */,
 				C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
@@ -1186,6 +1193,7 @@
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */,
+				C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
 				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,

@@ -9,10 +9,21 @@ import UIKit
 
 class TwoTabViewController: BaseTableViewController {
     var page = 1
-
+    private lazy var titleArray: [[String]] = {
+        let modelArray = ["SwiftyJSON示例",
+                          "HandyJson示例",
+                          "",
+                          ""]
+        let netArray = ["Table_SwiftyJSON_VC",
+                        "Table_HandyJSON_VC",
+                        "Table_ObjectMapper_Moya",
+                        ""]
+        let _vcArray = [modelArray, netArray]
+        return _vcArray
+    }()
     private lazy var mVCArray: [[String]] = {
         let modelArray = ["SwiftyJSONViewController",
-                          "",
+                          "HandyJsonTableViewController",
                           "",
                           ""]
         let netArray = ["Table_SwiftyJSON_VC",
@@ -91,7 +102,7 @@ extension TwoTabViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
-        cell.textLabel?.text = self.mVCArray[indexPath.section][indexPath.row]
+        cell.textLabel?.text = self.titleArray[indexPath.section][indexPath.row]
         return cell
     }
 }
