@@ -11,14 +11,15 @@ class TwoTabViewController: BaseTableViewController {
     var page = 1
 
     private lazy var mVCArray: [[String]] = {
-        let _vcArray = [["SwiftyJSONViewController",
-                         "",
-                         "",
-                         ""],
-                        ["Table_SwiftyJSON_VC",
-                         "Table_HandyJSON_VC",
-                         "Table_ObjectMapper_Moya",
-                         ""]]
+        let modelArray = ["SwiftyJSONViewController",
+                          "",
+                          "",
+                          ""]
+        let netArray = ["Table_SwiftyJSON_VC",
+                        "Table_HandyJSON_VC",
+                        "Table_ObjectMapper_Moya",
+                        ""]
+        let _vcArray = [modelArray, netArray]
         return _vcArray
     }()
 
@@ -26,15 +27,6 @@ class TwoTabViewController: BaseTableViewController {
         super.viewDidLoad()
         self.configTableView()
         view.backgroundColor = .white
-        // 计算属性,设置cell.textLabel
-        configModelArr = ["SwiftyJSON使用",
-                          "",
-                          "",
-                          "",
-                          "链式+SwiftyJSON",
-                          "链式+HandyJSON",
-                          "Table_ObjectMapper_Moya",
-                          ""]
 
         // MARK: - BarIetms设置
 
