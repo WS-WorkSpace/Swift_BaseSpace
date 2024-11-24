@@ -15,8 +15,19 @@ struct Book {
     var desc: String
 }
 
-class SwiftyJSONViewController: BaseTableViewController {
+class SwiftyJSONViewController: UIViewController {
     var bookArray = [Book]()
+    lazy var mTableView: UITableView = {
+        let tabview = UITableView()
+        tabview.frame = kScrollViewFrame
+        tabview.delegate = self
+        tabview.dataSource = self
+        tabview.backgroundColor = .lightGray
+        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        return tabview
+    }()
+
+    static let ItemCellID = "SwiftyJSONCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +41,10 @@ class SwiftyJSONViewController: BaseTableViewController {
 //        let dic = EasyTestModel.readJsonWithFileName("BookList", "json")
 //        readLocalJSON()
         getNetModel()
+    }
+
+    func configTableView() {
+        view.addSubview(mTableView)
     }
 
     /// 读取本地json数据
@@ -47,10 +62,9 @@ class SwiftyJSONViewController: BaseTableViewController {
             let book = Book(authorNumber: num, authorName: name, desc: desc)
             bookArray.append(book)
 
-            appendModelArr(name) // 列表title
+//            appendModelArr(name) // 列表title
             mTableView.reloadData()
         }
-        print(bookArray)
     }
 
     func getNetModel() {
@@ -69,5 +83,32 @@ class SwiftyJSONViewController: BaseTableViewController {
 
             })
         }
+    }
+}
+
+extension SwiftyJSONViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        bookArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
+        let descString = bookArray[indexPath.row].desc
+        cell.textLabel?.text = descString
+        cell.textLabel?.numberOfLines = 0
+        // 图片转换
+        // let url = "tupian.webp"
+        // let pngUrl = url.replacingOccurrences(of: ".webp", with: ".png")
+//        cell.imageView?.kf.setImage(with: URL(string: "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"))
+        return cell
+    }
+}
+
+extension SwiftyJSONViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let descString = bookArray[indexPath.row].desc
+        let contentHeight = descString.RD_getStringHeight(kScreenWidth - 10 - 10, 20)
+        let cellHeight = contentHeight + 10 + 10
+        return cellHeight
     }
 }
