@@ -8,25 +8,19 @@
 import HandyJSON
 import UIKit
 
-class BookHandyJsonModel: NSObject, HandyJSON {
-//    @objc var list:String?
-    @objc var list = [BookModel()] // 嵌套模型
-
-    override required init() {}
-
-    override var description: String {
-        return self.dictionaryWithValues(forKeys: ["list"]).description
-    }
+class BookHandyJsonModel: HandyJSON {
+    var list = [BookModel()] // 嵌套模型
+    required init() {}
 }
 
-class BookModel: NSObject, HandyJSON {
-    @objc var desc: String?
-    @objc var name: String?
-    @objc var num: String?
-//    @objc var temp:String = ""
-//    @objc var temp2:String = ""
+class BookModel: HandyJSON {
+    var desc: String?
+    var name: String?
+    var num: String?
+    var my_desc: String = ""
+    var my_name: String = ""
 //    @objc var info = Info()//嵌套模型
-    override required init() {}
+    required init() {}
     var cellHeight: CGFloat {
         var height = 0.0
         let labelWidrh = kScreenWidth - 130
@@ -37,26 +31,10 @@ class BookModel: NSObject, HandyJSON {
         return height > 60 ? height : 60.0
     }
 
-    override var description: String {
-        return self.dictionaryWithValues(forKeys: ["desc",
-                                                   "name",
-                                                   "num"]).description
-
-//        return self.dictionaryWithValues(forKeys: ["desc",
-//                                                "name",
-//                                                "num",
-//                                                "info",
-//                                                "temp",
-//                                                "temp2"]).description
+    func mapping(mapper: HelpingMapper) {
+        mapper <<< self.my_desc <-- "desc" // 把desc 转换为模型中的 my_desc
+        mapper <<< self.my_name <-- "name" // 把name 转换为模型中的 my_name
     }
-//    mutating func mapping(map: ObjectMapper.Map) {
-//        desc            <- map["desc"]
-//        name            <- map["name"]
-//        num             <- map["num"]
-//    }
-//    init?(map: ObjectMapper.Map) {
-//
-//    }
 }
 
 // 子模型

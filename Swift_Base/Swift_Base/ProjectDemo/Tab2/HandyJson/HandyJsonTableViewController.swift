@@ -92,21 +92,18 @@ class HandyJsonTableViewController: UIViewController {
 
 extension HandyJsonTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.bookArray.count
+        return bookArray.count
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return bookArray[indexPath.row].cellHeight
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
-        let repTestDetail:BookModel = bookArray[indexPath.row]
-        Lg.log("--->",repTestDetail)
-
+        let repTestDetail: BookModel = bookArray[indexPath.row]
         cell?.leftLab.text = repTestDetail.desc ?? ""
-//        Lg.log(repTestDetail.desc ?? "")
         let imgeURL = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
         cell?.rightImg.kf.setImage(with: URL(string: imgeURL), placeholder: UIImage(named: "AppIcon-mini"), options: nil, progressBlock: nil, completionHandler: nil)
         cell?.backgroundColor = UIColor.randomColor
@@ -120,7 +117,5 @@ extension HandyJsonTableViewController: UITableViewDataSource {
 extension HandyJsonTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true) // 取消选中
-        let cell = tableView.cellForRow(at: indexPath)
-        // Lg.log("- 选中cell : \(text)")
     }
 }
