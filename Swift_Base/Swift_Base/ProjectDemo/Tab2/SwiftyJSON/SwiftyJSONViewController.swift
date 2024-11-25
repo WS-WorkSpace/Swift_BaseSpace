@@ -80,7 +80,7 @@ class SwiftyJSONViewController: UIViewController {
     }
 
     deinit {
-        // print("SwiftyJSONViewController已经释放")
+        print("SwiftyJSONViewController已经释放")
     }
 }
 

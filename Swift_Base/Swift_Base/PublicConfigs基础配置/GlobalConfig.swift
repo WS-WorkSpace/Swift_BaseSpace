@@ -18,14 +18,14 @@ public enum GlobalConfig {
     public static let gRestUrl = "http://\(gBaseUrl):9098/grpc"
     public static let gCharHost = "http://\(gBaseUrl):9100"
 
-    // 高德地图key
+    // /Users/wangshuang/Desktop/WS_Bench/Swift_BaseSpace/Swift_Base/Swift_Base/ProjectDemo/Tab2/HandyJson/BookHandyJsonModel.swift高德地图key
     public static let gGaoDeMapKey = "b00c88f69a38f58eee2a00b6ebe1abda"
 
     /// GET 请求
     /// "http://cx.shouji.360.cn/phonearea.php?number=13012345678"
     /// 图书列表链接
     public static let BOOKLIST_URL = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
-    public static let IMESSAGE_URL = "https://raw.githubusercontent.com/xiaoyouxinqing/PostDemo/master/PostDemo/Resources/PostListData_recommend_1.json"
+    public static let USERDETAIL_URL = "https://raw.githubusercontent.com/xiaoyouxinqing/PostDemo/master/PostDemo/Resources/PostListData_recommend_1.json"
     /// http://cx.shouji.360.cn/phonearea.php?number=13012345678  //需要支持@"text/html"
     // GET 请求
 //        let strURL = "https://mobi.hsxt.cn:9446/refactor/lcs/queryProvinceTree"

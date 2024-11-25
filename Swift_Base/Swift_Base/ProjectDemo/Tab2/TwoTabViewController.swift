@@ -12,7 +12,7 @@ class TwoTabViewController: BaseTableViewController {
     private lazy var titleArray: [[String]] = {
         let modelArray = ["SwiftyJSON示例",
                           "HandyJson示例",
-                          "",
+                          "ObjectMapper示例",
                           ""]
         let netArray = ["Table_SwiftyJSON_VC",
                         "Table_HandyJSON_VC",
@@ -21,10 +21,11 @@ class TwoTabViewController: BaseTableViewController {
         let _vcArray = [modelArray, netArray]
         return _vcArray
     }()
+
     private lazy var mVCArray: [[String]] = {
         let modelArray = ["SwiftyJSONViewController",
                           "HandyJsonTableViewController",
-                          "",
+                          "ObjectMapperViewController",
                           ""]
         let netArray = ["Table_SwiftyJSON_VC",
                         "Table_HandyJSON_VC",

@@ -43,6 +43,8 @@
 		C6B580402CF215CF00794CF1 /* BookList.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B5803F2CF215CF00794CF1 /* BookList.json */; };
 		C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580432CF2D5CF00794CF1 /* HandyJsonTableViewController.swift */; };
 		C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */; };
+		C6B580482CF4D8CA00794CF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580472CF4D8CA00794CF1 /* UserModel.swift */; };
+		C6B5804A2CF4D97A00794CF1 /* ObjectMapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580492CF4D97A00794CF1 /* ObjectMapperViewController.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -192,6 +194,8 @@
 		C6B5803F2CF215CF00794CF1 /* BookList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookList.json; sourceTree = "<group>"; };
 		C6B580432CF2D5CF00794CF1 /* HandyJsonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonTableViewController.swift; sourceTree = "<group>"; };
 		C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHandyJsonModel.swift; sourceTree = "<group>"; };
+		C6B580472CF4D8CA00794CF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = /Users/wangshuang/Documents/UserModel.swift; sourceTree = "<absolute>"; };
+		C6B580492CF4D97A00794CF1 /* ObjectMapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperViewController.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -476,6 +480,8 @@
 		C6B580422CF2C2F300794CF1 /* ObjectMapper */ = {
 			isa = PBXGroup;
 			children = (
+				C6B580492CF4D97A00794CF1 /* ObjectMapperViewController.swift */,
+				C6B580472CF4D8CA00794CF1 /* UserModel.swift */,
 			);
 			path = ObjectMapper;
 			sourceTree = "<group>";
@@ -1153,6 +1159,7 @@
 				C6EE3A872A88D9E000A76C19 /* NetAPIManager.swift in Sources */,
 				C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */,
 				C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */,
+				C6B5804A2CF4D97A00794CF1 /* ObjectMapperViewController.swift in Sources */,
 				C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */,
@@ -1212,6 +1219,7 @@
 				C6C5CEE32A76A5A200C5CF02 /* SystemAlertTool.swift in Sources */,
 				C68CB74F2CE83B2C009F8A6A /* Swift_Call_OC_ViewController.swift in Sources */,
 				C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */,
+				C6B580482CF4D8CA00794CF1 /* UserModel.swift in Sources */,
 				C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */,
 				C68CB74D2CE83A24009F8A6A /* WS_Person.m in Sources */,
 				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,

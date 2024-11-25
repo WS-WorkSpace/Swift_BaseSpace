@@ -41,35 +41,6 @@ class HandyJsonTableViewController: UIViewController {
         print("HandyJsonTableViewController已经释放")
     }
 
-//    func updateModel(_ json: JSON) {
-//        let bookArr = json["list"].arrayValue
-//        for element in bookArr {
-//            let num = element["num"].intValue
-//            let name = element["name"].stringValue
-//            let desc = element["desc"].stringValue
-//            let book = Book(authorNumber: num, authorName: name, desc: desc)
-//            bookArray.append(book)
-//
-    ////            appendModelArr(name) // 列表title
-//            mTableView.reloadData()
-//        }
-//    }
-
-//    private func loadNewData() {
-//        // 链式网络请求：Alamofire + SwiftyJSON
-//        let url = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
-//        CP_Net_Request.url(url).requestType(.get).params(nil).requestEasy {[weak self] res in
-//            let dic = res as? Dictionary<String, Any>
-//            /// HandyJSON接受字典
-//            /// 会重新计算label的高度,并保存.刷新UI时,动态改变Cell的高度.此时label 的约束失效.
-//            guard let resObj = TotalModel.deserialize(from: dic) ,let self = self else { return }
-//            self.items.removeAll()
-//            self.items = resObj.list
-//            mLog(self.items)
-//            self.subTableView.reloadData()
-//        }
-//    }
-
     func getNetModel() {
         let url = GlobalConfig.BOOKLIST_URL
         let parameters = ["key": "value"]
