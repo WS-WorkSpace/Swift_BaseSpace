@@ -64,14 +64,26 @@ extension ObjectMapperViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID)
+        if cell == nil {
+            cell = UITableViewCell(style: .value2, reuseIdentifier: Self.ItemCellID)
+        }
+
         let userInfo: UserInfo = userItems[indexPath.row]
-        // 图片转换
-        let avatarURL = userInfo.avatar
+        var avatarURL = userInfo.avatar
         let avatarText = userInfo.text
-        cell.imageView?.kf.setImage(with: URL(string: avatarURL ?? ""))
-        cell.textLabel?.text = avatarText ?? ""
-        cell.textLabel?.numberOfLines = 0
+
+        // 来临时换个固定图片
+        // 这里重载过后才会变成.value2的cell,有显示bug
+        avatarURL = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666#/"
+        // 图片转换
+         let pngUrl = avatarURL?.replacingOccurrences(of: ".webp", with: ".png")
+        cell?.imageView?.kf.setImage(with: URL(string: pngUrl ?? ""))
+
+        cell?.textLabel?.text = avatarText ?? ""
+        cell?.textLabel?.numberOfLines = 0
+        return cell!
+
 //        if indexPath.row == 0 {
 //            print("----1---->", userInfo.id as Any) // Optional(1000)
 //            print("----2---->", userInfo.avatar as Any) // Optional("4e7f0c83ly8g1ho507078j20ro0rojtq.jpg")
@@ -81,7 +93,6 @@ extension ObjectMapperViewController: UITableViewDataSource {
 //            print("----6---->", userInfo.text as Any) // Optional("潮汕菜太好吃了")
 //            print("----7---->", userInfo.images as Any) // Optional([4e7f0c83gy1gam2misv31j21hc0u016k.jpg, 4e7f0c83gy1gam2mjhk8zj21hc0v6wnx.jpg, 4e7f0c83gy1gam2ml6nucj22tc240kjl.jpg, 4e7f0c83gy1gam2mn58d3j22tc240qv5.jpg, 4e7f0c83gy1gam2mp0x4pj22tc240u0x.jpg, 4e7f0c83gy1gam2mr1b81j22tc2407wi.jpg])
 //        }
-        return cell
     }
 }
 
