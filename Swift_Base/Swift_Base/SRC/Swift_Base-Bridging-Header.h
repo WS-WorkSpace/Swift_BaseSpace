@@ -20,6 +20,6 @@
 
 #import <Alamofire/Alamofire-Swift.h>
 #import <Kingfisher/Kingfisher-Swift.h>         //默认不支持WebP格式的图片,需要额外安装KingfisherWebP
-//#import <SwiftyJSON/SwiftyJSON-Swift.h>         //不能转换成模型
+//#import <SwiftyJSON/SwiftyJSON-Swift.h>       
 //#import <SnapKit/SnapKit-Swift.h>         
 //#import <MJRefresh.h>                           //#import <MJRefresh/MJRefresh.h>
