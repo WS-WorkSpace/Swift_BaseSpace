@@ -63,19 +63,27 @@ class SwiftyJSONViewController: UIViewController {
     func getNetModel() {
         let url = GlobalConfig.BOOKLIST_URL
         let parameters = ["key": "value"]
-        DispatchQueue.global().async {
-            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
-                // 处理响应结果
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    self.updateModel(json)
-                }
-                if let error = response.result.error {
-                    print("Response error: \(error)")
-                }
-
-            })
-        }
+//        DispatchQueue.global().async {
+//            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+//                // 处理响应结果
+//                if let value = response.result.value {
+//                    let json = JSON(value)
+//                    self.updateModel(json)
+//                }
+//                if let error = response.result.error {
+//                    print("Response error: \(error)")
+//                }
+//
+//            })
+//        }
+        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
+            if let res = response.data {
+                print(res)
+                let json = JSON(res)
+                print(json)
+                self?.updateModel(json)
+            }
+        })
     }
 
     deinit {
