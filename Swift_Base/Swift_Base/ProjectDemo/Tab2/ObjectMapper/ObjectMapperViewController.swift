@@ -5,7 +5,6 @@
 //  Created by 王爽 on 2024/11/26.
 //
 
-import Alamofire
 import ObjectMapper
 import UIKit
 
@@ -35,13 +34,18 @@ class ObjectMapperViewController: UIViewController {
         let parameters = ["key": "value"]
         DispatchQueue.global().async {
             Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { [weak self] response in
+//                guard let res = response.result.value, let weakSelf = self else { return }
+//                let dic = res as? [String: Any]
+//                let arr = dic?["list"] as? [[String: Any]]
+//                let arrayTemp = Mapper<UserInfo>().mapArray(JSONArray: arr!)
+//                weakSelf.userItems = dicTemp["list"]
+
                 guard let res = response.result.value, let weakSelf = self else { return }
-                let dic = res as? [String: Any]
-                let arr = dic?["list"] as? [[String: Any]]
-                let arrayTemp = Mapper<UserInfo>().mapArray(JSONArray: arr!)
+                let focusList = Mapper<FocusList>().map(JSONObject: res)
+                guard let userItemsTemp = focusList?.list else { return }
                 // 逃逸闭包用到self,以及它的属性需要捕获一下.[weak self]表示弱引用,弱引用肯定是可选类型
                 weakSelf.userItems.removeAll()
-                weakSelf.userItems = arrayTemp
+                weakSelf.userItems = userItemsTemp
                 weakSelf.mTableView.reloadData()
             })
         }
@@ -97,11 +101,11 @@ extension ObjectMapperViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
         let userInfo: UserInfo = userItems[indexPath.row]
         // 图片转换
-        var avatarURL = userInfo.avatar
-        avatarURL = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
+        let avatarURL = userInfo.avatar
         let avatarText = userInfo.text
         cell.imageView?.kf.setImage(with: URL(string: avatarURL ?? ""))
-//        cell.textLabel?.text = avatarText ?? ""
+        cell.textLabel?.text = avatarText ?? ""
+        cell.textLabel?.numberOfLines = 0
 
         if indexPath.row == 0 {
             print("----1---->", userInfo.id as Any) // Optional(1000)
