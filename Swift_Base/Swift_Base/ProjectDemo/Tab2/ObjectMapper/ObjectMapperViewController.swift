@@ -6,12 +6,13 @@
 //
 
 import Alamofire
+import ObjectMapper
 import UIKit
 
 class ObjectMapperViewController: UIViewController {
     lazy var mTableView = {
         let tabview = UITableView()
-        tabview.frame = view.bounds
+        tabview.frame = kScrollViewFrame
         tabview.delegate = self
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
@@ -19,13 +20,14 @@ class ObjectMapperViewController: UIViewController {
         return tabview
     }()
 
-    lazy var items = [RepTestDetail]() // [Item]()
+    lazy var userItems = [UserInfo]() // [Item]()
     var page = 1
     static let ItemCellID = "item"
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(mTableView)
+        loadNewData()
     }
 
     func loadNewData() {
@@ -34,16 +36,12 @@ class ObjectMapperViewController: UIViewController {
         DispatchQueue.global().async {
             Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { [weak self] response in
                 guard let res = response.result.value, let weakSelf = self else { return }
-
-                //                let arr = res["list"] as? [[String: Any]]
-                //                guard let temparr = arr else { return }
-                //                let array = Mapper<RepTestDetail>().mapArray(JSONArray: temparr)
-                //                self?.items.removeAll()
-                //                self?.items = array
-                //                self?.tabview.reloadData()
-                //                self?.tabview.mj_header?.endRefreshing()
-                //                self?.page = 1
-
+                let dic = res as? [String: Any]
+                let arr = dic?["list"] as? [[String: Any]]
+                let arrayTemp = Mapper<UserInfo>().mapArray(JSONArray: arr!)
+                // 逃逸闭包用到self,以及它的属性需要捕获一下.[weak self]表示弱引用,弱引用肯定是可选类型
+                weakSelf.userItems.removeAll()
+                weakSelf.userItems = arrayTemp
                 weakSelf.mTableView.reloadData()
             })
         }
@@ -60,12 +58,6 @@ class ObjectMapperViewController: UIViewController {
 //            self?.tabview.reloadData()
 //            self?.tabview.mj_header?.endRefreshing()
 //            self?.page = 1
-
-//            print("-------->",model1?.id as Any)
-//            print("-------->",model1?.avatar ?? "")
-//            print("-------->",model1?.vip)
-//            print("-------->",model1?.date)
-//            print("-------->",model1?.images!)
 
 //            let jsonlist = json["list"][0].rawString()
 //            let model3 = Mapper<EvaluateModel>().map(JSONString: jsonlist!)
@@ -98,30 +90,30 @@ class ObjectMapperViewController: UIViewController {
 
 extension ObjectMapperViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.mj_footer?.isHidden = (items.count == 0)
-        return items.count
+        return userItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
-        let repTestDetail: RepTestDetail = items[indexPath.row]
-
-//        let dicT = items[indexPath.row] as? [String:Any]
-//        guard let dicTemp = dicT else{ return cell}
-//        let descString = dicTemp["desc"] as? String
-
+        let userInfo: UserInfo = userItems[indexPath.row]
         // 图片转换
-        // let url = "tupian.webp"
-        // let pngUrl = url.replacingOccurrences(of: ".webp", with: ".png")
-        cell.imageView?.kf.setImage(with: URL(string: "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"))
-        //        print("--------__>",dicT)
-        cell.textLabel?.text = repTestDetail.desc
+        var avatarURL = userInfo.avatar
+        avatarURL = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
+        let avatarText = userInfo.text
+        cell.imageView?.kf.setImage(with: URL(string: avatarURL ?? ""))
+//        cell.textLabel?.text = avatarText ?? ""
+
+        if indexPath.row == 0 {
+            print("----1---->", userInfo.id as Any) // Optional(1000)
+            print("----2---->", userInfo.avatar as Any) // Optional("4e7f0c83ly8g1ho507078j20ro0rojtq.jpg")
+            print("----3---->", userInfo.vip as Any) // Optional(true)
+            print("----4---->", userInfo.name as Any) // Optional("娄艺潇")
+            print("----5---->", userInfo.date as Any) // Optional(1970-01-01 00:33:40 +0000)
+            print("----6---->", userInfo.text as Any) // Optional("潮汕菜太好吃了")
+            print("----7---->", userInfo.images as Any) // Optional([4e7f0c83gy1gam2misv31j21hc0u016k.jpg, 4e7f0c83gy1gam2mjhk8zj21hc0v6wnx.jpg, 4e7f0c83gy1gam2ml6nucj22tc240kjl.jpg, 4e7f0c83gy1gam2mn58d3j22tc240qv5.jpg, 4e7f0c83gy1gam2mp0x4pj22tc240u0x.jpg, 4e7f0c83gy1gam2mr1b81j22tc2407wi.jpg])
+        }
+
         return cell
-//        var tmp = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID)//这里cell可能为空
-//        if tmp == nil {
-//            tmp = UITableViewCell(style: .value2, reuseIdentifier: Self.ItemCellID)
-//        }
-//        let cell = tmp!
     }
 }
 
