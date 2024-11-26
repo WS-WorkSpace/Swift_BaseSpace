@@ -13,7 +13,7 @@ class TwoTabViewController: BaseTableViewController {
         let modelArray = ["SwiftyJSON示例",
                           "HandyJson示例",
                           "ObjectMapper示例",
-                          ""]
+                          "Codable示例"]
         let netArray = ["Table_SwiftyJSON_VC",
                         "Table_HandyJSON_VC",
                         "Table_ObjectMapper_Moya",
@@ -26,7 +26,7 @@ class TwoTabViewController: BaseTableViewController {
         let modelArray = ["SwiftyJSONViewController",
                           "HandyJsonTableViewController",
                           "ObjectMapperViewController",
-                          ""]
+                          "CodableViewController"]
         let netArray = ["Table_SwiftyJSON_VC",
                         "Table_HandyJSON_VC",
                         "Table_ObjectMapper_Moya",

@@ -45,6 +45,8 @@
 		C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */; };
 		C6B580482CF4D8CA00794CF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580472CF4D8CA00794CF1 /* UserModel.swift */; };
 		C6B5804A2CF4D97A00794CF1 /* ObjectMapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580492CF4D97A00794CF1 /* ObjectMapperViewController.swift */; };
+		C6B5804F2CF613CB00794CF1 /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5804E2CF613CB00794CF1 /* CodableViewController.swift */; };
+		C6B580512CF6157600794CF1 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580502CF6157600794CF1 /* BookDetail.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -113,7 +115,6 @@
 		C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */; };
 		C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A502A8248F800A76C19 /* WaterFallModelHandle.swift */; };
 		C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A522A834EA100A76C19 /* WaterFallFlowLayout.swift */; };
-		C6EE3A552A8360E700A76C19 /* Collection+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A542A8360E700A76C19 /* Collection+extension.swift */; };
 		C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */; };
 		C6EE3A5C2A84DD1100A76C19 /* FPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */; };
 		C6EE3A612A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */; };
@@ -195,6 +196,8 @@
 		C6B580452CF2DAB700794CF1 /* BookHandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHandyJsonModel.swift; sourceTree = "<group>"; };
 		C6B580472CF4D8CA00794CF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = /Users/wangshuang/Documents/UserModel.swift; sourceTree = "<absolute>"; };
 		C6B580492CF4D97A00794CF1 /* ObjectMapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperViewController.swift; sourceTree = "<group>"; };
+		C6B5804E2CF613CB00794CF1 /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
+		C6B580502CF6157600794CF1 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,7 +278,6 @@
 		C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCell.swift; sourceTree = "<group>"; };
 		C6EE3A502A8248F800A76C19 /* WaterFallModelHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallModelHandle.swift; sourceTree = "<group>"; };
 		C6EE3A522A834EA100A76C19 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
-		C6EE3A542A8360E700A76C19 /* Collection+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+extension.swift"; sourceTree = "<group>"; };
 		C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkingListViewController.swift; sourceTree = "<group>"; };
 		C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSViewController.swift; sourceTree = "<group>"; };
 		C6EE3A602A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainProgrammingNetWorkKit.swift; sourceTree = "<group>"; };
@@ -484,6 +486,15 @@
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
+		C6B5804D2CF613B400794CF1 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				C6B5804E2CF613CB00794CF1 /* CodableViewController.swift */,
+				C6B580502CF6157600794CF1 /* BookDetail.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,7 +622,6 @@
 			children = (
 				C6C5CEDB2A76055F00C5CF02 /* String+Extension.swift */,
 				C6C5CECF2A75D73200C5CF02 /* NSString+Extension.swift */,
-				C6EE3A542A8360E700A76C19 /* Collection+extension.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -772,6 +782,7 @@
 				C6B580342CF1BF7600794CF1 /* SwiftyJSON */,
 				C6B580412CF2C2DB00794CF1 /* HandyJson */,
 				C6B580422CF2C2F300794CF1 /* ObjectMapper */,
+				C6B5804D2CF613B400794CF1 /* Codable */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
@@ -1118,7 +1129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C5CEBA2A75CC5000C5CF02 /* DeviceInfo.swift in Sources */,
-				C6EE3A552A8360E700A76C19 /* Collection+extension.swift in Sources */,
 				C6C5CF652A7D0B0500C5CF02 /* BaseCollectionViewCell.swift in Sources */,
 				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
@@ -1130,6 +1140,7 @@
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
+				C6B5804F2CF613CB00794CF1 /* CodableViewController.swift in Sources */,
 				C654370E2A80844700C304B4 /* Then.swift in Sources */,
 				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
 				C6EE3A642A85EB1900A76C19 /* TableListViewController.swift in Sources */,
@@ -1205,6 +1216,7 @@
 				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
+				C6B580512CF6157600794CF1 /* BookDetail.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
