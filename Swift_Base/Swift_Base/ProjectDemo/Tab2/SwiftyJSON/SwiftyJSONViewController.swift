@@ -68,6 +68,7 @@ class SwiftyJSONViewController: UIViewController {
 //                // 处理响应结果
 //                if let value = response.result.value {
 //                    let json = JSON(value)
+//                    self?.bookArray.removeAll()
 //                    self.updateModel(json)
 //                }
 //                if let error = response.result.error {
@@ -81,6 +82,7 @@ class SwiftyJSONViewController: UIViewController {
                 print(res)
                 let json = JSON(res)
                 print(json)
+                self?.bookArray.removeAll()
                 self?.updateModel(json)
             }
         })
