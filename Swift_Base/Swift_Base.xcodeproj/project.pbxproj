@@ -82,7 +82,7 @@
 		C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEEA2A76A9D300C5CF02 /* JsonTool.swift */; };
 		C6C5CEEE2A76AA2D00C5CF02 /* FileManagerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */; };
 		C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */; };
-		C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */; };
+		C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEF12A76AA8E00C5CF02 /* MonitorNetworkTool.swift */; };
 		C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF022A76DBF100C5CF02 /* YYWeakProxy.m */; };
 		C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF052A76DBF100C5CF02 /* FPSLabel.m */; };
 		C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF092A76F9AB00C5CF02 /* SelfRefreshBackGifFooter.m */; };
@@ -240,7 +240,7 @@
 		C6C5CEEA2A76A9D300C5CF02 /* JsonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTool.swift; sourceTree = "<group>"; };
 		C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTool.swift; sourceTree = "<group>"; };
 		C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTool.swift; sourceTree = "<group>"; };
-		C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityTool.swift; sourceTree = "<group>"; };
+		C6C5CEF12A76AA8E00C5CF02 /* MonitorNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorNetworkTool.swift; sourceTree = "<group>"; };
 		C6C5CF022A76DBF100C5CF02 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		C6C5CF032A76DBF100C5CF02 /* FPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
 		C6C5CF042A76DBF100C5CF02 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
@@ -683,7 +683,7 @@
 				C6C5CED22A75D81700C5CF02 /* SnapKit */,
 				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
 				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
-				C6C5CEF12A76AA8E00C5CF02 /* ReachabilityTool.swift */,
+				C6C5CEF12A76AA8E00C5CF02 /* MonitorNetworkTool.swift */,
 				C654370D2A80844700C304B4 /* Then.swift */,
 			);
 			path = Tools;
@@ -1134,7 +1134,7 @@
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
 				C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */,
-				C6C5CEF22A76AA8E00C5CF02 /* ReachabilityTool.swift in Sources */,
+				C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,

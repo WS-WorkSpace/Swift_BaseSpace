@@ -22,28 +22,4 @@ extension AppDelegate {
 //        IQKeyboardManager.shared.keyboardDistanceFromTextField = 5.0
 //    }
 
-    // MARK: - 实时网络监测
-
-    func monitorNetwork1() {
-        ReachabilityTool.monitorNetworkStatus1 { status in
-            var message = ""
-            switch status {
-            case .unknown:
-                message = "未知网络"
-            case .notReachable:
-                message = "无网络连接"
-            case .wwan:
-                message = "蜂窝移动网络"
-            case .ethernetOrWiFi:
-                message = "WiFi"
-            }
-//            RDProgressHUD.showText(message)
-        }
-    }
-
-    func monitorNetwork2() {
-        ReachabilityTool.monitorNetworkStatus2 { status in
-            print("-----", status)
-        }
-    }
 }
