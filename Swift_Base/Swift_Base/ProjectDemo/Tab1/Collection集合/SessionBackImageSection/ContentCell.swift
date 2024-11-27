@@ -5,7 +5,6 @@
 //  Created by 王爽 on 2023/8/7.
 //
 
-import SnapKit
 import UIKit
 class ContentCell: UICollectionViewCell {
     static let COMMONEPRODUCT_CID = "COMMONEPRODUCT_CID"

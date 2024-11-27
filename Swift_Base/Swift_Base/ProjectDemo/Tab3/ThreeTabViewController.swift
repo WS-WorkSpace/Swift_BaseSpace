@@ -5,7 +5,6 @@
 //  Created by 王爽 on 2023/7/31.
 //
 
-import SnapKit
 import UIKit
 
 @objcMembers class Temp: NSObject {

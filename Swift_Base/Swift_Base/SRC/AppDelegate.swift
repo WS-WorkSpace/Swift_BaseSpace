@@ -5,7 +5,6 @@
 //  Created by 王爽 on 2023/7/29.
 //
 
-import SnapKit
 import UIKit
 
 @main

@@ -5,7 +5,6 @@
 //  Created by 王爽 on 2023/8/10.
 //
 
-import SnapKit
 import UIKit
 class FPSViewController: BaseViewController {
     private lazy var mButton = UIButton().then {

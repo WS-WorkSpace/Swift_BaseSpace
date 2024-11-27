@@ -153,9 +153,9 @@ target 'Swift_Base' do
   #pod 'HorizonCalendar'
   #pod 'CalendarKit'
 # 下拉刷新
-#  pod 'DGElasticPullToRefresh'
+#  pod 'DGElasticPullToRefresh'   #有弹性效果的下拉刷新控件。
   pod 'CRRefresh'   # BaseTableView
-  #pod 'ESPullToRefresh', '2.9.3'
+  pod 'ESPullToRefresh', '2.9.3'  #https://github.com/eggswift/pull-to-refresh/blob/master/README_CN.md
   #pod 'PullToRefresher'
 # UI
   #pod 'Eureka' # 表单

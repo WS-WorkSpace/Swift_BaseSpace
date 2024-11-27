@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.9.1)
   - CRRefresh (1.1.3)
   - DZNEmptyDataSet (1.8.1)
+  - ESPullToRefresh (2.9.3)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.9)
   - Kingfisher (6.3.1)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Alamofire (= 4.9.1)
   - CRRefresh
   - DZNEmptyDataSet (= 1.8.1)
+  - ESPullToRefresh (= 2.9.3)
   - HandyJSON (= 5.0.2)
   - IQKeyboardManagerSwift (= 6.5.9)
   - Kingfisher (= 6.3.1)
@@ -54,6 +56,7 @@ SPEC REPOS:
     - Alamofire
     - CRRefresh
     - DZNEmptyDataSet
+    - ESPullToRefresh
     - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -76,6 +79,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CRRefresh: 1415d4ae06837fa7bb064c44f2e102f3ef517044
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
@@ -94,6 +98,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f945c698cbf0a7567a513efc4106a6d6082d9e10
+PODFILE CHECKSUM: 780e292b476a2d8751ac5316b56caca11fbf1f54
 
 COCOAPODS: 1.12.1
