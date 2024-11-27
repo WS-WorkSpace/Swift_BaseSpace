@@ -48,6 +48,7 @@
 		C6B5804F2CF613CB00794CF1 /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5804E2CF613CB00794CF1 /* CodableViewController.swift */; };
 		C6B580512CF6157600794CF1 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580502CF6157600794CF1 /* BookDetail.swift */; };
 		C6B580542CF723C700794CF1 /* ESPullToRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580532CF723C700794CF1 /* ESPullToRefreshViewController.swift */; };
+		C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580552CF75AD700794CF1 /* HeaderAnimatorView.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -200,6 +201,7 @@
 		C6B5804E2CF613CB00794CF1 /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
 		C6B580502CF6157600794CF1 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		C6B580532CF723C700794CF1 /* ESPullToRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPullToRefreshViewController.swift; sourceTree = "<group>"; };
+		C6B580552CF75AD700794CF1 /* HeaderAnimatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAnimatorView.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B580532CF723C700794CF1 /* ESPullToRefreshViewController.swift */,
+				C6B580552CF75AD700794CF1 /* HeaderAnimatorView.swift */,
 			);
 			path = ESPullToRefresh;
 			sourceTree = "<group>";
@@ -1186,6 +1189,7 @@
 				C67C41862CED735B00DE4723 /* ExtensionCompatible.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
 				C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */,
+				C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
 				C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */,
 				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,
