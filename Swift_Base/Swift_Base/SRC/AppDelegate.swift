@@ -27,16 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func getAppInfo() {
-        // version QA_Branch
-        // version QA_Branch1
-        // update
-//        print("App 显示名称 :", DEV_INFO.appDisplayName)
-//        print("App BundleName :", DEV_INFO.appName)
-//        print("App BuildNumber :", DEV_INFO.build)
-//        print("Bundle Identifier :", DEV_INFO.bundleIdentifier)
-//        print("设备udid :", DEV_INFO.identifierNumber)
-//        print("App 版本号 :", DEV_INFO.appVersion)
-//        print("iOS版本 :", DEV_INFO.iOSVersion)
+        print("App 显示名称 :", DEV_INFO.appDisplayName)
+        print("App BundleName :", DEV_INFO.appName)
+        print("App BuildNumber :", DEV_INFO.build)
+        print("Bundle Identifier :", DEV_INFO.bundleIdentifier)
+        print("设备udid :", DEV_INFO.identifierNumber)
+        print("App 版本号 :", DEV_INFO.appVersion)
+        print("iOS版本 :", DEV_INFO.iOSVersion)
         print("App Language :", DEV_INFO.aPPLanguage)
     }
 
@@ -45,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     // MARK: - 实时网络监测
+
     func monitorNetwork() {
         /// 监听网络变化 - Alamofire
         self.monitorNetworkAlamofire()
