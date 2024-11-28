@@ -9,6 +9,22 @@ import Foundation
 
 public typealias Lg = Logger
 
+//public func amLog<T>(_ messages: T...)
+//{
+//    #if DEBUG
+//        print("\(messages)")
+//    #endif
+//}
+
+/// 全部打印
+public func mAllLog<T>(_ message: T, file: String = #file, funcName: String = #function, lineNum: Int = #line)
+{
+    #if DEBUG
+        let fileName = (file as NSString).lastPathComponent
+        print("\n********** AllLog-satrt ***********\n\n文件名称:\(fileName)\n方法名称:\(funcName)\n行数:\(lineNum)\n信息:\n\n\(message)\n\n********** AllLog-end ***********\n")
+    #endif
+}
+
 public func mLog(_ items: Any...,
                  separator: String = " ",
                  terminator: String = "\n",
