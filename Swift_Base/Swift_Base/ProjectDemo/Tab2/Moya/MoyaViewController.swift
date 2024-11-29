@@ -21,11 +21,33 @@ class MoyaViewController: UIViewController {
     lazy var mHeaderView:UIView = {
         let hView = UIView(frame: CGRectMake(0, 0, kScreenWidth, 90))
         hView.backgroundColor = .magenta
-        
-        
+        let leftBtn = UIButton.creatButton("简单使用",.white, CGRectZero, self, #selector(leftButton))
+        leftBtn.layer.cornerRadius = 7
+        hView.addSubview(leftBtn)
+        leftBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(kScreenWidth/2-10, 80))
+            make.left.equalTo(5)
+            make.top.equalTo(5)
+        }
+        let rightBtn = UIButton.creatButton("封装使用",.white, CGRectZero, self, #selector(rightButton))
+        rightBtn.layer.cornerRadius = 7
+        hView.addSubview(rightBtn)
+        rightBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(kScreenWidth/2-10, 80))
+            make.right.equalToSuperview().offset(-5)
+            make.top.equalToSuperview().offset(5)
+        }
+
         
         return hView
     }()
+    @objc func leftButton(){
+        mLog("点击左侧按钮")
+    }
+    @objc func rightButton(){
+        mLog("点击右侧侧按钮")
+    }
+
     static let ItemCellID = "SwiftyJSONCell"
 
     override func viewDidLoad() {

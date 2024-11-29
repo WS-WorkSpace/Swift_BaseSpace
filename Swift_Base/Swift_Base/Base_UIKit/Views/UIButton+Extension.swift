@@ -11,11 +11,12 @@ import UIKit
 
 extension UIButton {
     static func creatButton(_ title: String,
-                            _ titleColor: UIColor = .white,
+                            _ titleColor: UIColor = UIColor.white,
                             _ frame: CGRect,
-                            _ target: AnyClass.Type,
-                            _ font:UIFont = UIFont.systemFont(ofSize: 16),
-                            _ action: Selector) -> UIButton {
+                            _ target: Any,
+                            _ action: Selector,
+                            _ font: UIFont = UIFont.systemFont(ofSize: 16)) -> UIButton
+    {
         let button = UIButton(frame: .zero)
         button.frame = frame
         button.titleLabel?.font = font
