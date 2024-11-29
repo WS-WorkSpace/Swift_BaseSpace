@@ -52,6 +52,7 @@
 		C6B580902CF8A35400794CF1 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */; };
 		C6B580922CF8A36200794CF1 /* MoyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580912CF8A36200794CF1 /* MoyaViewController.swift */; };
 		C6B580942CF9618100794CF1 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580932CF9618100794CF1 /* UIButton+Extension.swift */; };
+		C6B580962CF9A20F00794CF1 /* RDBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580952CF9A20F00794CF1 /* RDBase.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -208,6 +209,7 @@
 		C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		C6B580912CF8A36200794CF1 /* MoyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaViewController.swift; sourceTree = "<group>"; };
 		C6B580932CF9618100794CF1 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		C6B580952CF9A20F00794CF1 /* RDBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBase.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 				C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
+				C6B580952CF9A20F00794CF1 /* RDBase.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
@@ -1231,6 +1234,7 @@
 				C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */,
 				C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */,
 				C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */,
+				C6B580962CF9A20F00794CF1 /* RDBase.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6EE3A612A85C86400A76C19 /* ChainProgrammingNetWorkKit.swift in Sources */,
