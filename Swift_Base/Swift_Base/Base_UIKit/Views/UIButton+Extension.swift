@@ -7,7 +7,7 @@
 //
 // import Foundation
 ////https://www.jianshu.com/p/c815c31eff71
-/// *
+///*
 // 目录：
 // 1、基本的扩展
 // 2、链式调用
@@ -40,7 +40,7 @@
 //
 //        switch type {
 //        case .red:
-//            normalColor = .hexStringColor(hexString: "#E54749")
+//            normalColor = .hexColor(hexString: "#E54749")
 //            disabledColor = .hexStringColor(hexString: "#CCCCCC")
 //            lineTypeNormal = .none
 //            lineTypeDisable = .none
@@ -147,22 +147,22 @@
 //
 // }
 //
-
-/*
- private lazy var mButton = UIButton().then {
-     let title = "UIButton"
-     let titleColor = UIColor.randomColor
-     $0.frame = .zero
-     $0.titleLabel?.font = RD_Font(16)
-     $0.setTitle(title, for: .normal)
-     $0.setTitleColor(titleColor, for: .normal)
-     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
-     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
-     $0.layer.cornerRadius = 5
-     $0.layer.borderWidth = 1
-     $0.layer.borderColor = UIColor.randomColor.cgColor
-     $0.backgroundColor = UIColor.randomColor
-     $0.addTarget(self, action: #selector(self.fpsClickButton(btn:)), for: .touchUpInside)
-     view.addSubview($0)
- }
- */
+//
+///*
+// private lazy var mButton = UIButton().then {
+//     let title = "UIButton"
+//     let titleColor = UIColor.randomColor
+//     $0.frame = .zero
+//     $0.titleLabel?.font = RD_Font(16)
+//     $0.setTitle(title, for: .normal)
+//     $0.setTitleColor(titleColor, for: .normal)
+//     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
+//     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
+//     $0.layer.cornerRadius = 5
+//     $0.layer.borderWidth = 1
+//     $0.layer.borderColor = UIColor.randomColor.cgColor
+//     $0.backgroundColor = UIColor.randomColor
+//     $0.addTarget(self, action: #selector(self.fpsClickButton(btn:)), for: .touchUpInside)
+//     view.addSubview($0)
+// }
+// */

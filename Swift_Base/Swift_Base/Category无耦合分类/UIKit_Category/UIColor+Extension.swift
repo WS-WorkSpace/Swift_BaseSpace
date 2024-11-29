@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 public extension UIColor {
     convenience init(_ hexValue: Int, alphaValue: Float) {
         self.init(red: CGFloat((hexValue & 0xFF0000) >> 16) / 255, green: CGFloat((hexValue & 0x00FF00) >> 8) / 255, blue: CGFloat(hexValue & 0x0000FF) / 255, alpha: CGFloat(alphaValue))
@@ -25,13 +24,14 @@ public extension UIColor {
         return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
     }
 
-    static func hexColor(_ hexValue: Int, alphaValue: Float) -> UIColor {
+    func hexColor(_ hexValue: Int, _ alphaValue: Int = 1) -> UIColor {
         return UIColor(red: CGFloat((hexValue & 0xFF0000) >> 16) / 255, green: CGFloat((hexValue & 0x00FF00) >> 8) / 255, blue: CGFloat(hexValue & 0x0000FF) / 255, alpha: CGFloat(alphaValue))
     }
 
-    static func hexColor(_ hexValue: Int) -> UIColor {
-        return hexColor(hexValue, alphaValue: 1)
+    static func hexColor(_ hexValue: Int, alphaValue: Float = 1) -> UIColor {
+        return UIColor(red: CGFloat((hexValue & 0xFF0000) >> 16) / 255, green: CGFloat((hexValue & 0x00FF00) >> 8) / 255, blue: CGFloat(hexValue & 0x0000FF) / 255, alpha: CGFloat(alphaValue))
     }
+
     static func grayColor(_ v: Int) -> UIColor {
         return UIColor.rgbColor(v, v, v)
     }
