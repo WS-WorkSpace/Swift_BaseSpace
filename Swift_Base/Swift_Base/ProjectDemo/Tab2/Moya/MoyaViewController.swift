@@ -30,7 +30,7 @@ class MoyaViewController: UIViewController {
     func getNetModel() {
         let url = GlobalConfig.BOOKLIST_URL
         let parameters = ["key": "value"]
-        mLog(API.getPageList(1))
+        mLog("aaaaa",API.getPageList(1))
         JhHttpTool.request(API.getPageList(1)) {[weak self] json in
 //            self?.mTextView.text = String(describing: JSON(json))
             mAllLog(JSON(json))

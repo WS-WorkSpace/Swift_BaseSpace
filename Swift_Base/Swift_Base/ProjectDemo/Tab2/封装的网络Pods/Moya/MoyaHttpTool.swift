@@ -5,8 +5,8 @@
 //  Created by 王爽 on 2023/8/13.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 import Moya
 import SwiftyJSON
 
@@ -18,13 +18,13 @@ public class JhHttpTool {
     ///   - success: 成功的回调
     ///   - error: 连接服务器成功但是数据获取失败
     ///   - failure: 连接服务器失败
-    public class func request<T: TargetType>(_ target: T, success: @escaping((Any) -> Void), failure: ((Int?, String) ->Void)?) {
+    public class func request<T: TargetType>(_ target: T, success: @escaping ((Any) -> Void), failure: ((Int?, String) -> Void)?) {
         let provider = MoyaProvider<T>(plugins: [
             RequestHandlingPlugin(),
             //            networkLoggerPlugin
         ])
         
-        if (!isNetwork()) {
+        if !isNetwork() {
             failureHandle(failure: failure, stateCode: -1009, message: "网络不可用")
             return
         }
@@ -41,13 +41,17 @@ public class JhHttpTool {
                     let responseObject = JSON(resObject ?? "")
                     let code = responseObject["code"].intValue
                     let msg = String(describing: responseObject["msg"])
-                    switch (code) {
-                    case 200 :
+                    switch code {
+                    //测试接口中没有返回code
+                    //这里直接让他返回成功数据
+                    case 0:
+                        success(responseObject)
+                    case 200:
                         // 数据返回正确
                         success(responseObject)
                     case 401:
                         // 请重新登录
-                        failure!(code,msg)
+                        failure!(code, msg)
                         alertLogin(msg)
                     default:
                         // 其他错误
@@ -63,9 +67,9 @@ public class JhHttpTool {
         }
         
         // 错误处理 - 弹出错误信息
-        func failureHandle(failure: ((Int?, String) ->Void)? , stateCode: Int?, message: String) {
+        func failureHandle(failure: ((Int?, String) -> Void)?, stateCode: Int?, message: String) {
             showLoading(message)
-            failure?(stateCode ,message)
+            failure?(stateCode, message)
         }
         
         // 登录弹窗 - 弹出是否需要登录的窗口
@@ -84,10 +88,10 @@ public class JhHttpTool {
             let networkManager = NetworkReachabilityManager()
             return networkManager?.isReachable ?? true // 无返回就默认网络已连接
         }
-        
     }
     
     // MARK: - 打印日志
+
     //    static let networkLoggerPlugin = NetworkLoggerPlugin(verbose: true, cURL: true, requestDataFormatter: { data -> String in
     //        return String(data: data, encoding: .utf8) ?? ""
     //    }) { data -> (Data) in
