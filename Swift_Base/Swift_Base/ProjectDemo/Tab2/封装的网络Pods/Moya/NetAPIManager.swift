@@ -9,22 +9,16 @@ import Foundation
 import Moya
 
 /// 基础域名
-let kBaseURL = "http://rap2api.taobao.org/"/// 完整域名
+let kBaseURL = "http://rap2api.taobao.org/"
 
-//let kBaseURL = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"/// 完整域名
-
-//let kBaseURL = "https://mock.apipost.cn/app/mock/project/b3489dad-68b9-11eb-a95d-1c34da7b354c/v1/api"
-
-
-enum  API {
-    
-    case login(params:Dictionary<String,Any>)
+enum API {
+    case login(params: [String: Any])
     // 获取分页数据
-    case getPageList(_ page:Int)
+    case getPageList(_ page: Int)
     // 获取分页数据 - post
-    case getPageListPost(_ page:Int)
+    case getPageListPost(_ page: Int)
     // 获取分组分页数据
-    case getGroupPageList(page:Int)
+    case getGroupPageList(page: Int)
     // 获取联系人数据
     case getWxContact
     // 获取微信运行排行榜
@@ -32,27 +26,25 @@ enum  API {
     // 获取固定数据
     case getSimpleDict
     case getSimpleArrDict
-    ///其他接口...
+    /// 其他接口...
     case other1(p1: String, p2: Int, p3: String, p4: String)
     case other2
-    
 }
 
 // MARK: - 补全【MoyaConfig 3：配置TargetType协议可以一次性处理的参数】中没有处理的参数
+
 extension API: TargetType {
-    
-    //0. 基础域名，整个项目只用一个，可以写在MoyaConfig中
+    // 0. 服务器地址,基础域名
     var baseURL: URL {
         switch self {
         case .login:
-            return URL(string:kBaseURL)!
+            return URL(string: kBaseURL)!
         default:
-            return URL(string:kBaseURL)!
+            return URL(string: kBaseURL)!
         }
     }
-    
-    //1. 每个接口的相对路径
-    //请求时的绝对路径是   baseURL + path
+
+    // 1. 每个接口的相对路径,请求时的绝对路径是   baseURL + path
     var path: String {
         switch self {
         case .login:
@@ -77,28 +69,28 @@ extension API: TargetType {
             return ""
         }
     }
-    
-    //2. 每个接口要使用的请求方式
+
+    // 2. 每个接口要使用的请求方式
     var method: Moya.Method {
         switch self {
         case
-                .getPageList,
-                .getGroupPageList,
-                .getWxContact,
-                .getWxMotionTops,
-                .getSimpleDict,
-                .getSimpleArrDict,
-                .other1,
-                .other2:
+            .getPageList,
+            .getGroupPageList,
+            .getWxContact,
+            .getWxMotionTops,
+            .getSimpleDict,
+            .getSimpleArrDict,
+            .other1,
+            .other2:
             return .get
         case
-                .getPageListPost,
-                .login:
+            .getPageListPost,
+            .login:
             return .post
         }
     }
-    
-    //3. Task是一个枚举值，根据后台需要的数据，选择不同的http task。
+
+    // 3.请求任务事件（这里附带上参数）. Task是一个枚举值，根据后台需要的数据，选择不同的http task。
     var task: Task {
         var params: [String: Any] = [:]
         switch self {
@@ -110,7 +102,7 @@ extension API: TargetType {
             params["maxCount"] = 100
         case
             //            let   .getPageList(page),
-            let   .getPageListPost(page):
+            let .getPageListPost(page):
             params["page"] = page
             params["limit"] = 15
             params["maxCount"] = 100
@@ -118,11 +110,14 @@ extension API: TargetType {
             params["p3"] = p3
             params["p4"] = p4
         default:
-            //不需要传参数的接口走这里
+            // 不需要传参数的接口走这里
             return .requestPlain
         }
         return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
-    
-}
 
+//    //是否执行Alamofire验证
+//    public var validate: Bool {
+//        return false
+//    }
+}

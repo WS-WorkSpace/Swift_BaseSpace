@@ -5,12 +5,11 @@
 //  Created by 王爽 on 2023/8/13.
 //
 
-import Alamofire
 import Foundation
 import Moya
 import SwiftyJSON
 
-public class JhHttpTool {
+public class MoyaHttpCenter {
     /// 使用Moya的请求封装
     ///
     /// - Parameters:
@@ -21,7 +20,6 @@ public class JhHttpTool {
     public class func request<T: TargetType>(_ target: T, success: @escaping ((Any) -> Void), failure: ((Int?, String) -> Void)?) {
         let provider = MoyaProvider<T>(plugins: [
             RequestHandlingPlugin(),LoggingPlugin()
-            //            networkLoggerPlugin
         ])
         
         if !isNetwork() {
@@ -32,9 +30,6 @@ public class JhHttpTool {
         provider.request(target) { result in
             switch result {
             case let .success(response):
-                //                let json = try? response.mapString()
-                //                let responseObject = try? response.mapJSON()
-                //                JhLog( responseObject ?? "" );
                 do {
                     // *********** 这里可以统一处理错误码，弹出提示信息 ***********
                     let resObject = try? response.mapJSON()
@@ -89,18 +84,4 @@ public class JhHttpTool {
             return networkManager?.isReachable ?? true // 无返回就默认网络已连接
         }
     }
-    
-    // MARK: - 打印日志
-
-    //    static let networkLoggerPlugin = NetworkLoggerPlugin(verbose: true, cURL: true, requestDataFormatter: { data -> String in
-    //        return String(data: data, encoding: .utf8) ?? ""
-    //    }) { data -> (Data) in
-    //        do {
-    //            let dataAsJSON = try JSONSerialization.jsonObject(with: data)
-    //            let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
-    //            return prettyData
-    //        } catch {
-    //            return data
-    //        }
-    //    }
 }

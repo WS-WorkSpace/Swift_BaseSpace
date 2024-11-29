@@ -12,20 +12,15 @@ import Moya
 
 /**
  1、配置TargetType协议可以一次性处理的参数
-
  - Todo: 根据自己的需要更改，不能统一处理的移除下面的代码，并在APIManager中实现
-
  **/
 public extension TargetType {
-//    // 放到APIManager中了
-//    var baseURL: URL {
-//        return URL(string: "http://xxxxx")!
-//    }
-
+    // 设置请求头
     var headers: [String: String]? {
         return nil
     }
 
+    // 这个就是做单元测试模拟的数据，只会在单元测试文件中有作用
     var sampleData: Data {
         return "{}".data(using: String.Encoding.utf8)!
     }
@@ -33,11 +28,8 @@ public extension TargetType {
 
 /**
  2、公共参数
-
  - Todo: 配置公共参数，例如所有接口都需要传token，version，time等，就可以在这里统一处理
-
  - Note: 接口传参时可以覆盖公共参数。下面的代码只需要更改 【private var commonParams: [String: Any]?】
-
  **/
 extension URLRequest {
     // TODO：处理公共参数
