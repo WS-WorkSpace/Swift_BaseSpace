@@ -645,9 +645,6 @@
 			children = (
 				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
 				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
-				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
-				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
-				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -767,6 +764,9 @@
 				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
+				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
+				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
+				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
