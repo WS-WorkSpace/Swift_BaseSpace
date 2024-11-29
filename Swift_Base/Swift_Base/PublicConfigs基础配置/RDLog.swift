@@ -21,7 +21,7 @@ public func mAllLog<T>(_ message: T, file: String = #file, funcName: String = #f
 {
     #if DEBUG
         let fileName = (file as NSString).lastPathComponent
-        print("\n********** AllLog-satrt ***********\n\n文件名称:\(fileName)\n方法名称:\(funcName)\n行数:\(lineNum)\n信息:\n\n\(message)\n\n********** AllLog-end ***********\n")
+        print("\n********** AllLog-start ***********\n\n文件名称:\(fileName)\n方法名称:\(funcName)\n行数:\(lineNum)\n信息:\n\n\(message)\n\n********** AllLog-end ***********\n")
     #endif
 }
 

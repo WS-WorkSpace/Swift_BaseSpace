@@ -6,6 +6,18 @@
 //
 
 import UIKit
+import Moya
+
+enum WeatherService {
+    case currentWeather(city: String)
+    
+    var urlPath: String {
+        switch self {
+        case .currentWeather(let city):
+            return "/weather?city=\(city)"
+        }
+    }
+}
 
 class MoyaViewController: UIViewController {
     fileprivate var bookArray = [BookDetail]()
@@ -43,6 +55,30 @@ class MoyaViewController: UIViewController {
     }()
     @objc func leftButton(){
         mLog("点击左侧按钮")
+//        let provider = MoyaProvider<T>(plugins: [
+//            RequestHandlingPlugin(),
+//            //            networkLoggerPlugin
+//        ])
+
+//        let provider = MoyaProvider<WeatherService>(endpointClosure: { target<WeatherService> -> Endpoint in
+//            let url = URL(string: "https://api.example.com/weather")!
+//            return Endpoint(url: url, method: HTTPMethod.get, parameters: target.parameters, encoding: JSONEncoding.default)
+//        })
+
+        
+//        let provider = MoyaProvider<WeatherService>(endpointClosure: { target -> Endpoint<WeatherService> in
+//            let url = URL(string: "https://api.example.com/weather")!
+//            return Endpoint(url: url, method: HTTPMethod.get, parameters: target.parameters, encoding: JSONEncoding.default)
+//        })
+//        provider.request(.currentWeather(city: "New York")) { result in
+//            switch result {
+//            case .success(let response):
+//                // 解析 response 并处理数据
+//                print(response.mapJSON())
+//            case .failure(let error):
+//                print("Request failed with error: \(error)")
+//            }
+//        }
     }
     @objc func rightButton(){
         mLog("点击右侧侧按钮")
@@ -63,7 +99,7 @@ class MoyaViewController: UIViewController {
         mLog("aaaaa",API.getPageList(1))
         JhHttpTool.request(API.getPageList(1)) {[weak self] json in
 //            self?.mTextView.text = String(describing: JSON(json))
-            mAllLog(JSON(json))
+//            mAllLog(JSON(json))
         } failure: {code, msg in
             mAllLog("code : \(code!)")
             mLog("message : \(msg)")

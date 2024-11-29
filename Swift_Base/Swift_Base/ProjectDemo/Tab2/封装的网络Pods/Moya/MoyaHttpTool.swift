@@ -20,7 +20,7 @@ public class JhHttpTool {
     ///   - failure: 连接服务器失败
     public class func request<T: TargetType>(_ target: T, success: @escaping ((Any) -> Void), failure: ((Int?, String) -> Void)?) {
         let provider = MoyaProvider<T>(plugins: [
-            RequestHandlingPlugin(),
+            RequestHandlingPlugin(),LoggingPlugin()
             //            networkLoggerPlugin
         ])
         

@@ -8,7 +8,6 @@
 import Foundation
 import Moya
 
-
 // MARK: - 1、2需要根据项目进行更改
 
 /**
@@ -23,7 +22,7 @@ public extension TargetType {
 //        return URL(string: "http://xxxxx")!
 //    }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 
@@ -41,9 +40,9 @@ public extension TargetType {
 
  **/
 extension URLRequest {
-    //TODO：处理公共参数
+    // TODO：处理公共参数
     private var commonParams: [String: Any]? {
-        //所有接口的公共参数添加在这里：
+        // 所有接口的公共参数添加在这里：
         let header = [
             "Content-Type": "application/x-www-form-urlencoded",
             "systemType": "iOS",
@@ -54,22 +53,31 @@ extension URLRequest {
         // 如果不需要传空
         //        return nil
     }
-    
+
     private func getToken() -> String {
         return "1"
     }
 }
 
-
-//下面的代码不更改
-class RequestHandlingPlugin: PluginType {
-    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-        var mutateableRequest = request
-        return mutateableRequest.appendCommonParams();
+// 创建一个打印插件
+class LoggingPlugin: PluginType {
+    func willSend(_ request: RequestType, target: TargetType) {
+        guard let requstTemp = request.request else { return }
+        #if DEBUG
+            print("\n********** MoyaRequest-start ***********\n\n完整路径:\(requstTemp.description)\n方法:\(requstTemp.httpMethod ?? "")\n参数:\(target.task)\nbaseURL:\n\n\(target.baseURL)\n\n********** MoyaRequest-end ***********\n")
+        #endif
     }
 }
 
-//下面的代码不更改
+// 下面的代码不更改
+class RequestHandlingPlugin: PluginType {
+    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+        var mutateableRequest = request
+        return mutateableRequest.appendCommonParams()
+    }
+}
+
+// 下面的代码不更改
 extension URLRequest {
     mutating func appendCommonParams() -> URLRequest {
         let request = try? encoded(parameters: commonParams, parameterEncoding: URLEncoding(destination: .queryString))
