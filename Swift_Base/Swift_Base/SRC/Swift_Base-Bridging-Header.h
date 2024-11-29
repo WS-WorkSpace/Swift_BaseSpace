@@ -10,6 +10,7 @@
 #import "SELFAutoStateFooter.h"
 #import "SelfRefreshBackGifFooter.h"
 #import <CommonCrypto/CommonDigest.h> //StringTool 获取MD5需要
+#import "SVProgressHUD.h"
 
 //#import "AFHTTPSessionManager.h"
 // MARK: - 系统库
@@ -17,6 +18,7 @@
 //#import <UIKit/UIKit.h>
 // MARK: - OC暴漏给Swift的文件
 #import <Alamofire/Alamofire-Swift.h>
+#import <Moya/Moya-Swift.h>
 #import <Kingfisher/Kingfisher-Swift.h>         //默认不支持WebP格式的图片,需要额外安装KingfisherWebP
 #import <SnapKit/SnapKit-Swift.h>
 #import <SwiftyJSON/SwiftyJSON-Swift.h>

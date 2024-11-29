@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Moya
 
 // MARK: - 1、2需要根据项目进行更改
 
@@ -51,7 +50,27 @@ extension URLRequest {
     }
 }
 
-// 创建一个打印插件
+/// 设置加载loading 使用 NetworkActivityPlugin 插件
+/// NetworkActivityPlugin插件用来监听网络请求，界面上做相应的展示
+let activityPlugin = NetworkActivityPlugin.init { changeType, _ in
+    print("networkPlugin \(changeType)")
+    switch changeType {
+    case .began:
+        mLog("开始请求网络")
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
+        SVProgressHUD.setBackgroundLayerColor(UIColor.blue)
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.light)
+        SVProgressHUD.setForegroundColor(.green)
+        SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.flat)
+        SVProgressHUD.show(withStatus: "加载中")
+        SVProgressHUD.setMinimumDismissTimeInterval(20.0)
+    case .ended:
+        mLog("结束")
+        SVProgressHUD.dismiss()
+    }
+}
+
+/// 创建一个打印插件
 class LoggingPlugin: PluginType {
     func willSend(_ request: RequestType, target: TargetType) {
         guard let requstTemp = request.request else { return }

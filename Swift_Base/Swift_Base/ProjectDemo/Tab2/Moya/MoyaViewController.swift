@@ -94,14 +94,29 @@ class MoyaViewController: UIViewController {
     }
 
     func getNetModel() {
-        MoyaHttpCenter.request(API.getPageList(1)) {[weak self] json in
+        MoyaHttpCenter.request(API_W.getPageList(1)) {[weak self] json in
 //            self?.mTextView.text = String(describing: JSON(json))
             mAllLog(JSON(json))
         } failure: {code, msg in
             mAllLog("code : \(code!)")
             mLog("message : \(msg)")
         }
-
+        /**
+         DouBanProvider.request(.playlist(channelId)) { result in
+             if case let .success(response) = result {
+                 //解析数据，获取歌曲信息
+                 let data = try? response.mapJSON()
+                 let json = JSON(data!)
+                 let music = json["song"].arrayValue[0]
+                 let artist = music["artist"].stringValue
+                 let title = music["title"].stringValue
+                 let message = "歌手：\(artist)\n歌曲：\(title)"
+                  
+                 //将歌曲信息弹出显示
+                 self.showAlert(title: channelName, message: message)
+             }
+         }
+         **/
 
     }
 

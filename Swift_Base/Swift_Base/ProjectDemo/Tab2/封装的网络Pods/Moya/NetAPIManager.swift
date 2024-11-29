@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import Moya
 
 /// 基础域名
 let kBaseURL = "http://rap2api.taobao.org/"
 
-enum API {
+enum API_W {
     case login(params: [String: Any])
     // 获取分页数据
     case getPageList(_ page: Int)
@@ -33,7 +32,7 @@ enum API {
 
 // MARK: - 补全【MoyaConfig 3：配置TargetType协议可以一次性处理的参数】中没有处理的参数
 
-extension API: TargetType {
+extension API_W: TargetType {
     // 0. 服务器地址,基础域名
     var baseURL: URL {
         switch self {

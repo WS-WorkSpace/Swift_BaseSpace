@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Moya
-import SwiftyJSON
 
 public class MoyaHttpCenter {
     /// 使用Moya的请求封装
@@ -19,7 +17,7 @@ public class MoyaHttpCenter {
     ///   - failure: 连接服务器失败
     public class func request<T: TargetType>(_ target: T, success: @escaping ((Any) -> Void), failure: ((Int?, String) -> Void)?) {
         let provider = MoyaProvider<T>(plugins: [
-            RequestHandlingPlugin(),LoggingPlugin()
+            RequestHandlingPlugin(), activityPlugin, LoggingPlugin()
         ])
         
         if !isNetwork() {
@@ -37,8 +35,8 @@ public class MoyaHttpCenter {
                     let code = responseObject["code"].intValue
                     let msg = String(describing: responseObject["msg"])
                     switch code {
-                    //测试接口中没有返回code
-                    //这里直接让他返回成功数据
+                    // 测试接口中没有返回code
+                    // 这里直接让他返回成功数据
                     case 0:
                         success(responseObject)
                     case 200:
