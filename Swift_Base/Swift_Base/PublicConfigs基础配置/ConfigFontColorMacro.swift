@@ -7,33 +7,6 @@
 
 import UIKit
 
-// MARK: - 颜色设置
-
-/// RGB颜色设置：支持(255, 255, 255)
-func RD_Color(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor {
-    return UIColor(red: CGFloat(r) / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
-}
-
-func RD_ColorA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor {
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
-}
-
-func RD_RandomColor() -> UIColor {
-    return RD_Color(CGFloat(arc4random_uniform(255)), CGFloat(arc4random_uniform(255)), CGFloat(arc4random_uniform(255)))
-}
-
-func RD_GrayColor(_ v: CGFloat) -> UIColor {
-    return RD_Color(v, v, v)
-}
-
-///// 十六进制颜色设置：支持#FF0000
-// func RD_HexColor(_ rgbValue: String) -> UIColor? {
-//    return UIColor.RD_hexColor(rgbValue, alpha: 1.0)
-// }
-//
-// func RD_HexColorA(_ rgbValue: String, _ a: CGFloat) -> UIColor? {
-//    return UIColor.RD_hexColor(rgbValue, alpha: a)
-// }
 
 // MARK: - dark mode 配置
 
@@ -58,29 +31,29 @@ func DynamicImage(_ lightImage: String, _ darkImage: String) -> UIImage {
 // MARK: - 项目颜色
 
 /// 主题色
-let BaseThemeColor = RD_Color(65, 191, 49)
-let BaseThemeGreenColor = RD_Color(0, 190, 102)
+let BaseThemeColor = UIColor.rgbColor(65, 191, 49)
+let BaseThemeGreenColor = UIColor.rgbColor(0, 190, 102)
 /// 背景色
 let BaseBgColor = DynamicColor(BaseBgColor_Light, BaseBgColor_Dark)
-let BaseBgColor_Light = RD_Color(248, 248, 248)
-let BaseBgColor_Dark = RD_GrayColor(17)
+let BaseBgColor_Light = UIColor.rgbColor(248, 248, 248)
+let BaseBgColor_Dark = UIColor.grayColor(17)
 /// 基础黑
-let BaseBlackTextColor = RD_Color(51, 51, 51)
-let BaseBlackTextColor_Dark = RD_GrayColor(198)
+let BaseBlackTextColor = UIColor.rgbColor(51, 51, 51)
+let BaseBlackTextColor_Dark = UIColor.grayColor(198)
 /// 浅灰色
-let BaseLightGreyTextColor = RD_Color(119, 119, 119)
-let BaseLightGreyTextColor_Dark = RD_GrayColor(120)
+let BaseLightGreyTextColor = UIColor.rgbColor(119, 119, 119)
+let BaseLightGreyTextColor_Dark = UIColor.grayColor(120)
 
 /// Label颜色
 let BaseLabelColor = DynamicColor(BaseBlackTextColor, BaseBlackTextColor_Dark)
 /// title Label颜色
 let BaseTitleLabelColor = DynamicColor(BaseBlackTextColor, BaseBlackTextColor_Dark)
 /// info Label颜色
-let BaseInfoLabelColor = DynamicColor(RD_GrayColor(150), RD_GrayColor(150))
+let BaseInfoLabelColor = DynamicColor(UIColor.grayColor(150), UIColor.grayColor(150))
 /// Placeholder颜色
-let BasePlaceholderColor = DynamicColor(RD_GrayColor(187), RD_GrayColor(87))
+let BasePlaceholderColor = DynamicColor(UIColor.grayColor(187), UIColor.grayColor(87))
 /// 分割线颜色
-let BaselineColor = DynamicColor(RD_Color(230, 230, 230), RD_GrayColor(35))
+let BaselineColor = DynamicColor(UIColor.rgbColor(230, 230, 230), UIColor.grayColor(35))
 /// 空数据文字颜色
 let BaseEmptyDataTextColor = DynamicColor(BaseLightGreyTextColor, BaseLightGreyTextColor_Dark)
 /// 导航条背景色，白底黑字
@@ -94,25 +67,25 @@ let BaseNavBgColor2 = DynamicColor(BaseThemeColor, BaseBgColor)
 /// 导航条标题颜色
 let BaseNavTitleColor2 = DynamicColor(UIColor.white, UIColor.white)
 /// TabBar背景色
-let BaseTabBarBgColor = DynamicColor(UIColor.white, RD_GrayColor(29))
+let BaseTabBarBgColor = DynamicColor(UIColor.white, UIColor.grayColor(29))
 /// TabBar默认文字颜色
 let BaseTabBarNormalTextColor = DynamicColor(BaseBlackTextColor, BaseBlackTextColor_Dark)
 /// TabBar选中文字颜色
 let BaseTabBarSelectTextColor = DynamicColor(BaseThemeColor, BaseThemeColor)
 /// Cell背景颜色
-let BaseCellBgColor = DynamicColor(UIColor.white, RD_GrayColor(25))
+let BaseCellBgColor = DynamicColor(UIColor.white, UIColor.grayColor(25))
 /// TextView背景颜色
-let BaseTextViewBgColor = DynamicColor(RD_GrayColor(250), RD_GrayColor(50))
+let BaseTextViewBgColor = DynamicColor(UIColor.grayColor(250), UIColor.grayColor(50))
 /// Btn、segment等UI组件背景颜色
-let BaseBtnBgColor = DynamicColor(BaseThemeColor, RD_GrayColor(43))
+let BaseBtnBgColor = DynamicColor(BaseThemeColor, UIColor.grayColor(43))
 /// Toast 背景颜色
-let BaseToastBgColor = DynamicColor(UIColor.white, RD_GrayColor(47))
+let BaseToastBgColor = DynamicColor(UIColor.white, UIColor.grayColor(47))
 /// Alert 背景颜色
-let BaseAlertBgColor = DynamicColor(UIColor.white, RD_GrayColor(44))
+let BaseAlertBgColor = DynamicColor(UIColor.white, UIColor.grayColor(44))
 /// Picker 背景颜色
-let BasePickerBgColor = DynamicColor(UIColor.white, RD_GrayColor(30))
+let BasePickerBgColor = DynamicColor(UIColor.white, UIColor.grayColor(30))
 /// Pop 背景颜色
-let BasePopBgColor = DynamicColor(UIColor.white, RD_GrayColor(64))
+let BasePopBgColor = DynamicColor(UIColor.white, UIColor.grayColor(64))
 
 // MARK: - 字体设置
 

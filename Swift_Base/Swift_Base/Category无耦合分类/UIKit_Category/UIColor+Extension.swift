@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 public extension UIColor {
     convenience init(_ hexValue: Int, alphaValue: Float) {
         self.init(red: CGFloat((hexValue & 0xFF0000) >> 16) / 255, green: CGFloat((hexValue & 0x00FF00) >> 8) / 255, blue: CGFloat(hexValue & 0x0000FF) / 255, alpha: CGFloat(alphaValue))
@@ -16,11 +17,11 @@ public extension UIColor {
         self.init(hexValue, alphaValue: 1)
     }
 
-    func rgbColor(_ red: Int, _ green: Int, _ blue: Int) -> UIColor {
+    static func rgbColor(_ red: Int, _ green: Int, _ blue: Int) -> UIColor {
         return rgbColor(red, green, blue, 1)
     }
 
-    func rgbColor(_ red: Int, _ green: Int, _ blue: Int, _ alpha: CGFloat) -> UIColor {
+    static func rgbColor(_ red: Int, _ green: Int, _ blue: Int, _ alpha: CGFloat) -> UIColor {
         return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
     }
 
@@ -31,6 +32,9 @@ public extension UIColor {
     static func hexColor(_ hexValue: Int) -> UIColor {
         return hexColor(hexValue, alphaValue: 1)
     }
+    static func grayColor(_ v: Int) -> UIColor {
+        return UIColor.rgbColor(v, v, v)
+    }
 
     /// 随机色
     static var randomColor: UIColor {
@@ -39,11 +43,11 @@ public extension UIColor {
 
     /// color：支持“#123456”
     class func hexColor(_ hexStr: String) -> UIColor {
-        return UIColor.RD_hexColor(hexStr, 1.0)
+        return UIColor.hexColor(hexStr, 1.0)
     }
 
     /// color：支持“#123456”
-    class func RD_hexColor(_ hexStr: String, _ alpha: CGFloat) -> UIColor {
+    class func hexColor(_ hexStr: String, _ alpha: CGFloat) -> UIColor {
         let hexString = hexStr.trimmingCharacters(in: .whitespacesAndNewlines)
         let scanner = Scanner(string: hexString)
         if hexString.hasPrefix("#") {
@@ -72,3 +76,34 @@ public extension UIColor {
         return image!
     }
 }
+
+/*
+ // MARK: - 颜色设置,全局变量
+
+ /// RGB颜色设置：支持(255, 255, 255)
+ func RD_Color(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor {
+     return UIColor(red: CGFloat(r) / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
+ }
+
+ func RD_ColorA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor {
+     return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
+ }
+
+ func RD_RandomColor() -> UIColor {
+     return RD_Color(CGFloat(arc4random_uniform(255)), CGFloat(arc4random_uniform(255)), CGFloat(arc4random_uniform(255)))
+ }
+
+ func RD_GrayColor(_ v: CGFloat) -> UIColor {
+     return RD_Color(v, v, v)
+ }
+
+ /// 十六进制颜色设置：支持#FF0000
+  func RD_HexColor(_ rgbValue: String) -> UIColor? {
+     return UIColor.RD_hexColor(rgbValue, alpha: 1.0)
+  }
+
+  func RD_HexColorA(_ rgbValue: String, _ a: CGFloat) -> UIColor? {
+     return UIColor.RD_hexColor(rgbValue, alpha: a)
+  }
+
+ */

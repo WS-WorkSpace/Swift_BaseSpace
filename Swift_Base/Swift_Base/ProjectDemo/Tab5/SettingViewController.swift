@@ -38,7 +38,7 @@ class SettingViewController: UIViewController {
     // 实现居于当前视图的中心的视图布局，宽高为100，
     private func configSnapKit1() {
         self.view.addSubview(centerView)
-        centerView.backgroundColor = RD_RandomColor()
+        centerView.backgroundColor = UIColor.randomColor
         // makeConstraints 添加某个约束
         // updateConstraints 更新某个约束
         // removeConstraints 重置全部约束
@@ -56,7 +56,7 @@ class SettingViewController: UIViewController {
         }
         
         self.view.addSubview(centerXView)
-        centerXView.backgroundColor = RD_RandomColor()
+        centerXView.backgroundColor = UIColor.randomColor
         centerXView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(15+distanceTop)
@@ -69,7 +69,7 @@ class SettingViewController: UIViewController {
     // 实现上下左右4个角添加4个视图，宽100，高50，间距15
     private func configSnapKit2() {
         self.view.addSubview(topLeftView)
-        topLeftView.backgroundColor = RD_RandomColor()
+        topLeftView.backgroundColor = UIColor.randomColor
         topLeftView.snp.makeConstraints { (make) in
             make.top.equalTo(15+distanceTop)
             make.left.equalTo(15)
@@ -77,7 +77,7 @@ class SettingViewController: UIViewController {
         }
         
         self.view.addSubview(topRightView)
-        topRightView.backgroundColor = RD_RandomColor()
+        topRightView.backgroundColor = UIColor.randomColor
         topRightView.snp.makeConstraints { (make) in
             make.top.equalTo(15+distanceTop)
             make.right.equalTo(-15)
@@ -85,7 +85,7 @@ class SettingViewController: UIViewController {
         }
         
         self.view.addSubview(bottomLeftView)
-        bottomLeftView.backgroundColor = RD_RandomColor()
+        bottomLeftView.backgroundColor = UIColor.randomColor
         bottomLeftView.snp.makeConstraints { (make) in
             make.bottom.equalTo(-15-kBottomSafeHeight)
             make.left.equalTo(15)
@@ -93,7 +93,7 @@ class SettingViewController: UIViewController {
         }
         
         self.view.addSubview(bottomRightView)
-        bottomRightView.backgroundColor = RD_RandomColor()
+        bottomRightView.backgroundColor = UIColor.randomColor
         bottomRightView.snp.makeConstraints { (make) in
             make.bottom.equalTo(-15-kBottomSafeHeight)
             make.right.equalTo(-15)
@@ -104,7 +104,7 @@ class SettingViewController: UIViewController {
     private func configSnapKit3() {
         // 中心view 内部添加子view
         centerView.addSubview(view1)
-        view1.backgroundColor = RD_RandomColor()
+        view1.backgroundColor = UIColor.randomColor
         view1.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(20)      // 当前视图的顶部距离父视图的顶部：20（父视图顶部+20）
             make.left.equalToSuperview().offset(20)     // 当前视图的左边距离父视图的左边：20（父视图左边+20）
@@ -114,7 +114,7 @@ class SettingViewController: UIViewController {
         
         // view2距离centerView底部20，左侧对齐，宽度为一半，高度为一半
         self.view.addSubview(view2)
-        view2.backgroundColor = RD_RandomColor()
+        view2.backgroundColor = UIColor.randomColor
         view2.snp.makeConstraints { (make) in
             make.left.equalTo(centerView.snp.left) // 左对齐
             make.top.equalTo(centerView.snp.bottom).offset(20) // 当前控件距离某控件的某位置距离

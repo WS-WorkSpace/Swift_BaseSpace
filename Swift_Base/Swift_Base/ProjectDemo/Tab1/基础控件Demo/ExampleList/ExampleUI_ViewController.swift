@@ -22,7 +22,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         /// 视图 使用代码创建，frame 布局 ，不用去管 translatesAutoresizingMaskIntoConstraints
         /// 视图 使用代码创建，autolayout 布局，translatesAutoresizingMaskIntoConstraints 设置为 NO
         self.customLabel.text = "snp: label"
-        self.customLabel.backgroundColor = RD_RandomColor()
+        self.customLabel.backgroundColor = UIColor.randomColor
         self.customLabel.textAlignment = NSTextAlignment.center
         self.view.addSubview(self.customLabel)
         self.customLabel.snp.makeConstraints { make in
@@ -49,13 +49,13 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         label.frame = CGRect(x: 10, y: distanceTop+30+10, width: self.subViewsWidth, height: 30)
         label.text = "normal: label"
         label.textColor = .black
-        label.backgroundColor = RD_RandomColor()
+        label.backgroundColor = UIColor.randomColor
         return label
     }()
     
     lazy var mView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = RD_RandomColor()
+        view.backgroundColor = UIColor.randomColor
         view.frame = CGRect(x: 10, y: self.mLabel.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30 * 3)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapClick(tap:)))
         view.addGestureRecognizer(tapGesture)
@@ -69,7 +69,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         
     lazy var mButton: UIButton = {
         let title = "这是UIButton"
-        let titleColor = RD_RandomColor()
+        let titleColor = UIColor.randomColor
         
         let button = UIButton(frame: .zero)
         button.frame = CGRect(x: 10, y: self.mView.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30)
@@ -80,8 +80,8 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
-        button.backgroundColor = RD_RandomColor()
+        button.layer.borderColor = UIColor.randomColor.cgColor
+        button.backgroundColor = UIColor.randomColor
         button.addTarget(self, action: #selector(self.ClickButton), for: .touchUpInside)
         return button
     }()
@@ -96,7 +96,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         textField.text = ""
         textField.placeholder = "这是UITextField"
         textField.font = RD_Font(15)
-        textField.textColor = RD_RandomColor()
+        textField.textColor = UIColor.randomColor
         textField.backgroundColor = BaseBgColor
         textField.textAlignment = .center
         textField.isEnabled = true
@@ -126,7 +126,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         textField.frame = CGRect(x: 10, y: self.mTextField.frame.maxY+10, width: self.mLabel.frame.size.width, height: 30)
         textField.text = ""
         textField.font = RD_Font(15)
-        textField.textColor = RD_RandomColor()
+        textField.textColor = UIColor.randomColor
         textField.backgroundColor = BaseBgColor
         textField.textAlignment = .left
         textField.placeholder = "请输入6-16位字母、数字"
@@ -169,8 +169,8 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         textView.frame = CGRect(x: 10, y: self.mImageView.frame.maxY+10, width: self.mLabel.frame.size.width, height: 100)
         textView.text = "UITextView"
         textView.font = RD_Font(15)
-        textView.textColor = RD_RandomColor()
-        textView.backgroundColor = RD_RandomColor()
+        textView.textColor = UIColor.randomColor
+        textView.backgroundColor = UIColor.randomColor
         textView.textAlignment = .left
         textView.isEditable = true
         textView.delegate = self
@@ -198,7 +198,7 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         let switchBtn = UISwitch(frame: .zero)
         switchBtn.frame = CGRect(x: (kScreenWidth - 30)/2, y: self.mTextView.frame.maxY+10, width: kScreenWidth, height: 30)
         switchBtn.isOn = true
-        switchBtn.onTintColor = RD_RandomColor()
+        switchBtn.onTintColor = UIColor.randomColor
         return switchBtn
     }()
     
@@ -209,15 +209,15 @@ class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextV
         segment.isMomentary = false
         segment.layer.cornerRadius = 5
         segment.clipsToBounds = true
-        segment.tintColor = RD_Color(237, 148, 45) // 选中颜色
-        segment.backgroundColor = RD_GrayColor(254)
+        segment.tintColor = UIColor.rgbColor(237, 148, 45) // 选中颜色
+        segment.backgroundColor = UIColor.grayColor(254)
         if #available(iOS 13.0, *) {
             // 文字默认颜色
             segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
             // 文字选中颜色
             segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.yellow], for: .selected)
             // 选中item背景颜色
-            segment.selectedSegmentTintColor = RD_Color(237, 148, 45)
+            segment.selectedSegmentTintColor = UIColor.rgbColor(237, 148, 45)
         }
         segment.selectedSegmentIndex = 0 // 选中第几个segment 一般用于初始化时选中
         segment.RD_centerX = self.view.RD_centerX

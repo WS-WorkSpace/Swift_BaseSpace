@@ -5,9 +5,9 @@
 ////  Created by 王爽 on 2024/11/29.
 ////
 //
-//import Foundation
+// import Foundation
 ////https://www.jianshu.com/p/c815c31eff71
-///*
+/// *
 // 目录：
 // 1、基本的扩展
 // 2、链式调用
@@ -17,12 +17,12 @@
 //
 //
 //// MARK:- 一、基本的扩展
-//public extension UIButton {
+// public extension UIButton {
 //    enum SmallButtonType {
 //        case red
 //        case pink
 //    }
-//    
+//
 //    // MARK: 1.1、创建一个带颜色的 Button
 //    /// 创建一个带颜色的 Button
 //    /// - Parameters:
@@ -37,7 +37,7 @@
 //        let lineTypeDisable: LineType
 //        let titleColorNormal: UIColor
 //        let titleColorDisable: UIColor
-//    
+//
 //        switch type {
 //        case .red:
 //            normalColor = .hexStringColor(hexString: "#E54749")
@@ -54,7 +54,7 @@
 //            titleColorNormal = .hexStringColor(hexString: "#E54749")
 //            titleColorDisable = .white
 //        }
-//    
+//
 //        let btn = UIButton(type: .custom).font(.systemFont(ofSize: 16))
 //        btn.setTitleColor(titleColorNormal, for: .normal)
 //        btn.setTitleColor(titleColorDisable, for: .disabled)
@@ -112,7 +112,7 @@
 //        UIGraphicsEndImageContext()
 //        return img
 //    }
-//}
+// }
 // extension UIButton {
 //
 //     func addAction(for controlEvents: UIControlEvents,action:@escaping (UIButton)->()) {
@@ -123,7 +123,7 @@
 //
 //     }
 //
-//     
+//
 //
 //     func addAction(_ action:@escaping (UIButton)->()) {
 //
@@ -133,7 +133,7 @@
 //
 //     }
 //
-//     
+//
 //
 //     func cmButtonClick() {
 //
@@ -147,4 +147,22 @@
 //
 // }
 //
-//
+
+/*
+ private lazy var mButton = UIButton().then {
+     let title = "UIButton"
+     let titleColor = UIColor.randomColor
+     $0.frame = .zero
+     $0.titleLabel?.font = RD_Font(16)
+     $0.setTitle(title, for: .normal)
+     $0.setTitleColor(titleColor, for: .normal)
+     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .highlighted)
+     $0.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
+     $0.layer.cornerRadius = 5
+     $0.layer.borderWidth = 1
+     $0.layer.borderColor = UIColor.randomColor.cgColor
+     $0.backgroundColor = UIColor.randomColor
+     $0.addTarget(self, action: #selector(self.fpsClickButton(btn:)), for: .touchUpInside)
+     view.addSubview($0)
+ }
+ */

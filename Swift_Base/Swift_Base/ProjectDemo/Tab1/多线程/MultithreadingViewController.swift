@@ -43,7 +43,7 @@ class MultithreadingViewController: UIViewController {
     }
 
     lazy var mButton: UIButton = {
-        let titleColor = RD_RandomColor()
+        let titleColor = UIColor.randomColor
         let button = UIButton(frame: .zero)
         button.frame = CGRect(x: 10, y: distanceTop + 50, width: kScreenWidth - 20, height: 60)
         button.titleLabel?.font = RD_Font(16)
@@ -53,7 +53,7 @@ class MultithreadingViewController: UIViewController {
         button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
+        button.layer.borderColor = UIColor.randomColor.cgColor
         button.backgroundColor = .lightGray
         button.addTarget(self, action: #selector(clicklazyButton), for: .touchUpInside)
         return button
@@ -70,15 +70,15 @@ class MultithreadingViewController: UIViewController {
         segment.isMomentary = false
         segment.layer.cornerRadius = 5
         segment.clipsToBounds = true
-        segment.tintColor = RD_Color(237, 148, 45) // 选中颜色
-        segment.backgroundColor = RD_GrayColor(254)
+        segment.tintColor = UIColor.rgbColor(237, 148, 45) // 选中颜色
+        segment.backgroundColor = UIColor.rgbColor(254, 254, 254)
         if #available(iOS 13.0, *) {
             // 文字默认颜色
             segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
             // 文字选中颜色
             segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.yellow], for: .selected)
             // 选中item背景颜色
-            segment.selectedSegmentTintColor = RD_Color(237, 148, 45)
+            segment.selectedSegmentTintColor = UIColor.rgbColor(237, 148, 45)
         }
         segment.selectedSegmentIndex = 1 // 选中第几个segment 一般用于初始化时选中
         segment.RD_centerX = self.view.RD_centerX
@@ -97,7 +97,7 @@ class MultithreadingViewController: UIViewController {
     }
 
     lazy var onceButton: UIButton = {
-        let titleColor = RD_RandomColor()
+        let titleColor = UIColor.randomColor
         let button = UIButton(frame: .zero)
         button.frame = CGRect(x: 10, y: distanceTop + 250, width: kScreenWidth - 20, height: 60)
         button.titleLabel?.font = RD_Font(16)
@@ -107,7 +107,7 @@ class MultithreadingViewController: UIViewController {
         button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
+        button.layer.borderColor = UIColor.randomColor.cgColor
         button.backgroundColor = .lightGray
         button.addTarget(self, action: #selector(clickOnceButton(btn:)), for: .touchUpInside)
         return button
@@ -118,7 +118,7 @@ class MultithreadingViewController: UIViewController {
     }
 
     lazy var lockButton: UIButton = {
-        let titleColor = RD_RandomColor()
+        let titleColor = UIColor.randomColor
         let button = UIButton(frame: .zero)
         button.frame = CGRect(x: 10, y: distanceTop + 350, width: kScreenWidth - 20, height: 60)
         button.titleLabel?.font = RD_Font(16)
@@ -128,7 +128,7 @@ class MultithreadingViewController: UIViewController {
         button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
+        button.layer.borderColor = UIColor.randomColor.cgColor
         button.backgroundColor = .lightGray
         button.addTarget(self, action: #selector(clickLockButton(btn:)), for: .touchUpInside)
         return button

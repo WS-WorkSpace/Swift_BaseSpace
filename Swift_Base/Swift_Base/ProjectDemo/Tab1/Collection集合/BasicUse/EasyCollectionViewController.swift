@@ -64,7 +64,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         // 添加头部
         let headerHeight = 50.0
         let headerView = UIView(frame: .zero)
-        headerView.backgroundColor = RD_RandomColor()
+        headerView.backgroundColor = UIColor.randomColor
         headerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: headerHeight)
         collectionFlowLayout?.headerReferenceSize = CGSize(width: kScreenWidth, height: headerHeight)
         collectionFlowLayout?.sectionHeadersPinToVisibleBounds = true // 悬停
@@ -76,7 +76,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         // 添加尾部
         let footerHeight = 50.0
         let footerView = UIView(frame: .zero)
-        footerView.backgroundColor = RD_RandomColor()
+        footerView.backgroundColor = UIColor.randomColor
         footerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: footerHeight)
         collectionFlowLayout?.footerReferenceSize = CGSize(width: kScreenWidth, height: footerHeight)
         //        Jh_collectionFlowLayout?.sectionFootersPinToVisibleBounds = true // 悬停

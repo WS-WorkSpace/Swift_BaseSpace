@@ -27,8 +27,8 @@ class ThreeTabViewController: UIViewController {
         view.addSubview(button)
         button.setTitle("测试", for: .normal)
         button.layer.borderWidth = 1
-        button.layer.borderColor = RD_RandomColor().cgColor
-        button.backgroundColor = RD_RandomColor()
+        button.layer.borderColor = UIColor.randomColor.cgColor
+        button.backgroundColor = UIColor.randomColor
         button.addTarget(self, action: #selector(btnMethod), for: UIControl.Event.touchUpInside)
         button.snp.makeConstraints { make in
             make.center.equalToSuperview()

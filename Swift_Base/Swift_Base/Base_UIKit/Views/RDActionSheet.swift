@@ -16,11 +16,11 @@ class RDActionSheet: UIView {
     let kButtonTitleFontSize = 18.0
     let kAnimateDuration = 0.3
     
-    let kBgColor = DynamicColor(UIColor.white, RD_GrayColor(44))
-    let kTitleColor = DynamicColor(RD_GrayColor(135), BaseLabelColor)
-    let kLargeTitleColor = DynamicColor(RD_GrayColor(64), UIColor.white)
-    let kBtnTitleColor = DynamicColor(RD_GrayColor(64), BaseLabelColor)
-    let kSeparatorColor = DynamicColor(RD_GrayColor(238), RD_GrayColor(35))
+    let kBgColor = DynamicColor(UIColor.white, UIColor.grayColor(44))
+    let kTitleColor = DynamicColor(UIColor.grayColor(135), BaseLabelColor)
+    let kLargeTitleColor = DynamicColor(UIColor.grayColor(64), UIColor.white)
+    let kBtnTitleColor = DynamicColor(UIColor.grayColor(64), BaseLabelColor)
+    let kSeparatorColor = DynamicColor(UIColor.grayColor(238), UIColor.grayColor(35))
     
     var backgroundView = UIView()
     var actionSheetView = UIView()
@@ -54,7 +54,7 @@ extension RDActionSheet {
         
         backgroundView = UIView(frame: frame)
         backgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        backgroundView.backgroundColor = RD_ColorA(0, 0, 0, 0.4)
+        backgroundView.backgroundColor = UIColor.rgbColor(0, 0, 0, 0.4)
         backgroundView.alpha = 0
         addSubview(backgroundView)
         
@@ -63,8 +63,8 @@ extension RDActionSheet {
         actionSheetView.backgroundColor = kSeparatorColor
         addSubview(actionSheetView)
         
-        let normalImage = UIImage.dynamicImage(UIImage.RD_imageWithColor(UIColor.white), UIImage.RD_imageWithColor(RD_GrayColor(44)))
-        let highlightedImage = UIImage.dynamicImage(UIImage.RD_imageWithColor(RD_GrayColor(242)), UIImage.RD_imageWithColor(RD_GrayColor(64)))
+        let normalImage = UIImage.dynamicImage(UIImage.RD_imageWithColor(UIColor.white), UIImage.RD_imageWithColor(UIColor.grayColor(44)))
+        let highlightedImage = UIImage.dynamicImage(UIImage.RD_imageWithColor(UIColor.grayColor(242)), UIImage.RD_imageWithColor(UIColor.grayColor(64)))
         
         if !title!.isEmpty {
             actionSheetHeight += kRowLineHeight
@@ -132,7 +132,7 @@ extension RDActionSheet {
             destructiveButton.tag = -1
             destructiveButton.titleLabel?.font = UIFont.systemFont(ofSize: kButtonTitleFontSize)
             destructiveButton.setTitle(destructiveButtonTitle, for: .normal)
-            destructiveButton.setTitleColor(RD_Color(230, 66, 66), for: .normal)
+            destructiveButton.setTitleColor(UIColor.rgbColor(230, 66, 66), for: .normal)
             destructiveButton.setBackgroundImage(normalImage, for: .normal)
             destructiveButton.setBackgroundImage(highlightedImage, for: .highlighted)
             destructiveButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
