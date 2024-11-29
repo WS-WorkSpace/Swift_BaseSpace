@@ -38,7 +38,7 @@ public extension UIColor {
     }
 
     /// color：支持“#123456”
-    class func RD_hexColor(_ hexStr: String) -> UIColor {
+    class func hexColor(_ hexStr: String) -> UIColor {
         return UIColor.RD_hexColor(hexStr, 1.0)
     }
 

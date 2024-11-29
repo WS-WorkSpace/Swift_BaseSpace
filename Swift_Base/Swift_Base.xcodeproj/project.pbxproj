@@ -51,6 +51,7 @@
 		C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580552CF75AD700794CF1 /* HeaderAnimatorView.swift */; };
 		C6B580902CF8A35400794CF1 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */; };
 		C6B580922CF8A36200794CF1 /* MoyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580912CF8A36200794CF1 /* MoyaViewController.swift */; };
+		C6B580942CF9618100794CF1 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580932CF9618100794CF1 /* UIButton+Extension.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -206,6 +207,7 @@
 		C6B580552CF75AD700794CF1 /* HeaderAnimatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAnimatorView.swift; sourceTree = "<group>"; };
 		C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		C6B580912CF8A36200794CF1 /* MoyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaViewController.swift; sourceTree = "<group>"; };
+		C6B580932CF9618100794CF1 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 			children = (
 				C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
+				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
 			);
@@ -939,8 +942,8 @@
 		C6EE3A882A88E8BA00A76C19 /* Moya */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */,
 				C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */,
+				C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */,
 				C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */,
 			);
 			path = Moya;
@@ -1261,6 +1264,7 @@
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
 				C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */,
 				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
+				C6B580942CF9618100794CF1 /* UIButton+Extension.swift in Sources */,
 				C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */,
 				C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */,
 				C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */,

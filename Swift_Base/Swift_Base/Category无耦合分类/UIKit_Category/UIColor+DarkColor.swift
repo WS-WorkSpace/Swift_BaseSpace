@@ -28,13 +28,13 @@ extension UIColor {
         if #available(iOS 13.0, *) {
             return UIColor.init { (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .light {
-                    return UIColor.RD_hexColor(lightColor)
+                    return UIColor.hexColor(lightColor)
                 } else {
-                    return UIColor.RD_hexColor(darkColor)
+                    return UIColor.hexColor(darkColor)
                 }
             }
         } else {
-            return UIColor.RD_hexColor(lightColor)
+            return UIColor.hexColor(lightColor)
         }
     }
 
@@ -43,13 +43,13 @@ extension UIColor {
         if #available(iOS 13.0, *) {
             return UIColor.init { (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .light {
-                    return UIColor.RD_hexColor(lightColor)
+                    return UIColor.hexColor(lightColor)
                 } else {
-                    return UIColor.RD_hexColor(darkColor)
+                    return UIColor.hexColor(darkColor)
                 }
             }
         } else {
-            return UIColor.RD_hexColor(lightColor)
+            return UIColor.hexColor(lightColor)
         }
     }
 }

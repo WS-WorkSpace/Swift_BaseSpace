@@ -18,11 +18,19 @@ class MoyaViewController: UIViewController {
         tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
         return tabview
     }()
-
+    lazy var mHeaderView:UIView = {
+        let hView = UIView(frame: CGRectMake(0, 0, kScreenWidth, 90))
+        hView.backgroundColor = .magenta
+        
+        
+        
+        return hView
+    }()
     static let ItemCellID = "SwiftyJSONCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mTableView.tableHeaderView = mHeaderView
         view.addSubview(mTableView)
         getNetModel()
     }
