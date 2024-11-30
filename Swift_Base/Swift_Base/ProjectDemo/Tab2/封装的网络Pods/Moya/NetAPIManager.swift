@@ -25,6 +25,8 @@ enum API_W {
     // 获取固定数据
     case getSimpleDict
     case getSimpleArrDict
+    ///  上传图片
+    case uploadImage(image: Data)
     /// 其他接口...
     case other1(p1: String, p2: Int, p3: String, p4: String)
     case other2
@@ -62,13 +64,14 @@ extension API_W: TargetType {
             return "/mock/simpleDict"
         case .getSimpleArrDict:
             return "/mock/simpleArrDict"
+        case .uploadImage:
+            return ""
         case let .other1(p1, p2, _, _):
             return "/list?id=\(p1)&page=\(p2)"
         case .other2:
             return ""
         }
     }
-
     // 2. 每个接口要使用的请求方式
     var method: Moya.Method {
         switch self {
@@ -84,6 +87,7 @@ extension API_W: TargetType {
             return .get
         case
             .getPageListPost,
+            .uploadImage,
             .login:
             return .post
         }
@@ -108,6 +112,8 @@ extension API_W: TargetType {
         case let .other1(_, _, p3, p4):
             params["p3"] = p3
             params["p4"] = p4
+        case let .uploadImage(image):
+            return .uploadMultipart([MultipartFormData(provider: .data(image), name: "image")])
         default:
             // 不需要传参数的接口走这里
             return .requestPlain

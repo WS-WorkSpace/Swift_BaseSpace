@@ -82,4 +82,35 @@ public class MoyaHttpCenter {
             return networkManager?.isReachable ?? true // 无返回就默认网络已连接
         }
     }
+    func uploadImage<T:TargetType>(_ target: T, _ image: Image, success: @escaping ((Any) -> Void), failure: ((Int?, String) -> Void)?) {
+//        let image = UIImage(named: "your-image-name")
+//        uploadImage(image: image)
+        let provider = MoyaProvider<T>()
+        provider.request(target) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    // *********** 这里可以统一处理错误码，弹出提示信息 ***********
+                    let resObject = try? response.mapJSON()
+                    let responseObject = JSON(resObject ?? "")
+                    let code = responseObject["code"].intValue
+                    let msg = String(describing: responseObject["msg"])
+                    switch code {
+                        // 测试接口中没有返回code
+                        // 这里直接让他返回成功数据
+                    case 0:
+                        success(responseObject)
+                    default:
+                        // 其他错误
+                        //                        failureHandle(failure: failure, stateCode: code, message: msg)
+                        failure?(code, "图片上传失败")
+                    }
+                }
+            case let .failure(error):
+                let statusCode = error.response?.statusCode ?? 1000
+                failure?(statusCode, "图片上传失败")
+            }
+            
+        }
+    }
 }

@@ -8,19 +8,8 @@
 import UIKit
 import Moya
 
-enum WeatherService {
-    case currentWeather(city: String)
-    
-    var urlPath: String {
-        switch self {
-        case .currentWeather(let city):
-            return "/weather?city=\(city)"
-        }
-    }
-}
-
 class MoyaViewController: UIViewController {
-    fileprivate var bookArray = [BookDetail]()
+    fileprivate var bookJsonArray = [JSON]()
     lazy var mTableView: UITableView = {
         let tabview = UITableView()
         tabview.frame = kScrollViewFrame
@@ -54,39 +43,28 @@ class MoyaViewController: UIViewController {
         return hView
     }()
     @objc func leftButton(){
-        mLog("点击左侧按钮")
         MoyaHttpCenter.request(API_W.getPageList(1)) {[weak self] json in
-            mAllLog(JSON(json))
+            mLog("点击左侧侧按钮")
+            let jsonDate = JSON(json)
+            self?.bookJsonArray.removeAll()
+            self?.bookJsonArray = jsonDate["list"].arrayValue
+            self?.mTableView.reloadData()
         } failure: {code, msg in
             mAllLog("code : \(code!)")
             mLog("message : \(msg)")
         }
-        /*
-         DouBanProvider.request(.playlist(channelId)) { result in
-             if case let .success(response) = result {
-                 //解析数据，获取歌曲信息
-                 let data = try? response.mapJSON()
-                 let json = JSON(data!)
-                 let music = json["song"].arrayValue[0]
-                 let artist = music["artist"].stringValue
-                 let title = music["title"].stringValue
-                 let message = "歌手：\(artist)\n歌曲：\(title)"
-                  
-                 //将歌曲信息弹出显示
-                 self.showAlert(title: channelName, message: message)
-             }
-         }
-         */
     }
     
     @objc func rightButton(){
         mLog("点击右侧侧按钮")
-        NetWorkRequest(API.getPageList(1), completion: {data in
-            mAllLog(JSON(data))
+        NetWorkRequest(API.getPageList(1), completion: {[weak p = self] data in
+            let jsonDate = JSON(data)
+            p?.bookJsonArray.removeAll()
+            p?.bookJsonArray = jsonDate["list"].arrayValue
+            p?.mTableView.reloadData()
         }) { errorString in
             mLog(errorString)
         }
-        
     }
 
     static let ItemCellID = "SwiftyJSONCell"
@@ -108,12 +86,12 @@ class MoyaViewController: UIViewController {
 
 extension MoyaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        bookArray.count
+        bookJsonArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
-        let descString = bookArray[indexPath.row].desc
+        let descString = bookJsonArray[indexPath.row]["desc"].stringValue
         cell.textLabel?.text = descString
         cell.textLabel?.numberOfLines = 0
         return cell
@@ -122,7 +100,7 @@ extension MoyaViewController: UITableViewDataSource {
 
 extension MoyaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let descString = bookArray[indexPath.row].desc
+        let descString = bookJsonArray[indexPath.row]["desc"].stringValue
         let contentHeight = descString.RD_getStringHeight(kScreenWidth - 10 - 10, 20)
         let cellHeight = contentHeight + 10 + 10
         return cellHeight

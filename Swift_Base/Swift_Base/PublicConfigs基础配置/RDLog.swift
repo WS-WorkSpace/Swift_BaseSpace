@@ -32,7 +32,8 @@ public func mLog(_ items: Any...,
                  line: Int = #line,
                  method: String = #function)
 {
-    Lg.log(items, separator: separator, terminator: terminator, file: file, line: line, method: method)
+    Lg.log(items)
+//    Lg.log(items, separator: separator, terminator: terminator, file: file, line: line, method: method)
 }
 
 /*
