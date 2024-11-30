@@ -25,6 +25,8 @@
 		C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135982CFA2C6900FB7653 /* NetworkManager.swift */; };
 		C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */; };
 		C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135962CFA2C6900FB7653 /* APIProvider.swift */; };
+		C68135A02CFB512B00FB7653 /* KingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */; };
+		C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */; };
 		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
@@ -183,6 +185,8 @@
 		C68135962CFA2C6900FB7653 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig_W.swift; sourceTree = "<group>"; };
 		C68135982CFA2C6900FB7653 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherViewController.swift; sourceTree = "<group>"; };
+		C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KingfisherViewController.xib; sourceTree = "<group>"; };
 		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -422,6 +426,15 @@
 				C68135982CFA2C6900FB7653 /* NetworkManager.swift */,
 			);
 			path = MoyaCustom;
+			sourceTree = "<group>";
+		};
+		C681359D2CFB510200FB7653 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */,
+				C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */,
+			);
+			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 		C68CB74A2CE83A08009F8A6A /* Swift调用OC */ = {
@@ -840,6 +853,7 @@
 				C6B5804D2CF613B400794CF1 /* Codable */,
 				C6B5808E2CF8A2F400794CF1 /* Alamofire */,
 				C6B5808D2CF8A2DF00794CF1 /* Moya */,
+				C681359D2CFB510200FB7653 /* Kingfisher */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
@@ -1120,6 +1134,7 @@
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
 				C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */,
+				C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */,
 				C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1283,6 +1298,7 @@
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
 				C6B580512CF6157600794CF1 /* BookDetail.swift in Sources */,
+				C68135A02CFB512B00FB7653 /* KingfisherViewController.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
