@@ -54,7 +54,7 @@ class ObjectMapperViewController: UIViewController {
     }
 
     deinit {
-        print("ObjectMapperVC:已经释放")
+        print("\(Self.self)已经释放")
     }
 }
 

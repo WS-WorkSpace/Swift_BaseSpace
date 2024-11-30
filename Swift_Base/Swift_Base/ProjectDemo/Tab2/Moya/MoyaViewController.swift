@@ -77,7 +77,7 @@ class MoyaViewController: UIViewController {
     }
 
     deinit {
-        print("SwiftyJSONViewController已经释放")
+        print("\(Self.self)已经释放")
     }
 }
 

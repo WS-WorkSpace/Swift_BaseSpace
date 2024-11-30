@@ -56,7 +56,21 @@ class AlamofireViewController: UIViewController {
     }
 
     @objc func rightButton() {
-        mLog("点击右侧侧按钮")
+        let url = "http://rap2api.taobao.org/" + "app/mock/303994/test/dbbooklist"
+        let mSuccess: (JSON) -> Void = {
+            [weak self] json in
+            let jasonData = JSON(json)
+            self?.bookJsonArray.removeAll()
+            self?.bookJsonArray = jasonData["list"].arrayValue
+            self?.mTableView.reloadData()
+
+        }
+        let mFailure: (Int?, String) -> Void = {
+            errorCode, msg in
+            mLog(errorCode ?? -999)
+            mLog(msg)
+        }
+        CP_Net.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
     }
 
     static let AlamofireItemCellID = "AlamofireVCCell"
@@ -68,7 +82,7 @@ class AlamofireViewController: UIViewController {
     }
 
     deinit {
-        print("SwiftyJSONViewController已经释放")
+        print("\(Self.self)已经释放")
     }
 }
 

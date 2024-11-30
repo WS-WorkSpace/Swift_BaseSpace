@@ -38,7 +38,7 @@ class HandyJsonTableViewController: UIViewController {
     }
 
     deinit {
-        print("HandyJsonTableViewController已经释放")
+        print("\(Self.self)已经释放")
     }
 
     func getNetModel() {
