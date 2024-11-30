@@ -8,52 +8,63 @@
 import UIKit
 
 class AlamofireViewController: UIViewController {
-    fileprivate var bookArray = [BookDetail]()
+    fileprivate var bookJsonArray = [JSON]()
     lazy var mTableView: UITableView = {
         let tabview = UITableView()
         tabview.frame = kScrollViewFrame
         tabview.delegate = self
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
-        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.AlamofireItemCellID)
         return tabview
     }()
 
-    static let ItemCellID = "SwiftyJSONCell"
+    lazy var mHeaderView: UIView = {
+        let hView = UIView(frame: CGRectMake(0, 0, kScreenWidth, 90))
+        hView.backgroundColor = .magenta
+        let leftBtn = UIButton.creatButton("简单使用", .white, CGRectZero, self, #selector(leftButton))
+        leftBtn.layer.cornerRadius = 7
+        hView.addSubview(leftBtn)
+        leftBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(kScreenWidth/2 - 10, 80))
+            make.left.equalTo(5)
+            make.top.equalTo(5)
+        }
+        let rightBtn = UIButton.creatButton("封装使用", .white, CGRectZero, self, #selector(rightButton))
+        rightBtn.layer.cornerRadius = 7
+        hView.addSubview(rightBtn)
+        rightBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(kScreenWidth/2 - 10, 80))
+            make.right.equalToSuperview().offset(-5)
+            make.top.equalToSuperview().offset(5)
+        }
+        return hView
+    }()
+
+    @objc func leftButton() {
+        let url = GlobalConfig.BOOKLIST_URL
+        let parameters = ["key": "value"]
+        DispatchQueue.global().async {
+            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { [weak self] response in
+                guard let json = response.result.value, let weakSelf = self else { return }
+                let jasonData = JSON(json)
+                weakSelf.bookJsonArray.removeAll()
+                weakSelf.bookJsonArray = jasonData["list"].arrayValue
+                weakSelf.mTableView.reloadData()
+            })
+        }
+    }
+
+    @objc func rightButton() {
+        mLog("点击右侧侧按钮")
+    }
+
+    static let AlamofireItemCellID = "AlamofireVCCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mTableView)
-        getNetModel()
-    }
-
-    func getNetModel() {
-        let url = GlobalConfig.BOOKLIST_URL
-        let parameters = ["key": "value"]
-        DispatchQueue.global().async {
-//            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
-            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { [weak self] response in
-                guard let json = response.result.value, let weakSelf = self else { return }
-                guard let dic = json as? [String: Any] else { return }
-                let bookList: BookList? = BookList.convertFromDict(dict: dic)
-                guard let bookListTemp = bookList?.list else { return }
-                weakSelf.bookArray.removeAll()
-                weakSelf.bookArray = bookListTemp
-                weakSelf.mTableView.reloadData()
-
-//                guard let dicT = dic else { return }
-//                guard let arrT = dicT["list"] as? [[String: Any]] else { return }
-//                let dicM = arrT[0]
-//
-//                let bookDetail: BookDetail? = BookDetail.convertFromDict(dict: dicM)
-//                print(">>>>>", bookDetail?.num) // Optional(26)
-//                print(">>>>>", bookDetail?.name) // Optional("史敏")
-//                print(">>>>>", bookDetail?.desc) // Optional("即建位表就油见家周心别严通眼等越看)
-//                let myDic = bookDetail?.convertToDict()
-//                print("model转换为DIctionary:", myDic) //
-
-            })
-        }
+        mTableView.tableHeaderView = mHeaderView
     }
 
     deinit {
@@ -63,12 +74,12 @@ class AlamofireViewController: UIViewController {
 
 extension AlamofireViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        bookArray.count
+        bookJsonArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
-        let descString = bookArray[indexPath.row].desc
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.AlamofireItemCellID, for: indexPath)
+        let descString = bookJsonArray[indexPath.row]["desc"].stringValue
         cell.textLabel?.text = descString
         cell.textLabel?.numberOfLines = 0
         return cell
@@ -77,10 +88,9 @@ extension AlamofireViewController: UITableViewDataSource {
 
 extension AlamofireViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let descString = bookArray[indexPath.row].desc
+        let descString = bookJsonArray[indexPath.row]["desc"].stringValue
         let contentHeight = descString.RD_getStringHeight(kScreenWidth - 10 - 10, 20)
         let cellHeight = contentHeight + 10 + 10
         return cellHeight
     }
 }
-

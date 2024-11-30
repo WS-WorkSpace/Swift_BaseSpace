@@ -15,11 +15,11 @@ class CodableViewController: UIViewController {
         tabview.delegate = self
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
-        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.CodableItemCellID)
         return tabview
     }()
 
-    static let ItemCellID = "SwiftyJSONCell"
+    static let CodableItemCellID = "CodableVCCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ extension CodableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.CodableItemCellID, for: indexPath)
         let descString = bookArray[indexPath.row].desc
         cell.textLabel?.text = descString
         cell.textLabel?.numberOfLines = 0

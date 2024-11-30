@@ -22,11 +22,11 @@ class SwiftyJSONViewController: UIViewController {
         tabview.delegate = self
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
-        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.SwiftyJSONCellID)
         return tabview
     }()
 
-    static let ItemCellID = "SwiftyJSONCell"
+    static let SwiftyJSONCellID = "SwiftyJSONCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +99,7 @@ extension SwiftyJSONViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.SwiftyJSONCellID, for: indexPath)
         let descString = bookArray[indexPath.row].desc
         cell.textLabel?.text = descString
         cell.textLabel?.numberOfLines = 0

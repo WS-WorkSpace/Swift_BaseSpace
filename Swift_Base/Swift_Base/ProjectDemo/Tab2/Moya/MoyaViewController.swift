@@ -5,8 +5,8 @@
 //  Created by 王爽 on 2024/11/28.
 //
 
-import UIKit
 import Moya
+import UIKit
 
 class MoyaViewController: UIViewController {
     fileprivate var bookJsonArray = [JSON]()
@@ -16,48 +16,49 @@ class MoyaViewController: UIViewController {
         tabview.delegate = self
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
-        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.ItemCellID)
+        tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.MoyaItemCellID)
         return tabview
     }()
-    lazy var mHeaderView:UIView = {
+
+    lazy var mHeaderView: UIView = {
         let hView = UIView(frame: CGRectMake(0, 0, kScreenWidth, 90))
         hView.backgroundColor = .magenta
-        let leftBtn = UIButton.creatButton("简单使用",.white, CGRectZero, self, #selector(leftButton))
+        let leftBtn = UIButton.creatButton("简单使用", .white, CGRectZero, self, #selector(leftButton))
         leftBtn.layer.cornerRadius = 7
         hView.addSubview(leftBtn)
         leftBtn.snp.makeConstraints { make in
-            make.size.equalTo(CGSizeMake(kScreenWidth/2-10, 80))
+            make.size.equalTo(CGSizeMake(kScreenWidth/2 - 10, 80))
             make.left.equalTo(5)
             make.top.equalTo(5)
         }
-        let rightBtn = UIButton.creatButton("封装使用",.white, CGRectZero, self, #selector(rightButton))
+        let rightBtn = UIButton.creatButton("封装使用", .white, CGRectZero, self, #selector(rightButton))
         rightBtn.layer.cornerRadius = 7
         hView.addSubview(rightBtn)
         rightBtn.snp.makeConstraints { make in
-            make.size.equalTo(CGSizeMake(kScreenWidth/2-10, 80))
+            make.size.equalTo(CGSizeMake(kScreenWidth/2 - 10, 80))
             make.right.equalToSuperview().offset(-5)
             make.top.equalToSuperview().offset(5)
         }
 
-        
         return hView
     }()
-    @objc func leftButton(){
-        MoyaHttpCenter.request(API_W.getPageList(1)) {[weak self] json in
+
+    @objc func leftButton() {
+        MoyaHttpCenter.request(API_W.getPageList(1)) { [weak self] json in
             mLog("点击左侧侧按钮")
             let jsonDate = JSON(json)
             self?.bookJsonArray.removeAll()
             self?.bookJsonArray = jsonDate["list"].arrayValue
             self?.mTableView.reloadData()
-        } failure: {code, msg in
+        } failure: { code, msg in
             mAllLog("code : \(code!)")
             mLog("message : \(msg)")
         }
     }
-    
-    @objc func rightButton(){
+
+    @objc func rightButton() {
         mLog("点击右侧侧按钮")
-        NetWorkRequest(API.getPageList(1), completion: {[weak p = self] data in
+        NetWorkRequest(API.getPageList(1), completion: { [weak p = self] data in
             let jsonDate = JSON(data)
             p?.bookJsonArray.removeAll()
             p?.bookJsonArray = jsonDate["list"].arrayValue
@@ -67,16 +68,12 @@ class MoyaViewController: UIViewController {
         }
     }
 
-    static let ItemCellID = "SwiftyJSONCell"
+    static let MoyaItemCellID = "MoyaVCCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mTableView.tableHeaderView = mHeaderView
         view.addSubview(mTableView)
-        getNetModel()
-    }
-
-    func getNetModel() {
     }
 
     deinit {
@@ -90,7 +87,7 @@ extension MoyaViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.ItemCellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.MoyaItemCellID, for: indexPath)
         let descString = bookJsonArray[indexPath.row]["desc"].stringValue
         cell.textLabel?.text = descString
         cell.textLabel?.numberOfLines = 0
@@ -106,4 +103,3 @@ extension MoyaViewController: UITableViewDelegate {
         return cellHeight
     }
 }
-
