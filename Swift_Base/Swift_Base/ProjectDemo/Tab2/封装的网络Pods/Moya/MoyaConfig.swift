@@ -56,7 +56,7 @@ let activityPlugin = NetworkActivityPlugin.init { changeType, _ in
     print("networkPlugin \(changeType)")
     switch changeType {
     case .began:
-        mLog("开始请求网络")
+//        mLog("开始请求网络")
         SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
         SVProgressHUD.setBackgroundLayerColor(UIColor.blue)
         SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.light)
@@ -65,7 +65,7 @@ let activityPlugin = NetworkActivityPlugin.init { changeType, _ in
         SVProgressHUD.show(withStatus: "加载中")
         SVProgressHUD.setMinimumDismissTimeInterval(20.0)
     case .ended:
-        mLog("结束")
+//        mLog("结束")
         SVProgressHUD.dismiss()
     }
 }
@@ -75,7 +75,15 @@ class LoggingPlugin: PluginType {
     func willSend(_ request: RequestType, target: TargetType) {
         guard let requstTemp = request.request else { return }
         #if DEBUG
-            print("\n********** MoyaRequest-start ***********\n\n完整路径:\(requstTemp.description)\n方法:\(requstTemp.httpMethod ?? "")\n参数:\(target.task)\nbaseURL:\n\n\(target.baseURL)\n\n********** MoyaRequest-end ***********\n")
+        // let parmeter = String(data: request.request!.httpBody!, encoding: String.Encoding.utf8) ?? ""
+        print("********** MoyaRequest-start ***********\n",
+              "完整路径:\n",
+              "\(requstTemp.description)\n",
+              "方法:\n",
+              "\(requstTemp.httpMethod ?? "")\n",
+              "Task参数:\n\(target.task)\n",
+              "baseURL:\n\(target.baseURL)\n",
+              "********** MoyaRequest-end ***********\n")
         #endif
     }
 }

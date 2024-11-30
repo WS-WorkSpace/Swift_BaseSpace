@@ -961,9 +961,9 @@
 		C6EE3A882A88E8BA00A76C19 /* Moya */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */,
 				C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */,
 				C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */,
+				C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */,
 				C68135992CFA2C6900FB7653 /* MoyaCustom */,
 			);
 			path = Moya;

@@ -55,53 +55,13 @@ class MoyaViewController: UIViewController {
     }()
     @objc func leftButton(){
         mLog("点击左侧按钮")
-//        let provider = MoyaProvider<T>(plugins: [
-//            RequestHandlingPlugin(),
-//            //            networkLoggerPlugin
-//        ])
-
-//        let provider = MoyaProvider<WeatherService>(endpointClosure: { target<WeatherService> -> Endpoint in
-//            let url = URL(string: "https://api.example.com/weather")!
-//            return Endpoint(url: url, method: HTTPMethod.get, parameters: target.parameters, encoding: JSONEncoding.default)
-//        })
-
-        
-//        let provider = MoyaProvider<WeatherService>(endpointClosure: { target -> Endpoint<WeatherService> in
-//            let url = URL(string: "https://api.example.com/weather")!
-//            return Endpoint(url: url, method: HTTPMethod.get, parameters: target.parameters, encoding: JSONEncoding.default)
-//        })
-//        provider.request(.currentWeather(city: "New York")) { result in
-//            switch result {
-//            case .success(let response):
-//                // 解析 response 并处理数据
-//                print(response.mapJSON())
-//            case .failure(let error):
-//                print("Request failed with error: \(error)")
-//            }
-//        }
-    }
-    @objc func rightButton(){
-        mLog("点击右侧侧按钮")
-    }
-
-    static let ItemCellID = "SwiftyJSONCell"
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mTableView.tableHeaderView = mHeaderView
-        view.addSubview(mTableView)
-        getNetModel()
-    }
-
-    func getNetModel() {
         MoyaHttpCenter.request(API_W.getPageList(1)) {[weak self] json in
-//            self?.mTextView.text = String(describing: JSON(json))
             mAllLog(JSON(json))
         } failure: {code, msg in
             mAllLog("code : \(code!)")
             mLog("message : \(msg)")
         }
-        /**
+        /*
          DouBanProvider.request(.playlist(channelId)) { result in
              if case let .success(response) = result {
                  //解析数据，获取歌曲信息
@@ -116,8 +76,29 @@ class MoyaViewController: UIViewController {
                  self.showAlert(title: channelName, message: message)
              }
          }
-         **/
+         */
+    }
+    
+    @objc func rightButton(){
+        mLog("点击右侧侧按钮")
+        NetWorkRequest(API.getPageList(1), completion: {data in
+            mAllLog(JSON(data))
+        }) { errorString in
+            mLog(errorString)
+        }
+        
+    }
 
+    static let ItemCellID = "SwiftyJSONCell"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mTableView.tableHeaderView = mHeaderView
+        view.addSubview(mTableView)
+        getNetModel()
+    }
+
+    func getNetModel() {
     }
 
     deinit {
