@@ -12,7 +12,6 @@ import Foundation
 let Moya_baseURL = "https://wxmini.baixingliangfan.cn/baixing/"
 
 /// 定义返回的JSON数据字段
-let RESULT_CODE = "flag"      //状态码
+let RESULT_CODE = "flag" // 状态码
 
-let RESULT_MESSAGE = "message"  //错误消息提示
-
+let RESULT_MESSAGE = "message" // 错误消息提示
