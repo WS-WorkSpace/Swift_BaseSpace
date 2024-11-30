@@ -70,7 +70,7 @@ class AlamofireViewController: UIViewController {
             mLog(errorCode ?? -999)
             mLog(msg)
         }
-        CP_Net.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
+        FPNetWorkRequest.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
     }
 
     static let AlamofireItemCellID = "AlamofireVCCell"

@@ -73,7 +73,7 @@ extension Table_SwiftyJSON_VC {
             mLog(errorCode ?? -999)
             mLog(msg)
         }
-        CP_Net.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
+        FPNetWork.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
 //        CP_Net_Request.url(baseUrl).requestType(.get).params(nil).success { res in
 //            print(" ========链式网络请求======== ")
 //            print(res)

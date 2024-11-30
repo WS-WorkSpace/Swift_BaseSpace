@@ -1,5 +1,5 @@
 //
-//  ChainProgrammingNetWorkKit.swift
+//  FuntionaProgrammingNetWork.swift
 //  Swift_Base
 //
 //  Created by 王爽 on 2023/8/11.
@@ -9,23 +9,18 @@ import Alamofire
 import Foundation
 import SwiftyJSON
 
-enum HttpRequestType {
-    case get
-    case post
-}
 
-public typealias CP_Net = ChainProgrammingNetWorkKit
+public typealias FPNetWork = FuntionaProgrammingNetWork
 
-public let CP_Net_Request = ChainProgrammingNetWorkKit.shared
+public let FPNetWorkRequest = FuntionaProgrammingNetWork.shared
 
-// ChainProgrammingNetWorkKit属性设置
-public class ChainProgrammingNetWorkKit {
-    public static let shared = ChainProgrammingNetWorkKit()
+public class FuntionaProgrammingNetWork {
+    public static let shared = FuntionaProgrammingNetWork()
     
     typealias SuccessHandlerType = (JSON) -> Void
     typealias FailureHandlerType = (Int?, String) -> Void
     
-    private var requestType: HttpRequestType = .post // 请求类型
+    private var requestType: HTTPMethod = .get // 请求类型
     private var url: String? // URL
     private var params: [String: Any]? // 参数
     private var success: SuccessHandlerType? // 成功的回调
@@ -33,16 +28,16 @@ public class ChainProgrammingNetWorkKit {
     private var httpRequest: Request?
 }
 
-// ChainProgrammingNetWorkKit属性的设置
-extension ChainProgrammingNetWorkKit {
+/// 属性
+extension FuntionaProgrammingNetWork {
     /// 设置url
     func url(_ url: String?) -> Self {
         self.url = url
         return self
     }
     
-    /// 设置post/get 默认post
-    func requestType(_ type: HttpRequestType) -> Self {
+    /// 设置post/get 默认get
+    func requestType(_ type: HTTPMethod) -> Self {
         requestType = type
         return self
     }
@@ -67,14 +62,12 @@ extension ChainProgrammingNetWorkKit {
 }
 
 // NetworkKit请求相关
-extension ChainProgrammingNetWorkKit {
+extension FuntionaProgrammingNetWork {
     func requestEasy(respondCallback: @escaping (_ responseObject: Any) -> Void) {
         var dataRequest: DataRequest? // alamofire请求后的返回值
         // 发起请求
         if let URLString = url {
-//            ProgressHUD.show()
-            let method = requestType == .get ? HTTPMethod.get : HTTPMethod.post
-            dataRequest = Alamofire.request(URLString, method: method, parameters: params)
+            dataRequest = Alamofire.request(URLString, method: requestType, parameters: params)
             httpRequest = dataRequest
         }
         dataRequest?.responseJSON {
@@ -102,7 +95,6 @@ extension ChainProgrammingNetWorkKit {
         }
     }
     
-
     /// 发起请求 设置好相关参数后再调用
     func request() {
         var dataRequest: DataRequest? // alamofire请求后的返回值
@@ -110,8 +102,7 @@ extension ChainProgrammingNetWorkKit {
         // 发起请求
         if let URLString = url {
 //            ProgressHUD.show()
-            let method = requestType == .get ? HTTPMethod.get : HTTPMethod.post
-            dataRequest = Alamofire.request(URLString, method: method, parameters: params)
+            dataRequest = Alamofire.request(URLString, method: requestType, parameters: params)
             httpRequest = dataRequest
         }
         

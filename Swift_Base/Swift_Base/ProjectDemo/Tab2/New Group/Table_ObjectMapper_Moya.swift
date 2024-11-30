@@ -60,7 +60,7 @@ extension Table_ObjectMapper_Moya {
     private func loadNewData(_ isLoadMore:Bool, _ complete:@escaping ()->Void) {
         // 链式网络请求：Alamofire + SwiftyJSON
         let url = "http://rap2api.taobao.org/app/mock/303994/test/dbbooklist"
-        CP_Net_Request.url(url).requestType(.get).params(nil).requestEasy {[weak self] res in
+        FPNetWorkRequest.url(url).requestType(.get).params(nil).requestEasy {[weak self] res in
             let dic = res as? Dictionary<String, Any>
             /// HandyJSON接受字典
             /// 会重新计算label的高度,并保存.刷新UI时,动态改变Cell的高度.此时label 的约束失效.
