@@ -8,7 +8,6 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-    
     lazy var centerView = UIView()
     lazy var centerXView = UIView()
     lazy var topLeftView = UIView()
@@ -27,37 +26,43 @@ class SettingViewController: UIViewController {
     }
     
     private func configUI() {
-        
         configSnapKit1()
         configSnapKit2()
         configSnapKit3()
         // 更新约束
         configSnapKit4()
     }
+
+    /**
+     priorityLow()：设置低优先级，优先级为250
+     priorityMedium()：设置中优先级，优先级为500（这个也就是默认的优先级）
+     priorityHigh()：设置高优先级，优先级为750
+     priority()：可以设置任意的优先级，接受的参数是0-1000的数字。比如：priority(600)
+     */
     
     // 实现居于当前视图的中心的视图布局，宽高为100，
     private func configSnapKit1() {
-        self.view.addSubview(centerView)
+        view.addSubview(centerView)
         centerView.backgroundColor = UIColor.randomColor
         // makeConstraints 添加某个约束
         // updateConstraints 更新某个约束
         // removeConstraints 重置全部约束
         
         // 实现一
-        centerView.snp.makeConstraints { (make) in
-            make.width.equalTo(100)         // 宽为100
-            make.height.equalTo(100)        // 高为100
-            make.center.equalTo(view)       // 位于当前视图的中心
+        centerView.snp.makeConstraints { make in
+            make.width.equalTo(100) // 宽为100
+            make.height.equalTo(100) // 高为100
+            make.center.equalTo(view) // 位于当前视图的中心
         }
         // 实现二 推荐
-        centerView.snp.makeConstraints { (make) in
-            make.width.height.equalTo(100)    // 链式语法直接定义宽高
-            make.center.equalToSuperview()    // 直接在父视图居中
+        centerView.snp.makeConstraints { make in
+            make.width.height.equalTo(100) // 链式语法直接定义宽高
+            make.center.equalToSuperview() // 直接在父视图居中
         }
         
-        self.view.addSubview(centerXView)
+        view.addSubview(centerXView)
         centerXView.backgroundColor = UIColor.randomColor
-        centerXView.snp.makeConstraints { (make) in
+        centerXView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(15+distanceTop)
             make.height.equalTo(centerView.snp.height)
@@ -68,33 +73,33 @@ class SettingViewController: UIViewController {
     
     // 实现上下左右4个角添加4个视图，宽100，高50，间距15
     private func configSnapKit2() {
-        self.view.addSubview(topLeftView)
+        view.addSubview(topLeftView)
         topLeftView.backgroundColor = UIColor.randomColor
-        topLeftView.snp.makeConstraints { (make) in
+        topLeftView.snp.makeConstraints { make in
             make.top.equalTo(15+distanceTop)
             make.left.equalTo(15)
             make.size.equalTo(CGSize(width: 100, height: 50))
         }
         
-        self.view.addSubview(topRightView)
+        view.addSubview(topRightView)
         topRightView.backgroundColor = UIColor.randomColor
-        topRightView.snp.makeConstraints { (make) in
+        topRightView.snp.makeConstraints { make in
             make.top.equalTo(15+distanceTop)
             make.right.equalTo(-15)
             make.size.equalTo(CGSize(width: 100, height: 50))
         }
         
-        self.view.addSubview(bottomLeftView)
+        view.addSubview(bottomLeftView)
         bottomLeftView.backgroundColor = UIColor.randomColor
-        bottomLeftView.snp.makeConstraints { (make) in
+        bottomLeftView.snp.makeConstraints { make in
             make.bottom.equalTo(-15-kBottomSafeHeight)
             make.left.equalTo(15)
             make.size.equalTo(CGSize(width: 100, height: 50))
         }
         
-        self.view.addSubview(bottomRightView)
+        view.addSubview(bottomRightView)
         bottomRightView.backgroundColor = UIColor.randomColor
-        bottomRightView.snp.makeConstraints { (make) in
+        bottomRightView.snp.makeConstraints { make in
             make.bottom.equalTo(-15-kBottomSafeHeight)
             make.right.equalTo(-15)
             make.size.equalTo(CGSize(width: 100, height: 50))
@@ -105,17 +110,17 @@ class SettingViewController: UIViewController {
         // 中心view 内部添加子view
         centerView.addSubview(view1)
         view1.backgroundColor = UIColor.randomColor
-        view1.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)      // 当前视图的顶部距离父视图的顶部：20（父视图顶部+20）
-            make.left.equalToSuperview().offset(20)     // 当前视图的左边距离父视图的左边：20（父视图左边+20）
-            make.bottom.equalToSuperview().offset(-20)  // 当前视图的底部距离父视图的底部：-20（父视图底部-20）
+        view1.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20) // 当前视图的顶部距离父视图的顶部：20（父视图顶部+20）
+            make.left.equalToSuperview().offset(20) // 当前视图的左边距离父视图的左边：20（父视图左边+20）
+            make.bottom.equalToSuperview().offset(-20) // 当前视图的底部距离父视图的底部：-20（父视图底部-20）
             make.right.equalToSuperview().offset(-20)
         }
         
         // view2距离centerView底部20，左侧对齐，宽度为一半，高度为一半
-        self.view.addSubview(view2)
+        view.addSubview(view2)
         view2.backgroundColor = UIColor.randomColor
-        view2.snp.makeConstraints { (make) in
+        view2.snp.makeConstraints { make in
             make.left.equalTo(centerView.snp.left) // 左对齐
             make.top.equalTo(centerView.snp.bottom).offset(20) // 当前控件距离某控件的某位置距离
             make.width.equalTo(centerView.snp.width).multipliedBy(0.5)
@@ -125,7 +130,7 @@ class SettingViewController: UIViewController {
     
     // 更新约束
     private func configSnapKit4() {
-        centerXView.snp.updateConstraints { (make) in
+        centerXView.snp.updateConstraints { make in
             make.top.equalTo(15+distanceTop+50) // 当前控件距离某控件的某位置距离
 //            // 设置优先级的4中内置快捷方式
 //            make.width.equalTo(50).priority(.required)
@@ -134,6 +139,4 @@ class SettingViewController: UIViewController {
 //            make.width.equalTo(300).priority(.low)
         }
     }
- 
 }
-

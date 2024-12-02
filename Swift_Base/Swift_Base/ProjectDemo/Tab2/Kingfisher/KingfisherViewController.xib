@@ -21,13 +21,12 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bpB-Vp-dNv" userLabel="topImageView">
-                    <rect key="frame" x="44" y="76" width="305" height="172"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RJ5-i6-BhN">
-                    <rect key="frame" x="44" y="272" width="305" height="159"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpB-Vp-dNv" userLabel="topImageView">
+                    <rect key="frame" x="96.666666666666686" y="109" width="200" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="100" id="RlG-Sg-0mj"/>
+                        <constraint firstAttribute="width" priority="750" constant="200" id="mbD-GE-Jq0"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K1-uN-VtN">
                     <rect key="frame" x="159" y="576" width="75" height="35"/>
@@ -35,10 +34,18 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RJ5-i6-BhN">
+                    <rect key="frame" x="44" y="642" width="305" height="159"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="176.33587786259542" y="22.535211267605636"/>
+            <constraints>
+                <constraint firstItem="bpB-Vp-dNv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BLQ-SE-cMm"/>
+                <constraint firstItem="bpB-Vp-dNv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="PSv-Y5-KI9"/>
+            </constraints>
+            <point key="canvasLocation" x="-640" y="-157"/>
         </view>
     </objects>
     <resources>
