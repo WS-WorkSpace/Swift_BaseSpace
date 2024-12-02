@@ -46,7 +46,8 @@ extension AppDelegate {
     func monitorNetwork() {
         /// 监听网络变化 - Alamofire
         self.monitorNetworkAlamofire()
-        mLog(AlamofireMonitorNetworkTool.isNetwork())
+        /// 判断是否有网络
+        //mLog(AlamofireMonitorNetworkTool.isNetwork())
         /// 监听网络变化 - ReachabilitySwift
         /// monitorNetworkReachability()
     }

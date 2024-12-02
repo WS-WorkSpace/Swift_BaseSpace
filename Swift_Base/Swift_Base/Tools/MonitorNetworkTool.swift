@@ -22,10 +22,10 @@ enum NetworkStatus {
 
 class AlamofireMonitorNetworkTool {
     static let shared = AlamofireMonitorNetworkTool()
-    
+
     static let networkManager = NetworkReachabilityManager(host: "www.baidu.com")
     /// 实时监听网络变化 - Alamofire
-    static func monitorNetworkStatusWithAlamofire(status: @escaping (NetworkStatus)->Void) {
+    static func monitorNetworkStatusWithAlamofire(status: @escaping (NetworkStatus) -> Void) {
         networkManager!.listener = {
             alamofireStatus in
             var message = ""
@@ -43,22 +43,22 @@ class AlamofireMonitorNetworkTool {
                 message = "WiFi"
                 status(.ethernetOrWiFi)
             }
-            mLog("当前网络状态：\(message)")
+            // mLog("当前网络状态：\(message)")
         }
         networkManager!.startListening()
     }
+
     // 判断网络是否连接
     static func isNetwork() -> Bool {
         return networkManager?.isReachable ?? true // 无返回就默认网络已连接
     }
-
-
 }
+
 class ReachabilityMonitorNetworkTool {
     static let shared = ReachabilityMonitorNetworkTool()
     static let reachability = try! Reachability()
     /// 实时监听网络变化 - Reachability
-    static func monitorNetworkStatusWithReachability(status: @escaping (NetworkStatus)->Void) {
+    static func monitorNetworkStatusWithReachability(status: @escaping (NetworkStatus) -> Void) {
         // 网络可用或切换网络类型时执行
         reachability.whenReachable = { reachability in
             if reachability.connection == .wifi {
