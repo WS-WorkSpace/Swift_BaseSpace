@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KingfisherViewController" customModule="Swift_Base" customModuleProvider="target">
             <connections>
+                <outlet property="botomImageView" destination="RJ5-i6-BhN" id="gWH-JL-IbK"/>
                 <outlet property="setImageButton" destination="3K1-uN-VtN" id="IM2-nC-QMN"/>
                 <outlet property="topImageView" destination="bpB-Vp-dNv" id="wFJ-BM-qHN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,13 +30,16 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K1-uN-VtN">
-                    <rect key="frame" x="159" y="576" width="75" height="35"/>
+                    <rect key="frame" x="151" y="576" width="92" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="下载图片"/>
+                    <connections>
+                        <action selector="DownImageMethd:" destination="-1" eventType="touchUpInside" id="Cpg-gl-vsc"/>
+                    </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RJ5-i6-BhN">
-                    <rect key="frame" x="44" y="642" width="305" height="159"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RJ5-i6-BhN" userLabel="botomImageView">
+                    <rect key="frame" x="44" y="358" width="305" height="159"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>

@@ -10,7 +10,13 @@ import UIKit
 class KingfisherViewController: UIViewController {
     @IBOutlet var topImageView: UIImageView!
 
+    @IBOutlet var botomImageView: UIImageView!
+
     @IBOutlet var setImageButton: UIButton!
+
+    @IBAction func DownImageMethd(_ sender: UIButton) {
+        mLog("点击按钮")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +30,35 @@ class KingfisherViewController: UIViewController {
             make.top.equalTo(view).offset(distanceTop + 10)
         }
 
-//        topImageView.kf.setImage(with: imgURL)
+        topImageView.kf.setImage(with: imgURL)
+        /// 置完成的回调
+        /**
+         topImageView.kf.setImage(with: imgURL) { result in
+             switch result {
+             case .success(let value):
+                 print("Image downloaded: \(value.source.url?.absoluteString ?? "")")
+             case .failure(let error):
+                 print("Image downloading failed: \(error)")
+             }
+         }
+          */
+        /// 使用缓存
+        /**
+         if let cachedImage = ImageCache.default.retrieveImageInMemoryCache(forKey: strURl) {
+             topImageView.image = cachedImage
+             print("使用图片缓存")
+         } else {
+             topImageView.kf.setImage(with: URL(string: strURl))
+             print("无缓存,网络获取")
+         }
+          **/
+        /// 清理缓存
+        /// clearCache()
 
-        /// 设置完成处理闭包
-//        topImageView.kf.setImage(with: imgURL) { result in
-//            switch result {
-//            case .success(let value):
-//                print("Image downloaded: \(value.source.url?.absoluteString ?? "")")
-//            case .failure(let error):
-//                print("Image downloading failed: \(error)")
-//            }
-//        }
-        if let cachedImage = ImageCache.default.retrieveImageInMemoryCache(forKey: strURl) {
-            topImageView.image = cachedImage
-            print("使用图片缓存")
-        } else {
-            topImageView.kf.setImage(with: URL(string: strURl))
-            print("无缓存,网络获取")
-        }
-        clearCache()
+        /// 下载图片
+        botomImageView.backgroundColor = .randomColor
+        downLoadImage(strURl)
+
     }
 
     // 清理图片缓存,机制待验证
@@ -51,6 +67,37 @@ class KingfisherViewController: UIViewController {
         ImageCache.default.clearDiskCache {
             print("清理完成")
         } // 清理磁盘缓存，完成后执行闭包
+    }
+    /// 下载图片
+    func downLoadImage(_ urlStr:String){
+        /// 下载图片
+        botomImageView.backgroundColor = .randomColor
+        let url = URL(string: urlStr)
+        ImageDownloader.default.downloadImage(with: url!, options: nil) { receivedSize, totalSize in
+            print("已下载:\(receivedSize)")
+            print("下载总量:\(totalSize)")
+            print("下载进度\(receivedSize / totalSize)")
+        } completionHandler: {
+//            (Result<ImageLoadingResult, KingfisherError>) -> Void)?
+            result in
+            switch result {
+            case .success(let value):
+//                self.botomImageView.image = value.image
+                self.botomImageView.image = UIImage(data: value.originalData)
+                print(value.image.cgImage ?? "")
+                print(value.image.size) // (500.0, 666.0)
+                print(value.image.scale) // 1.0
+                if #available(iOS 13.0, *) {
+                    print(value.image.configuration as Any) // Optional(<UIImageConfiguration:0x6000002b0aa0 traits=(DisplayScale = 1)>)
+                }
+                print(value.image.imageOrientation) // UIImageOrientation
+                print(value.url ?? "")
+                print(value.originalData) // 32226 bytes
+
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     deinit {
