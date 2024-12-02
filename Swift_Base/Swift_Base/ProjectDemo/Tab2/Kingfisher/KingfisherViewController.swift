@@ -148,3 +148,97 @@ extension KingfisherViewController: ImageDownloaderDelegate {
         print(image) // <UIImage:0x6000030314d0 anonymous {500, 666} renderingMode=automatic(original)>
     }
 }
+
+/**
+ https://www.jianshu.com/p/623acaf06f97
+ 一、老生长谈的group enter、group level
+ 由于Kingfisher里图片加载都是异步操作，我们希望可以监测到所有图片都加载完毕然后给一个回调，这其实就是多个异步任务的同步处理操作，而iOS里比较常用的也就是gcd里的信号量和group enter、group level了
+ 1单张图片加载方法，这里我们使用的是retrieveImage方法，这个方法会先从内存/硬盘缓存里查找图片，如果找到会直接返回，找不到则去加载并缓存图片资源。
+ static func downloadWith(urlStr: String, complete: ((UIImage?) -> ())? = nil) {
+        if let url = URL(string: urlStr) {
+            KingfisherManager.shared.retrieveImage(with: url) { (result) in
+                switch result {
+                case .success(let imgResult):
+                    complete?(imgResult.image)
+                case .failure(let error):
+                    print(error)
+                    complete?(nil)
+                }
+            }
+        } else {
+            complete?(nil)
+        }
+    }
+ 2今天的多张图片加载，这里使用的是dispatchgroup的enter、level来进行同步处理的。（我这边的需求是只要一张下载失败就直接返回，但是没有找到提前终止group或者释放的相关方法，这里处理是如果有下载失败直接回调，并将闭包置空）
+
+ static func downloadWith(urlStrArray: [String], complete: @escaping AIKingfisherDownLoadResultBlock) {
+        let group = DispatchGroup()
+        let queue = DispatchQueue.main
+        var imgDic = [String: UIImage]()
+        var downLoadCount = 0
+        var block: AIKingfisherDownLoadResultBlock? = complete
+        for urlStr in urlStrArray {
+            group.enter()
+            queue.async(group: group) {
+                AIKingfisher.downloadWith(urlStr: urlStr) { (image) in
+                    if let img = image {
+                        imgDic.updateValue(img, forKey: urlStr)
+                        downLoadCount = downLoadCount + 1
+                    } else { //有一个下载失败就提前终止
+                        block?(nil)
+                        block = nil
+                    }
+                    group.leave()
+                }
+            }
+        }
+        group.notify(queue: queue) {
+            if downLoadCount != urlStrArray.count {
+                block?(nil)
+            } else {
+                block?(AIKingfisherDownLoadResult(imgDic: imgDic))
+            }
+        }
+    }
+ 3、另外一种写法（使用group.wait设置超时时间，但要注意这个方法会阻塞当前线程所以不能放在主线程调用）
+
+ /// Kingfisher多图下载
+     /// - Parameter urlStrArray: 图片链接str数组
+     /// - Parameter timeout: 超时时间
+     /// - Parameter complete: 回调
+     static func downloadWith(urlStrArray: [String], timeout: TimeInterval = 10, complete: @escaping (AIKingfisherDownLoadResult?) -> ()) {
+         let group = DispatchGroup()
+         let queue = DispatchQueue.main
+         var imgDic = [String: UIImage]()
+         var downLoadCount = 0
+         for urlStr in urlStrArray {
+             group.enter()
+             queue.async(group: group) {
+                 AIKingfisher.downloadWith(urlStr: urlStr) { (image) in
+                     if let img = image {
+                         imgDic.updateValue(img, forKey: urlStr)
+                         downLoadCount = downLoadCount + 1
+                     }
+                     group.leave()
+                 }
+             }
+         }
+         DispatchQueue.global().async {
+             let result = group.wait(timeout: DispatchTime.now() + timeout)
+             DispatchQueue.main.async {
+                 switch result {
+                 case .success:
+                     if downLoadCount != urlStrArray.count {
+                         complete(nil)
+                     } else {
+                         complete(AIKingfisherDownLoadResult(imgDic: imgDic))
+                     }
+                 case .timedOut:
+                     AILog("下载超时")
+                     complete(nil)
+                 }
+             }
+         }
+     }
+
+ */
