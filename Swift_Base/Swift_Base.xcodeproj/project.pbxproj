@@ -23,6 +23,7 @@
 		C67C418D2CED766C00DE4723 /* POPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418C2CED766C00DE4723 /* POPViewController.swift */; };
 		C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */; };
 		C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */; };
+		C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004542D0091E800A86023 /* WCDBViewController.swift */; };
 		C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135982CFA2C6900FB7653 /* NetworkManager.swift */; };
 		C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */; };
 		C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135962CFA2C6900FB7653 /* APIProvider.swift */; };
@@ -184,6 +185,7 @@
 		C67C418C2CED766C00DE4723 /* POPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPViewController.swift; sourceTree = "<group>"; };
 		C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesViewController.swift; sourceTree = "<group>"; };
+		C68004542D0091E800A86023 /* WCDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBViewController.swift; sourceTree = "<group>"; };
 		C68135962CFA2C6900FB7653 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig_W.swift; sourceTree = "<group>"; };
 		C68135982CFA2C6900FB7653 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -426,6 +428,14 @@
 				C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */,
 			);
 			path = "SwiftMessages通知栏";
+			sourceTree = "<group>";
+		};
+		C68004532D0091C000A86023 /* WCDB */ = {
+			isa = PBXGroup;
+			children = (
+				C68004542D0091E800A86023 /* WCDBViewController.swift */,
+			);
+			path = WCDB;
 			sourceTree = "<group>";
 		};
 		C68135992CFA2C6900FB7653 /* MoyaCustom */ = {
@@ -864,6 +874,7 @@
 				C6B5808E2CF8A2F400794CF1 /* Alamofire */,
 				C6B5808D2CF8A2DF00794CF1 /* Moya */,
 				C681359D2CFB510200FB7653 /* Kingfisher */,
+				C68004532D0091C000A86023 /* WCDB */,
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
@@ -1223,6 +1234,7 @@
 				C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
+				C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
