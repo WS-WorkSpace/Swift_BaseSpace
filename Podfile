@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 workspace 'Swift_BaseSpace.xcworkspace'
 
@@ -46,7 +46,7 @@ target 'Swift_Base' do
   pod 'IQKeyboardManagerSwift', '6.5.9' #AppDelegate+Extension
   #pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
-#  pod 'WCDB.swift', '~> 2.0.4'
+  pod 'WCDB.swift', '2.1.9'
 
   #pod 'SQLite.swift', '0.13.2'             # SQLite.swift:用swift封装的sqlite 3操作框架。
   #pod 'RealmSwift'
