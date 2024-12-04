@@ -27,6 +27,9 @@ PODS:
   - RxSwift (6.8.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
   - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
 
@@ -48,6 +51,7 @@ DEPENDENCIES:
   - RxSwift (= 6.8.0)
   - SnapKit (= 4.2.0)
   - SVProgressHUD (= 2.2.5)
+  - SwiftMessages (= 9.0.6)
   - SwiftyJSON (= 5.0.1)
   - Toast-Swift (= 5.0.1)
 
@@ -72,6 +76,7 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SVProgressHUD
+    - SwiftMessages
     - SwiftyJSON
     - Toast-Swift
 
@@ -95,9 +100,10 @@ SPEC CHECKSUMS:
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 780e292b476a2d8751ac5316b56caca11fbf1f54
+PODFILE CHECKSUM: 8a88a0386a29ced5cbe0f6db128d4f56b55a8376
 
 COCOAPODS: 1.12.1

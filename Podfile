@@ -87,7 +87,7 @@ target 'Swift_Base' do
   #pod 'SCLAlertView', '0.8' # 标题上方带图片
   
   # SwiftMessages 是一个 Swift 编写的通知和消息库，它提供了许多不同的消息样式和配置选项，非常适合移动应用程序开发。                                     https://github.com/SwiftKickMobile/SwiftMessages
-  #pod 'SwiftMessages', '9.0.6'
+  pod 'SwiftMessages', '9.0.6'
   
   #pod 'BulletinBoard'
   #pod 'FloatingPanel' # 浮动界面
