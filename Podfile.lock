@@ -32,12 +32,6 @@ PODS:
   - SwiftMessages/App (9.0.6)
   - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
-  - WCDB.swift (2.0.4):
-    - WCDB.swift/no-arc (= 2.0.4)
-    - WCDBOptimizedSQLCipher (~> 1.4.2)
-  - WCDB.swift/no-arc (2.0.4):
-    - WCDBOptimizedSQLCipher (~> 1.4.2)
-  - WCDBOptimizedSQLCipher (1.4.6)
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
@@ -60,7 +54,6 @@ DEPENDENCIES:
   - SwiftMessages (= 9.0.6)
   - SwiftyJSON (= 5.0.1)
   - Toast-Swift (= 5.0.1)
-  - WCDB.swift (~> 2.0.4)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -86,8 +79,6 @@ SPEC REPOS:
     - SwiftMessages
     - SwiftyJSON
     - Toast-Swift
-    - WCDB.swift
-    - WCDBOptimizedSQLCipher
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -112,9 +103,7 @@ SPEC CHECKSUMS:
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
-  WCDB.swift: 28dd96180d913abadb3ea9cf99bd6e942262379a
-  WCDBOptimizedSQLCipher: c6451e1dead7ec53e1344a2545aaed2c4c139fc0
 
-PODFILE CHECKSUM: ec19d7cca7978f8890f7a046cff8040d4ef18481
+PODFILE CHECKSUM: dfb5cd6bb95ed724498d8ace5c659c230ddfb806
 
 COCOAPODS: 1.12.1
