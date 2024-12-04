@@ -22,6 +22,7 @@
 		C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41882CED746C00DE4723 /* UIColorTool.swift */; };
 		C67C418D2CED766C00DE4723 /* POPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418C2CED766C00DE4723 /* POPViewController.swift */; };
 		C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */; };
+		C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */; };
 		C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135982CFA2C6900FB7653 /* NetworkManager.swift */; };
 		C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */; };
 		C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135962CFA2C6900FB7653 /* APIProvider.swift */; };
@@ -182,6 +183,7 @@
 		C67C41882CED746C00DE4723 /* UIColorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
 		C67C418C2CED766C00DE4723 /* POPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPViewController.swift; sourceTree = "<group>"; };
 		C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
+		C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesViewController.swift; sourceTree = "<group>"; };
 		C68135962CFA2C6900FB7653 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig_W.swift; sourceTree = "<group>"; };
 		C68135982CFA2C6900FB7653 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -416,6 +418,14 @@
 				C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */,
 			);
 			path = "响应式编程";
+			sourceTree = "<group>";
+		};
+		C68004502D003EFA00A86023 /* SwiftMessages通知栏 */ = {
+			isa = PBXGroup;
+			children = (
+				C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */,
+			);
+			path = "SwiftMessages通知栏";
 			sourceTree = "<group>";
 		};
 		C68135992CFA2C6900FB7653 /* MoyaCustom */ = {
@@ -879,6 +889,7 @@
 				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 				C6B580312CF19F8A00794CF1 /* 菊花加载动画 */,
 				C6B580522CF7239300794CF1 /* ESPullToRefresh */,
+				C68004502D003EFA00A86023 /* SwiftMessages通知栏 */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1252,6 +1263,7 @@
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
 				C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */,
 				C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */,
+				C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
 				C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */,
 				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,

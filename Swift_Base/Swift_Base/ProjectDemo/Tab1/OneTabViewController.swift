@@ -21,7 +21,8 @@ class OneTabViewController: BaseTableViewController {
          "ReactiveProgrammingViewController",
          "MirrorViewController",
          "NVActivityIndicatorViewController",
-         "ESPullToRefreshViewController"]
+         "ESPullToRefreshViewController",
+         "SwiftMessagesViewController"]
     }
 
     override func viewDidLoad() {
@@ -40,7 +41,8 @@ class OneTabViewController: BaseTableViewController {
                           "响应式编程",
                           "反射",
                           "菊花动画",
-                          "ESPullToRefresh"]
+                          "ESPullToRefresh",
+                          "SwiftMessages通知栏"]
 
         // MARK: - 点击cell的closure返回
 

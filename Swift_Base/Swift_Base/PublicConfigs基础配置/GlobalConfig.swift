@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+public let USER_IMG_URl = "https://img0.baidu.com/it/u=654841015,2231853144&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666#/"
+
 public enum GlobalConfig {
     // MARK: - Config Info
 
@@ -34,6 +36,8 @@ public enum GlobalConfig {
 //        let strURL3 = "https://raw.githubusercontent.com/xiaoyouxinqing/PostDemo/master/PostDemo/Resources/PostListData_recommend_1.json"
 
     // 下载,上传 的接口查看tab4_基于AFN封装的网络请求模块
+    
+
 
     // MARK: -  UI
 }
