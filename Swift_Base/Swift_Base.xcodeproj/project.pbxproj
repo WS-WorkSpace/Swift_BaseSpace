@@ -24,6 +24,7 @@
 		C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */; };
 		C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */; };
 		C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004542D0091E800A86023 /* WCDBViewController.swift */; };
+		C68004572D0092C900A86023 /* WCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004562D0092C900A86023 /* WCDManager.swift */; };
 		C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135982CFA2C6900FB7653 /* NetworkManager.swift */; };
 		C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */; };
 		C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135962CFA2C6900FB7653 /* APIProvider.swift */; };
@@ -186,6 +187,7 @@
 		C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesViewController.swift; sourceTree = "<group>"; };
 		C68004542D0091E800A86023 /* WCDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBViewController.swift; sourceTree = "<group>"; };
+		C68004562D0092C900A86023 /* WCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDManager.swift; sourceTree = "<group>"; };
 		C68135962CFA2C6900FB7653 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		C68135972CFA2C6900FB7653 /* MoyaConfig_W.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig_W.swift; sourceTree = "<group>"; };
 		C68135982CFA2C6900FB7653 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */,
+				C68004562D0092C900A86023 /* WCDManager.swift */,
 			);
 			path = SwiftyJSON;
 			sourceTree = "<group>";
@@ -1248,6 +1251,7 @@
 				C6C5CF612A7D011A00C5CF02 /* BaseCollectionViewController.swift in Sources */,
 				C6EE3A7E2A86927700A76C19 /* XIBTableHeaderView.swift in Sources */,
 				C6C5CEE62A76A82000C5CF02 /* JsonUtils.swift in Sources */,
+				C68004572D0092C900A86023 /* WCDManager.swift in Sources */,
 				C6C5CED02A75D73200C5CF02 /* NSString+Extension.swift in Sources */,
 				C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */,
 				C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */,
