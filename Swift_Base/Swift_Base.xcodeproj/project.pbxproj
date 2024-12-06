@@ -42,6 +42,9 @@
 		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
 		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
+		C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A9511F2D019C3B00D07C53 /* BookItem.swift */; };
+		C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951212D01B0BF00D07C53 /* ExampleItem.swift */; };
+		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
 		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
 		C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */; };
@@ -129,7 +132,6 @@
 		C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */; };
 		C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A502A8248F800A76C19 /* WaterFallModelHandle.swift */; };
 		C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A522A834EA100A76C19 /* WaterFallFlowLayout.swift */; };
-		C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */; };
 		C6EE3A5C2A84DD1100A76C19 /* FPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */; };
 		C6EE3A612A85C86400A76C19 /* FuntionaProgrammingNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A602A85C86400A76C19 /* FuntionaProgrammingNetWork.swift */; };
 		C6EE3A642A85EB1900A76C19 /* TableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A632A85EB1900A76C19 /* TableListViewController.swift */; };
@@ -207,6 +209,9 @@
 		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
 		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
+		C6A9511F2D019C3B00D07C53 /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
+		C6A951212D01B0BF00D07C53 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
+		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
 		C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewController.swift; sourceTree = "<group>"; };
@@ -306,7 +311,6 @@
 		C6EE3A4E2A8225D200A76C19 /* WaterflowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCell.swift; sourceTree = "<group>"; };
 		C6EE3A502A8248F800A76C19 /* WaterFallModelHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallModelHandle.swift; sourceTree = "<group>"; };
 		C6EE3A522A834EA100A76C19 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
-		C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkingListViewController.swift; sourceTree = "<group>"; };
 		C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSViewController.swift; sourceTree = "<group>"; };
 		C6EE3A602A85C86400A76C19 /* FuntionaProgrammingNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionaProgrammingNetWork.swift; sourceTree = "<group>"; };
 		C6EE3A632A85EB1900A76C19 /* TableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +440,10 @@
 			isa = PBXGroup;
 			children = (
 				C68004542D0091E800A86023 /* WCDBViewController.swift */,
+				C68004562D0092C900A86023 /* WCDManager.swift */,
+				C6A9511F2D019C3B00D07C53 /* BookItem.swift */,
+				C6A951212D01B0BF00D07C53 /* ExampleItem.swift */,
+				C6A951232D01FA7300D07C53 /* Sample.swift */,
 			);
 			path = WCDB;
 			sourceTree = "<group>";
@@ -517,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */,
-				C68004562D0092C900A86023 /* WCDManager.swift */,
 			);
 			path = SwiftyJSON;
 			sourceTree = "<group>";
@@ -572,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B580912CF8A36200794CF1 /* MoyaViewController.swift */,
+				C6EE3A882A88E8BA00A76C19 /* MoyaPods */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -580,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */,
+				C6EE3A8F2A8939FC00A76C19 /* 链式 */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -881,8 +890,6 @@
 				C6EE3A832A88ABF900A76C19 /* 链式 + TableView - SwiftyJSON */,
 				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 				C6B8C4E52A89ED100080F9B4 /* New Group */,
-				C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */,
-				C6EE3A572A84DC1B00A76C19 /* 废弃的网络tableView目录 */,
 			);
 			path = Tab2;
 			sourceTree = "<group>";
@@ -960,14 +967,6 @@
 			path = "基础控件Demo";
 			sourceTree = "<group>";
 		};
-		C6EE3A572A84DC1B00A76C19 /* 废弃的网络tableView目录 */ = {
-			isa = PBXGroup;
-			children = (
-				C6EE3A582A84DC6300A76C19 /* NetWorkingListViewController.swift */,
-			);
-			path = "废弃的网络tableView目录";
-			sourceTree = "<group>";
-		};
 		C6EE3A622A85E4B400A76C19 /* Tableview集合 */ = {
 			isa = PBXGroup;
 			children = (
@@ -997,7 +996,7 @@
 			path = "链式 + TableView - SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		C6EE3A882A88E8BA00A76C19 /* Moya */ = {
+		C6EE3A882A88E8BA00A76C19 /* MoyaPods */ = {
 			isa = PBXGroup;
 			children = (
 				C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */,
@@ -1005,7 +1004,7 @@
 				C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */,
 				C68135992CFA2C6900FB7653 /* MoyaCustom */,
 			);
-			path = Moya;
+			path = MoyaPods;
 			sourceTree = "<group>";
 		};
 		C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */ = {
@@ -1015,15 +1014,6 @@
 				C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */,
 			);
 			path = "链式 + TableView - HandyJSON + 动态高度";
-			sourceTree = "<group>";
-		};
-		C6EE3A8E2A8939DB00A76C19 /* 封装的网络Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C6EE3A8F2A8939FC00A76C19 /* 链式 */,
-				C6EE3A882A88E8BA00A76C19 /* Moya */,
-			);
-			path = "封装的网络Pods";
 			sourceTree = "<group>";
 		};
 		C6EE3A8F2A8939FC00A76C19 /* 链式 */ = {
@@ -1240,6 +1230,7 @@
 				C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
+				C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */,
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
 				C6B5804F2CF613CB00794CF1 /* CodableViewController.swift in Sources */,
 				C654370E2A80844700C304B4 /* Then.swift in Sources */,
@@ -1288,6 +1279,7 @@
 				C6C5CEB52A74E2D000C5CF02 /* Toast.swift in Sources */,
 				C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */,
 				C6C5CED52A75D84F00C5CF02 /* MBProgressHUD+Extension.swift in Sources */,
+				C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */,
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
 				C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */,
@@ -1321,7 +1313,6 @@
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
 				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
-				C6EE3A592A84DC6300A76C19 /* NetWorkingListViewController.swift in Sources */,
 				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
@@ -1349,6 +1340,7 @@
 				C68CB7512CE83D47009F8A6A /* Car.swift in Sources */,
 				C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */,
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
+				C6A951242D01FA7300D07C53 /* Sample.swift in Sources */,
 				C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */,
 				C6C5CECD2A75D67800C5CF02 /* UITableView+Extension.swift in Sources */,
 			);

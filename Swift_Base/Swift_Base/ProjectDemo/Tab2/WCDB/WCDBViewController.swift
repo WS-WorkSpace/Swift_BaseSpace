@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import WCDBSwift
+
 private struct Book {
     var authorNumber: Int
     var authorName: String
@@ -29,14 +31,6 @@ class WCDBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mTableView)
-//        configModelArr = ["SwiftyJSON使用",
-//                          "",
-//                          "",
-//                          "",
-//                          ""]
-        /// 读取本地数据
-//        let dic = EasyTestModel.readJsonWithFileName("BookList", "json")
-//        readLocalJSON()
         getNetModel()
     }
 
@@ -115,6 +109,36 @@ extension WCDBViewController: UITableViewDelegate {
         let contentHeight = descString.RD_getStringHeight(kScreenWidth - 10 - 10, 20)
         let cellHeight = contentHeight + 10 + 10
         return cellHeight
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+//        let tableName = "BookItem"
+//        DBManager.shared.createTable(name: "BookItem", model: BookItem.self)
+//        let object = BookItem()
+//        object.authorNumber = Int.random(in: 0...3)
+//        let arr = ["Jim","Rose","Tom","jack","Li"]
+//        object.authorName = arr.randomElement()
+//        let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
+//        object.desc = description.randomElement()
+//        //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
+//        DBManager.shared.insert(objects: object, intoTable: tableName)
+//        print(object.lastInsertedRowID)
+        
+        let tableName = "ExampleItem"
+        DBManager.shared.createTable(name: "ExampleItem", model: ExampleItem.self)
+        let object = ExampleItem()
+        object.authorNumber = Int.random(in: 0...3)
+        let arr = ["Jim","Rose","Tom","jack","Li"]
+        object.authorName = arr.randomElement()
+        let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
+        object.desc = description.randomElement()
+        //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
+        DBManager.shared.insert(objects: object, intoTable: tableName)
+        DBManager.shared.insert(objects: object, intoTable: tableName)
+
+        print(object.lastInsertedRowID)
+        
+
+
     }
 }
 

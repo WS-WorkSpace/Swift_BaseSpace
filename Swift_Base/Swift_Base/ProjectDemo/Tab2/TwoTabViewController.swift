@@ -74,7 +74,6 @@ class TwoTabViewController: BaseTableViewController {
     // MARK: - BarIetms方法
 
     @objc func netWoringMethod() {
-        self.navigationController?.pushViewController(NetWorkingListViewController(), animated: true)
     }
 
     @objc func demoListVC() {
