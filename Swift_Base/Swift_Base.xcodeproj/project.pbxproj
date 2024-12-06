@@ -45,6 +45,8 @@
 		C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A9511F2D019C3B00D07C53 /* BookItem.swift */; };
 		C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951212D01B0BF00D07C53 /* ExampleItem.swift */; };
 		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
+		C6A951262D02AEAE00D07C53 /* WCDBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */; };
+		C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */; };
 		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
 		C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */; };
@@ -212,6 +214,8 @@
 		C6A9511F2D019C3B00D07C53 /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
 		C6A951212D01B0BF00D07C53 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBHeaderView.swift; sourceTree = "<group>"; };
+		C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCDBHeaderView.xib; sourceTree = "<group>"; };
 		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
 		C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewController.swift; sourceTree = "<group>"; };
@@ -444,6 +448,8 @@
 				C6A9511F2D019C3B00D07C53 /* BookItem.swift */,
 				C6A951212D01B0BF00D07C53 /* ExampleItem.swift */,
 				C6A951232D01FA7300D07C53 /* Sample.swift */,
+				C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */,
+				C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */,
 			);
 			path = WCDB;
 			sourceTree = "<group>";
@@ -1142,6 +1148,7 @@
 				C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */,
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
 				C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */,
+				C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */,
 				C6B580402CF215CF00794CF1 /* BookList.json in Resources */,
 				C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */,
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
@@ -1224,6 +1231,7 @@
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
 				C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */,
+				C6A951262D02AEAE00D07C53 /* WCDBHeaderView.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
@@ -1521,7 +1529,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1557,7 +1565,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

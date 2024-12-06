@@ -14,9 +14,9 @@ enum DBTableName: String {
     case addressTable = "AddressModel"
 }
 
-public let FPNetWorkRequest = DBManager.shared
+public let MYDB = DBManager.shared
 
-class DBManager: NSObject {
+public class DBManager: NSObject {
     private let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0].appending("/myWCDB.db")
     static let shared: DBManager = .init()
     public var db: Database!
@@ -86,15 +86,17 @@ class DBManager: NSObject {
     //    }
 
     // MARK: - 增
-    // 第一个只是单纯的插入数据,主键冲突可能会失败
-    public func insert<T: TableEncodable>(objects:T..., intoTable tableName: String){
+
+    // 只是单纯的插入数据,主键冲突可能会失败
+    public func insert<T: TableEncodable>(objects: T..., intoTable tableName: String) {
         do {
             try db?.insert(objects, intoTable: tableName)
-            
-        }catch let error {
+
+        } catch {
             debugPrint(error.localizedDescription)
         }
     }
+
     /// 插入数据，当数据出现冲突时会失败，而后两个在主键冲突等约束冲突出现时，insertOrReplace会把新数据会覆盖旧数据
     public func insertOrReplace<T: TableCodable>(_ objects: T..., tableName: String? = nil, on propertyConvertibleList: [PropertyConvertible]? = nil) {
         let table = db.getTable(named: tableName ?? "\(T.self)", of: T.self)
@@ -115,15 +117,6 @@ class DBManager: NSObject {
             debugPrint(error.localizedDescription)
         }
     }
-
-//    ///插入数据
-//    public func inser<T: TableEncodable>(objects:[T], intoTable table: DBTableName){
-//        do {
-//            try db?.insert(objects: objects, intoTable: table.rawValue)
-//        }catch let error {
-//            debugPrint(error.localizedDescription)
-//        }
-//    }
 
     // MARK: - 删
 

@@ -23,10 +23,17 @@ class WCDBViewController: UIViewController {
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
         tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.SwiftyJSONCellID)
+        
+        tabview.tableHeaderView = mTableHeaderView
         return tabview
     }()
-
-    static let SwiftyJSONCellID = "SwiftyJSONCell"
+    lazy var mTableHeaderView = {
+        let headerView =  WCDBHeaderView.loadFromNib()
+        headerView.frame = CGRectMake(0, 0, kScreenWidth, 200)
+        return headerView
+    }()
+    
+    static let SwiftyJSONCellID = "WCDBCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +78,9 @@ class WCDBViewController: UIViewController {
 //        }
         Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
             if let res = response.data {
-                print(res)
+//                print(res)
                 let json = JSON(res)
-                print(json)
+//                print(json)
                 self?.bookArray.removeAll()
                 self?.updateModel(json)
             }
@@ -111,20 +118,9 @@ extension WCDBViewController: UITableViewDelegate {
         return cellHeight
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//        let tableName = "BookItem"
-//        DBManager.shared.createTable(name: "BookItem", model: BookItem.self)
-//        let object = BookItem()
-//        object.authorNumber = Int.random(in: 0...3)
-//        let arr = ["Jim","Rose","Tom","jack","Li"]
-//        object.authorName = arr.randomElement()
-//        let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
-//        object.desc = description.randomElement()
-//        //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
-//        DBManager.shared.insert(objects: object, intoTable: tableName)
-//        print(object.lastInsertedRowID)
         
         let tableName = "ExampleItem"
-        DBManager.shared.createTable(name: "ExampleItem", model: ExampleItem.self)
+        MYDB.createTable(name: "ExampleItem", model: ExampleItem.self)
         let object = ExampleItem()
         object.authorNumber = Int.random(in: 0...3)
         let arr = ["Jim","Rose","Tom","jack","Li"]
@@ -132,8 +128,8 @@ extension WCDBViewController: UITableViewDelegate {
         let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
         object.desc = description.randomElement()
         //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
-        DBManager.shared.insert(objects: object, intoTable: tableName)
-        DBManager.shared.insert(objects: object, intoTable: tableName)
+        MYDB.insert(objects: object, intoTable: tableName)
+        MYDB.insert(objects: object, intoTable: tableName)
 
         print(object.lastInsertedRowID)
         
