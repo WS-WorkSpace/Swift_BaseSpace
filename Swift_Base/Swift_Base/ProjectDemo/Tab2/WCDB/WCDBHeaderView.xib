@@ -23,7 +23,7 @@
                     <state key="normal" title="增"/>
                     <buttonConfiguration key="configuration" style="filled" title="增"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWP-y0-YIk" userLabel="Button2">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWP-y0-YIk" userLabel="deleteBtn">
                     <rect key="frame" x="106" y="37" width="90" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -31,7 +31,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="删"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7V-dT-iQN" userLabel="Button3">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7V-dT-iQN" userLabel="changeBtn">
                     <rect key="frame" x="204" y="37" width="90" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -85,6 +85,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addBtn" destination="z0z-sZ-f0J" id="aYc-Ab-JcC"/>
+                <outlet property="changeBtn" destination="d7V-dT-iQN" id="TjT-EE-U1W"/>
+                <outlet property="deleteBtn" destination="zWP-y0-YIk" id="sEF-cA-GXU"/>
             </connections>
             <point key="canvasLocation" x="-150.38167938931298" y="-245.07042253521129"/>
         </view>

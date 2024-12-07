@@ -8,7 +8,6 @@
 import UIKit
 import WCDBSwift
 
-
 class WCDBViewController: UIViewController {
     fileprivate var bookArray = [ExampleItem]()
     lazy var mTableView: UITableView = {
@@ -18,25 +17,30 @@ class WCDBViewController: UIViewController {
         tabview.dataSource = self
         tabview.backgroundColor = .lightGray
         tabview.register(UITableViewCell.self, forCellReuseIdentifier: Self.SwiftyJSONCellID)
-        
+
         tabview.tableHeaderView = mTableHeaderView
         return tabview
     }()
+
     lazy var mTableHeaderView = {
-        let headerView =  WCDBHeaderView.loadFromNib()
+        let headerView = WCDBHeaderView.loadFromNib()
         headerView.frame = CGRectMake(0, 0, kScreenWidth, 200)
         return headerView
     }()
-    
+
     static let SwiftyJSONCellID = "WCDBCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mTableView)
+        // 调用单例会创建数据库
+        // createTable创建表
+        DBManager.shared.createTable(name: "ExampleItem", model: ExampleItem.self)
+
         readLocalDataBase()
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: .WCDBHeaderViewNotification, object: nil)
-
     }
+
     @objc func handleNotification(_ notification: Notification) {
         if let userInfo = notification.userInfo, let value = userInfo["key"] as? String {
             print("接收到传递的通知: \(value)")
@@ -44,18 +48,19 @@ class WCDBViewController: UIViewController {
         }
     }
 
-    /// 读取本地json数据
+    /// 读取本地数据库
     func readLocalDataBase() {
         do {
             let allObjects: [ExampleItem] = try DBManager.shared.db.getObjects(on: ExampleItem.Properties.all, fromTable: "\(ExampleItem.self)")
-            print("getObjects(全部列的查询)",allObjects)
+            let condition: Condition = ExampleItem.Properties.authorNumber < 50 // && ExampleItem.Properties.authorName == "abc"
+            let allObjectsA: [ExampleItem] = try DBManager.shared.db.getObjects(on: ExampleItem.Properties.all, fromTable: "ExampleItem", where: condition, limit: 10, offset: 0)
+//            let _ = allObjectsA.map {
+//                print($0.authorNumber ?? 0)
+//                print($0.authorName ?? "")
+//            }
             bookArray = allObjects
             mTableView.reloadData()
-        } catch {
-
-        }
-
-
+        } catch {}
     }
 
 //    func updateModel(_ json: JSON) {
@@ -73,25 +78,25 @@ class WCDBViewController: UIViewController {
 //    func getNetModel() {
 //        let url = GlobalConfig.BOOKLIST_URL
 //        let parameters = ["key": "value"]
-////        DispatchQueue.global().async {
-////            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
-////                // 处理响应结果
-////                if let value = response.result.value {
-////                    let json = JSON(value)
-////                    self?.bookArray.removeAll()
-////                    self.updateModel(json)
-////                }
-////                if let error = response.result.error {
-////                    print("Response error: \(error)")
-////                }
-////
-////            })
-////        }
+    ////        DispatchQueue.global().async {
+    ////            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+    ////                // 处理响应结果
+    ////                if let value = response.result.value {
+    ////                    let json = JSON(value)
+    ////                    self?.bookArray.removeAll()
+    ////                    self.updateModel(json)
+    ////                }
+    ////                if let error = response.result.error {
+    ////                    print("Response error: \(error)")
+    ////                }
+    ////
+    ////            })
+    ////        }
 //        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
 //            if let res = response.data {
-////                print(res)
+    ////                print(res)
 //                let json = JSON(res)
-////                print(json)
+    ////                print(json)
 //                self?.bookArray.removeAll()
 //                self?.updateModel(json)
 //            }
@@ -129,7 +134,8 @@ extension WCDBViewController: UITableViewDelegate {
         let cellHeight = contentHeight + 10 + 10
         return cellHeight
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let tableName = "ExampleItem"
 //        MYDB.createTable(name: "ExampleItem", model: ExampleItem.self)
 //        let object = ExampleItem()
@@ -144,4 +150,3 @@ extension WCDBViewController: UITableViewDelegate {
 //        print(object.lastInsertedRowID)
     }
 }
-

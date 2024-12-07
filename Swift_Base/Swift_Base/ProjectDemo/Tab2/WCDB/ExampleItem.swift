@@ -34,6 +34,11 @@ final class ExampleItem: TableCodable {
     /// 不需要写入数据库的数据
     var descTemp: String?
 
+    init(authorNumber: Int? = nil, authorName: String? = nil, desc: String? = nil) {
+        self.authorNumber = authorNumber
+        self.authorName = authorName
+        self.desc = desc
+    }
 //    var myClass: Customer? = nil
 
     // 这一块管WCDB在数据库需要存储的值
@@ -92,7 +97,9 @@ final class ExampleItem: TableCodable {
 
     // 当主键需要自动递增时需设置下面两个属性
     // 用于定义是否使用自增的方式插入
-    var isAutoIncrement: Bool = true // 这儿一定要设置为false，设置了初始值false一样递增，若是设置了true当插入相同主键时，会crash
+    // 这儿一定要设置为false，设置了初始值false一样递增，若是设置了true当插入相同主键时，会crash
+    // Auto-increment inserts do not support conflict action! 自动增量插入不支持冲突
+    var isAutoIncrement: Bool = false
     // 用于获取自增插入后的主键值
     var lastInsertedRowID: Int64 = 0
 }

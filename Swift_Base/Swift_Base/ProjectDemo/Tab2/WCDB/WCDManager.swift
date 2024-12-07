@@ -30,23 +30,23 @@ public class DBManager: NSObject {
     override private init() {
         super.init()
         db = createDB()
-//         // 全局性能监控
-//         Database.globalTracePerformance { tag, path, handleId, sql, cost in
-//             print("WCDB数据库性能指标： tag \(tag) id \(handleId) at path \(path) takes \(cost) seconds to execute sql \(sql)")
-//         }
-//
-//         // 全局错误监控
-//         Database.globalTraceError { (error: WCDBError) in
-//             #if DEBUG
-//             assert(error.level != .Fatal)
-//             #endif
-//
-//             if error.level == .Ignore {
-//                 print("可忽略WCDB数据库信息", error)
-//             } else {
-//                 print("WCDB数据库错误", error)
-//             }
-//         }
+         // 全局性能监控
+         Database.globalTracePerformance { tag, path, handleId, sql, cost in
+             //print("WCDB数据库性能指标： tag \(tag) id \(handleId) at path \(path) takes \(cost) seconds to execute sql \(sql)")
+         }
+
+         // 全局错误监控
+         Database.globalTraceError { (error: WCDBError) in
+             #if DEBUG
+             assert(error.level != .Fatal)
+             #endif
+
+             if error.level == .Ignore {
+                 // print("可忽略WCDB数据库信息", error)
+             } else {
+                 // print("WCDB数据库错误", error)
+             }
+         }
         db.setNotification { corruptedDatabase in
             print("Database is corrupted: tag \(corruptedDatabase.tag ?? 0), path \(corruptedDatabase.path)")
             // WCDB 检测到损坏之后，isAlreadyCorrupted会始终返回 YES
@@ -88,7 +88,18 @@ public class DBManager: NSObject {
     // MARK: - 增
 
     // 只是单纯的插入数据,主键冲突可能会失败
+    // 传入多参数
     public func insert<T: TableEncodable>(objects: T..., intoTable tableName: String) {
+        do {
+            try db?.insert(objects, intoTable: tableName)
+
+        } catch {
+            debugPrint(error.localizedDescription)
+        }
+    }
+
+    // 传入数组
+    public func insert<T: TableEncodable>(objects: [T], intoTable tableName: String) {
         do {
             try db?.insert(objects, intoTable: tableName)
 
@@ -106,6 +117,15 @@ public class DBManager: NSObject {
             debugPrint(error.localizedDescription)
         }
     }
+    public func insertOrReplace<T: TableCodable>(_ objects: [T], tableName: String? = nil, on propertyConvertibleList: [PropertyConvertible]? = nil) {
+        let table = db.getTable(named: tableName ?? "\(T.self)", of: T.self)
+        do {
+            try table.insertOrReplace(objects, on: propertyConvertibleList)
+        } catch {
+            debugPrint(error.localizedDescription)
+        }
+    }
+
 
     /// 对特定（或全部）属性执行插入或忽略‘ tableencoable ’对象。///如果当前表中已经存在相同的主键或行id，则忽略该对象。
     /// insertOrIgnore则是会忽略冲突数据，而不产生错误。
