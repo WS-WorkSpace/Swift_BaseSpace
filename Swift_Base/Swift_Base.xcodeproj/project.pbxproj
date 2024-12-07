@@ -66,6 +66,7 @@
 		C6B580922CF8A36200794CF1 /* MoyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580912CF8A36200794CF1 /* MoyaViewController.swift */; };
 		C6B580942CF9618100794CF1 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580932CF9618100794CF1 /* UIButton+Extension.swift */; };
 		C6B580962CF9A20F00794CF1 /* RDBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580952CF9A20F00794CF1 /* RDBase.swift */; };
+		C6B87D542D04241D00D83033 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B87D532D04241D00D83033 /* Notification+Extension.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
 		C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */; };
 		C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CE7D2A745BD400C5CF02 /* Assets.xcassets */; };
@@ -235,6 +236,7 @@
 		C6B580912CF8A36200794CF1 /* MoyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaViewController.swift; sourceTree = "<group>"; };
 		C6B580932CF9618100794CF1 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C6B580952CF9A20F00794CF1 /* RDBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBase.swift; sourceTree = "<group>"; };
+		C6B87D532D04241D00D83033 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
 		C6C5CE712A745BD300C5CF02 /* Swift_Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5CE742A745BD300C5CF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -445,11 +447,10 @@
 			children = (
 				C68004542D0091E800A86023 /* WCDBViewController.swift */,
 				C68004562D0092C900A86023 /* WCDManager.swift */,
-				C6A9511F2D019C3B00D07C53 /* BookItem.swift */,
 				C6A951212D01B0BF00D07C53 /* ExampleItem.swift */,
-				C6A951232D01FA7300D07C53 /* Sample.swift */,
 				C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */,
 				C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */,
+				C6B87D502D033AB300D83033 /* unused */,
 			);
 			path = WCDB;
 			sourceTree = "<group>";
@@ -599,6 +600,15 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		C6B87D502D033AB300D83033 /* unused */ = {
+			isa = PBXGroup;
+			children = (
+				C6A9511F2D019C3B00D07C53 /* BookItem.swift */,
+				C6A951232D01FA7300D07C53 /* Sample.swift */,
+			);
+			path = unused;
+			sourceTree = "<group>";
+		};
 		C6B8C4E52A89ED100080F9B4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +733,7 @@
 			children = (
 				C6C5CEDB2A76055F00C5CF02 /* String+Extension.swift */,
 				C6C5CECF2A75D73200C5CF02 /* NSString+Extension.swift */,
+				C6B87D532D04241D00D83033 /* Notification+Extension.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -1294,6 +1305,7 @@
 				C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */,
 				C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */,
 				C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */,
+				C6B87D542D04241D00D83033 /* Notification+Extension.swift in Sources */,
 				C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */,
 				C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */,
 				C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */,

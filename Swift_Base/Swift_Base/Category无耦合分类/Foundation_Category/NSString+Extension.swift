@@ -57,8 +57,8 @@ extension NSString {
         /// 返回这个类的对象
         if let _vcClass = vcClass {
             return _vcClass.init()
-        }else{
-            Toast.toast(("没有\(className)这个类"), duration: 2.8)
+        } else {
+            Toast.toast("没有\(className)这个类", duration: 2.8)
             return nil
         }
     }

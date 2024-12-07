@@ -8,14 +8,9 @@
 import UIKit
 import WCDBSwift
 
-private struct Book {
-    var authorNumber: Int
-    var authorName: String
-    var desc: String
-}
 
 class WCDBViewController: UIViewController {
-    fileprivate var bookArray = [Book]()
+    fileprivate var bookArray = [ExampleItem]()
     lazy var mTableView: UITableView = {
         let tabview = UITableView()
         tabview.frame = kScrollViewFrame
@@ -38,57 +33,74 @@ class WCDBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mTableView)
-        getNetModel()
+        readLocalDataBase()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: .WCDBHeaderViewNotification, object: nil)
+
+    }
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo, let value = userInfo["key"] as? String {
+            print("接收到传递的通知: \(value)")
+            readLocalDataBase()
+        }
     }
 
     /// 读取本地json数据
-    func readLocalJSON() {
-        let json = EasyTestModel.getLocalJSON("BookList", "json")
-        updateModel(json)
-    }
+    func readLocalDataBase() {
+        do {
+            let allObjects: [ExampleItem] = try DBManager.shared.db.getObjects(on: ExampleItem.Properties.all, fromTable: "\(ExampleItem.self)")
+            print("getObjects(全部列的查询)",allObjects)
+            bookArray = allObjects
+            mTableView.reloadData()
+        } catch {
 
-    func updateModel(_ json: JSON) {
-        let bookArr = json["list"].arrayValue
-        for element in bookArr {
-            let num = element["num"].intValue
-            let name = element["name"].stringValue
-            let desc = element["desc"].stringValue
-            let book = Book(authorNumber: num, authorName: name, desc: desc)
-            bookArray.append(book)
         }
-        mTableView.reloadData()
+
+
     }
 
-    func getNetModel() {
-        let url = GlobalConfig.BOOKLIST_URL
-        let parameters = ["key": "value"]
-//        DispatchQueue.global().async {
-//            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
-//                // 处理响应结果
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//                    self?.bookArray.removeAll()
-//                    self.updateModel(json)
-//                }
-//                if let error = response.result.error {
-//                    print("Response error: \(error)")
-//                }
-//
-//            })
+//    func updateModel(_ json: JSON) {
+//        let bookArr = json["list"].arrayValue
+//        for element in bookArr {
+//            let num = element["num"].intValue
+//            let name = element["name"].stringValue
+//            let desc = element["desc"].stringValue
+//            let book = Book(authorNumber: num, authorName: name, desc: desc)
+//            bookArray.append(book)
 //        }
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
-            if let res = response.data {
-//                print(res)
-                let json = JSON(res)
-//                print(json)
-                self?.bookArray.removeAll()
-                self?.updateModel(json)
-            }
-        })
-    }
+//        mTableView.reloadData()
+//    }
+
+//    func getNetModel() {
+//        let url = GlobalConfig.BOOKLIST_URL
+//        let parameters = ["key": "value"]
+////        DispatchQueue.global().async {
+////            Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+////                // 处理响应结果
+////                if let value = response.result.value {
+////                    let json = JSON(value)
+////                    self?.bookArray.removeAll()
+////                    self.updateModel(json)
+////                }
+////                if let error = response.result.error {
+////                    print("Response error: \(error)")
+////                }
+////
+////            })
+////        }
+//        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
+//            if let res = response.data {
+////                print(res)
+//                let json = JSON(res)
+////                print(json)
+//                self?.bookArray.removeAll()
+//                self?.updateModel(json)
+//            }
+//        })
+//    }
 
     deinit {
         print("\(Self.self)已经释放")
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -112,29 +124,24 @@ extension WCDBViewController: UITableViewDataSource {
 
 extension WCDBViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let descString = bookArray[indexPath.row].desc
+        let descString = bookArray[indexPath.row].desc ?? ""
         let contentHeight = descString.RD_getStringHeight(kScreenWidth - 10 - 10, 20)
         let cellHeight = contentHeight + 10 + 10
         return cellHeight
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        let tableName = "ExampleItem"
-        MYDB.createTable(name: "ExampleItem", model: ExampleItem.self)
-        let object = ExampleItem()
-        object.authorNumber = Int.random(in: 0...3)
-        let arr = ["Jim","Rose","Tom","jack","Li"]
-        object.authorName = arr.randomElement()
-        let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
-        object.desc = description.randomElement()
-        //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
-        MYDB.insert(objects: object, intoTable: tableName)
-        MYDB.insert(objects: object, intoTable: tableName)
-
-        print(object.lastInsertedRowID)
-        
-
-
+//        let tableName = "ExampleItem"
+//        MYDB.createTable(name: "ExampleItem", model: ExampleItem.self)
+//        let object = ExampleItem()
+//        object.authorNumber = Int.random(in: 0...3)
+//        let arr = ["Jim","Rose","Tom","jack","Li"]
+//        object.authorName = arr.randomElement()
+//        let description = ["一个数学家","小学生","程序员","艺人","吃瓜群众"]
+//        object.desc = description.randomElement()
+//        //纯插入操作，由于设置了identifier为主键，所以identifier必须唯一，不然插入必失败并打印错误
+//        MYDB.insert(objects: object, intoTable: tableName)
+//        MYDB.insert(objects: object, intoTable: tableName)
+//        print(object.lastInsertedRowID)
     }
 }
 
