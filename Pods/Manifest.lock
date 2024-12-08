@@ -5,6 +5,7 @@ PODS:
   - ESPullToRefresh (2.9.3)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.9)
+  - JKSwiftExtension (2.7.2)
   - Kingfisher (6.3.1)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.7.2)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - ESPullToRefresh (= 2.9.3)
   - HandyJSON (= 5.0.2)
   - IQKeyboardManagerSwift (= 6.5.9)
+  - JKSwiftExtension
   - Kingfisher (= 6.3.1)
   - MBProgressHUD (= 1.1.0)
   - MJRefresh (= 3.7.2)
@@ -67,6 +69,7 @@ SPEC REPOS:
     - ESPullToRefresh
     - HandyJSON
     - IQKeyboardManagerSwift
+    - JKSwiftExtension
     - Kingfisher
     - MBProgressHUD
     - MJRefresh
@@ -93,6 +96,7 @@ SPEC CHECKSUMS:
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  JKSwiftExtension: 5a73c409d7806a470c493170271ed01639a6578d
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
@@ -112,6 +116,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 64f662eddd53dfc1c8f821f8090b5b9ab3586882
   WCDBOptimizedSQLCipher: c6451e1dead7ec53e1344a2545aaed2c4c139fc0
 
-PODFILE CHECKSUM: 13fb10ee7dafebd6f1785a1a959641c27285e9bb
+PODFILE CHECKSUM: bc02b377e10b55b73c58d490a4731d63a965398a
 
 COCOAPODS: 1.12.1

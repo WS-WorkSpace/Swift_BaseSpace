@@ -5,8 +5,8 @@
 //  Created by 王爽 on 2023/7/31.
 //
 
+import JKSwiftExtension
 import UIKit
-
 @objcMembers class Temp: NSObject {
     func test1(v1: Int) { print("test1") }
     func test2(v1: Int, v2: Int) { print("test2(v1:v2:)") }
@@ -34,8 +34,10 @@ class ThreeTabViewController: UIViewController {
             make.center.equalToSuperview()
             make.size.equalTo(CGSizeMake(200, 100))
         }
-        
-        
+        let dic: [String: Any] = ["key1": "value1", "key2": "value2"]
+        print(dic.has("key1"))
+        print(dic.jk.dictionaryToJson() as Any)
+
         test()
     }
 

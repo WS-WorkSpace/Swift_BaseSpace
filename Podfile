@@ -47,6 +47,9 @@ target 'Swift_Base' do
   #pod 'Gifu', '3.3.1'
 # 数据存储与数据安全
   pod 'WCDB.swift', '2.1.9'
+  # Extension
+  pod 'JKSwiftExtension'
+
 
   #pod 'SQLite.swift', '0.13.2'             # SQLite.swift:用swift封装的sqlite 3操作框架。
   #pod 'RealmSwift'
