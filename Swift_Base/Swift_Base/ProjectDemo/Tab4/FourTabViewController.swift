@@ -27,6 +27,21 @@ class FourTabViewController: UIViewController {
             make.top.equalTo(self.view.snp_top).offset(150)
         }
 
+        let customView:CustomView = CustomView()
+        customView.frame = CGRectMake(10, distanceTop+230, kScreenWidth-20, 50)
+        view.addSubview(customView)
+
+        
+        let templateView:Template = Template.loadFromNib()
+        templateView.frame = CGRectMake(10, distanceTop+330, kScreenWidth-20, 50)
+//        templateView.backgroundColor = .red
+        view.addSubview(templateView)
+        
+        let myxibView:MyXibView = Bundle.loadView(fromNib: "MyXibView", withType: MyXibView.self)
+        myxibView.frame = CGRectMake(10, distanceTop+430, kScreenWidth-20, 50)
+        view.addSubview(myxibView)
+
+        
     }
     
 

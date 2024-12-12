@@ -7,6 +7,18 @@
 
 import Foundation
 
+
+extension Bundle {
+
+    static func loadView<T>(fromNib name: String, withType type: T.Type) -> T {
+        if let view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T {
+            return view
+        }
+
+        fatalError("Could not load view with type " + String(describing: type))
+    }
+}
+
 /// 定义一个协议
 protocol NibLoadable {
     /// 具体实现写到 extension 中

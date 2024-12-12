@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
+		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
+		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
+		C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EF32D09E0A900B14D9B /* CustomView.xib */; };
 		C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */; };
 		C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */; };
 		C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */; };
@@ -41,6 +45,8 @@
 		C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */; };
 		C68CB7692CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */; };
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
+		C69EC9882D09FB310058912B /* MyXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69EC9872D09FB310058912B /* MyXibView.xib */; };
+		C69EC9892D09FB310058912B /* MyXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9862D09FB310058912B /* MyXibView.swift */; };
 		C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A9511F2D019C3B00D07C53 /* BookItem.swift */; };
 		C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951212D01B0BF00D07C53 /* ExampleItem.swift */; };
 		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
@@ -175,6 +181,10 @@
 		1A5DD0A6AFC6C7FB94C9F4A4 /* Pods-Swift_Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Base.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Base/Pods-Swift_Base.debug.xcconfig"; sourceTree = "<group>"; };
 		7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A286F9C1BFE2A0885F7E4F /* Pods-Swift_Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Base.release.xcconfig"; path = "Target Support Files/Pods-Swift_Base/Pods-Swift_Base.release.xcconfig"; sourceTree = "<group>"; };
+		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
+		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		C6292EF32D09E0A900B14D9B /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridViewController.swift; sourceTree = "<group>"; };
 		C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridFlowLayout.swift; sourceTree = "<group>"; };
 		C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundReusableView.swift; sourceTree = "<group>"; };
@@ -211,6 +221,8 @@
 		C68CB7612CE9A5B1009F8A6A /* WS_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Cache.swift; sourceTree = "<group>"; };
 		C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionalProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
+		C69EC9862D09FB310058912B /* MyXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyXibView.swift; sourceTree = "<group>"; };
+		C69EC9872D09FB310058912B /* MyXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyXibView.xib; sourceTree = "<group>"; };
 		C6A9511F2D019C3B00D07C53 /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
 		C6A951212D01B0BF00D07C53 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
@@ -879,6 +891,12 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */,
+				C6292EED2D09E08800B14D9B /* CustomView.swift */,
+				C6292EF32D09E0A900B14D9B /* CustomView.xib */,
+				C6292EE52D09D27500B14D9B /* Template.swift */,
+				C6292EE62D09D27500B14D9B /* Template.xib */,
+				C69EC9862D09FB310058912B /* MyXibView.swift */,
+				C69EC9872D09FB310058912B /* MyXibView.xib */,
 			);
 			path = Tab4;
 			sourceTree = "<group>";
@@ -1158,6 +1176,7 @@
 			files = (
 				C6C5CE812A745BD400C5CF02 /* LaunchScreen.storyboard in Resources */,
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
+				C69EC9882D09FB310058912B /* MyXibView.xib in Resources */,
 				C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */,
 				C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */,
 				C6B580402CF215CF00794CF1 /* BookList.json in Resources */,
@@ -1167,6 +1186,8 @@
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
 				C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */,
+				C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */,
+				C6292EE82D09D27500B14D9B /* Template.xib in Resources */,
 				C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */,
 				C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */,
 			);
@@ -1256,6 +1277,7 @@
 				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
 				C6EE3A642A85EB1900A76C19 /* TableListViewController.swift in Sources */,
 				C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */,
+				C69EC9892D09FB310058912B /* MyXibView.swift in Sources */,
 				C6C5CF632A7D03CE00C5CF02 /* BaseCollectionView.swift in Sources */,
 				C6C5CF612A7D011A00C5CF02 /* BaseCollectionViewController.swift in Sources */,
 				C6EE3A7E2A86927700A76C19 /* XIBTableHeaderView.swift in Sources */,
@@ -1280,6 +1302,7 @@
 				C6C5CF062A76DBF200C5CF02 /* YYWeakProxy.m in Sources */,
 				C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */,
 				C6B5804A2CF4D97A00794CF1 /* ObjectMapperViewController.swift in Sources */,
+				C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */,
 				C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */,
 				C6C5CF242A77109900C5CF02 /* RDActionSheet.swift in Sources */,
 				C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */,
@@ -1316,6 +1339,7 @@
 				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */,
+				C6292EE72D09D27500B14D9B /* Template.swift in Sources */,
 				C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
