@@ -28,8 +28,6 @@ class FourTabViewController: UIViewController {
         }
 
 
-
-    
         
     }
     

@@ -50,6 +50,8 @@
 		C69EC9982D0A99720058912B /* ProtocolLoadXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */; };
 		C69EC9992D0A99720058912B /* ProtocolLoadXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */; };
 		C69EC9A42D0AA9E30058912B /* CustomXIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9A32D0AA9E30058912B /* CustomXIBViewController.swift */; };
+		C69EC9C32D0AB1280058912B /* MyCustomXIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69EC9C22D0AB1280058912B /* MyCustomXIBView.xib */; };
+		C69EC9C42D0AB1280058912B /* MyCustomXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9C12D0AB1280058912B /* MyCustomXIBView.swift */; };
 		C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A9511F2D019C3B00D07C53 /* BookItem.swift */; };
 		C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951212D01B0BF00D07C53 /* ExampleItem.swift */; };
 		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
@@ -229,6 +231,8 @@
 		C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolLoadXibView.swift; sourceTree = "<group>"; };
 		C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolLoadXibView.xib; sourceTree = "<group>"; };
 		C69EC9A32D0AA9E30058912B /* CustomXIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBViewController.swift; sourceTree = "<group>"; };
+		C69EC9C12D0AB1280058912B /* MyCustomXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomXIBView.swift; sourceTree = "<group>"; };
+		C69EC9C22D0AB1280058912B /* MyCustomXIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomXIBView.xib; sourceTree = "<group>"; };
 		C6A9511F2D019C3B00D07C53 /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
 		C6A951212D01B0BF00D07C53 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
@@ -542,6 +546,8 @@
 				C69EC9872D09FB310058912B /* MyXibView.xib */,
 				C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */,
 				C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */,
+				C69EC9C12D0AB1280058912B /* MyCustomXIBView.swift */,
+				C69EC9C22D0AB1280058912B /* MyCustomXIBView.xib */,
 			);
 			path = "UIView和Xib";
 			sourceTree = "<group>";
@@ -1196,6 +1202,7 @@
 				C69EC9882D09FB310058912B /* MyXibView.xib in Resources */,
 				C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */,
 				C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */,
+				C69EC9C32D0AB1280058912B /* MyCustomXIBView.xib in Resources */,
 				C6B580402CF215CF00794CF1 /* BookList.json in Resources */,
 				C6EE3A6F2A864ADE00A76C19 /* XIBExampleCell.xib in Resources */,
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
@@ -1343,6 +1350,7 @@
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
 				C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */,
+				C69EC9C42D0AB1280058912B /* MyCustomXIBView.swift in Sources */,
 				C681359B2CFA2C6900FB7653 /* MoyaConfig_W.swift in Sources */,
 				C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */,
 				C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */,
