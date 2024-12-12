@@ -47,6 +47,9 @@
 		C68CB76E2CECE0C1009F8A6A /* WS_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */; };
 		C69EC9882D09FB310058912B /* MyXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69EC9872D09FB310058912B /* MyXibView.xib */; };
 		C69EC9892D09FB310058912B /* MyXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9862D09FB310058912B /* MyXibView.swift */; };
+		C69EC9982D0A99720058912B /* ProtocolLoadXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */; };
+		C69EC9992D0A99720058912B /* ProtocolLoadXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */; };
+		C69EC9A42D0AA9E30058912B /* CustomXIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC9A32D0AA9E30058912B /* CustomXIBViewController.swift */; };
 		C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A9511F2D019C3B00D07C53 /* BookItem.swift */; };
 		C6A951222D01B0BF00D07C53 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951212D01B0BF00D07C53 /* ExampleItem.swift */; };
 		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
@@ -223,6 +226,9 @@
 		C68CB76D2CECE0C1009F8A6A /* WS_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_TabBar.swift; sourceTree = "<group>"; };
 		C69EC9862D09FB310058912B /* MyXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyXibView.swift; sourceTree = "<group>"; };
 		C69EC9872D09FB310058912B /* MyXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyXibView.xib; sourceTree = "<group>"; };
+		C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolLoadXibView.swift; sourceTree = "<group>"; };
+		C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolLoadXibView.xib; sourceTree = "<group>"; };
+		C69EC9A32D0AA9E30058912B /* CustomXIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBViewController.swift; sourceTree = "<group>"; };
 		C6A9511F2D019C3B00D07C53 /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
 		C6A951212D01B0BF00D07C53 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
@@ -522,6 +528,22 @@
 				C68CB7682CEB7CDF009F8A6A /* FuntionalProgrammingViewController.swift */,
 			);
 			path = "函数式编程";
+			sourceTree = "<group>";
+		};
+		C69EC9A22D0AA9AB0058912B /* UIView和Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C69EC9A32D0AA9E30058912B /* CustomXIBViewController.swift */,
+				C6292EED2D09E08800B14D9B /* CustomView.swift */,
+				C6292EF32D09E0A900B14D9B /* CustomView.xib */,
+				C6292EE52D09D27500B14D9B /* Template.swift */,
+				C6292EE62D09D27500B14D9B /* Template.xib */,
+				C69EC9862D09FB310058912B /* MyXibView.swift */,
+				C69EC9872D09FB310058912B /* MyXibView.xib */,
+				C69EC9962D0A99720058912B /* ProtocolLoadXibView.swift */,
+				C69EC9972D0A99720058912B /* ProtocolLoadXibView.xib */,
+			);
+			path = "UIView和Xib";
 			sourceTree = "<group>";
 		};
 		C6B57FEC2CF087DF00794CF1 /* 反射 */ = {
@@ -891,12 +913,6 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF3E2A77367900C5CF02 /* FourTabViewController.swift */,
-				C6292EED2D09E08800B14D9B /* CustomView.swift */,
-				C6292EF32D09E0A900B14D9B /* CustomView.xib */,
-				C6292EE52D09D27500B14D9B /* Template.swift */,
-				C6292EE62D09D27500B14D9B /* Template.xib */,
-				C69EC9862D09FB310058912B /* MyXibView.swift */,
-				C69EC9872D09FB310058912B /* MyXibView.xib */,
 			);
 			path = Tab4;
 			sourceTree = "<group>";
@@ -946,6 +962,7 @@
 				C6B580312CF19F8A00794CF1 /* 菊花加载动画 */,
 				C6B580522CF7239300794CF1 /* ESPullToRefresh */,
 				C68004502D003EFA00A86023 /* SwiftMessages通知栏 */,
+				C69EC9A22D0AA9AB0058912B /* UIView和Xib */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -1184,6 +1201,7 @@
 				C6EE3A662A85F19600A76C19 /* RDEmptyData.bundle in Resources */,
 				C6C5CE7E2A745BD400C5CF02 /* Assets.xcassets in Resources */,
 				C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */,
+				C69EC9982D0A99720058912B /* ProtocolLoadXibView.xib in Resources */,
 				C6C5CF712A7E347B00C5CF02 /* DemoCollectionViewCell.xib in Resources */,
 				C6EE3A802A86927F00A76C19 /* XIBTableHeaderView.xib in Resources */,
 				C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */,
@@ -1289,6 +1307,7 @@
 				C6C5CF6D2A7E330400C5CF02 /* EasyCollectionViewController.swift in Sources */,
 				C6C5CEE02A76958000C5CF02 /* AppDelegate+Extension.swift in Sources */,
 				C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */,
+				C69EC9A42D0AA9E30058912B /* CustomXIBViewController.swift in Sources */,
 				C6C5CEC52A75D52600C5CF02 /* UIImage+DarkImage.swift in Sources */,
 				C6C5CF6A2A7E325300C5CF02 /* CollectListViewController.swift in Sources */,
 				C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */,
@@ -1360,6 +1379,7 @@
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
 				C6B580512CF6157600794CF1 /* BookDetail.swift in Sources */,
+				C69EC9992D0A99720058912B /* ProtocolLoadXibView.swift in Sources */,
 				C68135A02CFB512B00FB7653 /* KingfisherViewController.swift in Sources */,
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,

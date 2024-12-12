@@ -22,7 +22,8 @@ class OneTabViewController: BaseTableViewController {
          "MirrorViewController",
          "NVActivityIndicatorViewController",
          "ESPullToRefreshViewController",
-         "SwiftMessagesViewController"]
+         "SwiftMessagesViewController",
+         "CustomXIBViewController"]
     }
 
     override func viewDidLoad() {
@@ -42,7 +43,8 @@ class OneTabViewController: BaseTableViewController {
                           "反射",
                           "菊花动画",
                           "ESPullToRefresh",
-                          "SwiftMessages通知栏"]
+                          "SwiftMessages通知栏",
+                          "UIView和XIB"]
 
         // MARK: - 点击cell的closure返回
 

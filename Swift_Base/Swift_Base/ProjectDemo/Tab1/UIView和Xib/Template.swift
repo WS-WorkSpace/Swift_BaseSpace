@@ -12,12 +12,12 @@ class Template: UIView {
     /// XIB 读取的时候required init可以不写,写的话就会调用
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        print("init(coder)")
+//        print("init(coder)")
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awakeFromNib")
+//        print("awakeFromNib")
         /// 让控件不随着父控件的拉伸而拉伸
 //        autoresizingMask = UIView.AutoresizingMask()
     }
