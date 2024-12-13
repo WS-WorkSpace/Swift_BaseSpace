@@ -30,6 +30,16 @@ class OneTabViewController: BaseTableViewController {
         super.viewDidLoad()
         self.configTableView()
 
+        // PostMan,Mock本地数据的测试用例
+        let url = "https://90b8a562-c986-4e95-b3cb-9a1dca954854.mock.pstmn.io/mock_login"
+        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response(completionHandler: { response in
+            if let res = response.data {
+                print(res)
+                let json = JSON(res)
+                print(json)
+            }
+        })
+
         view.backgroundColor = .white
         configModelArr = ["基本控件_Demo",
                           "UITableView_Demo",

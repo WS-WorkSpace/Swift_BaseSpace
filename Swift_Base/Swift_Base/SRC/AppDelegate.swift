@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("App Language :", DEV_INFO.aPPLanguage)
     }
 
+
     // MARK: UISceneSession Lifecycle
 }
 
