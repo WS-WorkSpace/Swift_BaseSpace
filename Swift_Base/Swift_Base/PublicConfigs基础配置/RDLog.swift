@@ -9,12 +9,12 @@ import Foundation
 
 public typealias Lg = Logger
 
-//public func amLog<T>(_ messages: T...)
-//{
+// public func amLog<T>(_ messages: T...)
+// {
 //    #if DEBUG
 //        print("\(messages)")
 //    #endif
-//}
+// }
 
 /// 全部打印
 public func mAllLog<T>(_ message: T, file: String = #file, funcName: String = #function, lineNum: Int = #line)
@@ -25,14 +25,16 @@ public func mAllLog<T>(_ message: T, file: String = #file, funcName: String = #f
     #endif
 }
 
-public func mLog(_ items: Any...,
+public func mlog(_ items: Any...,
                  separator: String = " ",
                  terminator: String = "\n",
                  file: String = #file,
                  line: Int = #line,
                  method: String = #function)
 {
-    Lg.log(items)
+    #if DEBUG
+        print(items)
+    #endif
 //    Lg.log(items, separator: separator, terminator: terminator, file: file, line: line, method: method)
 }
 

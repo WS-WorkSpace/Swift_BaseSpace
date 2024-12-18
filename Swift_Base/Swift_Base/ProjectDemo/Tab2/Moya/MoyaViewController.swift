@@ -45,26 +45,26 @@ class MoyaViewController: UIViewController {
 
     @objc func leftButton() {
         MoyaHttpCenter.request(API_W.getPageList(1)) { [weak self] json in
-            mLog("点击左侧侧按钮")
+            mlog("点击左侧侧按钮")
             let jsonDate = JSON(json)
             self?.bookJsonArray.removeAll()
             self?.bookJsonArray = jsonDate["list"].arrayValue
             self?.mTableView.reloadData()
         } failure: { code, msg in
             mAllLog("code : \(code!)")
-            mLog("message : \(msg)")
+            mlog("message : \(msg)")
         }
     }
 
     @objc func rightButton() {
-        mLog("点击右侧侧按钮")
+        mlog("点击右侧侧按钮")
         NetWorkRequest(API.getPageList(1), completion: { [weak p = self] data in
             let jsonDate = JSON(data)
             p?.bookJsonArray.removeAll()
             p?.bookJsonArray = jsonDate["list"].arrayValue
             p?.mTableView.reloadData()
         }) { errorString in
-            mLog(errorString)
+            mlog(errorString)
         }
     }
 

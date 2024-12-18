@@ -28,7 +28,7 @@ class Table_HandyJSON_VC: BaseTableViewController {
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
         clickCellBlock = { [weak self] _, _ in
-            mLog("点击Cell",self as Any)
+            mlog("点击Cell",self as Any)
         }
     }
 
@@ -51,7 +51,7 @@ extension Table_HandyJSON_VC {
             guard let resObj = TotalModel.deserialize(from: dic) ,let self = self else { return }
             self.items.removeAll()
             self.items = resObj.list
-            mLog(self.items)
+            mlog(self.items)
             self.subTableView.reloadData()
         }
     }

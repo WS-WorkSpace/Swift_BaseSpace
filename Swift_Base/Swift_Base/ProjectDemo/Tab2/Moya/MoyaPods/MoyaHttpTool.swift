@@ -54,7 +54,7 @@ public class MoyaHttpCenter {
             case let .failure(error):
                 let statusCode = error.response?.statusCode ?? 1000
                 let message = "请求出错，错误码：" + String(statusCode)
-                mLog(message)
+                mlog(message)
                 failureHandle(failure: failure, stateCode: statusCode, message: error.errorDescription ?? message)
             }
         }

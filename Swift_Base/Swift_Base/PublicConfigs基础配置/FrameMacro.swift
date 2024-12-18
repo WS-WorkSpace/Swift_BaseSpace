@@ -60,13 +60,28 @@ func STATUSBAR_HEIGHT() -> CGFloat {
     }
 }
 
+// 获取状态栏高度
 func SAFEAREA_TOP() -> CGFloat {
+//    if #available(iOS 13.0, *) {
+//        return getWindow()?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+//    } else if #available(iOS 11.0, *) {
+//        return getWindow()?.safeAreaInsets.top ?? 0
+//    } else {
+//        return UIApplication.shared.statusBarFrame.height
+//    }
     if #available(iOS 13.0, *) {
-        return getWindow()?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-    } else if #available(iOS 11.0, *) {
-        return getWindow()?.safeAreaInsets.top ?? 0
+        let window: UIWindow? = UIApplication.shared.windows.first
+        let statusBarHeight = (window?.windowScene?.statusBarManager?.statusBarFrame.height) ?? 0
+        return statusBarHeight
+        /*
+        let scene = UIApplication.shared.connectedScenes.first
+        guard let windowScene = scene as? UIWindowScene else { return 0 }
+        guard let statusBarManager = windowScene.statusBarManager else { return 0 }
+        return statusBarManager.statusBarFrame.height
+         */
     } else {
-        return UIApplication.shared.statusBarFrame.height
+        // 防止界面没有出来获取为0的情况
+        return UIApplication.shared.statusBarFrame.height > 0 ? UIApplication.shared.statusBarFrame.height : 44
     }
 }
 

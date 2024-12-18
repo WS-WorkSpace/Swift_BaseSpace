@@ -45,7 +45,7 @@ class Table_ObjectMapper_Moya: BaseTableViewController {
         }
         self.view.addSubview(self.subTableView)
         clickCellBlock = { [weak self] _, _ in
-            mLog("点击Cell",self as Any)
+            mlog("点击Cell",self as Any)
         }
     }
 
@@ -71,7 +71,7 @@ extension Table_ObjectMapper_Moya {
             }else{
                 self.items += resObj.list
             }
-            mLog(self.items,self.items.count)
+            mlog(self.items,self.items.count)
             self.subTableView.reloadData()
             complete()
         }

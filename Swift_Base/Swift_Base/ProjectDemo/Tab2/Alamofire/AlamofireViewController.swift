@@ -67,8 +67,8 @@ class AlamofireViewController: UIViewController {
         }
         let mFailure: (Int?, String) -> Void = {
             errorCode, msg in
-            mLog(errorCode ?? -999)
-            mLog(msg)
+            mlog(errorCode ?? -999)
+            mlog(msg)
         }
         FPNetWorkRequest.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
     }

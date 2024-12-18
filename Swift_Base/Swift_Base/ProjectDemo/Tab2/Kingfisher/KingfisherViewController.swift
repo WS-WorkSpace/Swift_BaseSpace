@@ -18,7 +18,7 @@ class KingfisherViewController: UIViewController {
     @IBOutlet var setImageButton: UIButton!
 
     @IBAction func DownImageMethd(_ sender: UIButton) {
-        mLog("点击按钮")
+        mlog("点击按钮")
         /// 下载图片
         topImageView.backgroundColor = .randomColor
         downLoadImage(strURl)

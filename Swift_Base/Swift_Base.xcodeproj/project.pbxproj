@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60C54D42D11882300B2B22B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D32D11882300B2B22B /* UIApplication+Extension.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -186,6 +187,7 @@
 		1A5DD0A6AFC6C7FB94C9F4A4 /* Pods-Swift_Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Base.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Base/Pods-Swift_Base.debug.xcconfig"; sourceTree = "<group>"; };
 		7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A286F9C1BFE2A0885F7E4F /* Pods-Swift_Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Base.release.xcconfig"; path = "Target Support Files/Pods-Swift_Base/Pods-Swift_Base.release.xcconfig"; sourceTree = "<group>"; };
+		C60C54D32D11882300B2B22B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 		C6C5CECE2A75D71500C5CF02 /* Foundation_Category */ = {
 			isa = PBXGroup;
 			children = (
+				C60C54D32D11882300B2B22B /* UIApplication+Extension.swift */,
 				C6C5CEDB2A76055F00C5CF02 /* String+Extension.swift */,
 				C6C5CECF2A75D73200C5CF02 /* NSString+Extension.swift */,
 				C6B87D532D04241D00D83033 /* Notification+Extension.swift */,
@@ -1339,6 +1342,7 @@
 				C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */,
 				C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
+				C60C54D42D11882300B2B22B /* UIApplication+Extension.swift in Sources */,
 				C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */,
 				C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */,
 				C6C5CEBC2A75D1D200C5CF02 /* GlobalConfig.swift in Sources */,

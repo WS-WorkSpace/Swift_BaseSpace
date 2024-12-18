@@ -70,7 +70,7 @@ extension ESPullToRefreshViewController {
         if animator == nil {
             mTableView.es.addPullToRefresh {
                 [unowned self] in
-                mLog("开始下拉刷新")
+                mlog("开始下拉刷新")
                 loadNewData()
                 //            mTableView.es.stopPullToRefresh()
                 /// 在这里做刷新相关事件
@@ -83,14 +83,14 @@ extension ESPullToRefreshViewController {
         } else {
             mTableView.es.addPullToRefresh(animator: animator!) {
                 [unowned self] in
-                mLog("开始下拉刷新")
+                mlog("开始下拉刷新")
                 loadNewData()
             }
         }
     }
 
     func setupLoadMoreData(animator: (ESRefreshProtocol & ESRefreshAnimatorProtocol)? = nil) {
-        mLog("上拉加载更多")
+        mlog("上拉加载更多")
         if animator == nil {
             mTableView.es.addInfiniteScrolling {
                 [unowned self] in

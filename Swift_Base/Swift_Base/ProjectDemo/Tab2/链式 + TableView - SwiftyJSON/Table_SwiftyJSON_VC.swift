@@ -65,13 +65,13 @@ extension Table_SwiftyJSON_VC {
         let mSuccess: (JSON) -> Void = {
             json in
             self.jsonModel = json
-            mLog(json)
+            mlog(json)
             self.subTableView.reloadData()
         }
         let mFailure: (Int?, String) -> Void = {
             errorCode, msg in
-            mLog(errorCode ?? -999)
-            mLog(msg)
+            mlog(errorCode ?? -999)
+            mlog(msg)
         }
         FPNetWork.shared.url(url).requestType(.get).params(nil).success(mSuccess).failure(mFailure).request()
 //        CP_Net_Request.url(baseUrl).requestType(.get).params(nil).success { res in
