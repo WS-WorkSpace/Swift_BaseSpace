@@ -50,25 +50,13 @@ let kTopSafeHeight = SAFEAREA_TOP()
 /// 34 || 0
 let kBottomSafeHeight = SAFEAREA_BOTTOM()
 
-// MARK: - 方法
-
+// MARK: -获取statusBar状态栏的高度
 func STATUSBAR_HEIGHT() -> CGFloat {
-    if #available(iOS 13.0, *) {
-        return getWindow()?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-    } else {
-        return UIApplication.shared.statusBarFrame.height
-    }
-}
-
-// 获取状态栏高度
-func SAFEAREA_TOP() -> CGFloat {
-//    if #available(iOS 13.0, *) {
-//        return getWindow()?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-//    } else if #available(iOS 11.0, *) {
-//        return getWindow()?.safeAreaInsets.top ?? 0
-//    } else {
-//        return UIApplication.shared.statusBarFrame.height
-//    }
+    /*
+    if #available(iOS 11.0, *) {
+            return getWindow()?.safeAreaInsets.top ?? 0
+        }
+    */
     if #available(iOS 13.0, *) {
         let window: UIWindow? = UIApplication.shared.windows.first
         let statusBarHeight = (window?.windowScene?.statusBarManager?.statusBarFrame.height) ?? 0
@@ -79,38 +67,52 @@ func SAFEAREA_TOP() -> CGFloat {
         guard let statusBarManager = windowScene.statusBarManager else { return 0 }
         return statusBarManager.statusBarFrame.height
          */
-    } else {
+    }
+    else {
         // 防止界面没有出来获取为0的情况
         return UIApplication.shared.statusBarFrame.height > 0 ? UIApplication.shared.statusBarFrame.height : 44
     }
 }
-
+// MARK: 2.4、顶部安全区高度
+/// 2.4、顶部安全区高度
+func SAFEAREA_TOP() -> CGFloat {
+    if #available(iOS 13.0, *) {
+        let scene = UIApplication.shared.connectedScenes.first
+        guard let windowScene = scene as? UIWindowScene else { return 0 }
+        guard let window = windowScene.windows.first else { return 0 }
+        return window.safeAreaInsets.top
+    }
+    return 0
+}
+// MARK: 2.6、底部安全区高度
 /// 底部指示条高度
 func SAFEAREA_BOTTOM() -> CGFloat {
     if #available(iOS 11.0, *) {
-        return getWindow()?.safeAreaInsets.bottom ?? 0
-    } else {
-        return 0
+        let scene = UIApplication.shared.connectedScenes.first
+        guard let windowScene = scene as? UIWindowScene else { return 0 }
+        guard let window = windowScene.windows.first else { return 0 }
+        return window.safeAreaInsets.bottom
     }
+    return 0
 }
 
 /// 获取当前设备window用于判断尺寸
-func getWindow() -> UIWindow? {
-    var originalKeyWindow: UIWindow?
-    #if swift(>=5.1)
-        if #available(iOS 13, *) {
-            originalKeyWindow = UIApplication.shared.connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap { $0.windows }
-                .first(where: { $0.isKeyWindow })
-        } else {
-            originalKeyWindow = UIApplication.shared.keyWindow
-        }
-    #else
-        originalKeyWindow = UIApplication.shared.keyWindow
-    #endif
-    return originalKeyWindow
-}
+//func getWindow() -> UIWindow? {
+//    var originalKeyWindow: UIWindow?
+//    #if swift(>=5.1)
+//        if #available(iOS 13, *) {
+//            originalKeyWindow = UIApplication.shared.connectedScenes
+//                .compactMap { $0 as? UIWindowScene }
+//                .flatMap { $0.windows }
+//                .first(where: { $0.isKeyWindow })
+//        } else {
+//            originalKeyWindow = UIApplication.shared.keyWindow
+//        }
+//    #else
+//        originalKeyWindow = UIApplication.shared.keyWindow
+//    #endif
+//    return originalKeyWindow
+//}
 
 // func getWindow() -> UIWindow? {
 //    if #available(iOS 13.0, *) {
