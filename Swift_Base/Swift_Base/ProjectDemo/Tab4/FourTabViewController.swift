@@ -7,14 +7,13 @@
 
 import UIKit
 class FourTabViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textField: UITextField = UITextField.init(frame: CGRectMake(30, 230, 100, 50))
+        let textField = UITextField(frame: CGRectMake(30, 230, 100, 50))
         textField.text = "asdasd"
         textField.backgroundColor = .green
         view.addSubview(textField)
-        
+
         let btn = UIButton()
         btn.backgroundColor = UIColor.red
         self.view.addSubview(btn)
@@ -26,20 +25,5 @@ class FourTabViewController: UIViewController {
 
             make.top.equalTo(self.view.snp_top).offset(150)
         }
-
-
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -52,6 +52,7 @@ public extension UIApplication {
     
     // MARK: 1.4、设备信息的获取
     /// 设备信息的获取
+    /*
     static var userAgent: String {
         if let info = Bundle.main.infoDictionary {
             let executable = info[kCFBundleExecutableKey as String] as? String ?? "Unknown"
@@ -71,6 +72,7 @@ public extension UIApplication {
         }
         return "JK" + Bundle.jk.appVersion
     }
+    */
     
     // MARK: 1.5、app定位区域
     /// app定位区域
