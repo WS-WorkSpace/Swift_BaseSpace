@@ -114,7 +114,15 @@ class MultithreadingViewController: UIViewController {
     }()
 
     @objc func clickOnceButton(btn: UIButton) {
+        // 仅执行一次有下面几种写法
         once()
+        // RDAsync
+        RDAsync.once(token: "one") {
+            mlog("仅执行一次one")
+        }
+        RDAsync.once(token: "two") {
+            mlog("仅执行一次two")
+        }
     }
 
     lazy var lockButton: UIButton = {
