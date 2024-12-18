@@ -96,6 +96,10 @@ func SAFEAREA_BOTTOM() -> CGFloat {
     return 0
 }
 
+// MARK: 2.9、身份证宽高比
+public let kRatioIDCard: CGFloat = 0.63
+
+
 /// 获取当前设备window用于判断尺寸
 //func getWindow() -> UIWindow? {
 //    var originalKeyWindow: UIWindow?

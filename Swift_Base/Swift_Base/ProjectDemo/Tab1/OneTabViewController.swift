@@ -31,14 +31,16 @@ class OneTabViewController: BaseTableViewController {
         self.configTableView()
 
         // PostMan,Mock本地数据的测试用例
-        let url = "https://90b8a562-c986-4e95-b3cb-9a1dca954854.mock.pstmn.io/mock_login"
-        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response(completionHandler: { response in
-            if let res = response.data {
-                print(res)
-                let json = JSON(res)
-                print(json)
-            }
-        })
+        /**
+         let url = "https://90b8a562-c986-4e95-b3cb-9a1dca954854.mock.pstmn.io/mock_login"
+         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response(completionHandler: { response in
+             if let res = response.data {
+                 print(res)
+                 let json = JSON(res)
+                 print(json)
+             }
+         })
+         */
 
         view.backgroundColor = .white
         configModelArr = ["基本控件_Demo",
@@ -65,6 +67,7 @@ class OneTabViewController: BaseTableViewController {
             }
             // 创建OC的Viewcontroller
             let _vcTemp = self.vcArray[index.row]
+            // OC_Call_Swift_ViewController是OC的类单独处理,忽略toast提示没有这个类
             if _vcTemp == "OC_Call_Swift_ViewController" {
 //                let vc:UIViewController  = NSClassFromString(_vcTemp).init()
                 let vc: UIViewController = OC_Call_Swift_ViewController()

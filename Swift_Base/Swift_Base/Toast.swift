@@ -8,7 +8,7 @@
 import Foundation
 import Toast_Swift
 
-class Toast {
+@objcMembers class Toast: NSObject {
     /// 全场toast
     public static var window: UIWindow? {
         return UIWindow.keyWindow
@@ -18,9 +18,14 @@ class Toast {
         // UIWindow.keyWindow?.view.toast(message: message)
         window?.makeToast(message, duration: 2.0, position: position)
     }
-    public static func toast(_ message: String, position: ToastPosition = .center, duration:Double) {
+
+    public static func toast(_ message: String, position: ToastPosition = .center, duration: Double) {
         // UIWindow.keyWindow?.view.toast(message: message)
         window?.makeToast(message, duration: duration, position: position)
     }
+    public static func runTempForOC(_ message: String) {
+        window?.makeToast(message, duration: 2.0)
+    }
 
 }
+

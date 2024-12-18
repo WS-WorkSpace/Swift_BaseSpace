@@ -25,6 +25,11 @@ void testSwift(void) {
     [car test];
     [car ws_run];
     [WS_Car run];
+    
+    Temp *temp = [[Temp alloc]init];
+    [temp run];
+
+    [Toast runTempForOC:@"OC调用Swift,查看打印结果"];    
 }
 
 @end

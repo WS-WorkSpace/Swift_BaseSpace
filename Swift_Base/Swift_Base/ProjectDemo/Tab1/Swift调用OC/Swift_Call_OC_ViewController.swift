@@ -22,6 +22,7 @@ func sum(_ v1: Int32, _ v2: Int32) -> Int32
 class Swift_Call_OC_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         runOCMethod()
     }
 
@@ -31,6 +32,7 @@ class Swift_Call_OC_ViewController: UIViewController {
         WS_Person.run()
         person.run()
         person.eat("糖醋排骨", other: "米饭")
-        print(sum(33, 44))
+        mlog(sum(33, 44))
+        Toast.toast("Swift调用OC,查看打印结果")
     }
 }
