@@ -14,6 +14,7 @@
 		C60C54DC2D13C12A00B2B22B /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DB2D13C12A00B2B22B /* Data+extension.swift */; };
 		C60C54DE2D13C2EE00B2B22B /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DD2D13C2EE00B2B22B /* Dictionary+Extension.swift */; };
 		C60C54E02D13C4B200B2B22B /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */; };
+		C60C54E22D13F65400B2B22B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E12D13F65400B2B22B /* Optional+Extension.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -200,6 +201,7 @@
 		C60C54DB2D13C12A00B2B22B /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
 		C60C54DD2D13C2EE00B2B22B /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		C60C54E12D13F65400B2B22B /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 				C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */,
 				C60C54DB2D13C12A00B2B22B /* Data+extension.swift */,
 				C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */,
+				C60C54E12D13F65400B2B22B /* Optional+Extension.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -1371,6 +1374,7 @@
 				C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */,
 				C6C5CED52A75D84F00C5CF02 /* MBProgressHUD+Extension.swift in Sources */,
 				C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */,
+				C60C54E22D13F65400B2B22B /* Optional+Extension.swift in Sources */,
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
 				C681359A2CFA2C6900FB7653 /* NetworkManager.swift in Sources */,
