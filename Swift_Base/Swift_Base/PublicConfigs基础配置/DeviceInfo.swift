@@ -7,11 +7,9 @@
 
 import UIKit
 
-
 // MARK: - 设备数据
 
 public typealias DEV_INFO = DeviceInfo
-
 
 /// 常用系统信息相关方法
 @objcMembers
@@ -64,11 +62,11 @@ public class DeviceInfo: NSObject {
     /// APP汇总信息
     public static func deviceInfo() -> [String: String] {
         return [
-            "OSVersion": appVersion,
+            "OSVersion": self.appVersion,
 //            "OSName": osName(),
-            "OSIdentifier": identifierNumber,
-            "APPName": getAppName(),
-            "AppVersion": appVersion,
+            "OSIdentifier": self.identifierNumber,
+            "APPName": self.getAppName(),
+            "AppVersion": self.appVersion,
         ]
     }
 
@@ -96,7 +94,6 @@ public class DeviceInfo: NSObject {
         return "App"
     }
 
-
     // MARK: - UI
 
     public static var isSupportSafeArea: Bool {
@@ -105,14 +102,13 @@ public class DeviceInfo: NSObject {
         }
         return false
     }
-
 }
 
-
 // MARK: - 系统版本
+
+import AudioToolbox
 // 使用CoreTelephony获取运营商信息、网络制式（4G、3G、2G）
 import CoreTelephony
-import AudioToolbox
 
 // 这里只指屏幕类型
 public enum UIDeviceScreenType: String {
@@ -149,9 +145,10 @@ public enum UIDeviceScreenType: String {
 }
 
 // MARK: - 一、基本的扩展
+
 public extension UIDevice {
-    
     // MARK: 1.1、设备的的identifier
+
     /// 设备的名字
     static var deviceIdentifier: String {
         var systemInfo = utsname()
@@ -165,11 +162,13 @@ public extension UIDevice {
     }
     
     // MARK: 1.2、设备的名字
+
     /// 设备的名字
     static var modelName: String {
         let identifier = deviceIdentifier
         func mapToDevice(identifier: String) -> String {
-            //MARK: os(iOS)
+            // MARK: os(iOS)
+
             #if os(iOS)
             switch identifier {
             case "iPod1,1":
@@ -317,7 +316,9 @@ public extension UIDevice {
             default:
                 return identifier
             }
-            //MARK: os(tvOS)
+
+            // MARK: os(tvOS)
+
             #elseif os(tvOS)
             switch identifier {
             case "AppleTV5,3":
@@ -335,6 +336,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.3、获取设备类型
+
     /// 获取设备类型
     /// - Returns: 设备类型
     static func screenType() -> UIDeviceScreenType {
@@ -404,6 +406,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.4、判断是否为 iPad
+
     /// 判断是否为 Pad
     /// - Returns: bool
     static func isIpad() -> Bool {
@@ -415,6 +418,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.5、判断是否是 pad
+
     /// 判断是否是 pad
     /// - Returns: bool
     static func isPadDevice() -> Bool {
@@ -422,6 +426,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.6、判断是否为 iphone
+
     /// 判断是否为 iphone
     /// - Returns: bool
     static func isIphone() -> Bool {
@@ -429,6 +434,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.7、判断是否是 iphone5
+
     /// 判断是否是 iphone5
     /// - Returns: bool
     static func isIphone5Screen() -> Bool {
@@ -436,6 +442,7 @@ public extension UIDevice {
     }
     
     // MARK: 1.8、判断是否是 iphone678
+
     /// 判断是否是 判断是否是 iphone678
     /// - Returns: bool
     static func isIphone6Screen() -> Bool {
@@ -443,25 +450,39 @@ public extension UIDevice {
     }
     
     // MARK: 1.11、当前设备是不是模拟器
+
     /// 当前设备是不是模拟器
     static func isSimulator() -> Bool {
         ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] != nil
+    }
+
+    // MARK: 是否是刘海屏或者灵动岛的屏幕
+
+    static var isIPhoneNotch: Bool {
+        if #available(iOS 11.0, *) {
+            if let window = UIApplication.mKeyWindow {
+                return window.safeAreaInsets.bottom > 0
+            } else {
+                return false
+            }
+        } else {
+            return UIApplication.shared.statusBarFrame.height > 20
+        }
     }
 }
 
 // MARK: - 二、设备的基本信息
 
 public extension UIDevice {
-    
     // MARK: 2.1、当前设备的系统版本
+
     /// 当前设备的系统版本
-    static var currentSystemVersion : String {
-        get {
-            return self.current.systemVersion
-        }
+    static var currentSystemVersion: String {
+        return self.current.systemVersion
     }
     
     // MARK: 2.2、当前系统更新时间
+
     /// 当前系统更新时间
     static var systemUptime: Date {
         let time = ProcessInfo.processInfo.systemUptime
@@ -469,28 +490,28 @@ public extension UIDevice {
     }
     
     // MARK: 2.3、当前设备的类型，如 iPhone、iPad 等等
+
     /// 当前设备的类型
     static var deviceType: String {
         return UIDevice.current.model
     }
     
     // MARK: 2.4、当前系统的名称
+
     /// 当前系统的名称
-    static var currentSystemName : String {
-        get {
-            return UIDevice.current.systemName
-        }
+    static var currentSystemName: String {
+        return UIDevice.current.systemName
     }
     
     // MARK: 2.5、当前设备的名称
+
     /// 当前设备的名称
-    static var currentDeviceName : String {
-        get {
-            return UIDevice.current.name
-        }
+    static var currentDeviceName: String {
+        return UIDevice.current.name
     }
     
     // MARK: 2.6、当前设备是否越狱
+
     /// 当前设备是否越狱
     static var isJailbroken: Bool {
         if self.isSimulator() { return false }
@@ -518,6 +539,7 @@ public extension UIDevice {
     }
     
     // MARK: 2.7、当前硬盘的空间
+
     /// 当前硬盘的空间
     static var diskSpace: Int64 {
         if let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
@@ -531,6 +553,7 @@ public extension UIDevice {
     }
     
     // MARK: 2.8、当前硬盘可用空间
+
     /// 当前硬盘可用空间
     static var diskSpaceFree: Int64 {
         if let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
@@ -544,6 +567,7 @@ public extension UIDevice {
     }
     
     // MARK: 2.9、当前硬盘已经使用的空间
+
     /// 当前硬盘已经使用的空间
     static var diskSpaceUsed: Int64 {
         let total = self.diskSpace
@@ -556,12 +580,14 @@ public extension UIDevice {
     }
     
     // MARK: 2.10、获取总内存大小
+
     /// 获取总内存大小
     static var memoryTotal: UInt64 {
         return ProcessInfo.processInfo.physicalMemory
     }
     
     // MARK: 2.11、当前设备能否打电话
+
     /// 当前设备能否打电话
     /// - Returns: 结果
     static func isCanCallTel() -> Bool {
@@ -571,38 +597,44 @@ public extension UIDevice {
         return false
     }
     
-    //MARK: 2.12、当前App的语言
+    // MARK: 2.12、当前App的语言
+
     /// 当前App的语言
     static var appLanguage: String {
         return Bundle.main.preferredLocalizations[0]
     }
     
-    //MARK: 2.13、当前设备(手机)首选语言
+    // MARK: 2.13、当前设备(手机)首选语言
+
     /// 当前设备语言
     static var deviceLanguage: String? {
         return Locale.preferredLanguages.first
     }
         
-    //MARK: 2.14、设备区域化型号
+    // MARK: 2.14、设备区域化型号
+
     /// 设备区域化型号
 //    static var localizedModel: String {
 //        return UIDevice.current.localizedModel
 //    }
     
-    //MARK: 2.15、获取最高刷新率
+    // MARK: 2.15、获取最高刷新率
+
     /// 获取最高刷新率
     @available(iOS 10.3, *)
     static var maximumFramesPerSecond: Int {
         UIScreen.main.maximumFramesPerSecond
     }
     
-    //MARK: 2.16、获取设备是否是省电模式
+    // MARK: 2.16、获取设备是否是省电模式
+
     /// 获取设备是否是省电模式
     static var isLowPowerMode: Bool {
         ProcessInfo.processInfo.isLowPowerModeEnabled
     }
     
-    //MARK: 2.17、获取屏幕亮度比例
+    // MARK: 2.17、获取屏幕亮度比例
+
     /// 获取屏幕亮度比例
     static var brightnessRatio: CGFloat {
         UIScreen.main.brightness
@@ -610,18 +642,20 @@ public extension UIDevice {
 }
 
 // MARK: - 三、有关设备运营商的信息
+
 public extension UIDevice {
-    
     // MARK: 3.1、sim卡信息
+
     static func simCardInfos() -> [CTCarrier]? {
-        return getCarriers()
+        return self.getCarriers()
     }
     
     // MARK: 3.2、数据业务对应的通信技术
+
     /// 数据业务对应的通信技术
     /// - Returns: 通信技术
     static func currentRadioAccessTechnologys() -> [String]? {
-        guard !isSimulator() else {
+        guard !self.isSimulator() else {
             return nil
         }
         // 获取并输出运营商信息
@@ -640,6 +674,7 @@ public extension UIDevice {
     }
     
     // MARK: 3.3、设备网络制式
+
     /// 设备网络制式
     /// - Returns: 网络
     static func networkTypes() -> [String]? {
@@ -647,54 +682,59 @@ public extension UIDevice {
         guard let currentRadioTechs = currentRadioAccessTechnologys() else {
             return nil
         }
-        return currentRadioTechs.compactMap { getNetworkType(currentRadioTech: $0) }
+        return currentRadioTechs.compactMap { self.getNetworkType(currentRadioTech: $0) }
     }
     
     // MARK: 3.4、运营商名字
+
     /// 运营商名字
     /// - Returns: 运营商名字
     static func carrierNames() -> [String]? {
         // 获取并输出运营商信息
-        guard  let carriers = getCarriers(), carriers.count > 0 else {
+        guard let carriers = getCarriers(), carriers.count > 0 else {
             return nil
         }
-        return carriers.map{ $0.carrierName ?? ""}.filter{ $0.count > 0 }
+        return carriers.map { $0.carrierName ?? "" }.filter { $0.count > 0 }
     }
     
     // MARK: 3.5、移动国家码(MCC)
+
     /// 移动国家码(MCC)
     /// - Returns: 移动国家码(MCC)
     static func mobileCountryCodes() -> [String]? {
         // 获取并输出运营商信息
-        guard  let carriers = getCarriers(), carriers.count > 0 else {
+        guard let carriers = getCarriers(), carriers.count > 0 else {
             return nil
         }
-        return carriers.map{ $0.mobileCountryCode ?? ""}.filter{ $0.count > 0 }
+        return carriers.map { $0.mobileCountryCode ?? "" }.filter { $0.count > 0 }
     }
     
     // MARK: 3.6、移动网络码(MNC)
+
     /// 移动网络码(MNC)
     /// - Returns: 移动网络码(MNC)
     static func mobileNetworkCodes() -> [String]? {
         // 获取并输出运营商信息
-        guard  let carriers = getCarriers(), carriers.count > 0 else {
+        guard let carriers = getCarriers(), carriers.count > 0 else {
             return nil
         }
-        return carriers.map{ $0.mobileNetworkCode ?? ""}.filter{ $0.count > 0 }
+        return carriers.map { $0.mobileNetworkCode ?? "" }.filter { $0.count > 0 }
     }
     
     // MARK: 3.7、ISO国家代码
+
     /// ISO国家代码
     /// - Returns: ISO国家代码
     static func isoCountryCodes() -> [String]? {
         // 获取并输出运营商信息
-        guard  let carriers = getCarriers(), carriers.count > 0 else {
+        guard let carriers = getCarriers(), carriers.count > 0 else {
             return nil
         }
-        return carriers.map{ $0.isoCountryCode ?? ""}.filter{ $0.count > 0 }
+        return carriers.map { $0.isoCountryCode ?? "" }.filter { $0.count > 0 }
     }
     
     // MARK: 3.8、是否允许VoIP
+
     /// 是否允许VoIP
     /// - Returns: 是否允许VoIP
     static func isAllowsVOIPs() -> [Bool]? {
@@ -702,13 +742,13 @@ public extension UIDevice {
         guard let carriers = getCarriers(), carriers.count > 0 else {
             return nil
         }
-        return carriers.map{ $0.allowsVOIP }
+        return carriers.map { $0.allowsVOIP }
     }
     
     /// 获取并输出运营商信息
     /// - Returns: 运营商信息
     private static func getCarriers() -> [CTCarrier]? {
-        guard !isSimulator() else {
+        guard !self.isSimulator() else {
             return nil
         }
         // 获取并输出运营商信息
@@ -767,6 +807,7 @@ public extension UIDevice {
 }
 
 // MARK: - 四、设备的震动
+
 public enum SystemSoundIDShockType: Int64 {
     /// 短振动，普通短震，3D Touch 中 Peek 震动反馈
     case short3DTouchPeekVibration = 1519
@@ -777,7 +818,8 @@ public enum SystemSoundIDShockType: Int64 {
 }
 
 public extension UIDevice {
-    //MARK: 4.1、SystemSoundID
+    // MARK: 4.1、SystemSoundID
+
     /// 使用 SystemSoundID 产生的震动
     /// - Parameter type: 震动的类型
     static func systemSoundIDShock(type: SystemSoundIDShockType) {
@@ -785,7 +827,8 @@ public extension UIDevice {
         AudioServicesPlaySystemSound(soundShort)
     }
     
-    //MARK: 4.2、UINotificationFeedbackGenerator 来设置的手机振动
+    // MARK: 4.2、UINotificationFeedbackGenerator 来设置的手机振动
+
     /// UINotificationFeedbackGenerator 来设置的手机振动
     @available(iOS 10.0, *)
     static func notificationFeedbackGeneratorSuccess(_ notificationType: UINotificationFeedbackGenerator.FeedbackType) {
@@ -793,7 +836,8 @@ public extension UIDevice {
         generator.notificationOccurred(notificationType)
     }
     
-    //MARK: 4.3、UIImpactFeedbackGenerator 来设置的手机振动
+    // MARK: 4.3、UIImpactFeedbackGenerator 来设置的手机振动
+
     /// UIImpactFeedbackGenerator 来设置的手机振动
     @available(iOS 10.0, *)
     static func impactFeedbackGenerator(style: UIImpactFeedbackGenerator.FeedbackStyle) {
@@ -801,7 +845,8 @@ public extension UIDevice {
         generator.impactOccurred()
     }
     
-    //MARK: 4.4、模拟选择滚轮一类控件时的震动
+    // MARK: 4.4、模拟选择滚轮一类控件时的震动
+
     /// 模拟选择滚轮一类控件时的震动
     ///
     /// UISelectionFeedbackGenerator中只有一个类型，是用来模拟选择滚轮一类控件时的震动，比如计时器中的picker滚动时就有这个效果。

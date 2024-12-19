@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 extension UIImage {
     /// 纯色图颜色重绘（更改图片颜色）
@@ -32,5 +33,17 @@ extension UIImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image!
+    }
+}
+extension UIImage {
+    
+    // MARK: 1.15、保存图片到相册(建议使用这个)
+    /// 保存图片到相册
+    func savePhotosImageToAlbum(completion: @escaping ((Bool, Error?) -> Void)) {
+        PHPhotoLibrary.shared().performChanges {
+            PHAssetChangeRequest.creationRequestForAsset(from: self)
+        } completionHandler: { (isSuccess: Bool, error: Error?) in
+            completion(isSuccess, error)
+        }
     }
 }

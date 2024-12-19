@@ -15,6 +15,7 @@
 		C60C54DE2D13C2EE00B2B22B /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DD2D13C2EE00B2B22B /* Dictionary+Extension.swift */; };
 		C60C54E02D13C4B200B2B22B /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */; };
 		C60C54E22D13F65400B2B22B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E12D13F65400B2B22B /* Optional+Extension.swift */; };
+		C60C54E42D14616900B2B22B /* CustomClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E32D14616900B2B22B /* CustomClosure.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -202,6 +203,7 @@
 		C60C54DD2D13C2EE00B2B22B /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		C60C54E12D13F65400B2B22B /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		C60C54E32D14616900B2B22B /* CustomClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClosure.swift; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -763,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CEDE2A7612C000C5CF02 /* PublicConfigs_README.md */,
+				C60C54E32D14616900B2B22B /* CustomClosure.swift */,
 				C60C54D72D13104300B2B22B /* RDAsync.swift */,
 				C6B87D552D07541E00D83033 /* Then.swift */,
 				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
@@ -1395,6 +1398,7 @@
 				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */,
 				C6292EE72D09D27500B14D9B /* Template.swift in Sources */,
+				C60C54E42D14616900B2B22B /* CustomClosure.swift in Sources */,
 				C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,

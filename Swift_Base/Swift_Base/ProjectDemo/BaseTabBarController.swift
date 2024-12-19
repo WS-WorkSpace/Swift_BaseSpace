@@ -43,7 +43,12 @@ class BaseTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.view.getViewLayer(borderWidth: 0.9, borderColor: .red, backgroundColor: .yellow)
+//    }
 
     func addChildVC(_ title: String, _ imageName: String, _ selectedImage: String, _ type: UIViewController.Type) {
         let childVC = type.init()

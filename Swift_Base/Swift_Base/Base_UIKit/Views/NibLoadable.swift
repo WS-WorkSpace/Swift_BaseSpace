@@ -24,6 +24,7 @@ protocol NibLoadable {
     /// 具体实现写到 extension 中
 }
 
+// MARK: - 一、继承于UIView的才可以使用该协议的扩展
 /// 加载xib
 extension NibLoadable where Self: UIView {
     /* Xib 和 类名 同名
@@ -32,7 +33,6 @@ extension NibLoadable where Self: UIView {
      *  lazy var sectionView = HomeHeaderView.loadFromNib("sectionView")
      * Xib 中多个 View 视图
      * lazy var sectionView = Level1SectionView.loadFromNib("Level1HeaderView",index: 1)
-     * https://www.jianshu.com/p/cceeaaff0397
      */
 
     /// 协议中不能定义class
