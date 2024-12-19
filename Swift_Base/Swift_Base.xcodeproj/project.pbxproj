@@ -11,6 +11,7 @@
 		C60C54D62D130DB500B2B22B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D52D130DB500B2B22B /* Array+Extension.swift */; };
 		C60C54D82D13104300B2B22B /* RDAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D72D13104300B2B22B /* RDAsync.swift */; };
 		C60C54DA2D13B56800B2B22B /* UserDefaults+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */; };
+		C60C54DC2D13C12A00B2B22B /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DB2D13C12A00B2B22B /* Data+extension.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -194,6 +195,7 @@
 		C60C54D52D130DB500B2B22B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		C60C54D72D13104300B2B22B /* RDAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDAsync.swift; sourceTree = "<group>"; };
 		C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extesnion.swift"; sourceTree = "<group>"; };
+		C60C54DB2D13C12A00B2B22B /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -787,6 +789,7 @@
 				C6C5CECF2A75D73200C5CF02 /* NSString+Extension.swift */,
 				C6B87D532D04241D00D83033 /* Notification+Extension.swift */,
 				C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */,
+				C60C54DB2D13C12A00B2B22B /* Data+extension.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -1393,6 +1396,7 @@
 				C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */,
 				C6C5CF112A76FA1700C5CF02 /* SELFAutoStateFooter.m in Sources */,
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
+				C60C54DC2D13C12A00B2B22B /* Data+extension.swift in Sources */,
 				C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */,
 				C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
