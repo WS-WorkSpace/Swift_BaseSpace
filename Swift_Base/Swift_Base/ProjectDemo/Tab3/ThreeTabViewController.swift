@@ -27,10 +27,13 @@ class ThreeTabViewController: UIViewController {
         print(dic.jk.dictionaryToJson() as Any)
 
         test()
+        var value = UserDefaults.userDefaultsGetValue(key: "key333")
+        mlog(value as Any)
     }
 
     @objc func btnMethod() {
         print("点击了测试按钮")
+        UserDefaults.userDefaultsSetValue(value: "dsasda", key: "key333")
     }
 
     typealias Fn = (Int) -> (Int)

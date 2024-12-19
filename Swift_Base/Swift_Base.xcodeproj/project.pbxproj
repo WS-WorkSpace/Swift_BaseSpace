@@ -10,6 +10,7 @@
 		C60C54D42D11882300B2B22B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D32D11882300B2B22B /* UIApplication+Extension.swift */; };
 		C60C54D62D130DB500B2B22B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D52D130DB500B2B22B /* Array+Extension.swift */; };
 		C60C54D82D13104300B2B22B /* RDAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D72D13104300B2B22B /* RDAsync.swift */; };
+		C60C54DA2D13B56800B2B22B /* UserDefaults+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -192,6 +193,7 @@
 		C60C54D32D11882300B2B22B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		C60C54D52D130DB500B2B22B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		C60C54D72D13104300B2B22B /* RDAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDAsync.swift; sourceTree = "<group>"; };
+		C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extesnion.swift"; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -784,6 +786,7 @@
 				C6C5CEDB2A76055F00C5CF02 /* String+Extension.swift */,
 				C6C5CECF2A75D73200C5CF02 /* NSString+Extension.swift */,
 				C6B87D532D04241D00D83033 /* Notification+Extension.swift */,
+				C60C54D92D13B56700B2B22B /* UserDefaults+Extesnion.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -1320,6 +1323,7 @@
 				C6C5CED02A75D73200C5CF02 /* NSString+Extension.swift in Sources */,
 				C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */,
 				C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */,
+				C60C54DA2D13B56800B2B22B /* UserDefaults+Extesnion.swift in Sources */,
 				C6C5CF6D2A7E330400C5CF02 /* EasyCollectionViewController.swift in Sources */,
 				C6C5CEE02A76958000C5CF02 /* AppDelegate+Extension.swift in Sources */,
 				C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */,

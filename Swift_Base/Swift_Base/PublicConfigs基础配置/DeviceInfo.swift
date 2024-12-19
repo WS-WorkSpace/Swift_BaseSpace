@@ -28,13 +28,13 @@ public class DeviceInfo: NSObject {
     // App 显示名称
     static let appDisplayName = Bundle.main.infoDictionary?["CFBundleDisplayName"] ?? ""
 
-    // App BundleName
+    // 项目/app 的名字
     static let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] ?? ""
 
-    // App BuildNumber , build号
+    // App BuildNumber , 获取app的 Build ID
     static let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) ?? ""
 
-    // Bundle Identifier ,App BundleID
+    // Bundle Identifier ,App BundleID,获取app的 Bundle Identifier
     static let bundleIdentifier: String = Bundle.main.bundleIdentifier ?? ""
 
     // 设备udid
@@ -79,6 +79,14 @@ public class DeviceInfo: NSObject {
             "AppVersion": appVersion,
         ]
     }
+
+    /// App命名空间
+    /*
+     static var namespace: String {
+         guard let namespace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String else { return "" }
+         return namespace
+     }
+     */
 
     /// 获取APP名称
     public static func getAppName() -> String {
