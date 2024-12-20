@@ -27,6 +27,29 @@ class ThreeTabViewController: UIViewController {
         print(dic.jk.dictionaryToJson() as Any)
 
         test()
+        
+        let label = UILabel()
+        label.backgroundColor = .gray
+        let labelText = "这时一个测试的label."
+        label.text = labelText
+//        label.sizeToFit()
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(button.snp.bottom).offset(30)
+        }
+        
+        let mutableAttributedString = NSMutableAttributedString(string: labelText)
+        let mufont = UIFont.systemFont(ofSize: 22)
+        let range = NSRange(location: 1, length: 3)
+        let attributes = [NSAttributedString.Key.font : mufont]
+        //UIFont.systemFont(ofSize: 30)
+        for name in attributes.keys {
+            mutableAttributedString.addAttribute(name, value: attributes[name] ?? "", range: range)
+        }
+        label.attributedText = mutableAttributedString
+        
+
     }
 
     @objc func btnMethod() {

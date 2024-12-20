@@ -792,6 +792,8 @@
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 				C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */,
+				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
+				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -809,8 +811,6 @@
 				C60C54DB2D13C12A00B2B22B /* Data+extension.swift */,
 				C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */,
 				C60C54E12D13F65400B2B22B /* Optional+Extension.swift */,
-				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
-				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
