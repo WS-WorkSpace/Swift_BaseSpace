@@ -75,8 +75,4 @@ class OneTabViewController: BaseTableViewController {
             }
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.view.getViewLayer(borderWidth: 0.9, borderColor: .red, backgroundColor: .yellow)
-    }
 }

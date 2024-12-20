@@ -16,6 +16,11 @@ class FiveTabViewController: UIViewController {
     var titleLabel: UILabel! // 标题标签
     var topConstraint: Constraint? // 登录框距顶部距离约束
     let keyboardHeight = 125
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.getViewLayer(borderWidth: 0.9, borderColor: .red, backgroundColor: .yellow)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // 视图背景色
@@ -146,6 +151,7 @@ class FiveTabViewController: UIViewController {
             self.view.layoutIfNeeded()
         })
     }
+    
 }
 
 extension FiveTabViewController: UITextFieldDelegate {
