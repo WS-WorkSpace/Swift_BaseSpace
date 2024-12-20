@@ -21,6 +21,7 @@
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
 		C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EF32D09E0A900B14D9B /* CustomView.xib */; };
+		C63875132D1569BF00CD7B84 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */; };
 		C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */; };
 		C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */; };
 		C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */; };
@@ -210,6 +211,7 @@
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C6292EF32D09E0A900B14D9B /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 		C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridViewController.swift; sourceTree = "<group>"; };
 		C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridFlowLayout.swift; sourceTree = "<group>"; };
 		C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundReusableView.swift; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
+				C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -1317,6 +1320,7 @@
 				C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */,
 				C6C5CEEB2A76A9D300C5CF02 /* JsonTool.swift in Sources */,
 				C6EE3A6E2A864ADE00A76C19 /* XIBExampleCell.swift in Sources */,
+				C63875132D1569BF00CD7B84 /* UIControl+Extension.swift in Sources */,
 				C68CB7622CE9A5B1009F8A6A /* WS_Cache.swift in Sources */,
 				C6A951262D02AEAE00D07C53 /* WCDBHeaderView.swift in Sources */,
 				C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */,
