@@ -362,6 +362,7 @@ public extension CALayer {
     ///   - repeatNumber: 重复的次数
     ///   - removedOnCompletion: 运动后的位置保持不变（layer的最后位置是toValue）
     ///   - option: 动画的时间节奏控制 方式
+#if swift(<6)
     func addKeyframeAnimationRotation(values: [Any] = [CGFloat(-5).jk.degreesToRadians(), CGFloat(5).jk.degreesToRadians(), CGFloat(-5).jk.degreesToRadians()],
                                       keyTimes: [NSNumber]?,
                                       duration: TimeInterval = 1.0,
@@ -371,6 +372,10 @@ public extension CALayer {
                                       option: CAMediaTimingFunctionName = .default) {
         baseKeyframeAnimation(keyPath: "transform.rotation", values: values, keyTimes: keyTimes, duration: duration, delay: delay, repeatNumber: repeatNumber, path: nil, removedOnCompletion: removedOnCompletion, option: option)
     }
+#else
+        //swift6无法编译
+        WCDBError.fatalError("Swift 5 is required.")
+#endif
     
     // MARK: 3.3、根据 CGPath 进行做 移动 动画
     /// 根据 CGPath 进行做 移动 动画

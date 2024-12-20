@@ -49,7 +49,18 @@ class ThreeTabViewController: UIViewController {
         }
         label.attributedText = mutableAttributedString
         
-
+        let easyBtn = UIButton.easyButton("简单Btn"){btn in
+            btn?.backgroundColor = UIColor.randomColor
+            mlog("点击了按钮")
+        }
+        easyBtn.backgroundColor = .cyan
+        view.addSubview(easyBtn)
+        easyBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(200, 100))
+            make.top.equalTo(label.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+        }
+        
     }
 
     @objc func btnMethod() {

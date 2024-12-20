@@ -10,6 +10,23 @@
 import UIKit
 
 extension UIButton {
+    static func easyButton(_ title: String,
+                            _ titleColor: UIColor = UIColor.white,
+                            _ font: Double = 16.0,
+                            _ frame: CGRect = CGRectZero,
+                            _ block:@escaping ButtonCallBack) -> UIButton
+    {
+        let button = UIButton(frame: .zero)
+        button.frame = frame
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(titleColor, for: .normal)
+        button.setTitleColor(titleColor, for: .highlighted)
+        button.setTitleColor(titleColor.withAlphaComponent(0.5), for: .disabled)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setHandleClick(buttonCallBack: block)
+        return button
+    }
+
     static func creatButton(_ title: String,
                             _ titleColor: UIColor = UIColor.white,
                             _ font: Double = 16.0,
@@ -146,6 +163,33 @@ public extension UIButton {
         self.contentEdgeInsets = UIEdgeInsets(top: edgeOffset, left: 0, bottom: edgeOffset, right: 0)
     }
 }
+
+// MARK: - 五、Button的基本事件
+private var buttonCallBackKey: Void?
+typealias ButtonCallBack = ((UIButton?) -> ())
+extension UIButton {
+
+    internal var buttonCallBack: ButtonCallBack? {
+        get { return objc_getAssociatedObject(self, &buttonCallBackKey) as? ButtonCallBack}
+        set { objc_setAssociatedObject(self, &buttonCallBackKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC) }
+    }
+    
+    @objc internal func swiftButtonAction(_ button: UIButton) {
+        self.buttonCallBack?(button)
+    }
+    // MARK: 5.1、button的事件
+    /// button的事件
+    /// - Parameters:
+    ///   - controlEvents: 事件类型，默认是 valueChanged
+    ///   - buttonCallBack: 事件
+    /// - Returns: 闭包事件
+    func setHandleClick(controlEvents: UIControl.Event = .touchUpInside, buttonCallBack: ((_ button: UIButton?) -> ())?){
+        self.buttonCallBack = buttonCallBack
+        self.addTarget(self, action: #selector(swiftButtonAction), for: controlEvents)
+    }
+}
+
+
 // MARK: - Button扩大点击事件
 private var UIButtonExpandSizeKey = UnsafeRawPointer("UIButtonExpandSizeKey".withCString { $0 })
 public extension UIButton {

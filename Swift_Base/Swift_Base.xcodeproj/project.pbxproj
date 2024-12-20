@@ -22,6 +22,8 @@
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
 		C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EF32D09E0A900B14D9B /* CustomView.xib */; };
 		C63875132D1569BF00CD7B84 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */; };
+		C63875152D15B23300CD7B84 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875142D15B23300CD7B84 /* UIScreen+Extension.swift */; };
+		C63875192D15B71500CD7B84 /* Version_Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875182D15B71500CD7B84 /* Version_Detail.swift */; };
 		C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */; };
 		C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */; };
 		C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */; };
@@ -212,6 +214,8 @@
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C6292EF32D09E0A900B14D9B /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
+		C63875142D15B23300CD7B84 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		C63875182D15B71500CD7B84 /* Version_Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version_Detail.swift; sourceTree = "<group>"; };
 		C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridViewController.swift; sourceTree = "<group>"; };
 		C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridFlowLayout.swift; sourceTree = "<group>"; };
 		C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundReusableView.swift; sourceTree = "<group>"; };
@@ -770,6 +774,7 @@
 			children = (
 				C6C5CEDE2A7612C000C5CF02 /* PublicConfigs_README.md */,
 				C60C54E32D14616900B2B22B /* CustomClosure.swift */,
+				C63875182D15B71500CD7B84 /* Version_Detail.swift */,
 				C60C54D72D13104300B2B22B /* RDAsync.swift */,
 				C6B87D552D07541E00D83033 /* Then.swift */,
 				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
@@ -790,6 +795,7 @@
 				C60C54E52D1527CF00B2B22B /* CALayer+Extension.swift */,
 				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
+				C63875142D15B23300CD7B84 /* UIScreen+Extension.swift */,
 				C6C5CEC82A75D61100C5CF02 /* UIBarButtonItem+Extension.swift */,
 				C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */,
 				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
@@ -1351,6 +1357,7 @@
 				C6C5CEE02A76958000C5CF02 /* AppDelegate+Extension.swift in Sources */,
 				C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */,
 				C69EC9A42D0AA9E30058912B /* CustomXIBViewController.swift in Sources */,
+				C63875192D15B71500CD7B84 /* Version_Detail.swift in Sources */,
 				C6C5CEC52A75D52600C5CF02 /* UIImage+DarkImage.swift in Sources */,
 				C6C5CF6A2A7E325300C5CF02 /* CollectListViewController.swift in Sources */,
 				C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */,
@@ -1385,6 +1392,7 @@
 				C6C5CF332A7734D500C5CF02 /* BaseTabBarController.swift in Sources */,
 				C6C5CED52A75D84F00C5CF02 /* MBProgressHUD+Extension.swift in Sources */,
 				C6A951202D019C3B00D07C53 /* BookItem.swift in Sources */,
+				C63875152D15B23300CD7B84 /* UIScreen+Extension.swift in Sources */,
 				C60C54E22D13F65400B2B22B /* Optional+Extension.swift in Sources */,
 				C6C5CEC92A75D61100C5CF02 /* UIBarButtonItem+Extension.swift in Sources */,
 				C6EE3A532A834EA100A76C19 /* WaterFallFlowLayout.swift in Sources */,
