@@ -23,7 +23,7 @@ class MoyaViewController: UIViewController {
     lazy var mHeaderView: UIView = {
         let hView = UIView(frame: CGRectMake(0, 0, kScreenWidth, 90))
         hView.backgroundColor = .magenta
-        let leftBtn = UIButton.creatButton("简单使用", .white, CGRectZero, self, #selector(leftButton))
+        let leftBtn = UIButton.creatButton("简单使用", .white, 16, CGRectZero, self, #selector(leftButton))
         leftBtn.layer.cornerRadius = 7
         hView.addSubview(leftBtn)
         leftBtn.snp.makeConstraints { make in
@@ -31,7 +31,7 @@ class MoyaViewController: UIViewController {
             make.left.equalTo(5)
             make.top.equalTo(5)
         }
-        let rightBtn = UIButton.creatButton("封装使用", .white, CGRectZero, self, #selector(rightButton))
+        let rightBtn = UIButton.creatButton("封装使用", .white,16,CGRectZero, self, #selector(rightButton))
         rightBtn.layer.cornerRadius = 7
         hView.addSubview(rightBtn)
         rightBtn.snp.makeConstraints { make in

@@ -215,7 +215,7 @@ public extension UIApplication {
 
 // MARK: - 二、打开系统应用和第三方APP
 /// 系统app
-public enum JKSystemAppType: String {
+public enum SystemAppType: String {
     case safari = "http://"
     case googleMaps = "http://maps.google.com"
     case Phone = "tel://"
@@ -231,7 +231,7 @@ public extension UIApplication {
     // MARK: 2.1、打开系统app
     /// 打开系统app
     /// - Parameter type: 系统app类型
-    static func openSystemApp(type: JKSystemAppType, complete: @escaping ((Bool) -> Void)) {
+    static func openSystemApp(type: SystemAppType, complete: @escaping ((Bool) -> Void)) {
         openThirdPartyUrl(url: URL(string: type.rawValue)!, complete: complete)
     }
     
@@ -274,7 +274,7 @@ public extension UIApplication {
 }
 // MARK: - 二、APP权限的检测
 import Photos
-enum JKAppPermissionType {
+enum AppPermissionType {
     // 照相机
     case camera
     // 相册
@@ -290,7 +290,7 @@ extension UIApplication {
     /// 判断是否拥有权限，目前支持 照相机、相册、麦克风、定位，提示：这里判断是这些权限有没有被用户手动关闭
     /// - Parameter permission: 权限的类型
     /// - Returns: 结果
-    static func isOpenPermission(_ permission: JKAppPermissionType) -> Bool {
+    static func isOpenPermission(_ permission: AppPermissionType) -> Bool {
         
         var result: Bool = true
         if permission == .camera || permission == .audio {
