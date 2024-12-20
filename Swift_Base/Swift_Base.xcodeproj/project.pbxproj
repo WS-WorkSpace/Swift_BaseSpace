@@ -16,6 +16,7 @@
 		C60C54E02D13C4B200B2B22B /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */; };
 		C60C54E22D13F65400B2B22B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E12D13F65400B2B22B /* Optional+Extension.swift */; };
 		C60C54E42D14616900B2B22B /* CustomClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E32D14616900B2B22B /* CustomClosure.swift */; };
+		C60C54E62D1527CF00B2B22B /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C54E52D1527CF00B2B22B /* CALayer+Extension.swift */; };
 		C6292EE72D09D27500B14D9B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EE52D09D27500B14D9B /* Template.swift */; };
 		C6292EE82D09D27500B14D9B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6292EE62D09D27500B14D9B /* Template.xib */; };
 		C6292EEF2D09E08800B14D9B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292EED2D09E08800B14D9B /* CustomView.swift */; };
@@ -204,6 +205,7 @@
 		C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		C60C54E12D13F65400B2B22B /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		C60C54E32D14616900B2B22B /* CustomClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClosure.swift; sourceTree = "<group>"; };
+		C60C54E52D1527CF00B2B22B /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		C6292EE52D09D27500B14D9B /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		C6292EE62D09D27500B14D9B /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		C6292EED2D09E08800B14D9B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -783,8 +785,7 @@
 		C6C5CEBF2A75D36600C5CF02 /* UIKit_Category */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
-				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
+				C60C54E52D1527CF00B2B22B /* CALayer+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -802,6 +803,8 @@
 				C60C54DB2D13C12A00B2B22B /* Data+extension.swift */,
 				C60C54DF2D13C4B200B2B22B /* FileManager+Extension.swift */,
 				C60C54E12D13F65400B2B22B /* Optional+Extension.swift */,
+				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
+				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
 			);
 			path = Foundation_Category;
 			sourceTree = "<group>";
@@ -1319,6 +1322,7 @@
 				C6C5CEF22A76AA8E00C5CF02 /* MonitorNetworkTool.swift in Sources */,
 				C6C5CEDC2A76055F00C5CF02 /* String+Extension.swift in Sources */,
 				C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */,
+				C60C54E62D1527CF00B2B22B /* CALayer+Extension.swift in Sources */,
 				C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */,
 				C6C5CF0D2A76F9AC00C5CF02 /* SelfRefreshBackGifFooter.m in Sources */,
 				C6C5CEC72A75D5DC00C5CF02 /* UIView+Extension.swift in Sources */,
