@@ -17,15 +17,15 @@ class TableListViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
-                   "Table_SwiftyJSON_VC",
+                   "",
                    "",
                    "",
                    ""]
         return dataArr
     }()
 
-    lazy var subTableView: BaseTableView = {
-        let tableView = BaseTableView(frame: .zero)
+    lazy var subTableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false
@@ -39,7 +39,7 @@ class TableListViewController: BaseTableViewController {
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
         configModelArr = ["XIB + TableView",
-                          "链式 + TableView + SwiftyJSON",
+                          "",
                           "",
                           "",
                           ""]

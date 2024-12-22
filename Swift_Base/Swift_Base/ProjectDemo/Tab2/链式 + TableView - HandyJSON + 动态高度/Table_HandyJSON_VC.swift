@@ -12,8 +12,8 @@ import HandyJSON
 class Table_HandyJSON_VC: BaseTableViewController {
     lazy var items = [HandyJsonModel]()
 
-    lazy var subTableView: BaseTableView = {
-        let tableView = BaseTableView(frame: .zero)
+    lazy var subTableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false

@@ -23,8 +23,8 @@ class AlertUIViewController: BaseViewController {
         view.addSubview(tableView)
     }
 
-    lazy var tableView: BaseTableView = {
-        let tableView = BaseTableView(frame: .zero)
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
         tableView.frame = CGRect(x: 0, y: distanceTop, width: kScreenWidth, height: kScreenHeight-distanceTop-distanceBottom)
         //        tableView.separatorStyle = .none //不显示分割线
         //        tableView.showsVerticalScrollIndicator = false;
