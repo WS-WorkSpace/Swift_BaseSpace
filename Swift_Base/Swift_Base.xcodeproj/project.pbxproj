@@ -33,6 +33,7 @@
 		C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370B2A80829D00C304B4 /* ContentCell.swift */; };
 		C65437102A80D90800C304B4 /* ImageReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654370F2A80D90800C304B4 /* ImageReusableView.swift */; };
 		C65437132A82043000C304B4 /* WaterflowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */; };
+		C67ACD4B2D17B31900FFF9FF /* ButtonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ACD4A2D17B31900FFF9FF /* ButtonExampleViewController.swift */; };
 		C67C41852CED735B00DE4723 /* StringTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41842CED735B00DE4723 /* StringTool.swift */; };
 		C67C41862CED735B00DE4723 /* ExtensionCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */; };
 		C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41872CED746C00DE4723 /* TypeJudge.swift */; };
@@ -226,6 +227,7 @@
 		C654370B2A80829D00C304B4 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		C654370F2A80D90800C304B4 /* ImageReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReusableView.swift; sourceTree = "<group>"; };
 		C65437122A82043000C304B4 /* WaterflowCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterflowCollectionViewController.swift; sourceTree = "<group>"; };
+		C67ACD4A2D17B31900FFF9FF /* ButtonExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExampleViewController.swift; sourceTree = "<group>"; };
 		C67C41832CED735B00DE4723 /* ExtensionCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCompatible.swift; sourceTree = "<group>"; };
 		C67C41842CED735B00DE4723 /* StringTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTool.swift; sourceTree = "<group>"; };
 		C67C41872CED746C00DE4723 /* TypeJudge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeJudge.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,7 @@
 				C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */,
 				C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */,
 				C6EE3A5B2A84DD1100A76C19 /* FPSViewController.swift */,
+				C67ACD4A2D17B31900FFF9FF /* ButtonExampleViewController.swift */,
 			);
 			path = ExampleList;
 			sourceTree = "<group>";
@@ -1470,6 +1473,7 @@
 				C6C5CF0E2A76F9AC00C5CF02 /* SelfRefreshGifHeader.m in Sources */,
 				C6A951242D01FA7300D07C53 /* Sample.swift in Sources */,
 				C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */,
+				C67ACD4B2D17B31900FFF9FF /* ButtonExampleViewController.swift in Sources */,
 				C6C5CECD2A75D67800C5CF02 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,8 @@ class DemoListViewController: BaseTableViewController {
         var dataArr = NSMutableArray()
         dataArr = ["ExampleUI_ViewController",
                    "AlertUIViewController",
-                   "FPSViewController"]
+                   "FPSViewController",
+                   "ButtonExampleViewController"]
         return dataArr
     }()
 
@@ -26,7 +27,8 @@ class DemoListViewController: BaseTableViewController {
         configTableView()
         configModelArr = ["基本控件",
                           "Alert底部弹框",
-                          "FPS_Label"]
+                          "FPS_Label",
+                          "Button示例"]
 
         clickCellBlock = { [weak self] indexPath, _ in
             // OC对象 和 Swift 区别

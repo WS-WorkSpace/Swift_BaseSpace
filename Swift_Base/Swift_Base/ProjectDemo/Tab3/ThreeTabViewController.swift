@@ -61,6 +61,22 @@ class ThreeTabViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
+        let easyBtn1 = UIButton.easyButton("简单Btn2"){btn in
+            btn?.backgroundColor = UIColor.randomColor
+            mlog("点击了按钮")
+        }
+        easyBtn.backgroundColor = UIColor.randomColor
+        view.addSubview(easyBtn1)
+        easyBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSizeMake(200, 100))
+            make.top.equalTo(easyBtn1.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+        }
+        
+        
+
+        
+        
     }
 
     @objc func btnMethod() {
