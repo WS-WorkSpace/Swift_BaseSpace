@@ -7,7 +7,8 @@
 
 import UIKit
 
-class TableXIBViewController: BaseTableViewController {
+class TableXIBViewController: UIViewController {
+    let dataArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
     lazy var subTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.frame = kScrollViewFrame
@@ -23,7 +24,6 @@ class TableXIBViewController: BaseTableViewController {
 //        let viewT = boundle?.first as? XIBTableHeaderView
 //        viewT?.backgroundColor = .lightGray
 //        tableView.tableHeaderView = viewT
-
         lazy var headerView = XIBTableHeaderView.loadFromNib()
         tableView.tableHeaderView = headerView
 
@@ -35,41 +35,49 @@ class TableXIBViewController: BaseTableViewController {
         return tableView
     }()
 
-    private func mConfigTableView() {
-        self.view.addSubview(self.subTableView)
-        configModelArr = ["label:a", "label:b,label:label:", "label:clabel:clabel:clabel:clabel:c", "d", "e", "f", "label:label:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:clabel:c"]
-//        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
-
-        clickCellBlock = { [weak self] indexPath, _ in
-            // OC对象 和 Swift 区别
-            let mType: UIViewController.Type = TableXIBViewController.self
-            let childVC = mType.init()
-            self?.navigationController?.pushViewController(childVC, animated: true)
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle = "TableViw示例1.0"
-        self.mConfigTableView()
+        navigationItem.title = "TableViw示例"
+        self.view.addSubview(self.subTableView)
     }
 }
 
-extension TableXIBViewController {
-    /// 重写父类代理自定义xib cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+extension TableXIBViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataArr.count
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: XIBExampleCell.CellID, for: indexPath) as? XIBExampleCell
-        cell?.leftLab.text = configModelArr[indexPath.row]
+        cell?.leftLab.text = dataArr[indexPath.row]
         cell?.rightImg.image = UIImage(named: "AppIcon-mini") // "APP_NineGridHeadImg"
         cell?.backgroundColor = UIColor.randomColor
         return cell ?? XIBExampleCell()
     }
+}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+extension TableXIBViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    // 设置cell的显示 3D缩放动画
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // 设置cell的显示动画为3D缩放
+        // xy方向缩放的初始值为0.1
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        // 设置动画时间为0.25秒，xy方向缩放的最终值为1
+        UIView.animate(withDuration: 0.25, animations: {
+            cell.layer.transform=CATransform3DMakeScale(1, 1, 1)
+        })
     }
 }
