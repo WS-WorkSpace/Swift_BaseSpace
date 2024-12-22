@@ -22,8 +22,8 @@ class BaseTableViewController: BaseViewController {
         modelArr.append(newString)
     }
 
-    lazy var mTableView: BaseTableView = {
-        let tableView = BaseTableView(frame: .zero)
+    lazy var mTableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
         tableView.frame = kScrollViewFrame
         tableView.separatorStyle = .singleLine
         tableView.showsVerticalScrollIndicator = false

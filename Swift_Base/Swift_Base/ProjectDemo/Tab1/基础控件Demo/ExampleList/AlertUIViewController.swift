@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertUIViewController: BaseViewController {
+class AlertUIViewController: UIViewController {
     private lazy var modelArr: [[String]] = {
         var dataArr1 = [String]()
         dataArr1 = ["微信ActionSheet", "微信ActionSheet-没有标题", "微信ActionSheet-没有取消", "微信ActionSheet-红色按钮"]
@@ -19,7 +19,7 @@ class AlertUIViewController: BaseViewController {
     }()
 
     private func configTableView() {
-        navTitle = "弹框"
+        navigationItem.title = "弹框"
         view.addSubview(tableView)
     }
 
@@ -42,6 +42,7 @@ class AlertUIViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         configTableView()
     }
 }

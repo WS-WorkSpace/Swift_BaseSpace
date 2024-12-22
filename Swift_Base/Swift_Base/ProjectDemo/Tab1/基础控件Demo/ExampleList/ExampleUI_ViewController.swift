@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ExampleUI_ViewController: BaseViewController, UITextFieldDelegate, UITextViewDelegate {
+class ExampleUI_ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     lazy var subViewsWidth = 0.0
     lazy var customLabel: UILabel = .createCustomLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         self.subViewsWidth = kScreenWidth - 20
-        self.navTitle = "基础控件"
+        navigationItem.title = "基础控件"
         self.setupSubviews()
     }
 

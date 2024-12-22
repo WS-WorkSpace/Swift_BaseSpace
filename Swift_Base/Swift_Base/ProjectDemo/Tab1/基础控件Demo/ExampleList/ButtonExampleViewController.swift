@@ -15,7 +15,6 @@ class ButtonExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
         // MARK: - 简单创建个按钮
 
         let easyBtn = UIButton.easyButton("简单Btn") { btn in

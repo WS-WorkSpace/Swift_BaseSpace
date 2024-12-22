@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class FPSViewController: BaseViewController {
+class FPSViewController: UIViewController {
     private lazy var mButton = UIButton().then {
         let title = "UIButton"
         let titleColor = UIColor.randomColor
@@ -41,6 +41,7 @@ class FPSViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
     }
 
     override func viewWillLayoutSubviews() {

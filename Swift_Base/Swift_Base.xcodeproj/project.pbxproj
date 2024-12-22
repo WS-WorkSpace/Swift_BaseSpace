@@ -783,6 +783,7 @@
 		C6C5CEBF2A75D36600C5CF02 /* UIKit_Category */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CECC2A75D67800C5CF02 /* UITableView+Extension.swift */,
 				C60C54E52D1527CF00B2B22B /* CALayer+Extension.swift */,
 				C6B580932CF9618100794CF1 /* UIButton+Extension.swift */,
 				C6C5CEC62A75D5DC00C5CF02 /* UIView+Extension.swift */,
@@ -1024,7 +1025,6 @@
 				C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */,
 				C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */,
 				C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */,
-				C6C5CECC2A75D67800C5CF02 /* UITableView+Extension.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
