@@ -434,6 +434,7 @@
 				C68CB6FC2CE7B367009F8A6A /* Mems.swift */,
 				C68CB7002CE83119009F8A6A /* Singleton.swift */,
 				C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */,
+				C6C5CEB42A74E2D000C5CF02 /* Toast.swift */,
 			);
 			path = CommonTool;
 			sourceTree = "<group>";
@@ -736,8 +737,6 @@
 				C6C5CEAF2A74C6D700C5CF02 /* PublicConfigs基础配置 */,
 				C6C5CEAE2A7463FB00C5CF02 /* SRC */,
 				C6C5CEA62A745E3A00C5CF02 /* Resources */,
-				C6C5CEB22A74E11900C5CF02 /* UIWindow+Extension.swift */,
-				C6C5CEB42A74E2D000C5CF02 /* Toast.swift */,
 			);
 			path = Swift_Base;
 			sourceTree = "<group>";
@@ -940,6 +939,7 @@
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
 				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
 				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
+				C6C5CEB22A74E11900C5CF02 /* UIWindow+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
