@@ -1,5 +1,5 @@
 //
-//  BaseTableView.swift
+//  EmptyBaseTableView.swift
 //  Swift_Base
 //
 //  Created by 王爽 on 2023/8/3.
@@ -21,7 +21,7 @@ private let kNoDataStr = "暂无数据"
 private let kNetWorkErrorStr = "网络不给力,点击重新加载"
 private let kNoDataViewOffsetHeight = -(kScreenHeight * 0.5 - distanceTop - 50.0)
 
-class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+class EmptyBaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     required init?(coder: NSCoder) {
         super.init(coder:coder)
@@ -71,6 +71,8 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
     // MARK: - 设置空数据展示图
+    // 核心方法 设置代理,数据源
+    // reloadEmptyDataSet() 自定义view
     private func configNoDataPicture() {
         self.emptyDataSetSource = self
         self.emptyDataSetDelegate = self
@@ -84,6 +86,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
     // MARK: - 空白界面的标题
+    // emptyDataSet会自动调用这里
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         var title = ""
         if (emptyState == .StateNoData) {
@@ -99,6 +102,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
     // MARK: - 调整内容视图的垂直对齐（垂直偏移量）方式
+    // reloadEmptyDataSet后会自动调用这里
     func verticalOffset(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
         // 距离顶部距离
         if (emptyState == .StateNoData) {
@@ -114,7 +118,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     
     // MARK: - 空白页上view点击事件
     func emptyDataSet(_ scrollView: UIScrollView!, didTap view: UIView!) {
-        Lg.log(" BaseTableView - view点击事件 ")
+        Lg.log(" EmptyBaseTableView - view点击事件 ")
     }
     
     // MARK: - 是否允许滚动，默认NO
@@ -125,7 +129,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     // MARK: - 空白页上Btn点击事件
     func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
         if (emptyState == .StateNetWorkError) {
-            Lg.log(" BaseTableView - 点击了空白页上按钮 ")
+            Lg.log(" EmptyBaseTableView - 点击了空白页上按钮 ")
             emptyState = .StateLoading
             self.reloadEmptyDataSet()
             self.ClickEmptyViewBlock?()
@@ -133,6 +137,7 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
     // MARK: - 设置按钮图片(这张图片是带边框带重新加载文字的图片)
+    // reloadEmptyDataSet后会自动调用这里
     func buttonImage(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> UIImage! {
         var image = UIImage(named: "empty")
         if (emptyState == .StateNetWorkError) {
@@ -144,7 +149,12 @@ class BaseTableView: UITableView, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
 }
-extension BaseTableView {
+extension EmptyBaseTableView{
+//    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+//        UIImage(named: "Alert_error")
+//    }
+}
+extension EmptyBaseTableView {
     /// 添加上拉刷新控件
     func mAddHeadRefresh(isAutoRefresh: Bool = false, fetchNewDataBlock: @escaping (() -> Void)) {
         

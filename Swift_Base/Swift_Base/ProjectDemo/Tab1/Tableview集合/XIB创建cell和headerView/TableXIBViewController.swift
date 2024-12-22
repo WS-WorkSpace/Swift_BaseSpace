@@ -26,7 +26,6 @@ class TableXIBViewController: UIViewController {
 //        tableView.tableHeaderView = viewT
         lazy var headerView = XIBTableHeaderView.loadFromNib()
         tableView.tableHeaderView = headerView
-
         tableView.register(UINib(nibName: "XIBExampleCell", bundle: nil), forCellReuseIdentifier: XIBExampleCell.CellID)
 //        tableView.RD_registerNibCell(XIBExampleCell.self)
         tableView.dataSource = self

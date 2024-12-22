@@ -63,24 +63,6 @@ extension BaseTableViewController: UITableViewDataSource {
     }
 }
 
-/*
- func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     // 定义一个cell的标识
-     let cellID = "CellID"
-     // 从缓存池中取出cell
-     var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-     // 如果缓存池中没有cell, 判断为空进行初始化  --（当拉动页面显示超过主页面内容的时候就会重用之前的cell，而不会再次初始化）
-     if cell == nil {
-         cell = JhBaseTableViewCell(style: .value1, reuseIdentifier: cellID)
-     }
-     //        cell?.selectionStyle = .none //不显示选中颜色
-     cell?.accessoryType = .disclosureIndicator // 显示最右边的箭头
-     cell?.textLabel?.text = dataArr[indexPath.row] as? String
-     cell?.textLabel?.font = JhFont(17)
-     return cell!
- }
- */
-
 extension BaseTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

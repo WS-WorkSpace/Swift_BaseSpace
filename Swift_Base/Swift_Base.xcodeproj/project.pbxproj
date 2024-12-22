@@ -48,6 +48,7 @@
 		C681359C2CFA2C6900FB7653 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68135962CFA2C6900FB7653 /* APIProvider.swift */; };
 		C68135A02CFB512B00FB7653 /* KingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */; };
 		C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */; };
+		C685B24D2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */; };
 		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
@@ -235,6 +236,7 @@
 		C68135982CFA2C6900FB7653 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherViewController.swift; sourceTree = "<group>"; };
 		C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KingfisherViewController.xib; sourceTree = "<group>"; };
+		C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC_EmptyDataSetTableViewController.swift; sourceTree = "<group>"; };
 		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -526,6 +528,23 @@
 				C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */,
 			);
 			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		C685B24E2D18065400C0D0A6 /* 创建空数据tableview */ = {
+			isa = PBXGroup;
+			children = (
+				C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */,
+			);
+			path = "创建空数据tableview";
+			sourceTree = "<group>";
+		};
+		C685B24F2D186D6800C0D0A6 /* OC_ DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */,
+				C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */,
+			);
+			path = "OC_ DZNEmptyDataSet";
 			sourceTree = "<group>";
 		};
 		C68CB74A2CE83A08009F8A6A /* Swift调用OC */ = {
@@ -847,7 +866,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF2D2A7733D400C5CF02 /* Controllers */,
-				C6C5CF682A7E315D00C5CF02 /* Table */,
+				C6C5CF682A7E315D00C5CF02 /* TableView */,
 				C6C5CF5D2A7C65EE00C5CF02 /* Collection */,
 				C6C5CF2E2A77341000C5CF02 /* Views */,
 			);
@@ -1019,14 +1038,13 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		C6C5CF682A7E315D00C5CF02 /* Table */ = {
+		C6C5CF682A7E315D00C5CF02 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */,
 				C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */,
-				C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */,
+				C685B24F2D186D6800C0D0A6 /* OC_ DZNEmptyDataSet */,
 			);
-			path = Table;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		C6C5CF6B2A7E325E00C5CF02 /* Collection集合 */ = {
@@ -1054,12 +1072,13 @@
 			isa = PBXGroup;
 			children = (
 				C6EE3A632A85EB1900A76C19 /* TableListViewController.swift */,
-				C6EE3A672A85F46700A76C19 /* XIB */,
+				C6EE3A672A85F46700A76C19 /* XIB创建cell和headerView */,
+				C685B24E2D18065400C0D0A6 /* 创建空数据tableview */,
 			);
 			path = "Tableview集合";
 			sourceTree = "<group>";
 		};
-		C6EE3A672A85F46700A76C19 /* XIB */ = {
+		C6EE3A672A85F46700A76C19 /* XIB创建cell和headerView */ = {
 			isa = PBXGroup;
 			children = (
 				C6EE3A682A864A1400A76C19 /* TableXIBViewController.swift */,
@@ -1068,7 +1087,7 @@
 				C6EE3A7D2A86927700A76C19 /* XIBTableHeaderView.swift */,
 				C6EE3A7F2A86927F00A76C19 /* XIBTableHeaderView.xib */,
 			);
-			path = XIB;
+			path = "XIB创建cell和headerView";
 			sourceTree = "<group>";
 		};
 		C6EE3A882A88E8BA00A76C19 /* MoyaPods */ = {
@@ -1377,6 +1396,7 @@
 				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
 				C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */,
 				C6292EE72D09D27500B14D9B /* Template.swift in Sources */,
+				C685B24D2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift in Sources */,
 				C60C54E42D14616900B2B22B /* CustomClosure.swift in Sources */,
 				C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */,
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,

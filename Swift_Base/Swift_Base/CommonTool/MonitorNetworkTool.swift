@@ -20,6 +20,7 @@ enum NetworkStatus {
     case ethernetOrWiFi
 }
 
+typealias AF = AlamofireMonitorNetworkTool
 class AlamofireMonitorNetworkTool {
     static let shared = AlamofireMonitorNetworkTool()
 
@@ -49,6 +50,7 @@ class AlamofireMonitorNetworkTool {
     }
 
     // 判断网络是否连接
+    // 这里断网后再连接,可能有bug,后续发现处理
     static func isNetwork() -> Bool {
         return networkManager?.isReachable ?? true // 无返回就默认网络已连接
     }

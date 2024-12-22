@@ -10,6 +10,7 @@ import UIKit
 class TableListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         navTitle = "TableViw示例1.0"
         self.mConfigTableView()
     }
@@ -17,7 +18,7 @@ class TableListViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
-                   "",
+                   "OC_EmptyDataSetTableViewController",
                    "",
                    "",
                    ""]
@@ -38,8 +39,8 @@ class TableListViewController: BaseTableViewController {
 
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
-        configModelArr = ["XIB + TableView",
-                          "",
+        configModelArr = ["XIB创建cell和headerView",
+                          "网络请求后空数据tableview",
                           "",
                           "",
                           ""]
