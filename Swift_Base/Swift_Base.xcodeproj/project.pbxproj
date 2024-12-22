@@ -24,6 +24,7 @@
 		C63875132D1569BF00CD7B84 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */; };
 		C63875152D15B23300CD7B84 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875142D15B23300CD7B84 /* UIScreen+Extension.swift */; };
 		C63875192D15B71500CD7B84 /* Version_Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63875182D15B71500CD7B84 /* Version_Detail.swift */; };
+		C638751B2D16612D00CD7B84 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638751A2D16612D00CD7B84 /* UITextField+Extension.swift */; };
 		C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */; };
 		C65437012A7E7C8F00C304B4 /* NineGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */; };
 		C65437032A7FC74000C304B4 /* SectionBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */; };
@@ -216,6 +217,7 @@
 		C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 		C63875142D15B23300CD7B84 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		C63875182D15B71500CD7B84 /* Version_Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version_Detail.swift; sourceTree = "<group>"; };
+		C638751A2D16612D00CD7B84 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C65436FE2A7E475A00C304B4 /* NineGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridViewController.swift; sourceTree = "<group>"; };
 		C65437002A7E7C8F00C304B4 /* NineGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridFlowLayout.swift; sourceTree = "<group>"; };
 		C65437022A7FC74000C304B4 /* SectionBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundReusableView.swift; sourceTree = "<group>"; };
@@ -800,6 +802,7 @@
 				C63875122D1569BF00CD7B84 /* UIControl+Extension.swift */,
 				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
 				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
+				C638751A2D16612D00CD7B84 /* UITextField+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -1429,6 +1432,7 @@
 				C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */,
 				C60C54DC2D13C12A00B2B22B /* Data+extension.swift in Sources */,
 				C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */,
+				C638751B2D16612D00CD7B84 /* UITextField+Extension.swift in Sources */,
 				C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
 				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,

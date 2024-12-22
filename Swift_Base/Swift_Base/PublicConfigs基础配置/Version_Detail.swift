@@ -16,3 +16,14 @@ extension UIScrollView {
         }
     }
 }
+// MARK: tableView 在 iOS 11 上的适配
+extension UITableView {
+    func tableViewNeverAdjustContentInset() {
+        if #available(iOS 11, *) {
+            self.estimatedRowHeight = 0
+            self.estimatedSectionFooterHeight = 0
+            self.estimatedSectionHeaderHeight = 0
+            self.contentInsetAdjustmentBehavior = .never
+        }
+    }
+}

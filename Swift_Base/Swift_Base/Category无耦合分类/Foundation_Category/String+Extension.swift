@@ -7,6 +7,65 @@
 
 import UIKit
 
+/// 字符串取类型的长度
+public enum StringTypeLength {
+    /// Unicode字符个数
+    case count
+    /// utf8
+    case utf8
+    /// utf16获取长度对应NSString的.length方法
+    case utf16
+    /// unicodeScalars
+    case unicodeScalars
+    /// utf8编码通过字节判断长度
+    case lengthOfBytesUtf8
+    /// 英文 = 1，数字 = 1，汉语 = 2
+    case customCountOfChars
+}
+extension String {
+    // MARK: 1.1、字符串的长度
+    /// 字符串的长度
+    var length: Int {
+        return self.count
+    }
+    
+    // MARK: 1.2、字符串取类型的长度
+    /// 字符串取类型的长度
+    func typeLengh(_ type: StringTypeLength) -> Int {
+        let string = self
+        if type == .utf8 {
+            return string.utf8.count
+        } else if type == .utf16 {
+            return string.utf16.count
+        } else if type == .unicodeScalars {
+            return string.unicodeScalars.count
+        } else if type == .lengthOfBytesUtf8 {
+            return string.lengthOfBytes(using: .utf8)
+        }  else if type == .customCountOfChars {
+            return string.jk.customCountOfChars()
+        }
+        return string.count
+    }
+    
+    // MARK: 1.2、判断是否包含某个子串
+    /// 判断是否包含某个子串
+    /// - Parameter find: 子串
+    /// - Returns: Bool
+    func contains(find: String) -> Bool {
+        return self.range(of: find) != nil
+    }
+    
+    // MARK: 1.3、判断是否包含某个子串 -- 忽略大小写
+    ///  判断是否包含某个子串 -- 忽略大小写
+    /// - Parameter find: 子串
+    /// - Returns: Bool
+    func containsIgnoringCase(find: String) -> Bool {
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
+    
+
+}
+
 extension String {
     
     /// 字符串转 base64
