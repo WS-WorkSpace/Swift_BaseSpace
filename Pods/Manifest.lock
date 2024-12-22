@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.9.1)
   - CRRefresh (1.1.3)
   - DZNEmptyDataSet (1.8.1)
+  - EmptyDataSet-Swift (5.0.0)
   - ESPullToRefresh (2.9.3)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.9)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - Alamofire (= 4.9.1)
   - CRRefresh
   - DZNEmptyDataSet (= 1.8.1)
+  - EmptyDataSet-Swift (~> 5.0.0)
   - ESPullToRefresh (= 2.9.3)
   - HandyJSON (= 5.0.2)
   - IQKeyboardManagerSwift (= 6.5.9)
@@ -66,6 +68,7 @@ SPEC REPOS:
     - Alamofire
     - CRRefresh
     - DZNEmptyDataSet
+    - EmptyDataSet-Swift
     - ESPullToRefresh
     - HandyJSON
     - IQKeyboardManagerSwift
@@ -93,6 +96,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CRRefresh: 1415d4ae06837fa7bb064c44f2e102f3ef517044
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 64f662eddd53dfc1c8f821f8090b5b9ab3586882
   WCDBOptimizedSQLCipher: c6451e1dead7ec53e1344a2545aaed2c4c139fc0
 
-PODFILE CHECKSUM: bc02b377e10b55b73c58d490a4731d63a965398a
+PODFILE CHECKSUM: 226cb7d583f588a224e3509d9db729019203bfbf
 
 COCOAPODS: 1.12.1

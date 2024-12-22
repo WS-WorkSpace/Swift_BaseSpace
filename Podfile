@@ -49,7 +49,8 @@ target 'Swift_Base' do
   pod 'WCDB.swift', '2.1.9'
   # Extension
   pod 'JKSwiftExtension'
-
+  # 加载空数据scrollview
+  pod 'EmptyDataSet-Swift', '~> 5.0.0'
 
   #pod 'SQLite.swift', '0.13.2'             # SQLite.swift:用swift封装的sqlite 3操作框架。
   #pod 'RealmSwift'
