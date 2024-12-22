@@ -170,8 +170,6 @@
 		C6EE3A872A88D9E000A76C19 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */; };
 		C6EE3A8A2A88E8F700A76C19 /* MoyaHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */; };
 		C6EE3A8C2A88E91F00A76C19 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */; };
-		C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */; };
-		C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */; };
 		F1DA6B090365CD91650A31BB /* Pods_Swift_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7933B4EB486844E5F32EC5A4 /* Pods_Swift_Base.framework */; };
 /* End PBXBuildFile section */
 
@@ -373,8 +371,6 @@
 		C6EE3A862A88D9E000A76C19 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		C6EE3A892A88E8F700A76C19 /* MoyaHttpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHttpTool.swift; sourceTree = "<group>"; };
 		C6EE3A8B2A88E91F00A76C19 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
-		C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_HandyJSON_VC.swift; sourceTree = "<group>"; };
-		C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -975,7 +971,6 @@
 				C6B5808D2CF8A2DF00794CF1 /* Moya */,
 				C681359D2CFB510200FB7653 /* Kingfisher */,
 				C68004532D0091C000A86023 /* WCDB */,
-				C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */,
 			);
 			path = Tab2;
 			sourceTree = "<group>";
@@ -1085,15 +1080,6 @@
 				C68135992CFA2C6900FB7653 /* MoyaCustom */,
 			);
 			path = MoyaPods;
-			sourceTree = "<group>";
-		};
-		C6EE3A8D2A89399500A76C19 /* 链式 + TableView - HandyJSON + 动态高度 */ = {
-			isa = PBXGroup;
-			children = (
-				C6EE3A922A893AB100A76C19 /* Table_HandyJSON_VC.swift */,
-				C6EE3A942A893D8B00A76C19 /* HandyJsonModel.swift */,
-			);
-			path = "链式 + TableView - HandyJSON + 动态高度";
 			sourceTree = "<group>";
 		};
 		C6EE3A8F2A8939FC00A76C19 /* 链式 */ = {
@@ -1360,7 +1346,6 @@
 				C67C41852CED735B00DE4723 /* StringTool.swift in Sources */,
 				C67C41862CED735B00DE4723 /* ExtensionCompatible.swift in Sources */,
 				C6C5CF072A76DBF200C5CF02 /* FPSLabel.m in Sources */,
-				C6EE3A932A893AB100A76C19 /* Table_HandyJSON_VC.swift in Sources */,
 				C6B580562CF75AD700794CF1 /* HeaderAnimatorView.swift in Sources */,
 				C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */,
 				C6C5CEBE2A75D2E300C5CF02 /* ConfigFontColorMacro.swift in Sources */,
@@ -1410,7 +1395,6 @@
 				C638751B2D16612D00CD7B84 /* UITextField+Extension.swift in Sources */,
 				C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
-				C6EE3A952A893D8B00A76C19 /* HandyJsonModel.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
 				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,

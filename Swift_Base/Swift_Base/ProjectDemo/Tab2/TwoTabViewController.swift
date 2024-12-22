@@ -18,8 +18,6 @@ class TwoTabViewController: BaseTableViewController {
                         "Moya示例",
                         "KingFisher示例",
                         "WCDB示例",
-                        "Table_SwiftyJSON_VC",
-                        "Table_HandyJSON_VC",
                         ""]
         let _vcArray = [modelArray, netArray]
         return _vcArray
@@ -34,8 +32,6 @@ class TwoTabViewController: BaseTableViewController {
                         "MoyaViewController",
                         "KingfisherViewController",
                         "WCDBViewController",
-                        "Table_SwiftyJSON_VC",
-                        "Table_HandyJSON_VC",
                         ""]
         let _vcArray = [modelArray, netArray]
         return _vcArray
