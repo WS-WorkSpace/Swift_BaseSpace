@@ -144,7 +144,6 @@
 		C6C5CF412A77369100C5CF02 /* FiveTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */; };
 		C6C5CF432A7738D700C5CF02 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF422A7738D700C5CF02 /* NavigationController.swift */; };
 		C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF492A77714500C5CF02 /* SettingViewController.swift */; };
-		C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */; };
 		C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */; };
 		C6C5CF532A7ADB3A00C5CF02 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */; };
 		C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */; };
@@ -352,7 +351,6 @@
 		C6C5CF402A77369100C5CF02 /* FiveTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveTabViewController.swift; sourceTree = "<group>"; };
 		C6C5CF422A7738D700C5CF02 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		C6C5CF492A77714500C5CF02 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVersion.swift; sourceTree = "<group>"; };
 		C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
@@ -925,7 +923,6 @@
 			children = (
 				C6C5CF422A7738D700C5CF02 /* NavigationController.swift */,
 				C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */,
-				C6C5CF4B2A78458300C5CF02 /* ConfigVersion.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1425,7 +1422,6 @@
 				C6EE3A612A85C86400A76C19 /* FuntionaProgrammingNetWork.swift in Sources */,
 				C6C5CF3F2A77367900C5CF02 /* FourTabViewController.swift in Sources */,
 				C68CB7542CE83FE9009F8A6A /* MultithreadingViewController.swift in Sources */,
-				C6C5CF4C2A78458300C5CF02 /* ConfigVersion.swift in Sources */,
 				C6B580442CF2D5CF00794CF1 /* HandyJsonTableViewController.swift in Sources */,
 				C6292EE72D09D27500B14D9B /* Template.swift in Sources */,
 				C60C54E42D14616900B2B22B /* CustomClosure.swift in Sources */,
