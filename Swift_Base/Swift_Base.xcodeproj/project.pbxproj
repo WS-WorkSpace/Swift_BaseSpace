@@ -90,7 +90,6 @@
 		C6B580902CF8A35400794CF1 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */; };
 		C6B580922CF8A36200794CF1 /* MoyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580912CF8A36200794CF1 /* MoyaViewController.swift */; };
 		C6B580942CF9618100794CF1 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580932CF9618100794CF1 /* UIButton+Extension.swift */; };
-		C6B580962CF9A20F00794CF1 /* RDBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580952CF9A20F00794CF1 /* RDBase.swift */; };
 		C6B87D542D04241D00D83033 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B87D532D04241D00D83033 /* Notification+Extension.swift */; };
 		C6B87D562D07541E00D83033 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B87D552D07541E00D83033 /* Then.swift */; };
 		C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */; };
@@ -103,7 +102,6 @@
 		C6C5CEA52A745D8B00C5CF02 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEA42A745D8B00C5CF02 /* RootViewController.swift */; };
 		C6C5CEA82A745E4700C5CF02 /* LaunchImage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C5CEA72A745E4700C5CF02 /* LaunchImage_1.png */; };
 		C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEB02A74C73200C5CF02 /* RDLog.swift */; };
-		C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEB22A74E11900C5CF02 /* UIWindow+Extension.swift */; };
 		C6C5CEB52A74E2D000C5CF02 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEB42A74E2D000C5CF02 /* Toast.swift */; };
 		C6C5CEB82A758A2100C5CF02 /* FrameMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEB72A758A2100C5CF02 /* FrameMacro.swift */; };
 		C6C5CEBA2A75CC5000C5CF02 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */; };
@@ -285,7 +283,6 @@
 		C6B5808F2CF8A35400794CF1 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		C6B580912CF8A36200794CF1 /* MoyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaViewController.swift; sourceTree = "<group>"; };
 		C6B580932CF9618100794CF1 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		C6B580952CF9A20F00794CF1 /* RDBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBase.swift; sourceTree = "<group>"; };
 		C6B87D532D04241D00D83033 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		C6B87D552D07541E00D83033 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C6B8C4E62A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ObjectMapper_Moya.swift; sourceTree = "<group>"; };
@@ -303,7 +300,6 @@
 		C6C5CEA72A745E4700C5CF02 /* LaunchImage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage_1.png; sourceTree = "<group>"; };
 		C6C5CEA92A74619500C5CF02 /* Swift_Base-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift_Base-Bridging-Header.h"; sourceTree = "<group>"; };
 		C6C5CEB02A74C73200C5CF02 /* RDLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDLog.swift; sourceTree = "<group>"; };
-		C6C5CEB22A74E11900C5CF02 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		C6C5CEB42A74E2D000C5CF02 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		C6C5CEB72A758A2100C5CF02 /* FrameMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameMacro.swift; sourceTree = "<group>"; };
 		C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
@@ -812,6 +808,8 @@
 				C6C5CEC22A75D46E00C5CF02 /* UIColor+Extension.swift */,
 				C6C5CEC02A75D42900C5CF02 /* UIColor+DarkColor.swift */,
 				C638751A2D16612D00CD7B84 /* UITextField+Extension.swift */,
+				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
+				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
 			);
 			path = UIKit_Category;
 			sourceTree = "<group>";
@@ -931,12 +929,8 @@
 			isa = PBXGroup;
 			children = (
 				C6EE3A812A873F6B00A76C19 /* NibLoadable.swift */,
-				C6B580952CF9A20F00794CF1 /* RDBase.swift */,
 				C6C5CEE22A76A5A200C5CF02 /* SystemAlertTool.swift */,
 				C6C5CF232A77109800C5CF02 /* RDActionSheet.swift */,
-				C6C5CEC42A75D52600C5CF02 /* UIImage+DarkImage.swift */,
-				C6C5CECA2A75D65200C5CF02 /* UIImage+Extension.swift */,
-				C6C5CEB22A74E11900C5CF02 /* UIWindow+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1351,7 +1345,6 @@
 				C6C5CEB12A74C73200C5CF02 /* RDLog.swift in Sources */,
 				C6B5804F2CF613CB00794CF1 /* CodableViewController.swift in Sources */,
 				C6B580922CF8A36200794CF1 /* MoyaViewController.swift in Sources */,
-				C6C5CEB32A74E11900C5CF02 /* UIWindow+Extension.swift in Sources */,
 				C6EE3A642A85EB1900A76C19 /* TableListViewController.swift in Sources */,
 				C6EE3A4F2A8225D200A76C19 /* WaterflowCell.swift in Sources */,
 				C69EC9892D09FB310058912B /* MyXibView.swift in Sources */,
@@ -1416,7 +1409,6 @@
 				C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */,
 				C6B8C4E72A89ED8A0080F9B4 /* Table_ObjectMapper_Moya.swift in Sources */,
 				C65436FF2A7E475A00C304B4 /* NineGridViewController.swift in Sources */,
-				C6B580962CF9A20F00794CF1 /* RDBase.swift in Sources */,
 				C6C5CEC12A75D42900C5CF02 /* UIColor+DarkColor.swift in Sources */,
 				C6C5CED92A75D89600C5CF02 /* ConstraintArrayDSL.swift in Sources */,
 				C6EE3A612A85C86400A76C19 /* FuntionaProgrammingNetWork.swift in Sources */,
