@@ -423,6 +423,21 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		C6201E142D17EAD70012C2E8 /* CommonTool */ = {
+			isa = PBXGroup;
+			children = (
+				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
+				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
+				C6C5CEF12A76AA8E00C5CF02 /* MonitorNetworkTool.swift */,
+				C63875182D15B71500CD7B84 /* Version_Detail.swift */,
+				C60C54D72D13104300B2B22B /* RDAsync.swift */,
+				C68CB6FC2CE7B367009F8A6A /* Mems.swift */,
+				C68CB7002CE83119009F8A6A /* Singleton.swift */,
+				C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */,
+			);
+			path = CommonTool;
+			sourceTree = "<group>";
+		};
 		C65437082A80816400C304B4 /* BasicUse */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,10 +728,11 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF2F2A77342100C5CF02 /* ProjectDemo */,
-				C6C5CEEC2A76AA0E00C5CF02 /* Tools */,
+				C6C5CEEC2A76AA0E00C5CF02 /* ThirdTools */,
 				C6C5CEE72A76A88400C5CF02 /* RD_Model */,
 				C6C5CEE42A76A7F500C5CF02 /* Base_UIKit */,
 				C6C5CEDA2A75D8D400C5CF02 /* Category无耦合分类 */,
+				C6201E142D17EAD70012C2E8 /* CommonTool */,
 				C6C5CEAF2A74C6D700C5CF02 /* PublicConfigs基础配置 */,
 				C6C5CEAE2A7463FB00C5CF02 /* SRC */,
 				C6C5CEA62A745E3A00C5CF02 /* Resources */,
@@ -778,17 +794,11 @@
 			children = (
 				C6C5CEDE2A7612C000C5CF02 /* PublicConfigs_README.md */,
 				C60C54E32D14616900B2B22B /* CustomClosure.swift */,
-				C63875182D15B71500CD7B84 /* Version_Detail.swift */,
-				C60C54D72D13104300B2B22B /* RDAsync.swift */,
-				C6B87D552D07541E00D83033 /* Then.swift */,
-				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
 				C6C5CEB72A758A2100C5CF02 /* FrameMacro.swift */,
 				C6C5CEB92A75CC5000C5CF02 /* DeviceInfo.swift */,
 				C6C5CEBB2A75D1D200C5CF02 /* GlobalConfig.swift */,
 				C6C5CEBD2A75D2E300C5CF02 /* ConfigFontColorMacro.swift */,
-				C68CB6FC2CE7B367009F8A6A /* Mems.swift */,
-				C68CB7002CE83119009F8A6A /* Singleton.swift */,
-				C68CB75F2CE99F41009F8A6A /* AssertsManager.swift */,
+				C6C5CEB02A74C73200C5CF02 /* RDLog.swift */,
 			);
 			path = "PublicConfigs基础配置";
 			sourceTree = "<group>";
@@ -874,18 +884,16 @@
 			path = RD_Model;
 			sourceTree = "<group>";
 		};
-		C6C5CEEC2A76AA0E00C5CF02 /* Tools */ = {
+		C6C5CEEC2A76AA0E00C5CF02 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				C6B87D552D07541E00D83033 /* Then.swift */,
 				C6C5CF082A76F99900C5CF02 /* MJRefresh */,
 				C6C5CF012A76DBF100C5CF02 /* FPSLabel */,
 				C6C5CED32A75D82300C5CF02 /* MBProgressHUD */,
 				C6C5CED22A75D81700C5CF02 /* SnapKit */,
-				C6C5CEED2A76AA2D00C5CF02 /* FileManagerTool.swift */,
-				C6C5CEEF2A76AA6600C5CF02 /* CommonTool.swift */,
-				C6C5CEF12A76AA8E00C5CF02 /* MonitorNetworkTool.swift */,
 			);
-			path = Tools;
+			path = ThirdTools;
 			sourceTree = "<group>";
 		};
 		C6C5CF012A76DBF100C5CF02 /* FPSLabel */ = {
