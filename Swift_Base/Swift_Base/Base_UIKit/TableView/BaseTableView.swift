@@ -32,9 +32,9 @@ class BaseTableView: UITableView {
         super.init(coder: coder)
         fatalError("init(coder:) has not been implemented")
     }
-    private func mReloadEmptyDataSet(){
-//        Alamofire.request(<#T##urlRequest: any URLRequestConvertible##any URLRequestConvertible#>)
-        self.reloadEmptyDataSet()
+    func mReloadEmptyDataSet(){
+//        Alamofire.request(T##urlRequest: any URLRequestConvertible##any URLRequestConvertible)
+//        self.reloadEmptyDataSet()
         //DZNEmptyDataSet.UIScrollView.reloadEmptyDataSet()
 
     }

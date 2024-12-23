@@ -39,7 +39,6 @@
 		C67C41892CED746C00DE4723 /* TypeJudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41872CED746C00DE4723 /* TypeJudge.swift */; };
 		C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C41882CED746C00DE4723 /* UIColorTool.swift */; };
 		C67C418D2CED766C00DE4723 /* POPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418C2CED766C00DE4723 /* POPViewController.swift */; };
-		C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */; };
 		C68004522D003F1E00A86023 /* SwiftMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */; };
 		C68004552D0091E800A86023 /* WCDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004542D0091E800A86023 /* WCDBViewController.swift */; };
 		C68004572D0092C900A86023 /* WCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68004562D0092C900A86023 /* WCDManager.swift */; };
@@ -51,6 +50,8 @@
 		C685B24D2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */; };
 		C685B2512D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B2502D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift */; };
 		C685B2532D1870E500C0D0A6 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B2522D1870E500C0D0A6 /* BaseTableView.swift */; };
+		C685B2662D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C685B2652D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.xib */; };
+		C685B2672D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B2642D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.swift */; };
 		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
@@ -75,7 +76,6 @@
 		C6A951242D01FA7300D07C53 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951232D01FA7300D07C53 /* Sample.swift */; };
 		C6A951262D02AEAE00D07C53 /* WCDBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */; };
 		C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */; };
-		C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */; };
 		C6B57FEE2CF087FA00794CF1 /* MirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */; };
 		C6B580332CF19FF800794CF1 /* NVActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */; };
 		C6B580362CF1BFF100794CF1 /* SwiftyJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */; };
@@ -229,7 +229,6 @@
 		C67C41872CED746C00DE4723 /* TypeJudge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeJudge.swift; sourceTree = "<group>"; };
 		C67C41882CED746C00DE4723 /* UIColorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
 		C67C418C2CED766C00DE4723 /* POPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPViewController.swift; sourceTree = "<group>"; };
-		C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
 		C68004512D003F1E00A86023 /* SwiftMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesViewController.swift; sourceTree = "<group>"; };
 		C68004542D0091E800A86023 /* WCDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBViewController.swift; sourceTree = "<group>"; };
 		C68004562D0092C900A86023 /* WCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDManager.swift; sourceTree = "<group>"; };
@@ -241,6 +240,8 @@
 		C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC_EmptyDataSetTableViewController.swift; sourceTree = "<group>"; };
 		C685B2502D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_EmptyDataSetTableViewController.swift; sourceTree = "<group>"; };
 		C685B2522D1870E500C0D0A6 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		C685B2642D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingViewController.swift; sourceTree = "<group>"; };
+		C685B2652D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -267,7 +268,6 @@
 		C6A951232D01FA7300D07C53 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		C6A951252D02AEAE00D07C53 /* WCDBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBHeaderView.swift; sourceTree = "<group>"; };
 		C6A951272D02AEBA00D07C53 /* WCDBHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCDBHeaderView.xib; sourceTree = "<group>"; };
-		C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactiveProgrammingViewController.xib; sourceTree = "<group>"; };
 		C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorViewController.swift; sourceTree = "<group>"; };
 		C6B580322CF19FF800794CF1 /* NVActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		C6B580352CF1BFF100794CF1 /* SwiftyJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONViewController.swift; sourceTree = "<group>"; };
@@ -488,8 +488,8 @@
 		C67C418E2CEE289F00DE4723 /* 响应式编程 */ = {
 			isa = PBXGroup;
 			children = (
-				C67C418F2CEE28C500DE4723 /* ReactiveProgrammingViewController.swift */,
-				C6B519842CEF261300794CF1 /* ReactiveProgrammingViewController.xib */,
+				C685B2642D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.swift */,
+				C685B2652D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.xib */,
 			);
 			path = "响应式编程";
 			sourceTree = "<group>";
@@ -612,7 +612,6 @@
 			isa = PBXGroup;
 			children = (
 				C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */,
-				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 			);
 			path = "反射";
 			sourceTree = "<group>";
@@ -1013,6 +1012,7 @@
 				C68CB7522CE83FB1009F8A6A /* 多线程 */,
 				C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */,
 				C67C41822CED734200DE4723 /* 面向协议编程 */,
+				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 				C6B580312CF19F8A00794CF1 /* 菊花加载动画 */,
 				C6B580522CF7239300794CF1 /* ESPullToRefresh */,
@@ -1234,6 +1234,7 @@
 				C6C5CF1B2A77031C00C5CF02 /* Refresh.bundle in Resources */,
 				C69EC9882D09FB310058912B /* MyXibView.xib in Resources */,
 				C6B5803B2CF206C200794CF1 /* LocalData.json in Resources */,
+				C685B2662D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.xib in Resources */,
 				C6A951282D02AEBA00D07C53 /* WCDBHeaderView.xib in Resources */,
 				C69EC9C32D0AB1280058912B /* MyCustomXIBView.xib in Resources */,
 				C6B580402CF215CF00794CF1 /* BookList.json in Resources */,
@@ -1247,7 +1248,6 @@
 				C6292EF42D09E0A900B14D9B /* CustomView.xib in Resources */,
 				C6292EE82D09D27500B14D9B /* Template.xib in Resources */,
 				C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */,
-				C6B519852CEF261300794CF1 /* ReactiveProgrammingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,6 +1351,7 @@
 				C65437072A80811B00C304B4 /* SessionBackImageSectionViewController.swift in Sources */,
 				C69EC9A42D0AA9E30058912B /* CustomXIBViewController.swift in Sources */,
 				C63875192D15B71500CD7B84 /* Version_Detail.swift in Sources */,
+				C685B2672D19AC4E00C0D0A6 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6C5CEC52A75D52600C5CF02 /* UIImage+DarkImage.swift in Sources */,
 				C6C5CF6A2A7E325300C5CF02 /* CollectListViewController.swift in Sources */,
 				C6C5CF352A7735C200C5CF02 /* OneTabViewController.swift in Sources */,
@@ -1423,7 +1424,6 @@
 				C6B580462CF2DAB700794CF1 /* BookHandyJsonModel.swift in Sources */,
 				C67C418A2CED746C00DE4723 /* UIColorTool.swift in Sources */,
 				C6C5CE752A745BD300C5CF02 /* AppDelegate.swift in Sources */,
-				C67C41902CEE28C500DE4723 /* ReactiveProgrammingViewController.swift in Sources */,
 				C6EE3A692A864A1400A76C19 /* TableXIBViewController.swift in Sources */,
 				C6B580392CF1C52F00794CF1 /* EasyTestModel.swift in Sources */,
 				C60C54E02D13C4B200B2B22B /* FileManager+Extension.swift in Sources */,
