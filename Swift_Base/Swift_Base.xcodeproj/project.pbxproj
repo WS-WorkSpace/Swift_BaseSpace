@@ -49,6 +49,8 @@
 		C68135A02CFB512B00FB7653 /* KingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */; };
 		C68135A12CFB512B00FB7653 /* KingfisherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */; };
 		C685B24D2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */; };
+		C685B2512D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B2502D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift */; };
+		C685B2532D1870E500C0D0A6 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685B2522D1870E500C0D0A6 /* BaseTableView.swift */; };
 		C68CB6FD2CE7B367009F8A6A /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FC2CE7B367009F8A6A /* Mems.swift */; };
 		C68CB6FF2CE7B3EB009F8A6A /* WS_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */; };
 		C68CB7012CE83119009F8A6A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CB7002CE83119009F8A6A /* Singleton.swift */; };
@@ -144,7 +146,7 @@
 		C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF492A77714500C5CF02 /* SettingViewController.swift */; };
 		C6C5CF4E2A78497700C5CF02 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */; };
 		C6C5CF532A7ADB3A00C5CF02 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */; };
-		C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */; };
+		C6C5CF552A7ADFB100C5CF02 /* EmptyBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF542A7ADFB100C5CF02 /* EmptyBaseTableView.swift */; };
 		C6C5CF572A7B024B00C5CF02 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF562A7B024B00C5CF02 /* DemoListViewController.swift */; };
 		C6C5CF5A2A7B08F300C5CF02 /* ExampleUI_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */; };
 		C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */; };
@@ -237,6 +239,8 @@
 		C681359E2CFB512B00FB7653 /* KingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherViewController.swift; sourceTree = "<group>"; };
 		C681359F2CFB512B00FB7653 /* KingfisherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KingfisherViewController.xib; sourceTree = "<group>"; };
 		C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC_EmptyDataSetTableViewController.swift; sourceTree = "<group>"; };
+		C685B2502D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_EmptyDataSetTableViewController.swift; sourceTree = "<group>"; };
+		C685B2522D1870E500C0D0A6 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		C68CB6FC2CE7B367009F8A6A /* Mems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		C68CB6FE2CE7B3EB009F8A6A /* WS_Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_Async.swift; sourceTree = "<group>"; };
 		C68CB7002CE83119009F8A6A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -346,7 +350,7 @@
 		C6C5CF492A77714500C5CF02 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C6C5CF4D2A78497700C5CF02 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		C6C5CF542A7ADFB100C5CF02 /* EmptyBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBaseTableView.swift; sourceTree = "<group>"; };
 		C6C5CF562A7B024B00C5CF02 /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
 		C6C5CF592A7B08F300C5CF02 /* ExampleUI_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUI_ViewController.swift; sourceTree = "<group>"; };
 		C6C5CF5B2A7B9C1A00C5CF02 /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
@@ -533,6 +537,7 @@
 		C685B24E2D18065400C0D0A6 /* 创建空数据tableview */ = {
 			isa = PBXGroup;
 			children = (
+				C685B2502D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift */,
 				C685B24C2D1804DD00C0D0A6 /* OC_EmptyDataSetTableViewController.swift */,
 			);
 			path = "创建空数据tableview";
@@ -541,7 +546,7 @@
 		C685B24F2D186D6800C0D0A6 /* OC_ DZNEmptyDataSet */ = {
 			isa = PBXGroup;
 			children = (
-				C6C5CF542A7ADFB100C5CF02 /* BaseTableView.swift */,
+				C6C5CF542A7ADFB100C5CF02 /* EmptyBaseTableView.swift */,
 				C6EE3A652A85F19600A76C19 /* RDEmptyData.bundle */,
 			);
 			path = "OC_ DZNEmptyDataSet";
@@ -607,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B57FED2CF087FA00794CF1 /* MirrorViewController.swift */,
+				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 			);
 			path = "反射";
 			sourceTree = "<group>";
@@ -1007,7 +1013,6 @@
 				C68CB7522CE83FB1009F8A6A /* 多线程 */,
 				C68CB76A2CEB7CEE009F8A6A /* 函数式编程 */,
 				C67C41822CED734200DE4723 /* 面向协议编程 */,
-				C67C418E2CEE289F00DE4723 /* 响应式编程 */,
 				C6B57FEC2CF087DF00794CF1 /* 反射 */,
 				C6B580312CF19F8A00794CF1 /* 菊花加载动画 */,
 				C6B580522CF7239300794CF1 /* ESPullToRefresh */,
@@ -1042,6 +1047,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5CF522A7ADB3A00C5CF02 /* BaseTableViewController.swift */,
+				C685B2522D1870E500C0D0A6 /* BaseTableView.swift */,
 				C685B24F2D186D6800C0D0A6 /* OC_ DZNEmptyDataSet */,
 			);
 			path = TableView;
@@ -1402,6 +1408,7 @@
 				C6C5CF5C2A7B9C1A00C5CF02 /* AlertUIViewController.swift in Sources */,
 				C6EE3A822A873F6B00A76C19 /* NibLoadable.swift in Sources */,
 				C6C5CECB2A75D65200C5CF02 /* UIImage+Extension.swift in Sources */,
+				C685B2512D186F0200C0D0A6 /* Swift_EmptyDataSetTableViewController.swift in Sources */,
 				C67C418D2CED766C00DE4723 /* POPViewController.swift in Sources */,
 				C6C5CF702A7E347B00C5CF02 /* DemoCollectionViewCell.swift in Sources */,
 				C6C5CF372A7735DB00C5CF02 /* TwoTabViewController.swift in Sources */,
@@ -1426,6 +1433,7 @@
 				C65437052A8080E800C304B4 /* SectionDecorationLayout.swift in Sources */,
 				C68CB7602CE99F41009F8A6A /* AssertsManager.swift in Sources */,
 				C60C54D62D130DB500B2B22B /* Array+Extension.swift in Sources */,
+				C685B2532D1870E500C0D0A6 /* BaseTableView.swift in Sources */,
 				C654370C2A80829D00C304B4 /* ContentCell.swift in Sources */,
 				C6EE3A512A8248F900A76C19 /* WaterFallModelHandle.swift in Sources */,
 				C6C5CF3D2A77366800C5CF02 /* ThreeTabViewController.swift in Sources */,
@@ -1439,7 +1447,7 @@
 				C6B580542CF723C700794CF1 /* ESPullToRefreshViewController.swift in Sources */,
 				C6B580482CF4D8CA00794CF1 /* UserModel.swift in Sources */,
 				C6B87D562D07541E00D83033 /* Then.swift in Sources */,
-				C6C5CF552A7ADFB100C5CF02 /* BaseTableView.swift in Sources */,
+				C6C5CF552A7ADFB100C5CF02 /* EmptyBaseTableView.swift in Sources */,
 				C68CB74D2CE83A24009F8A6A /* WS_Person.m in Sources */,
 				C6C5CF4A2A77714500C5CF02 /* SettingViewController.swift in Sources */,
 				C6C5CEF02A76AA6600C5CF02 /* CommonTool.swift in Sources */,

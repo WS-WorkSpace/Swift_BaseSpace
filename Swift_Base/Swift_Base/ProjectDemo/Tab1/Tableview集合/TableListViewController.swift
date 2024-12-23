@@ -18,8 +18,8 @@ class TableListViewController: BaseTableViewController {
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
         dataArr = ["TableXIBViewController",
+                   "Swift_EmptyDataSetTableViewController",
                    "OC_EmptyDataSetTableViewController",
-                   "",
                    "",
                    ""]
         return dataArr
@@ -40,8 +40,8 @@ class TableListViewController: BaseTableViewController {
     private func mConfigTableView() {
         self.view.addSubview(self.subTableView)
         configModelArr = ["XIB创建cell和headerView",
-                          "网络请求后空数据tableview",
-                          "",
+                          "网络请求后空数据tableview_Swift",
+                          "网络请求后空数据tableview_OC",
                           "",
                           ""]
 //        self.tableView.showEmptyDataViewWithType(EmptyDataViewState.StateNetWorkError)
