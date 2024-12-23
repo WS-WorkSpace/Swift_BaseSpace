@@ -8,7 +8,7 @@
 import UIKit
 import CRRefresh
 
-enum EmptyDataState: Int {
+enum EmptyDataViewState: Int {
     /// 状态0 - 暂无数据
     case StateNoData = 0
     /// 状态1 -网络请求错误,(网络不可用,请检查网络设置)

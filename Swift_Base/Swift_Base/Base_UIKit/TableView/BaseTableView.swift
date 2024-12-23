@@ -8,78 +8,83 @@
 import EmptyDataSet_Swift
 import UIKit
 
-enum EmptyDataViewState: Int {
+enum EmptyDataState: Int {
     /// 状态0 - 暂无数据
     case StateNoData = 0
     /// 状态1 -网络请求错误,(网络不可用,请检查网络设置)
     case StateNetWorkError
-    /// 状态2 - 重新加载
-    case StateLoading
+    /// 状态2 - other
+    case StateOhter
 }
 
-private let kNoDataStr = NSAttributedString(string: "暂无数据")
-private let kNetWorkErrorStr = NSAttributedString(string: "网络不给力,点击重新加载")
-private let kButtonTitleNormal = NSAttributedString(string: "重新加载1")
-private let kButtonTitlehigHlighted = NSAttributedString(string: "重新加载2")
+private let kNoDataStr = "暂无数据"
+private let kNetWorkErrorStr = "网络不给力,点击重新加载"
+
+var titleEmptyNoData:String = ""
+var descriptionEmptyNoData:String = ""
 
 class BaseTableView: UITableView {
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        initMethod()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         fatalError("init(coder:) has not been implemented")
     }
-    func mReloadEmptyDataSet(){
-//        Alamofire.request(T##urlRequest: any URLRequestConvertible##any URLRequestConvertible)
-//        self.reloadEmptyDataSet()
-        //DZNEmptyDataSet.UIScrollView.reloadEmptyDataSet()
 
+    func setUpEmptyDataSet(_ type:EmptyDataState) {
+        switch type {
+        case .StateNoData:
+            titleEmptyNoData = kNoDataStr
+            descriptionEmptyNoData = "努力为您查找..."
+        case .StateNetWorkError:
+            titleEmptyNoData = kNoDataStr
+            descriptionEmptyNoData = "网络不给力,点击重新加载"
+        case .StateOhter:
+            titleEmptyNoData = ""
+            descriptionEmptyNoData = ""
+        }
+        self.initMethod()
+        /// self.reloadEmptyDataSet()
     }
+
     private func initMethod() {
         backgroundColor = .white
         configIOS11()
         emptyDataSetSource = self
         emptyDataSetDelegate = self
 
-//        ///*  方法一:直接设置 emptyDataSetView
-//        /// 方法二:代理中设置
-//         self.emptyDataSetView { view in
-//             view.titleLabelString(kNoDataStr)
-//                 .detailLabelString(kNetWorkErrorStr)
-//                 .image(UIImage(named: "Alert_error"))
-        ////                 .imageAnimation(imageAnimation)
-        ////                 .buttonTitle(kButtonTitleNormal, for: .normal)
-        ////                 .buttonTitle(kButtonTitlehigHlighted, for: .highlighted)
-        ////                 .buttonBackgroundImage(buttonBackgroundImage, for: .normal)
-        ////                 .buttonBackgroundImage(buttonBackgroundImage, for: .highlighted)
-        ////                 .dataSetBackgroundColor(backgroundColor)
-        ////                 .verticalOffset(verticalOffset)
-        ////                 .verticalSpace(spaceHeight)
-//                 .shouldDisplay(true)
-        ////                 .shouldFadeIn(true)
-        ////                 .isTouchAllowed(true)
-        ////                 .isScrollAllowed(true)
-        ////                 .isImageViewAnimateAllowed(isLoading)
-//                 .didTapDataButton {
-//                     // Do something
-//                     mlog("点击重新加载按钮")
-//                 }
-//                 .didTapContentView {
-//                     // Do something
-//                     mlog("点击ContentView")
-//                 }
-//         }
-        /// */
-
-//        // 设置空数据视图
-//        emptyDataSetSource = MyEmptyDataSetSource()
-//        emptyDataSetDelegate = self
+        /*  方法一:直接设置 emptyDataSetView
+         /// 方法二:代理中设置
+         emptyDataSetView { view in
+             view.titleLabelString(NSAttributedString(string: kNoDataStr))
+                 .detailLabelString(NSAttributedString(string: "网络不给力,点击重新加载"))
+                 .image(UIImage(named: "Alert_error"))
+                 .imageAnimation(imageAnimation)
+                 .buttonTitle(kButtonTitleNormal, for: .normal)
+                 .buttonTitle(kButtonTitlehigHlighted, for: .highlighted)
+                 .buttonBackgroundImage(buttonBackgroundImage, for: .normal)
+                 .buttonBackgroundImage(buttonBackgroundImage, for: .highlighted)
+                 .dataSetBackgroundColor(backgroundColor)
+                 .verticalOffset(verticalOffset)
+                 .verticalSpace(spaceHeight)
+                 .shouldDisplay(true)
+                 .shouldFadeIn(true)
+                 .isTouchAllowed(true)
+                 .isScrollAllowed(true)
+                 .isImageViewAnimateAllowed(isLoading)
+                 .didTapDataButton {
+                     // Do something
+                     mlog("点击重新加载按钮")
+                 }
+                 .didTapContentView {
+                     // Do something
+                     mlog("点击ContentView")
+                 }
+         }
+         */
     }
-
-    func setupEmpty() {}
 
     // MARK: - iOS 适配
 
@@ -98,17 +103,17 @@ class BaseTableView: UITableView {
 
 extension BaseTableView: EmptyDataSetSource {
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let text = "暂无数据"
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        let text = titleEmptyNoData
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         return NSAttributedString(string: text, attributes: attributes)
     }
 
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let text = "努力为您查找..."
+        let text = descriptionEmptyNoData
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byWordWrapping
         paragraphStyle.alignment = .center
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.paragraphStyle: paragraphStyle]
         return NSAttributedString(string: text, attributes: attributes)
     }
 
@@ -127,8 +132,8 @@ extension BaseTableView: EmptyDataSetSource {
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
         return UIImage(named: "Alert_error")
     }
-    
-    func imageAnimation(forEmptyDataSet scrollView: UIScrollView) -> CAAnimation?{
+
+    func imageAnimation(forEmptyDataSet scrollView: UIScrollView) -> CAAnimation? {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
         animation.toValue = Double.pi * 2

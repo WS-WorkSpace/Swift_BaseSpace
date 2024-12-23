@@ -30,15 +30,16 @@ class Swift_EmptyDataSetTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mTableView)
-        setUpEmptyDetail()
+        getNetModel()
     }
 
+    /**
     /// 读取本地json数据
     func readLocalJSON() {
         let json = EasyTestModel.getLocalJSON("BookList", "json")
         updateModel(json)
     }
-
+    */
     func updateModel(_ json: JSON) {
         let bookArr = json["list"].arrayValue
         for element in bookArr {
@@ -48,14 +49,16 @@ class Swift_EmptyDataSetTableViewController: UIViewController {
             let book = Book(authorNumber: num, authorName: name, desc: desc)
             bookArray.append(book)
         }
+        if bookArray.count == 0{
+            mTableView.setUpEmptyDataSet(.StateNoData)
+        }
         mTableView.reloadData()
     }
     func setUpEmptyDetail(){
-        mTableView.mReloadEmptyDataSet()
     }
     func getNetModel() {
         if AF.isNetwork() == false {
-            self.setUpEmptyDetail()
+            mTableView.setUpEmptyDataSet(.StateNetWorkError)
             return
         }
         let url = GlobalConfig.BOOKLIST_URL
