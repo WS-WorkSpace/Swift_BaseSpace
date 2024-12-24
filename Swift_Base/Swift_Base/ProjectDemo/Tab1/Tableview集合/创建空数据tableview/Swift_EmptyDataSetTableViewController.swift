@@ -61,7 +61,8 @@ class Swift_EmptyDataSetTableViewController: UIViewController {
             mTableView.setUpEmptyDataSet(.StateNetWorkError)
             return
         }
-        let url = GlobalConfig.BOOKLIST_URL
+        /// let url = GlobalConfig.BOOKLIST_URL
+        let url = ""
         let parameters = ["key": "value"]
         Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { [weak self] response in
             if let res = response.data {

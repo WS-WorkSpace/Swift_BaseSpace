@@ -20,32 +20,11 @@ class WaterflowCollectionViewController: BaseViewController {
         $0.getHeightWithIndexBlock = { [weak self] mindexPath in
             guard let self = self else { return 0.0 }
             let isUserd = (self.itemCellHeight.count - 1) >= mindexPath.item
-//            if isUserd {
-//                return self.itemCellHeight[mindexPath.item]
-//            }else {
-//                0.0
-//            }
             return isUserd ? self.itemCellHeight[mindexPath.item] : 0.0
         }
     }
 
     var itemCellHeight: [Double] = []
-//    private lazy var layout = UICollectionViewFlowLayout().then {
-//        let margin = 10.0 // 设置间距
-//        let maxCol = 3.0 // 设置列数
-//        // 设置item尺寸
-//        let itemW = (kScreenWidth - (maxCol + 1) * margin) / maxCol
-//        let itemH = itemW + 20
-//        $0.itemSize = CGSize(width: itemW, height: itemH) // 每个item的大小
-//        $0.minimumLineSpacing = margin // 设置最小行间距
-//        $0.minimumInteritemSpacing = margin // 最小列间距
-//        $0.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin) // 每组的四周位置间距 ,分别为上、左、下、右
-//        $0.scrollDirection = .vertical // 方向
-//        $0.minimumLineSpacing = 10
-//        $0.minimumInteritemSpacing = 0
-//        $0.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//    }
-
     lazy var mCollectionView: BaseCollectionView = {
         let tempView = BaseCollectionView(frame: kScrollViewFrame, collectionViewLayout: layout)
         tempView.delegate = self
