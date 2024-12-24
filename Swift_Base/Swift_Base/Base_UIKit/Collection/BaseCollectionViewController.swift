@@ -12,9 +12,14 @@ private let HeaderViewID = "HeaderViewID"
 private let FooterViewID = "FooterViewID"
 
 class BaseCollectionViewController: BaseViewController {
-    lazy var mCollectionView: UICollectionView = {
+    lazy var mFlowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
-        let collectionView = BaseCollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        //flowLayout.itemSize = CGSizeMake(300, 300)
+        flowLayout.scrollDirection = .vertical
+        return flowLayout
+    }()
+    lazy var mCollectionView: UICollectionView = {
+        let collectionView = BaseCollectionView(frame: .zero, collectionViewLayout: mFlowLayout)
         collectionView.frame = kScrollViewFrame
         collectionView.backgroundColor = BaseBgColor
         collectionView.delegate = self
@@ -76,10 +81,10 @@ class BaseCollectionViewController: BaseViewController {
     }
 
     /*
-    func registerSupplementaryView(kind: String = UICollectionView.elementKindSectionHeader, viewID: String) {
-        mCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: viewID)
-    }
-    */
+     func registerSupplementaryView(kind: String = UICollectionView.elementKindSectionHeader, viewID: String) {
+         mCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: viewID)
+     }
+     */
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,58 +146,83 @@ extension BaseCollectionViewController: UICollectionViewDataSource {
 }
 
 extension BaseCollectionViewController: UICollectionViewDelegate {
+    /// 是否允许选择某个单元格
+    /**
+     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+         return false
+     }
+     */
+
     ///  - 点击事件
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //        let cell = collectionView.cellForItem(at: indexPath)
         clickCustomCellBlock?(indexPath)
     }
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
 
     /// (@"取消选择----->%zd",indexPath.item)
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        Lg.log("取消选择-----", indexPath.item)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        Lg.log("取消选择-----", indexPath.item)
+    }
 
     /** 对应的高亮和选中状态分别由highlighted和selected两个属性表示
-    // (@"shouldHighlightItemAtIndexPath 设置是否要高亮"); //    return YES;
-     func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {}
+     // (@"shouldHighlightItemAtIndexPath 设置是否要高亮"); //    return YES;
+      func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {}
 
-    // (@"didHighlightItemAtIndexPath 已经展示高亮");
-     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {}
+     // (@"didHighlightItemAtIndexPath 已经展示高亮");
+      func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {}
 
-    // @"didUnhighlightItemAtIndexPath 高亮结束"
-     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {}
+     // @"didUnhighlightItemAtIndexPath 高亮结束"
+      func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {}
 
-    // shouldSelectItemAt 反
-     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {}
-    */
+     // shouldSelectItemAt 反
+      func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {}
+     */
+
+    /** 下面三个方法设置cell的menu 弹框
+    // 设置是否展示长按菜单
+    func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    // 这个方法用于设置要展示的菜单选项
+    func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool{
+        if String(describing: action) == "copy:" || String(describing: action) == "paste:" {
+            return true
+        }
+        return false
+        // return action == #selector(copy(_:))
+
+    }
     
-    // 长按菜单栏 待续
-//    func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-    // API_DEPRECATED_WITH_REPLACEMENT("collectionView:contextMenuConfigurationForItemsAtIndexPaths:point:", ios(6.0, 13.0))
-    // iOS13 新增
-    // override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {}
-    // override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {}
+    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        if action == #selector(copy(_:)) {
+            // 获取要复制的内容
+            let cell = collectionView.cellForItem(at: indexPath)
+            // 显示菜单
+            UIMenuController.shared.showMenu(from: cell!, rect: cell!.frame)
+            UIMenuController.shared.setMenuVisible(true, animated: true)
+        }
+    }
+    */
+
 }
 
 extension BaseCollectionViewController: UICollectionViewDelegateFlowLayout {
+    /// 对某个cell制定尺寸
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        if indexPath.item == 1 {
 //            return CGSizeMake(150, 150)
 //        }
 //        return CGSizeMake(100, 100)
 //    }
+    
+    
 
     // 返回每个分区的内边距
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        let numberOfItems = collectionView.numberOfItems(inSection: section)
-//        return numberOfItems > 0 ? UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10) :
-//            UIEdgeInsets.zero
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let numberOfItems = collectionView.numberOfItems(inSection: section)
+        return numberOfItems > 0 ? UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10) :
+            UIEdgeInsets.zero
+    }
 
     /*
      collectionView在设置referenceSizeForHeaderInSection(区头视图大小)或者referenceSizeForFooterInSection(区尾视图大小时) 需要区分滚动方向 根据滚动方向不同，header和footer的width和height中只有一个会起作用：

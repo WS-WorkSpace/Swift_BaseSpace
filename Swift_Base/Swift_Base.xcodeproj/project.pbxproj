@@ -1036,9 +1036,9 @@
 		C6C5CF5D2A7C65EE00C5CF02 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5CF602A7D011A00C5CF02 /* BaseCollectionViewController.swift */,
 				C6C5CF622A7D03CE00C5CF02 /* BaseCollectionView.swift */,
 				C6C5CF642A7D0B0500C5CF02 /* BaseCollectionViewCell.swift */,
-				C6C5CF602A7D011A00C5CF02 /* BaseCollectionViewController.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
