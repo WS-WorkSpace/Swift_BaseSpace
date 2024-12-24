@@ -16,7 +16,8 @@ class CollectListViewController: BaseTableViewController {
 
     private lazy var classArr: NSMutableArray = {
         var dataArr = NSMutableArray()
-        dataArr = ["EasyCollectionViewController",
+        dataArr = ["BaseCollectionViewController",
+                   "EasyCollectionViewController",
                    "NineGridViewController",
                    "SessionBackImageSectionViewController",
                    "WaterflowCollectionViewController"]
@@ -25,7 +26,8 @@ class CollectListViewController: BaseTableViewController {
 
     private func mConfigTableView() {
         configTableView()
-        configModelArr = ["基本使用",
+        configModelArr = ["BaseCollection",
+                          "基本使用",
                           "九宫格",
                           "自定义section背景图",
                           "刷新瀑布流"]

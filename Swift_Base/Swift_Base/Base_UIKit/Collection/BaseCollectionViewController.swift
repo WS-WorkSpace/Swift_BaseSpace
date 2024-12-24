@@ -12,23 +12,7 @@ private let HeaderViewID = "HeaderViewID"
 private let FooterViewID = "FooterViewID"
 
 class BaseCollectionViewController: BaseViewController {
-    /// 自定义的CellName
-    var registerCell: String? {
-        didSet {
-            // 注册Cell
-            let strTemp = registerCell ?? "BaseCollectionViewCell"
-            collectionView.register(NSString.RD_classFromString(strTemp), forCellWithReuseIdentifier: CellID)
-        }
-    }
-
-    var registerCellWithNib: String? {
-        didSet {
-            // Nib注册Cell
-            collectionView.register(UINib(nibName: registerCellWithNib ?? "BaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellID)
-        }
-    }
-
-    lazy var collectionView: UICollectionView = {
+    lazy var mCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = BaseCollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.frame = kScrollViewFrame
@@ -36,11 +20,12 @@ class BaseCollectionViewController: BaseViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsVerticalScrollIndicator = false
-        //        // 这句话的意思是为了 不管集合视图里面的值 多不多  都可以滚动 解决了值少了 集合视图不能滚动的问题
-        //        collectionView.alwaysBounceVertical = true
-        //        // 设置上左下右距离
-        //        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0,right: 0)
-
+        /*
+         // 这句话的意思是为了 不管集合视图里面的值 多不多  都可以滚动 解决了值少了 集合视图不能滚动的问题
+         collectionView.alwaysBounceVertical = true
+         // 设置上左下右距离
+         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+         */
         // header注册
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderViewID)
         // footer注册
@@ -60,7 +45,7 @@ class BaseCollectionViewController: BaseViewController {
     /// FlowLayout
     var collectionFlowLayout: UICollectionViewFlowLayout? {
         didSet {
-            collectionView.collectionViewLayout = collectionFlowLayout ?? UICollectionViewFlowLayout()
+            mCollectionView.collectionViewLayout = collectionFlowLayout ?? UICollectionViewFlowLayout()
         }
     }
 
@@ -79,35 +64,60 @@ class BaseCollectionViewController: BaseViewController {
         }
     }
 
+    /// 纯代码注册Cell
+    func registerCellWhihClassName(className: String) {
+        let strTemp = className
+        mCollectionView.register(NSString.RD_classFromString(strTemp), forCellWithReuseIdentifier: CellID)
+    }
+
+    /// nib方式注册Cell
+    func registerCellWithNib(nibString: String) {
+        mCollectionView.register(UINib(nibName: nibString, bundle: nil), forCellWithReuseIdentifier: CellID)
+    }
+
+    /*
+    func registerSupplementaryView(kind: String = UICollectionView.elementKindSectionHeader, viewID: String) {
+        mCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: viewID)
+    }
+    */
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        configIOS11()
+        configIOS15()
+
         // 设置 CollectionView()之前应先设置 cellName,否则默认为 BaseCollectionViewCell
         // 注册可重用的单元格
-        registerCell = "BaseCollectionViewCell"
-        view.addSubview(collectionView)
+        registerCellWhihClassName(className: "BaseCollectionViewCell")
+        view.addSubview(mCollectionView)
         // mock 数据
         modelArr = [1, 2, 3, 4, 5, 6, 7]
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        Lg.log(type(of: self))
     }
 }
 
 extension BaseCollectionViewController: UICollectionViewDataSource {
+    /// @optional section的数量
+    /// -Section num  返回分区数
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
     /// @required
     /// -返回每个Section下单元格个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataArr.count
     }
 
-    /// -cell 返回每个单元格视图
+    /// -cell 对于某个位置应该显示什么样的cell,返回每个单元格视图
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID, for: indexPath)
         customCellBlock?(indexPath, cell)
         return cell
-    }
-
-    /// @optional
-    /// -Section num  返回分区数
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
     }
 
     /// - 设置sectionHeader | sectionFooter
@@ -136,27 +146,29 @@ extension BaseCollectionViewController: UICollectionViewDelegate {
         //        let cell = collectionView.cellForItem(at: indexPath)
         clickCustomCellBlock?(indexPath)
     }
-//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 
     /// (@"取消选择----->%zd",indexPath.item)
 //    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
 //        Lg.log("取消选择-----", indexPath.item)
 //    }
 
-    /// (@"shouldHighlightItemAtIndexPath 设置是否要高亮"); //    return YES;
-    // func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {}
+    /** 对应的高亮和选中状态分别由highlighted和selected两个属性表示
+    // (@"shouldHighlightItemAtIndexPath 设置是否要高亮"); //    return YES;
+     func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {}
 
-    /// (@"didHighlightItemAtIndexPath 已经展示高亮");
-    // func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {}
+    // (@"didHighlightItemAtIndexPath 已经展示高亮");
+     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {}
 
-    /// @"didUnhighlightItemAtIndexPath 高亮结束"
-    // func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {}
+    // @"didUnhighlightItemAtIndexPath 高亮结束"
+     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {}
 
-    /// shouldSelectItemAt 反
-    // func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {}
-
+    // shouldSelectItemAt 反
+     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {}
+    */
+    
     // 长按菜单栏 待续
 //    func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
 //        return true

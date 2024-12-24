@@ -25,7 +25,7 @@ class NineGridViewController: BaseCollectionViewController {
         collectionFlowLayout = NineGridFlowLayout()
 
         /// 仅用于测试,这里父类register后子类再register,覆盖了一层SectionHeader
-        collectionView.register(ImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderViewID")
+        mCollectionView.register(ImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderViewID")
 
     }
 

@@ -12,7 +12,6 @@ class EasyCollectionViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        
         modelArr = dataArr
     }
 
@@ -35,7 +34,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         
         collectionFlowLayout = flowLayout
         
-        registerCellWithNib = "DemoCollectionViewCell"
+        registerCellWithNib(nibString: "DemoCollectionViewCell")
 
         customCellBlock = { [weak self] indexPath, customCell in
             let cell = customCell as? DemoCollectionViewCell
@@ -49,7 +48,7 @@ class EasyCollectionViewController: BaseCollectionViewController {
         }
         
         clickCustomCellBlock = { [weak self] indexPath in
-            let cell = self?.collectionView.cellForItem(at: indexPath) as! DemoCollectionViewCell
+            let cell = self?.mCollectionView.cellForItem(at: indexPath) as! DemoCollectionViewCell
             Lg.log("cell : \(String(describing: cell.textLabel.text))")
             
             Lg.log("选中section:\(indexPath.section) ")
@@ -69,7 +68,6 @@ class EasyCollectionViewController: BaseCollectionViewController {
         collectionFlowLayout?.headerReferenceSize = CGSize(width: kScreenWidth, height: headerHeight)
         collectionFlowLayout?.sectionHeadersPinToVisibleBounds = true // 悬停
         customHeaderViewBlock = { indexpath, mHeaderView in
-            print("-----------", indexpath.section)
             mHeaderView.addSubview(headerView)
         }
         
@@ -79,7 +77,6 @@ class EasyCollectionViewController: BaseCollectionViewController {
         footerView.backgroundColor = UIColor.randomColor
         footerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: footerHeight)
         collectionFlowLayout?.footerReferenceSize = CGSize(width: kScreenWidth, height: footerHeight)
-        //        Jh_collectionFlowLayout?.sectionFootersPinToVisibleBounds = true // 悬停
         customFooterViewBlock = { _, mFooterView in
             mFooterView.addSubview(footerView)
         }
